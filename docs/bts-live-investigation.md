@@ -62,7 +62,12 @@ Notable: `pix_w` and `pix_h` are both `1` for all streams (resolution not pre-de
 
 ## Audio Streams
 
-2 audio streams in Korean (primary), unencrypted:
+2 audio streams in Korean (primary), delivered as **clear (unencrypted) segments** (`isDrm: false`). Unlike video segments which are Widevine-encrypted, audio segments have no DRM protection — a common optimization for live streaming that reduces license acquisition overhead while the audio-only content has limited piracy value.
+
+Sample audio files (clear CMAF segments, playable without any DRM license):
+- [s_init.cmfa](segments/s_init.cmfa) — Initialization segment (709 bytes, contains `ftyp` + `moov` boxes with codec config)
+- [s_10635.cmfa](segments/s_10635.cmfa) — Media segment (~28 KB, contains `moof` + `mdat` boxes with ~2s of HE-AAC audio)
+- [audio_complete.mp4](audio_complete.mp4) — Concatenated init + media segment as a playable MP4
 
 | Profile | Bitrate (kbps) | Channels |
 |---------|---------------:|----------|
@@ -138,7 +143,7 @@ URL pattern: `https://<oca-host>/live/s_<Number>.<ext>?o=1&v=<ver>&e=<expiry>&t=
 - **DRM context ID**: `2755359`
 - **Has DRM profile**: `true`
 - **Has clear streams**: `false` (all video is encrypted)
-- **Audio is unencrypted** (`isDrm: false` on audio streams)
+- **Audio segments are clear (unencrypted)**: `isDrm: false` on audio streams — audio `.cmfa` segments can be downloaded and played without any DRM license
 
 License endpoints:
 - **Standard**: `/license?licenseType=standard&playbackContextId=...`
