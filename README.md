@@ -92,6 +92,7 @@ ASE Integration Layer  (streaming/)
 - [Playgraph Data Structures](docs/playgraph-data-structures.md) — Directed graph content engine: segments, weighted branches, ABR switches, ad insertion, interactive branching (Bandersnatch), live streaming
 - [XGBoost Prefetch Prioritization Model](docs/xgboost-prefetch-model.md) — 145-feature ML decision tree for predicting which titles to prefetch based on real-time browse behavior
 - [BTS Live Stream Investigation](docs/bts-live-investigation.md) — Captured manifest/playapi responses, bitrate ladder, CDN infrastructure, segment templates
+- [Cadmium vs dash.js](docs/cadmium-vs-dashjs.md) — Technical comparison of Netflix's proprietary Cadmium player and the open-source dash.js reference implementation: architecture, ABR, security, DRM, buffer management, CDN intelligence
 
 ## Version
 
