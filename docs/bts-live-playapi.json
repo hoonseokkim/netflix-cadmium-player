@@ -1,0 +1,1200 @@
+{
+    "id": 177409347003829060,
+    "version": 2,
+    "serverTime": 1774093470549,
+    "result": {
+        "audio_tracks": [
+            {
+                "trackType": "PRIMARY",
+                "rawTrackType": "primary",
+                "channels": "2.0",
+                "surroundFormatLabel": "2.0",
+                "channelsFormat": "2.0",
+                "language": "ko",
+                "languageDescription": "한국어 [원어]",
+                "disallowedSubtitleTracks": [],
+                "track_id": "6b6f7c322e307c5072696d6172797c747275657c6e6f6e657c756e6b6e6f776e7c756e6b6e6f776e7c417564696f7c756e6b6e6f776e7c7c7c6e6f6e657c30",
+                "id": "6b6f7c322e307c5072696d6172797c747275657c6e6f6e657c756e6b6e6f776e7c756e6b6e6f776e7c417564696f7c756e6b6e6f776e7c7c7c6e6f6e657c30",
+                "new_track_id": "A:2:1;2;ko;1;0;",
+                "type": 0,
+                "profileType": "AbstractDynamicEnum{name='AUDIO'}",
+                "defaultTimedText": null,
+                "stereo": true,
+                "profile": "heaac-2-dash",
+                "codecName": "AAC",
+                "bitrates": [
+                    96
+                ],
+                "streams": [
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "heaac-2-dash",
+                        "bitrate": 96,
+                        "size": 0,
+                        "downloadable_id": "865344385",
+                        "new_stream_id": "865344385",
+                        "type": 0,
+                        "channels": "2.0",
+                        "surroundFormatLabel": "2.0",
+                        "channelsFormat": "2.0",
+                        "language": "ko",
+                        "tags": [],
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=65rAZ0RlUIMB2B2o9pHy1GEC1FSTLHns76kiKrXPJGNDNFQf4Dh96g0r2gVCKqjR2lJLrTWsFF36eH2rG3EbfmPB8WRi4d_x7hhAJEk1lpU94r-yupe9XCivsZBT5yM_MdFyP91sae_zgbnZlgvAZk3_fovy0_9zoMIXohQ_vtBCXfr02wQCoBGOWdY_JZ1XsfnMNU83MfAOTIRISLhdRBAgSl6KCertIXanSGXHMShaBM-k6XYtBZu1uSUdkmelEO77kEStILE9iZ3VVJI",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=BiN4jv8gbLj49lUVEDIRSTH6Re7FQdeRKsKvmgQK1UwYkNviGxhaLyk5aodNhAOD2UsUT3T94vafurKtx0DwfGH8pvPA2zKZejNVcQ3DYsxrliZSGHIVI7TETL4D46W4D6z-EUIy1shZOrm8WZIpUNvM4APaQzP8RcHsamf1_vDsXhHY10_1lBXa4LpnYt8U7uZLwrCXnAtu4KgWTN2XFDNmRR9OCUki4Nzh7Q3c7ZlGlL4vO6qbQh-7Ms9Dzy2-6zK_xIeWCQ5lmFg4ceA",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=pfRpxOXo7DWfDO96bL6F6f7N_oVrkikYtdxMDS_BjidRBnueWvdqEAbk0iIUWXx3kAknhFgGIO2NvBkLybR5n1JU_LU8kgpxDG5yHJfRoyq2YSC3ZJRuUcKTtuft5lualKcAbbtrtfy1mUCtSx-ZqMvm9bmVKEdw-OjVSaVafy61T9SJHFUkV6ii8Mo0oD0jTsC0_go0JLIMfYoZENNh23lgM-UYWMrel4j3LaDcCW3-7eeDpjiBGZwb3UJvBA-uR2N58loJ-PQJNsc1wuk",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "audioKey": null,
+                        "isDrm": false
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "heaac-2hq-dash",
+                        "bitrate": 128,
+                        "size": 0,
+                        "downloadable_id": "865344678",
+                        "new_stream_id": "865344678",
+                        "type": 0,
+                        "channels": "2.0",
+                        "surroundFormatLabel": "2.0",
+                        "channelsFormat": "2.0",
+                        "language": "ko",
+                        "tags": [],
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=8lT_XomFhsJJ1ZS2-QtimczI2XtX8Uq3avXfoAsHigqnRPF1qDwg4UL-Y4YZeWTSEZnLZefcQd5yWPiANpCIb3ZrW7qTv7IobxO4AhIprXNXq379Ab-JKafePPXDwG6TLFtk7O-LX_OHx4bHyxjUPTZjEEZRr7zhjH55jtRFyfiHk1mmgdhjDjbBAlXzzNOPXR8pEWR1NFATmTvpB4vbcyHwlg_0LE65Y4C0425BSdsUH1Hsz7LKXj92fqcVp036FqxRPvTC84lc1Ih55pow",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=C3z8x59Fj15mu6ub25DeqUMXVi_itkNfedE6cRV6i3b8wA-1Xd8k-9_FFHUjtfrmrrkTvZM-4kx0_n61S-qu7dWOf48iWO86c2Unjdukc6GFBTJ9qmE7AQhQV4_oC5r8TLeLgNYWcnFneFIPaASMdHF7e8JkCxn2LgKZWSfJwvcldHgbPmKwgqoRL6Q6cZBG-t4DRIXe0ctvldSXajHQ9RgFB0xPhpkophdlB775qRW5DFRRYR1hkh77ZLwjfwrfusBUOSSofMPs8b8pyc6R",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=hFsOyUmStsUYi_AQL8HyHVuAcg5qMrm_yj7_HejdYm8uLB8wZNnvBzJRo-0bDj-Om_OcRGzGSGbLzQWXZTYy-AMdyE7VvSJ3SfYLw7xiq9dKJpeRqWHmPmqNnWcdmVdzx4Fng6m6nzmXoL0qiveDr8S3vz76DSMp8pH1RPqDRxzcvcohUOWe5LS53WzErdm7t8jtaiMFTOcuTCOByunl3218R8S-HwRCtSCZpi-TPaOWCMmjqLQyv7F1cZxoyW6EbzWd9KdkUfukWoD6JZ5l",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "audioKey": null,
+                        "isDrm": false
+                    }
+                ],
+                "rank": 0,
+                "offTrackDisallowed": false,
+                "hydrated": true,
+                "allowedVideoTrackId": "",
+                "isNoneTrack": false,
+                "isNative": true
+            }
+        ],
+        "mediaEventTracks": [
+            {
+                "type": 3,
+                "id": "1",
+                "profile": "iso_23001_18-dash-live",
+                "streams": [
+                    {
+                        "downloadable_id": 865342740,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=YWEA32dlVNfOnWze-dpcX4ilrzpjt2GoGbKfOIuBxRPXtEKuepsBlPz84FBPFXz9Dr1hO5pdEY81Nt32VideGM6qU22Tj02IjmCl3bRBcFICYuM_DYxwz7hzra2Jp2HYUeoqNC_4g1Yi-dwwyr6Zbx4VcVcijim6fmaQrs9qrLc5MeCYXu4-z_FR3ElhlYxWvvDFVL5VOVGESw4sQ8upbghamHo9S-xtQFPfR363n75TDVZNgYe1AKkUKZifngXqifmBMHy8h0cogl0fXQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=jeA4w2grqV49O8Yk5SsMbQmLYXcFy_MQkFgFlndSaHnNWwWK6faId-9XqDYK4C1HOYyLKJAin50IRc95OOw88ydGM8L558blJ-kb5qZ__Q8VNPsDaHLvzndyit3qOhd7gdpmupJAMxvqFb2JI5uAz3Iy7Jc-pW8KFnIec4IYIxgzHlAznJj9S153RdWuNjk-CkXACVK5vLGnz77-ZM4ASVTtWwD4THqc4QWUFRHLFub4F7v9eufqI3zV2C-M9xcfaO2h2yxSD5lG80NGCA",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=_oVLBjpsOXxdwcjg9bU-K4vaXJD9t7-J5qobqRRIHctWJ5lGELlpSU-IAhtiNRg6bOOXt0WZiFA4_I89bPRDQqPXQ5rUBFcYe74DlqRgz-U9ChinJNUvseaGEzqgrYcusZ5h8ee_nLprkG6FumXrMyq_DbEroHwx-hKy-Qv1TZYnt_jTecO15VHbPwOreCwDtwKuIeJEPoIz51V2rsHXg1C0TbMasrNHDp3GdrRFpIX66wQrIXxI2nvalIa72FPVskZdP2w7vo1VYPrBVQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "audioTextShortcuts": [
+            {
+                "id": "f56cf26a-b5bc-bfa7-90cc-b6d6d76f8980",
+                "audioTrackId": "A:2:1;2;ko;1;0;",
+                "textTrackId": "T:2:1;1;NONE;0;1;0;"
+            },
+            {
+                "id": "a1c9896a-898b-f0aa-ebb1-6754e1118398",
+                "audioTrackId": "A:2:1;2;ko;1;0;",
+                "textTrackId": "T:2:1;1;ko;0;0;0;"
+            }
+        ],
+        "bookmark": -1,
+        "cdnResponseData": {
+            "sessionABTestCell": "SABTest-1.Cell-1",
+            "pbcid": "6.ub8AB_fv2bOAWt7o5o-xTYEcMTtMdCLK--wOFPSsqb8",
+            "enableLive504Handling": "true"
+        },
+        "clientIpAddress": "14.47.176.155",
+        "drmContextId": "2755359",
+        "drmType": "widevine",
+        "drmVersion": 0,
+        "duration": 0,
+        "eligibleABTestMap": {
+            "56308": "3"
+        },
+        "expiration": 1774136670508,
+        "hasClearProfile": false,
+        "hasClearStreams": false,
+        "hasDrmProfile": true,
+        "hasDrmStreams": true,
+        "links": {
+            "ldl": {
+                "href": "/license?licenseType=limited&playbackContextId=E3-Bgj5tevcAxKVBPc4kW5Q-lWct8IZve6YGWREMV0Z02ykfe7e_MMbSPL4ALHYkXtKK-daQGpPQlG0zynfMddD5saBqZWpgC5uI8EYuDp3uR3LPkZJxmZ9-l8rXMtHqhfvo1cLmmb2_EVn1AiZGIiDXoOR50IL_p_Zm0AjCA8gXL-N8ujf6LINb5auk215kFnuA9asui5ZqMfaLbGghysDjGF5HHMYSTbHE9nidE7DHCn6ctyKdXWbWDFZ91eGFHZK-r9LbXihWwl7Lyx_5W2HrhRxAJwrb6sonA0ohmQMIpea4zQjk1nXq5EENm3E1_iGGby0VnUG7F3g3CNfFCbH6xKQDIZ3UJOsDv806XTGzMyMvh6tfm8rptcgh7DWDEa4eQyzeWlA2SHM83ucTE_GVHDyNT7u0BYP5ZmXXymg8G3Sxz1IQywpTf8S3sqjUnJXqEPMotfB_7Y0lYvWSTyVQ7gYo9RbJxpYVbPNJcBXFkfjRmiX_A0zL1p-0l_NojwzdsxwBGXY9enNiPXz6tkSIL-78D-QeGouHVjMrmdzohi5srFL8uW7aXSKeB209i8BVdmtI-G5Pn9rINCxjhtUlOFsTW-4aVtMhEM_xOxkWzUJMhJFPfQNfGhF3XpTG5ifPZWhEWjhywmWDIUvxgMXnAUmfGtZ5yNANaZoUYrEKAY1Iz2O99uiYWtF5N5hrNk5VPwpQAyxjd9O0T-qVCdIGAYiDgoMG-fXYnZrTt_OBMHX&esn=NFCDCH-MC-MU1QG9AXG01E2J33PM7QKD7A6P0NHG&drmContextId=2755359",
+                "rel": "license"
+            },
+            "events": {
+                "href": "/events?playbackContextId=E3-Bgj5tevcAxKVBPc4kW5Q-lWct8IZve6YGWREMV0Z02ykfe7e_MMbSPL4ALHYkXtKK-daQGpPQlG0zynfMddD5saBqZWpgC5uI8EYuDp3uR3LPkZJxmZ9-l8rXMtHqhfvo1cLmmb2_EVn1AiZGIiDXoOR50IL_p_Zm0AjCA8gXL-N8ujf6LINb5auk215kFnuA9asui5ZqMfaLbGghysDjGF5HHMYSTbHE9nidE7DHCn6ctyKdXWbWDFZ91eGFHZK-r9LbXihWwl7Lyx_5W2HrhRxAJwrb6sonA0ohmQMIpea4zQjk1nXq5EENm3E1_iGGby0VnUG7F3g3CNfFCbH6xKQDIZ3UJOsDv806XTGzMyMvh6tfm8rptcgh7DWDEa4eQyzeWlA2SHM83ucTE_GVHDyNT7u0BYP5ZmXXymg8G3Sxz1IQywpTf8S3sqjUnJXqEPMotfB_7Y0lYvWSTyVQ7gYo9RbJxpYVbPNJcBXFkfjRmiX_A0zL1p-0l_NojwzdsxwBGXY9enNiPXz6tkSIL-78D-QeGouHVjMrmdzohi5srFL8uW7aXSKeB209i8BVdmtI-G5Pn9rINCxjhtUlOFsTW-4aVtMhEM_xOxkWzUJMhJFPfQNfGhF3XpTG5ifPZWhEWjhywmWDIUvxgMXnAUmfGtZ5yNANaZoUYrEKAY1Iz2O99uiYWtF5N5hrNk5VPwpQAyxjd9O0T-qVCdIGAYiDgoMG-fXYnZrTt_OBMHX&esn=NFCDCH-MC-MU1QG9AXG01E2J33PM7QKD7A6P0NHG",
+                "rel": "events"
+            },
+            "license": {
+                "href": "/license?licenseType=standard&playbackContextId=E3-Bgj5tevcAxKVBPc4kW5Q-lWct8IZve6YGWREMV0Z02ykfe7e_MMbSPL4ALHYkXtKK-daQGpPQlG0zynfMddD5saBqZWpgC5uI8EYuDp3uR3LPkZJxmZ9-l8rXMtHqhfvo1cLmmb2_EVn1AiZGIiDXoOR50IL_p_Zm0AjCA8gXL-N8ujf6LINb5auk215kFnuA9asui5ZqMfaLbGghysDjGF5HHMYSTbHE9nidE7DHCn6ctyKdXWbWDFZ91eGFHZK-r9LbXihWwl7Lyx_5W2HrhRxAJwrb6sonA0ohmQMIpea4zQjk1nXq5EENm3E1_iGGby0VnUG7F3g3CNfFCbH6xKQDIZ3UJOsDv806XTGzMyMvh6tfm8rptcgh7DWDEa4eQyzeWlA2SHM83ucTE_GVHDyNT7u0BYP5ZmXXymg8G3Sxz1IQywpTf8S3sqjUnJXqEPMotfB_7Y0lYvWSTyVQ7gYo9RbJxpYVbPNJcBXFkfjRmiX_A0zL1p-0l_NojwzdsxwBGXY9enNiPXz6tkSIL-78D-QeGouHVjMrmdzohi5srFL8uW7aXSKeB209i8BVdmtI-G5Pn9rINCxjhtUlOFsTW-4aVtMhEM_xOxkWzUJMhJFPfQNfGhF3XpTG5ifPZWhEWjhywmWDIUvxgMXnAUmfGtZ5yNANaZoUYrEKAY1Iz2O99uiYWtF5N5hrNk5VPwpQAyxjd9O0T-qVCdIGAYiDgoMG-fXYnZrTt_OBMHX&esn=NFCDCH-MC-MU1QG9AXG01E2J33PM7QKD7A6P0NHG&drmContextId=2755359",
+                "rel": "license"
+            }
+        },
+        "locations": [
+            {
+                "key": "1-4766-high",
+                "rank": 1,
+                "weight": 140,
+                "level": 1
+            }
+        ],
+        "manifestExpirationDuration": 28799945,
+        "movieId": 82157128,
+        "packageId": "2755359",
+        "playbackContextId": "E3-Bgj5tevcAxKVBPc4kW5Q-lWct8IZve6YGWREMV0Z02ykfe7e_MMbSPL4ALHYkXtKK-daQGpPQlG0zynfMddD5saBqZWpgC5uI8EYuDp3uR3LPkZJxmZ9-l8rXMtHqhfvo1cLmmb2_EVn1AiZGIiDXoOR50IL_p_Zm0AjCA8gXL-N8ujf6LINb5auk215kFnuA9asui5ZqMfaLbGghysDjGF5HHMYSTbHE9nidE7DHCn6ctyKdXWbWDFZ91eGFHZK-r9LbXihWwl7Lyx_5W2HrhRxAJwrb6sonA0ohmQMIpea4zQjk1nXq5EENm3E1_iGGby0VnUG7F3g3CNfFCbH6xKQDIZ3UJOsDv806XTGzMyMvh6tfm8rptcgh7DWDEa4eQyzeWlA2SHM83ucTE_GVHDyNT7u0BYP5ZmXXymg8G3Sxz1IQywpTf8S3sqjUnJXqEPMotfB_7Y0lYvWSTyVQ7gYo9RbJxpYVbPNJcBXFkfjRmiX_A0zL1p-0l_NojwzdsxwBGXY9enNiPXz6tkSIL-78D-QeGouHVjMrmdzohi5srFL8uW7aXSKeB209i8BVdmtI-G5Pn9rINCxjhtUlOFsTW-4aVtMhEM_xOxkWzUJMhJFPfQNfGhF3XpTG5ifPZWhEWjhywmWDIUvxgMXnAUmfGtZ5yNANaZoUYrEKAY1Iz2O99uiYWtF5N5hrNk5VPwpQAyxjd9O0T-qVCdIGAYiDgoMG-fXYnZrTt_OBMHX",
+        "servers": [
+            {
+                "id": 80746,
+                "key": "1-4766-high",
+                "lowgrade": false,
+                "name": "c133.tyo001.ix.nflxvideo.net",
+                "rank": 1,
+                "type": "OPEN_CONNECT_APPLIANCE",
+                "dns": {
+                    "host": "ipv4-c133-tyo001-ix.1.oca.nflxvideo.net",
+                    "ipv4": "23.246.47.134",
+                    "ipv6": null,
+                    "forceLookup": false
+                }
+            },
+            {
+                "id": 80735,
+                "key": "1-4766-high",
+                "lowgrade": false,
+                "name": "c124.tyo001.ix.nflxvideo.net",
+                "rank": 2,
+                "type": "OPEN_CONNECT_APPLIANCE",
+                "dns": {
+                    "host": "ipv4-c124-tyo001-ix.1.oca.nflxvideo.net",
+                    "ipv4": "23.246.46.141",
+                    "ipv6": null,
+                    "forceLookup": false
+                }
+            },
+            {
+                "id": 140815,
+                "key": "1-4766-high",
+                "lowgrade": false,
+                "name": "c010.tyo013.ix.nflxvideo.net",
+                "rank": 3,
+                "type": "OPEN_CONNECT_APPLIANCE",
+                "dns": {
+                    "host": "ipv4-c010-tyo013-ix.1.oca.nflxvideo.net",
+                    "ipv4": "45.57.2.11",
+                    "ipv6": null,
+                    "forceLookup": false
+                }
+            }
+        ],
+        "steeringAdditionalInfo": {
+            "additionalGroupNames": [
+                "SABTest-1.Cell-1"
+            ],
+            "steeringId": "6.ub8AB_fv2bOAWt7o5o-xTYEcMTtMdCLK--wOFPSsqb8",
+            "streamingClientConfig": {
+                "enableLive504Handling": "true"
+            },
+            "stickySteeringMetadata": {
+                "stickySteeringToken": "eyJ0eXBlIjoxLCJ0b2tlbiI6eyJjZG5JZHMiOls4MDc0Niw4MDczNSwxNDA4MTVdLCJ0IjoxNzc0MDkzNDcwLCJ2IjoxfX0=",
+                "isSteeringSticky": false
+            },
+            "liveEdgeCushionMs": 4000,
+            "liveEdgeCushionWithSpreadMs": 4436
+        },
+        "timedtexttracks": [
+            {
+                "type": "timedtext",
+                "trackType": "PRIMARY",
+                "rawTrackType": "subtitles",
+                "id": "none",
+                "new_track_id": "T:2:1;1;NONE;0;1;0;",
+                "language": null,
+                "languageDescription": "끄기",
+                "downloadableIds": {},
+                "ttDownloadables": {},
+                "rank": -1,
+                "hydrated": true,
+                "encodingProfileNames": [],
+                "allowedVideoTrackId": "",
+                "isForcedNarrative": false,
+                "isNoneTrack": true,
+                "isLanguageLeftToRight": true
+            },
+            {
+                "type": "timedtext",
+                "trackType": "ASSISTIVE",
+                "rawTrackType": "closedcaptions",
+                "id": "6e6f6e657c554e4b4e4f574e7c756e6b6e6f776e7c66616c73657c6b6f7c436c6f73656443617074696f6e737c756e6b6e6f776e7c546578747c7072696d6172797c7c7c6e6f6e657c30",
+                "new_track_id": "T:2:1;1;ko;0;0;0;",
+                "language": "ko",
+                "languageDescription": "한국어",
+                "downloadableIds": {
+                    "imsc1.1": "865342054"
+                },
+                "ttDownloadables": {
+                    "imsc1.1": {
+                        "size": 0,
+                        "hashValue": "",
+                        "hashAlgo": "unknown_hash_algorithm",
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=M02nTn82za-JYzpo9Q_r-DpYRPYITzcTbaQepfo9r4Q_RUdC4YXUCpQtR8VTSy0LstDeyGKCXUHysE47-BLbLC35JHOmnmtjhdtG5HyjhqlntcNBrkBi17BFxnZuAPCxg2R6clhwfjuzJfqnZONmJ7XHVCJ4zz1jX-f0x38pN9d0AVO5I790xJ4e9y7ul8QUDHC82SBTwCM-h5Wy42Wed1ynbS8mB0YFQ6---hhtlAn5iykrT6sOQl2eYxvEhs0Qjb11NF2U38dafi44Dg",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=sKRR8n9YwZqWzEmPpZ_mF9BpD3oF5zvv2lWJsC5qt3tJ-o1G3nbabGheyS_LqxIV6vopaZbi_6H4xqaMUwgIiNfcawbqUsefqbk1XJqul-fYMcsewY-xi0XAISjwaq-tzcFfdOECYS2addjaeDOpfYmCA2AsoepAEoTGc_7PN28of62QdtjlNbbEhaQywmO-xAVw7DbhwM13M4qqiiefpNi02yxAg-C0q-fVVirKaBjRHshZcbsNcxjkmN9nnXJZgwOqJT0RUS3dGvCQaw",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=fVEGKA7_HNmAwSxsCw1IvPH0vWaI32LibNHJHt4CdkADIHsZwtzgJQjtG0QJZ5ifWbg_WTgkGd2d39fjRGS9Zyp6GCb_EiQELxQ2RzC3nDNVNON8oKr_opXq4O3eXG5AmOX0c1vxxsjELg7_8yNgfRswB1Rp1_tdTPk8uwgHf1MWFZXNsde1-A5DObmQqpOfTB6KGq_x2rE9r2vTV-d03-xe964znF4Vv8iWDOEQiP_Ev84lobV04HZrsvHan7l8Q2jkkgJGVSP3zg4vUA",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "textKey": null,
+                        "isImage": false
+                    }
+                },
+                "rank": 0,
+                "hydrated": true,
+                "encodingProfileNames": [
+                    "imsc1.1"
+                ],
+                "allowedVideoTrackId": "",
+                "isForcedNarrative": false,
+                "isNoneTrack": false,
+                "isLanguageLeftToRight": true
+            },
+            {
+                "type": "timedtext",
+                "trackType": "ASSISTIVE",
+                "rawTrackType": "closedcaptions",
+                "id": "6e6f6e657c554e4b4e4f574e7c756e6b6e6f776e7c66616c73657c656e7c436c6f73656443617074696f6e737c756e6b6e6f776e7c546578747c7072696d6172797c7c7c6e6f6e657c30",
+                "new_track_id": "T:2:1;1;en;0;0;0;",
+                "language": "en",
+                "languageDescription": "영어",
+                "downloadableIds": {
+                    "imsc1.1": "865341460"
+                },
+                "ttDownloadables": {
+                    "imsc1.1": {
+                        "size": 0,
+                        "hashValue": "",
+                        "hashAlgo": "unknown_hash_algorithm",
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=NTLjAihZ_A-SWsWqpcbTtcXkBnMyECFdyMtKugdMaevDNoD1XFBnYQvS4FUbltsv5TF2f2uRiH-lzrpYMhf6A2vXnCmYlLysRqd0UDyNR7D9QL5uuXFMHFG82Zc-XF8EihKKZ_ahpglorpaMOnBxRL-hNYZAmclu-dx2fEn9O3nJqji4R1qPPThJbmG7I3n2m2BWYPp7lJ1nER64OpCrN3h3H_PW0eyg1UZpiNzvftTc0ebZ7NRo_msO_w9TdCaLC51HOyfzOvSDPzVm1g",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=oI8aH1kOXWNwLp8XQ7YbPy-d0f9X7xGqu7Zf0z5iWSkGyEJ46ADtljlVZuaVdtfWSpamvSIGuFl7SsFMRGqa_GQ-PodJ8O9rZ7qNViio6tljJFbMG1kMBgYvas2RBkUQrIXrVa9OpUH9K_0EjrYf6bRA9bn9KHdVmzqWu1kOX_QHrWyekx8TNd3jPW1MgP9-rlq61uKv_4_nKbg8PwO6tuJFrhGcbTEtD9d9nzgk890UcV7WiLnh9WnHzi0SEVVhTXOp31zvyHBxNKjO2w",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=E8mfeeXQr_GJo3Eq2QfWUbgW0GEO2ydO8jTpUu5OeB4LESFDSvsZavcMUWPy84v7wol75Op_ItC-jn68y2DIflJxK1P5YpDYvo3BG93I-Farp7zE4WZlrbswpxSItKhGWTBL1UK5E_qJYI7Tg-k8K59u5BXOyKEJ5bXxeiwVv-LY7ZBQuVdALoxuTXJxKW4Uq2lN6KRQfF76JcpxJfn3KknQowmktSP8tBO10oKn12hxHBknOOx9MzoKEuLb7Zwq4dEHu_iiRGDj8-oVxQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "textKey": null,
+                        "isImage": false
+                    }
+                },
+                "rank": 1,
+                "hydrated": true,
+                "encodingProfileNames": [
+                    "imsc1.1"
+                ],
+                "allowedVideoTrackId": "",
+                "isForcedNarrative": false,
+                "isNoneTrack": false,
+                "isLanguageLeftToRight": true
+            }
+        ],
+        "trickplays": [],
+        "type": "standard",
+        "urlExpirationDuration": 43199960,
+        "viewableType": "MOVIE",
+        "badgingInfo": {
+            "dolbyDigitalAudio": false,
+            "hdrVideo": false,
+            "dolbyVisionVideo": false,
+            "ultraHdVideo": false,
+            "dolbyAtmosAudio": false,
+            "assistiveAudio": false,
+            "sdVideo": true,
+            "hdVideo": true,
+            "hdr10PlusVideo": false,
+            "3dVideo": false
+        },
+        "recommendedMedia": {
+            "videoTrackId": "V:2:1;2;;default;-1;none;-1;",
+            "audioTrackId": "A:2:1;2;ko;1;0;",
+            "timedTextTrackId": "T:2:1;1;ko;0;0;0;"
+        },
+        "partiallyHydrated": true,
+        "maxRecommendedAudioRank": 0,
+        "maxRecommendedTextRank": 1,
+        "dpsid": null,
+        "auxiliaryManifestToken": "GgI1TCIiMghBVkMtTGl2ZT0K1-M_QANKBr4FvwXABVoHZGVmYXVsdCoHCLDqARDpBzDIvJYn",
+        "auxiliaryManifests": [],
+        "adverts": {
+            "daiSupported": false,
+            "retainAdBreaks": false,
+            "adBreaks": []
+        },
+        "liveMetadata": {
+            "downloadableIdToSegmentTemplateId": {
+                "865334790": "0",
+                "865335103": "0",
+                "865335436": "0",
+                "865335564": "0",
+                "865335924": "0",
+                "865336135": "0",
+                "865336501": "0",
+                "865336646": "0",
+                "865337083": "0",
+                "865337129": "0",
+                "865337541": "0",
+                "865341460": "1",
+                "865342054": "1",
+                "865342740": "2",
+                "865344385": "3",
+                "865344678": "3"
+            },
+            "segmentTemplateIdToSegmentTemplate": {
+                "0": {
+                    "availabilityStartTime": "2026-03-21T05:12:45.400600161Z",
+                    "presentationTimeOffset": "22582560",
+                    "timescale": 30000,
+                    "media": "s_$Number$.cmfv",
+                    "initialization": "s_init.cmfv",
+                    "duration": 60060,
+                    "startNumber": "377"
+                },
+                "1": {
+                    "availabilityStartTime": "2026-03-21T05:12:45.400600161Z",
+                    "presentationTimeOffset": "22582560",
+                    "timescale": 30000,
+                    "media": "s_$Number$.ttml",
+                    "initialization": "",
+                    "duration": 60060,
+                    "startNumber": "377"
+                },
+                "2": {
+                    "availabilityStartTime": "2026-03-21T05:12:45.400600161Z",
+                    "presentationTimeOffset": "22582560",
+                    "timescale": 30000,
+                    "media": "s_$Number$.cmfm",
+                    "initialization": "s_init.cmfm",
+                    "duration": 60060,
+                    "startNumber": "377"
+                },
+                "3": {
+                    "availabilityStartTime": "2026-03-21T05:12:45.400600161Z",
+                    "presentationTimeOffset": "36132096",
+                    "timescale": 48000,
+                    "media": "s_$Number$.cmfa",
+                    "initialization": "s_init.cmfa",
+                    "duration": 96096,
+                    "startNumber": "377"
+                }
+            },
+            "ocLiveWindowDurationSeconds": 270,
+            "maxBitrate": 6000,
+            "eventStartTime": "2026-03-21T10:59:32.817Z",
+            "eventAvailabilityOffsetMs": 12649,
+            "disableLiveUi": false
+        },
+        "streamingType": "LIVE",
+        "timecodeAnnotations": [],
+        "mediaEventHistory": {
+            "timescale": 1,
+            "baseTimeMs": 1774069952751,
+            "cutoffTimeMs": 1774093457758,
+            "mediaEvents": []
+        },
+        "manifestVersion": "v2",
+        "ignoreUserTextPreferences": false,
+        "isBranching": false,
+        "isSupplemental": false,
+        "isAd": false,
+        "video_tracks": [
+            {
+                "trackType": "PRIMARY",
+                "track_id": "6e6f6e657c554e4b4e4f574e7c756e6b6e6f776e7c66616c73657c6e6f6e657c756e6b6e6f776e7c32447c566964656f7c756e6b6e6f776e7c7c7c64656661756c74",
+                "new_track_id": "V:2:1;2;;default;-1;none;-1;",
+                "dimensionsCount": 2,
+                "dimensionsLabel": "2D",
+                "stereo": false,
+                "profileType": "AbstractDynamicEnum{name='VIDEO'}",
+                "type": 1,
+                "ict": false,
+                "hasClearProfile": false,
+                "hasDrmProfile": true,
+                "hasClearStreams": false,
+                "hasDrmStreams": true,
+                "groupName": "default",
+                "streams": [
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl30-dash-playready-live",
+                        "bitrate": 275,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 608,
+                        "res_h": 342,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 608,
+                        "crop_h": 342,
+                        "downloadable_id": "865334790",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=j2JtqpwZcH0cOb5stRVLtNsX8btMBwd022JwxLoykpT2366zG7JCv13SHcDBetoP8MGIjrsxT3S6Aa9_6O-uAh0ZEfpNhLfPdtKld4SqigaLnuzR51r47W1nfWfhHQ4zS6xuNb00W8t76dRqhr4Kq92bIuKhmnZjyuLQo5asuSy3JPbGmC0BT7AB_gfldCF7W3IBx_yhvPZ4TXAPorECAJ1rnvqjqyyV6GgguQvQqWri_yy1dquRpbsLhm2gLndSjzYLvLVBfiVuBDmmey9L",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=SgbNpmlk9c_RE0C6jpnBwGIZ-VMjlxCXmHdt2HMBuSL390I3gTH74atIXloAr7PEJp9_2LQzqgVtdD72TJcrILRksVyK4z0_9-uUxGtwDCKIM8Sm0OLiGvRU3uqQpRyTYroN6tvY45eBjwW60tM0XeJbx_CCfAAdJzvM8ScAaZqzH5vQq8YufFPw1nXI0H2qRfDHQiv13gD59ATC8riJEZP57xPDD45EhrNq8Wgwcp1qGd6s5xwIO6eT6qmTT6NBQydBQhFydTVb78gc1tsN",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=YozvyITdzx1CKjgsJWZP5iek-7wNum0KxRX9sLjmxNPQFGaR-cOUJ133f7EP61yUC4d7OjjUzZ4cU5Aiap6d-ojiBWOGM5sCqbcR5rBFbG7xkFe79cRh1AFPuXMCKhdN8w_o3o_pCOemxNLr7k3-w2X64C0XbK_jKJrYGLoxG0kM_-rfhpNCyQEkV_FozSohcwFdl2f2_3gqMuiX670A8uzt3u_lG3iedcuNbZxEbXeg9xUcd_tCkphKuSo7MmfxPIKi79T9lBCqpK32WeYR",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl30-dash-playready-live",
+                        "bitrate": 350,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 768,
+                        "res_h": 432,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 768,
+                        "crop_h": 432,
+                        "downloadable_id": "865335103",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=bC3FHblYTuZe_otx2gxIF95ZIzhlqP3Q8TMFQvFR_ZArHanJeNZ-U7n73coxcicoKykCYd2DXxLIDn-2F3bA_P6bm8JJ-f8anIERxU0FlN9hgGuWcrtSwQg2QO8ZuGVruQyWgtYpfiPDgrvlav-m7CqbdY0CPbWLrLPHzM8f2Kauw9yFSjSyMGOdA643iGyrgH3HlOHnEbFuYCMiEj3kH_an6nMfWh8Aj6-xkjQ6rXJ3ipEGrSLOQ-KqF5tvEJEwvz5wnndYp8XTxnU42JXr",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=V3XdTHlSNimpkYrXyv07IuHFD8qKAhZTfra2OuFK9pmK_ojiORGGcAeKr8gkqW5i5HAxle86sNAZp5VuuvqHr7VPIsOB7feGOnLdMRcAfNy0UP3HIgeAO_jvkTKVu0kgOy9nSUXlwiYu05Wx_BtTeS91P7T91P3SAzP5vZYcEDI1WOGnKwY23zg7M361fQ_5tGuKnlGLp5f0xt_OJo3H4INsW6cdbWoKcI_n9mgJBidVJ1o3mv3Y0qwlD4-h5dKSljsKxTEY2oirJtYqQWWK",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=JtLgYPgH0zMwoHr_C7esFvjFpjv18knVqI2hyobyuR_zIJvsnSHWFExMf0KmM3tty4EFQAYoRbIvM6jt1OuI--niRPDeEitkmS9Mv32Etf_JOSEHfdvfWBktkt3hUzGXlPVS3fXc7bjlJgTKuozWFJVsFjm2GOes0n80P07C39IMNQTPCWYaPYXu5kyzVqaJ6twrByf6M1AquH7kygA0f0Q47izKxxP01FsEgbFtSlnAlOAS5t-05bypypZg61P4c2kGDmoDwErjBnOOtow-",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl30-dash-playready-live",
+                        "bitrate": 450,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 768,
+                        "res_h": 432,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 768,
+                        "crop_h": 432,
+                        "downloadable_id": "865335436",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=9CTJIUMHgzFuioB-aVO-XoGeC8356T3KdzfP460KNaGbHCNM0H3EELdPiW6Ckl8NywYw0KLEcodgHIQXDjkN8ImU2GgRcV-sWIk6cwQAWB4p5hMjBHYmu8Zw27yu_hWapcEH8Kj6cDDW_X-_AKi8_nyCejWnteZREW6pofum37IbDfmavP3ZV33ysVOGivEIxVBiyTHszBttUUApticStEjmoJlMtjxqv22RtM2SsFKf-T-c8vxWo34BUMCycJSuFq43FHrFylpm0owCUsz3",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=ONVBRhFl-rbhV9m4VARf0SXCtG666F-hp3CL0dIH9T6sulfmCUdPdJfhgtVjVs_25xUelH21-yA84sLJYR0A_4zLSRie-MeQKQAmoLkP3K4uHdoi-sq9AF3gXNwWaOCvJexISWy83OMr9UvtvYZpFKdyI2tQvQlKWt57lB_ooYFVnslc4tnvOhWu2vw0MoZiGWLvhPfMBTULntQM3fZCXPx2gnsZhIz5qrmtpJCLkwLr8Hyb9tWmjox1CKGeU00ro7VASAXNy06oC2BoNMWz",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=etLRl80nvRWJhzhE7KL0l5clJIjKwRVmHZPwc2QWWQmaFpGCZuViaI_r64pOVRmdLf19Q1K4akmMzPZGfkHQjnGJ5A8-6iDsjzU2POBiaXCSsnkn1CE-m1fu3RDQ8FdHBsgVJ8kExft3ZM7iY8N_xdQ_GwJOoKypwsGz6Py1-4xeqbHzpoXcGEXUuHtJd71ZnjaCOgYMXYPzKUvlg77fS2e5RLpvCSE_1j7TF0YhIlhou1G8ZWY-f1aNx01mrLTP8MjugdVyHg8GWslK0xDF",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl30-dash-playready-live",
+                        "bitrate": 700,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 960,
+                        "res_h": 540,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 960,
+                        "crop_h": 540,
+                        "downloadable_id": "865335564",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=4FyE-zn7WIw8rJyz6-Y5h3TUkBfKbpiEKPh-Rz1ymf7XcNDuoXt8uZiCPiJ22mIELqgmWsQLrLvbIO4TDKorRfXyrkFUXsZqNmMdH-K_WYo1zWsVgTIyDaQzRKqgdYO_w4U0sIR0rcxNnCUPkvJci61y1xNvzaYt--MIGvw2yMHzzLaPpzNdusODVY0xtPBkcsdy6f41ZWC7eO7x8r8ukB8AtvBOEjgr0lE3we3DQxv1DNBYQETEc9A6ryyGAODa-DUHG07d0v2lCEmRCebr",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=LAkNfiNzX1ANP-b1m55J3gaEv0d_yDBiHADoAOhPudz92jKAVBeNzL6Z1H62m3s1zElSrCR7aqZCfrTiydO_Vrd3UIkvKgx1awq6NUGF-YJ_gOmg7JXA5HnXP76E0ZbgRjxs569cDmlKxfq2GrB1hiusfDqq_anGCfQ1E5D87MbL1R1eeffYJRbHX5CaF3usViqBXU47TFKShdjfmzmfCMLoqsgPNhlcGX7A4Hv2sNJOTsjpFsSU-s30ZO7Wd9xv-4G0g5n5WPAfNsIsJ8jN",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=xkBCELitc020FHy2ssYnnVaaqi-P_HWmgXMoiH7jdb0IyPs6g6Zeg6WTXDRJlV4DLPxAm0biGRSkYz4WClvcu22vmq6ilCzhv4eghIgQiJGrpDAvJbejUIOuu-II7VdPBWDuiKUc-yXC8vP-3WE2JCOnAwQ7mx40vmmzq9nbyW1OqURpLvMJWpaP5ledERhA7i-VfTd9KeojgSg6DCoIBWxOHMIpvvx8wIt9wW2m0v7zIM0LPo4aEMRm8DROfejg1soXRkON9DnZWrcEIKFQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl30-dash-playready-live",
+                        "bitrate": 850,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 960,
+                        "res_h": 540,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 960,
+                        "crop_h": 540,
+                        "downloadable_id": "865335924",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=U807rkbqPGolxk1E3gDXwdKVVfZ3poOi7iTghTB1PeLjdcbiwKXiRJVYSMF9ui0SwKG19GOG6mLRuR-OeeY_ED8K3WL4TLELOZPhaFjfLB2L8yuYs8MhZ1fCRceu6P1CG3vEkynfardFI11SN9nv0gjZZL1vuMwiPrMAbZbnoAE183DClYHIjcrboHrooLvr6bIO-3b58S2gvxnV-vOg3TAm2XJZpeLEQks5_CLlagRDoog6e4VJADNq5RrAfZqRZqTUc_JIgPbLQ_YU8spC",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=-l3bivufxb1gb75Q_2RKoBVjBBIPahFAyViHlNwJyq1PvGdbRA5ThCERVmebaqUkWYBcrDGTPO_MielyXiND_uj72WsLF9s39jncibMX9naLkWRkPVEgPpXBNmtwsdjaCDK_rgUtYzzpLEqec2kRd6nJdVe8RJSQdF3oHY4Kx9aAc-6a8pFF3TZs8h6LHR6at5K3RceBSqIyzGR1RQnBhu2rpoXvpWmRSRWZJlGDfkTkwavCVdXAP7pnIWwdM4h27O4E3mHN1lFt1M_mGZ19",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=-znfC9QcMwSyBMVzOZwChnu5kzuOvxrhPwCA1-RPuL_C-zIWAJuNRVU_kN4CiK8v6OZ_1JIc5OJw0IBlKs28lCNZn9BjbzMC-MG4-9I-XxQNBas86ouOaT6ZSj5RXep3QPFGP64l_ILrxOhCIpEIGG9-4LmShzp3k-aKCMnlZijHz-v6xc_B4h3FsnLzTJpXwuEY4u2DKUBIuhz2w7LqKSgatllOkmlxXpS5vzPXIywb_o5bCvZA24mtWrHCOq8z6yvAg0HIJrS6TCWvgkVQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl30-dash-playready-live",
+                        "bitrate": 1300,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 960,
+                        "res_h": 540,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 960,
+                        "crop_h": 540,
+                        "downloadable_id": "865336135",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=RnhJ-W6gXvOltCELLJACoVf5FzRnAduDkf58VBeIVfTmsYiHSa5aAW-ff4Jk7Dp3qdgMLukn8bao82JZi1DaC9GQz9VJ_8pGmNJ1bqe8q_fg1-IonwqRDe3ybbVW-Ak8C2JSr0191y2lD5LciopkHQYirQl-IXHlQD2ObZUrqPhq3usivXiKUqDGgdf9EsIqkduT4BorwQ2PV__2yb7K83VHJNd8PEk3pVOapy7RECOl-SXjvrmUTte8jVuSf59C4S5GRx0mA3hXHK99H8vgPQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=fY3SwFE2vQgN9AzJ8D4z-p8YVZO8Dc3NvAUwJibsMoyoVYup08J4-Exap1sK3vqG9lAmPZb7PPmV_S5kZRY7ejUXyVDpAi9Fsw9FH7yOrN9DEmHVteFIuC7bT710DO-O6hZu7t9BMfEE5WSbKdgNS3pqpMgCGP1dzZfgC_j1lYu10GIp9Wso4uXVe-YmHC77KLRKZS8Zik8959-ShW1o5noFtdKuiZpxpdbSu8kYWNllJ-ifJh00maA7W1UXd2CGqb4FClxDG5HvponPjoJ3zg",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=GPPiWoSgh4Q0eV1KYL9KaZa-Zm57cfea20FQOP8Q7Abq6XO-3FQOLCZC9OZPGquyLXnbY_CswyarHuYHgnWG1DaphcjFN07uiEmyeoUzX51q-s359jVFcQFhM8Z52SEKfgm8TQoBS2Rz1TqhDHjCC5OdQ0483mPE6hyrcCAlpcRqSTxYvdguM40bIIXIYvdbshyAD7HE46LrgN3PxnqUPdn6lmL5IeSU2rkeG1a8fjoGChVCJmWlgDnX84cbxfqSSacH-MCrFeIIwWY2lViNRg",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl31-dash-playready-live",
+                        "bitrate": 2000,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 1280,
+                        "res_h": 720,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 1280,
+                        "crop_h": 720,
+                        "downloadable_id": "865336501",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=2U3ogB3Squhh5n1TNE20FVEAoDVO3ZbkVnCmjwlAuDO4kEKMVd95ztS_ulrMc9NxZGDCJdWGGilRrsgTGWnOgGayvxJPKB2IW8gq80HeXlXh5Jx52drSGBGNObAuZSGMuGvEM0fY5UdB9ieTZ4OGBB7-JKB8brKETCy6QuJmB3sHOrSODMRHZCoI2N6hoqUmv5TD2HgWYR6lB6_ZXK2mXty7R6J7B0QlMEAXPxY8NOG1J3T-XorpflyHs5opO5CMNv5wK77_EbeiZ5vuNmlezQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=yOZBXIBLDwqixK13_koNkao9hbal9DsDQHlw5P8saWhHfhPmAJi9idFUyRtWxrBthE3QjjHdaaGSoy_3jo4dvKU8oN2IFi2Np2cR_h14RHTMuHZzbwTRlCiqm15UbmxuOCZMMKtMAvewRR1JH1nlQapwSlbPhbYOnlDBnk1H76g6YWGGgPYq_JC2jhFuoiqvDjFPnN9UffZU70tJNvjQinizBmxfFc6wOOUMx2FBiwo14cj7W2VT44TtSHEF9uxc3ETRksBLklhnsOOFlsWVKw",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=-yRZ_zepf2Vs0TuCwtM-lTkf019fo1lez_HHre4dXNPNESgGox7fKmHik8c4jove2IRJI80tbOeKGvRTv12gv-EDY9qyDa-7bkoPNbTIK-28u0Lcp_mAXGAgK5CEZkJtA8tdagRNnzWH5lAxG9cSh3eSO21iU4l8KHfYlOeCdXcEznOfJGYBVqtTF17vm9rEksUGmxBlXeyM0KJzaIgr52FvNh95ZQYWCj9EwhHuEoLveVL9Ww0jdZ3WJXcui4JZ1P_qS7Q9DOaRbK3fzPpH6A",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl31-dash-playready-live",
+                        "bitrate": 3000,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 1280,
+                        "res_h": 720,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 1280,
+                        "crop_h": 720,
+                        "downloadable_id": "865336646",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=XR1p1E9PqNyTxVCxZc7qXr5nyWe5bF6J3qcAiorB8agexILJmcUfkpVLlRmkeo6_YfoMXqerFkGhDbIHiPScLKsv7gEPb6tUPto0gC6yYLdOHLfzc64j9CQYYiUkC99-AOR1eUgKGh2xRjjyMlhwKALeUqMZQDS0f0JjNaSWSJNx5z1Ovh-h7Ynpi0zwg9-6T1eCCiYXon8ADwTO8bhpb-YuzaeCMvb6dbpTk97UHTVyonIkpnnyYqx-eQtMsEazr7sqvrcZfNj-k1TbgybNIQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=rFKNqbbn0-6IAzfbPpCzwLY009bIviL-_z6XCw8N4Jx7bUFJQ3ybPEcpqq6xRu_NkLaPOVBZr0YjazpBcsxfQDqBbMWL2S25wzJ0oamuh1KQa-kEW1zd9knwlDZGoYNd1FWlaGlK7IgFevjwcw-KXpJreKxkQl-HEBVDS4e22XJgsnPHzlLFxdcH-acjnL-hXgvcKJK-CmKBTmdCfLe4jx6UwMS7BwzextxyxJN17bJzfdGJu53FZ7DaxzhEPShYH4ydvNdepXqcRdxpCPEqLw",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=PGtIVMgYfN7CvHQ2JPUIYH0xhoa47hmIVlBb78SuDNgPCyCrnsr23ONeq83shsXieYVA18DUCk5S1kSpPs6Z50p8YNmsDVrrIsGUdECq_ypFSzs93Fs2WjqCCqMufa0QOm_vciBkZxkZOCmKfCe7sadxGW1WjAiFicsN0Rv0krkfaUBDujnldn9xKF1-CAyXkp1Ho7-Ysccmedu-MSXZQg45E_xXI3mtoFlp-fOr4kw2QNdFZNtn_yQZ0om_QPaXWzt_F5A1Byym06EMgwsNbw",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl31-dash-playready-live",
+                        "bitrate": 6000,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 1280,
+                        "res_h": 720,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 1280,
+                        "crop_h": 720,
+                        "downloadable_id": "865337083",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=qK3OSKXSeoH9cqZwdYDhncY2ynEv8--P2lvTWsbhUtLL50Qu4hScUJ2BZYRpYVofgVhzHZMFscHS1sltvWGt7OaIaq56jy88MW6_c-hpTPoegNRaC2iPiRC8APAICiMAsvdMwqC8xWWriX9xXAyeEhN-YuOehapFyQr_PyRH-mXH0THN4rN1QdeSvhboGU8qs_cZUWDWwaizQitzaRz-KNTG8OX2jYhPFhB2QYgVylqNzkyHNAzaYKYN6zJ02ylCk6_2ZDxy8BxKBXgro9MgWg",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=IlYLAB0g8MTpha5yKEK1p23CJoVfVCXv4PWL69dnRiNJBRvsPeSIKjlJg44SnQZG3kQAEFhXJIjhUCFD8B6qDZ3M7EONFf542mUhv6u0y_ZQLkdidPAh5H8gccX8ySA9TTj6RQhx4cADG4C8TT5kTn9naBNyImgO_0nu-O2903t7Pvj50xCQ2Esfe2-l_yrlGQ3lOfzIWAkFee77qtjSmGtPF5CeP65lTk6_HF3lDeo3o2kZGjBt-hgdYhjKxvxpwCUR0w48k2v73CQbFDRvmA",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=D2LqmfUF2YXGe2EnwqwQLcycFlBHXQQHoouJxvpU4rcifUT4oZXGRiDjmIyXSgd5Dqbg28N-exEnzIlvkKo9xbwPbaOl923sDA4T-RUSlTNOJaoxp9dUVUxboblDBuIyPgMh9rk23Ns92GtTlFk29RKF4_9UoSLjP9Ogpl6_XdasiYfJ7rOFJrqdBHkJHRB53s872lHlbLTmIoptwEfBOWK0F3EjzqA-1mEncMFaLKOzgNy4YBss1XnjGWl2bFHf44iEqryYpS81il2C2doQxQ",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl40-dash-playready-live",
+                        "bitrate": 8000,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 1920,
+                        "res_h": 1080,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 1920,
+                        "crop_h": 1080,
+                        "downloadable_id": "865337129",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=Rz2HSz5tWWkeqOjtNCMVx3kQK7evNQ9RIf-kyFfzblfH43h72dl_PFndJkpW4kJR1NYdOnjH5tfBJ3E_bV8sNUhiRHVlWUqZ4Ix-G1Z6CF0WMjnJ6C2GKe86LaNBRRVpv9r-9CaNXnx1_-vUOyjOB2Tr-NgGGXqaRyqZ-MVG6idqIBJcrs-CrgquyuSRkR43MjrOMW4eWC3_VXdOVgQPOpneGBzfBK-of3TL_DdKlACKwMCn1aMJP_GSI8EZvIPOuhOnnI42idqQXxCMgv91Ng",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=iDFkrlYjOtp3UIZyjARtXfFgya7zllBf6Fh5QAafFXmagRF1EM8s9fXSJ3y-iskyPQoRU59AfQgmvtAZunO-cPS5ougOksedB2nYIc64cmfpAxvOsLFymoOCqeluJEoCXUeykhjF8o7W5dOmLMgqvjGqPRGCwLol6rZACXziJITDP4O3txG3SzsTJE1rI0S4k28H-v-XnXhWzbGbzG_JpzcFjrpXiycud9bmGLf4Ylz_jSztaTinVFKgu8qnsoO7F2rfXj7WxjXAyqqIAyMMeg",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=JdYlEMXmjEBrutHOdUD8_dCYlLMotDesxAP60FFz9SeiXiMy-clszuZMGbhf1Ka5E3rO-odr02utysqbzgONkSZF6WYqBULmx9qYUoGAgR54W6QxU-Yae2nKlOkGao6-X8Bq5q-t-PLvo0rg69FU4jDevGh82dLmuzTJxt3lQRcUGsb8TG6ZFCv1VaBlJIIBIpiV5aZgkwc0A8nmdVoT9zDO_MUrDR-lXgwaaxpQZSqFz0Ads6vfLkfmymQpMY3bbTD3HvB5dfjYyY9Qmsr2PA",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    },
+                    {
+                        "trackType": "PRIMARY",
+                        "content_profile": "h264hpl40-dash-playready-live",
+                        "bitrate": 14000,
+                        "peakBitrate": 0,
+                        "dimensionsCount": 2,
+                        "dimensionsLabel": "2D",
+                        "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                        "pix_w": 1,
+                        "pix_h": 1,
+                        "res_w": 1920,
+                        "res_h": 1080,
+                        "framerate_value": 30000,
+                        "framerate_scale": 1001,
+                        "size": 0,
+                        "startByteOffset": 0,
+                        "vmaf": null,
+                        "segmentVmaf": [],
+                        "crop_x": 0,
+                        "crop_y": 0,
+                        "crop_w": 1920,
+                        "crop_h": 1080,
+                        "downloadable_id": "865337541",
+                        "tags": [
+                            "live"
+                        ],
+                        "new_stream_id": "todo",
+                        "type": 1,
+                        "urls": [
+                            {
+                                "cdn_id": 80746,
+                                "url": "https://ipv4-c133-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=69&e=1774136670&t=YlJ8SQI4di0AAQUJZJCKXlk2Dio76Ik_w2pbmMhDbBxRi-rM-pUo4KDoTs2AnccqNlCYYnKmUk9XY2n93JszwHxSPnFIEdulg00wXE9Bd3LZX7EiSOHkZxmbRHVQveMcG5tNGfxTYI-21FxWYvsHrpEnSrX3erubT5rRvLNHNZQNGlCM_GIluVZtJsPZpafmY-0344143pFBdE_ISsfKEau19vpUxtPqj4uA_02-8fwheqBenFp5DybCKt3Z0wK5FUC0wYgkBrDofjK3OAfo_0U",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 80735,
+                                "url": "https://ipv4-c124-tyo001-ix.1.oca.nflxvideo.net/live?o=1&v=68&e=1774136670&t=v-NGjY8Lpws_bkgelSns-gqAg_djJchrpT3Ss67KFKqoLFpOfd1Dlg3J9JAH8D7mokz7Wwxd_qqlTlZ3vlcmW9rkn-MfkE-LiwY_hrsjEnBxEtxd88Nl3fqklGhbqPH_hMLh-4x7o4BjnyhMRloAl_ua6_ThOwP2E91US5le9Q0kGXrHdqE82Gh8IjfTWCe6GHRNrO1ta1zBuQkYVt8lWHaXukTJyVeG7QEEjpju2jx03gs7D0oQtd87hUarX0v8-oDmLr2_hyCy709GfikaCG4",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            },
+                            {
+                                "cdn_id": 140815,
+                                "url": "https://ipv4-c010-tyo013-ix.1.oca.nflxvideo.net/live?o=1&v=19&e=1774136670&t=BY6LaH5NuTRtDIEmUYcIkY2CfqZ4ypnQTydQ3QPJlkAd3je5yUNn6tctLkDpQ74rndKx7fF_TegwaWLRnxk3gVL0oiEjE_ku2C3SYY1w8zctaVoVBg6dbhk4eeb5mgaXfE3SFwHBhnduhV6OBFAU4sDPye4bxMN3EM_D63vCbD4JPiGeHfNljwFwJ7Et4ZGOpD7NxTSBPENdAbLzSUKkbmleaYuGbHKJ-BIOATZ-z-1A8gFsfFWM5SNfTCDrWCc_Aac-l9QwrG3w94ul8PQfdfM",
+                                "liveOcaCapabilities": [
+                                    "LIVE",
+                                    "DVR"
+                                ]
+                            }
+                        ],
+                        "isDrm": true
+                    }
+                ],
+                "profile": "h264hpl40-dash-playready-live",
+                "pixelAspectX": 1,
+                "pixelAspectY": 1,
+                "maxWidth": 1920,
+                "maxHeight": 1080,
+                "maxCroppedWidth": 1920,
+                "maxCroppedHeight": 1080,
+                "maxCroppedX": 0,
+                "maxCroppedY": 0,
+                "max_framerate_value": 30000,
+                "max_framerate_scale": 1001,
+                "minWidth": 608,
+                "minHeight": 342,
+                "minCroppedWidth": 608,
+                "minCroppedHeight": 342,
+                "minCroppedX": 0,
+                "minCroppedY": 0,
+                "flavor": "live",
+                "drmHeader": {
+                    "bytes": "AAAANHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABQIARIQAAAAAAmrL2wAAAAAAAAAAA==",
+                    "checksum": "",
+                    "drmHeaderId": "0000000009ab2f6c0000000000000000",
+                    "keyId": "AAAAAAmrL2wAAAAAAAAAAA==",
+                    "resolution": {
+                        "height": 1080,
+                        "width": 1920
+                    }
+                },
+                "hydrated": true,
+                "rank": 0,
+                "license": {
+                    "drmSessionId": "5947E22AFF3ECEBEFCBC3A7D51D9152C",
+                    "licenseResponseBase64": "CAISiwQKwAEKEESCXWvZfkTPxLQ1YU03so4SmQF7InZlcnNpb24iOiIxLjAiLCJlc24iOiJORkNEQ0gtTUMtTVUxUUc5QVhHMDFFMkozM1BNN1FLRDdBNlAwTkhHIiwiaXNzdWV0aW1lIjoxNzc0MDkzNDY3LCJtb3ZpZWlkIjoiODIxNTcxMjgiLCJzYWx0IjoiNzUxMjM1MzQ5MjczNjgyODk3MDk0NDQ1MTE2NjYyOTk4In0gASgAOMDRAkDA0QJInon6zQYSFAgBEAAYACDA0QIowNECWABgAXgBGlYSEBMMtF86AePe/KUaEx+FZU4aQEpimDq3YGxGx5rhFhbcaX5kyLPtFHMmgFH8+T9Raf6ZQSEWzm2b4JBJjmoUDbFvI4GwPbopdPIvR7IP2TmFAqAgARpWChAAAAAACasvbAAAAAAAAAAAEhDvNPBq7w6EUEtErPuQH8u9GhAK8E6nNtgloMaRbCZpAm3hIAIoAjICCAA6AggAQhIKEGtjMTYAAAAAm/MBboQAAAggnon6zQYyQnsidG9rZW5JZCI6IjE1MjI2OTE5NzYxMTA0MTE3MTUzMzcwODA3NzMzNDY2OSIsInNlcXVlbmNlTnVtYmVyIjo5fTgAUAVoAnIwCKDC7M0GEAAYACAAKhDlRLpAC8EPN9O2Nvi1T/tDMhB0ZXN0Lm5ldGZsaXguY29tGiChCpuNAQXfIoaP7PoIWphCeYR4ITzib03i+Hvon0iCKiKAAb/cBxAZhsBYc2wvnjYCPeUY+tFktQUGCM5JtfqAcsitu6iZ+f44KiTSRSh7QZp80XMo+46YuPedvuqN/ew9mzHAvp7DLgB0YWyZuLZLCnNY/A3FM+4KCT7+/8SAahj9iodlzGYO5JSJ4XVzSiinE01OvxsvvTevu9vCXWIbGe97OgkKBzE5LjE1LjFAAUqwAQAAAAIAAACwAAUAEJvzAW7BX5MLAAAA3QAAABAAAADvAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAACowAAAAAAAAKjAAAAAAAAAAAAAAAABAAABNQAAABAAAAFHAAAAEAAAAVkAAAAQAAAAAAAAAAAAAAF5AAAAELuhb04A316RhYu/Yue+A/roIID9b3iOEfWRZ1VXveYfWAE=",
+                    "links": {
+                        "releaseLicense": {
+                            "href": "/releaseLicense?drmLicenseContextId=E3-Bgj5tevcAxLKA_HucSyWm7hy7cZTWPHKd7_SlpzCSOWYpjX6TP59Qob9L_TZF6_QDhBKw7SizOnP5JiB5EXVHSMBePtQiTTLnu8RASJreCirC6MTDZ7u7SEGngt-LEHQ6n39njXRCcHg_c0UQZYbWM8olh_eK6sMBlXIYCWZPWXASAojO9lMVqY17CChHIQd7DgbWnKz0QoXnuTqfBfyCZDRU-lrbVewt3NegfJsXZ7jvqij-FogwXQXT9iSic1l61O9nWhVt2hxDMn9cK0ikMv5lDdq41w4uzusCGpwZPrUWQkIuIIMnQ8inpaG_LvOZcAGQVLtdWfcQdTNL-g3jiM5Td0nKKA7p9vvdJ0_rJMbKQn9dTiMOX5Z-PxTfc-HwHOefUCoa5L6Cj62UzQ_XxwpOu07rmkBy1b-_H8p8gYcPKivVRsY41FpUwSdEW5snQ4-pSUSCMcQR1jFMJxlnSeUyPjwKPYmdZ5GB-WQIV330fxU63S6wgxZSFqqnR5ruzaaMuislYP3bpyxZAppQWQdtMq6BxSJ--m9j9cxtLEJdAeTzcR7Dk7i20pEPD7pPgwRMBqkF7GBfzOwVUpjtyTcnTR89_K4Z29-s2fBNvrEVb2ZGAYiDgoMzVyfxbzRTmA3bZ2P;EDEF8BA9-79D6-4ACE-A3C8-27DCD51D21ED;STANDARD;1774093470522",
+                            "rel": "releaseLicense"
+                        }
+                    },
+                    "secureStopExpected": false,
+                    "providerSessionToken": null,
+                    "drmGroupId": null
+                }
+            }
+        ]
+    },
+    "common": {
+        "cadToken": "C1-BgjFtuvcAxKMAZku_xa7FccVddJrX6tZiuTqoalDSuyUky_fYSYcCE12mAioz3hzLQv4eernEhmM-vFbChjpDJu43oU4qEeiW-suGlJbe_Jdrs84D2jTfWN47yS5Rw7GBoVRiVpbl6u6Inix-35Oub8fLtOQ7YzschU3Ra6EaOoIdkNcG672j0xQUiCIphfbS3LOqukTGAYiDgoMJDYhjoz7oAgxJkmV"
+    },
+    "from": "playapi"
+}
