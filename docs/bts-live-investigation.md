@@ -42,7 +42,7 @@ The `result` field contains the exact same 48 keys as the raw manifest. The wrap
 
 ## Video Bitrate Ladder
 
-11 video streams using H.264 profiles with PlayReady DRM, all at ~29.97 fps (`30000/1001`):
+11 video streams using H.264 profiles, all at ~29.97 fps (`30000/1001`). Note: "playready" in the profile names (e.g. `h264hpl30-dash-playready-live`) is a Netflix-internal encoding label, not the DRM system — the actual DRM is **Widevine** (confirmed by PSSH system ID `edef8ba9-79d6-4ace-a3c8-27dcd51d21ed`):
 
 | Profile | Bitrate (kbps) | H.264 Level |
 |---------|---------------:|-------------|
@@ -131,7 +131,10 @@ URL pattern: `https://<oca-host>/live/s_<Number>.<ext>?o=1&v=<ver>&e=<expiry>&t=
 
 ## DRM Configuration
 
-- **DRM type**: Widevine
+- **DRM system**: **Widevine** — confirmed by PSSH box system ID `edef8ba9-79d6-4ace-a3c8-27dcd51d21ed` in the manifest's `drmHeader.bytes`
+- **PSSH box** (base64): `AAAANHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABQIARIQAAAAAAmrL2wAAAAAAAAAAA==`
+- **Pre-provisioned license**: The manifest includes a `licenseResponseBase64` containing a Widevine protobuf license response, allowing immediate playback without a separate license round-trip
+- **"playready" in profile names**: The content profile label `h264hpl*-dash-playready-live` is a Netflix-internal encoding identifier — it does **not** indicate PlayReady DRM. The actual DRM is determined by the PSSH box.
 - **DRM context ID**: `2755359`
 - **Has DRM profile**: `true`
 - **Has clear streams**: `false` (all video is encrypted)
