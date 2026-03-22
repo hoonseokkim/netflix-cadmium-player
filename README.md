@@ -88,6 +88,9 @@ ASE Integration Layer  (streaming/)
 ## Documentation
 
 - [Adaptive Bitrate (ABR) Deep Dive](docs/adaptive-bitrate.md) — Throughput estimation, stream selection algorithm, startup logic, ML decision tree
+- [MSL (Message Security Layer)](docs/msl-message-security-layer.md) — Netflix's custom encrypted messaging protocol: message format, token system, RSA key exchange, AES-CBC encryption, DRM license flow
+- [Playgraph Data Structures](docs/playgraph-data-structures.md) — Directed graph content engine: segments, weighted branches, ABR switches, ad insertion, interactive branching (Bandersnatch), live streaming
+- [XGBoost Prefetch Prioritization Model](docs/xgboost-prefetch-model.md) — 145-feature ML decision tree for predicting which titles to prefetch based on real-time browse behavior
 - [BTS Live Stream Investigation](docs/bts-live-investigation.md) — Captured manifest/playapi responses, bitrate ladder, CDN infrastructure, segment templates
 
 ## Version
