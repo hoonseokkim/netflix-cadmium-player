@@ -18,9 +18,9 @@ export class HttpRequestEnums {
         /** Manual abort reason 1 */
         Shb: 'mr1',
         /** Manual abort reason 2 */
-        internal_Rhb: 'mr2',
+        mr2: 'mr2',
         /** Manual abort reason 3 */
-        internal_Thb: 'mr3',
+        mr3: 'mr3',
         /** Manual abort reason 4 (general) */
         O7: 'mr4',
         /** Manual abort reason 5 */

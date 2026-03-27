@@ -11,7 +11,7 @@
 import { __extends, __importDefault } from 'tslib'; // Module 22970
 import { fp as BaseKeyResponseData } from '../msl/MslTokenStore'; // Module 48235
 import asyncComplete from '../msl/MslMessageStreamFactory'; // Module 42979
-import { internal_Bxa as deserializeMasterToken } from '../msl/MslControl'; // Module 58892
+import { _Bxa as deserializeMasterToken } from '../msl/MslControl'; // Module 58892
 import MslKeyExchangeException from '../msl/MslInternalException'; // Module 35661
 import MslError from '../msl/MslInterruptedException'; // Module 36114
 import MslEncodingException from '../msl/MslInternalException'; // Module 6838

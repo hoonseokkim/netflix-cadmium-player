@@ -69,7 +69,7 @@ export class ComponentHost extends BaseComponentAdapter {
         preCleanupCallback();
       }
 
-      componentData.internal_Jea = {};
+      componentData._Jea = {};
       this.hostedComponent.events.removeAllListeners();
       this.hostedComponent = undefined;
     }

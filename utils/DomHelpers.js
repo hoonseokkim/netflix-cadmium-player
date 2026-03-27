@@ -32,8 +32,8 @@ import {
     fromCharCode,                   // m.dmb  - String.fromCharCode
     mathFloor,                      // m.uX   - Math.floor
     mathRound,                      // m.totalTime - Math.round
-    mathPow,                        // m.internal_Cgb - Math.pow
-    mathSqrt,                       // m.internal_Dgb - Math.sqrt
+    mathPow,                        // m._Cgb - Math.pow
+    mathSqrt,                       // m._Dgb - Math.sqrt
 } from "./Module_22365";                                                         // m = a(22365) - platform globals
 import {
     isArray,
@@ -44,7 +44,6 @@ import {
     isDefined,          // n.gd (unused here but available)
 } from "./Module_32687";                                                         // n = a(32687) - type checks
 import { CENC_SCHEME_TYPE } from "./Module_82100";                               // q = a(82100) - DRM constants
-
 
 // ---------------------------------------------------------------------------
 // Internal / private helpers
@@ -140,7 +139,6 @@ function sumArray(arr) {
     }
     return total;
 }
-
 
 // ---------------------------------------------------------------------------
 // Exported functions
@@ -368,7 +366,7 @@ export function findMaxValue(arr, accessor) {
     if (arguments.length === 1) {
         // No accessor - compare values directly
         while (++i < len && !(null != (max = arr[i]) && max <= max)) {
-            max = undefined;
+
         }
         while (++i < len) {
             if (null != (val = arr[i]) && val > max) {
@@ -378,7 +376,7 @@ export function findMaxValue(arr, accessor) {
     } else {
         // With accessor
         while (++i < len && !(null != (max = accessor.call(arr, arr[i], i)) && max <= max)) {
-            max = undefined;
+
         }
         while (++i < len) {
             if (null != (val = accessor.call(arr, arr[i], i)) && val > max) {
@@ -402,7 +400,7 @@ export function findMinValue(arr, accessor) {
     let min, val;
     if (arguments.length === 1) {
         while (++i < len && !(null != (min = arr[i]) && min <= min)) {
-            min = undefined;
+
         }
         while (++i < len) {
             if (null != (val = arr[i]) && min > val) {
@@ -411,7 +409,7 @@ export function findMinValue(arr, accessor) {
         }
     } else {
         while (++i < len && !(null != (min = accessor.call(arr, arr[i], i)) && min <= min)) {
-            min = undefined;
+
         }
         while (++i < len) {
             if (null != (val = accessor.call(arr, arr[i], i)) && min > val) {

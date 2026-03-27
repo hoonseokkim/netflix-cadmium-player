@@ -20,11 +20,6 @@
  */
 
 // Dependencies
-// import { __extends, __values, __generator, __read, __spreadArray } from '../ads/AdBreakMismatchLogger.js';
-// import { assert, findLast, DeferredIterator, uniqueArray } from '../core/AsejsEngine.js';
-// import { platform } from '../core/AsejsEngine.js';
-// import { WorkingSegment, computeWeightRange, normalizeWeight } from './PlaygraphMerger.js';
-// import { mergePlaygraphs } from './modules/Module_26162.js';
 
 /**
  * Resolves the default next segment ID for a given segment, choosing the

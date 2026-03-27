@@ -8,9 +8,6 @@
  * @module Module_45146
  */
 
-// import { disposableList } from '../drm/LicenseBroker.js'; // webpack module 31276 (service locator)
-// import { DebugSymbol } from '../ioc/ConfigurationStore.js';    // webpack module 90597
-
 let _assertService;
 
 /**

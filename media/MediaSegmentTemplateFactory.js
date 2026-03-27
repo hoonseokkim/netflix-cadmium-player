@@ -44,7 +44,7 @@ export default function MediaSegmentTemplateFactory(module, exports, require) {
             value: true
         }
     });
-    exports.MediaSegmentTemplateFactoryClass = void 0;
+    exports.MediaSegmentTemplateFactoryClass = undefined;
 
     tslib = require(22970);
     TimeUtil = require(91176);
@@ -77,7 +77,7 @@ export default function MediaSegmentTemplateFactory(module, exports, require) {
          * @param {number} trackId - Track ID (default: 1)
          * @returns {Object} Video template with init segment and media data
          */
-        MediaSegmentTemplateFactoryClass.prototype.internal_Azc = function getVideoTemplate(type, codecString, frameRate, aspectRatio, trackId) {
+        MediaSegmentTemplateFactoryClass.prototype._cb_Azc = function getVideoTemplate(type, codecString, frameRate, aspectRatio, trackId) {
             var frameRateKey, cached;
 
             if (aspectRatio === undefined) aspectRatio = { w: 16, zy: 9 };

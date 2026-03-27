@@ -16,7 +16,7 @@
 import { __read, __values } from '../../tslib';
 import { MediaType } from '../types/MediaType';               // Module 6198 / 91176
 import { assert } from '../assert/assert';                     // Module 52571
-import { HeaderContainer } from '../classes/HeaderContainer';  // Module 69575 / internal_Blb
+import { HeaderContainer } from '../classes/HeaderContainer';  // Module 69575 / _Blb
 import { lookupSegmentByProperties, findLastFragment } from '../mp4/FragmentLookup'; // Module 65077
 import { FrameRate } from '../timing/FrameRate';               // Module 444 / AG
 import { Resolution } from '../classes/Resolution';            // Module 52629 / aY
@@ -24,7 +24,7 @@ import { isLiveStream } from '../live/LiveStreamUtil';         // Module 8149
 import { DEBUG } from '../core/debug';                         // Module 48170
 import { BitrateSource } from '../abr/BitrateSource';         // Module 91967 / XP
 import { LiveDownloadable } from '../live/LiveDownloadable';   // Module 87225 / zGa
-import { AseDownloadable } from '../streaming/AseDownloadable'; // Module 48834 / internal_Yhb
+import { AseDownloadable } from '../streaming/AseDownloadable'; // Module 48834 / _Yhb
 
 /**
  * @typedef {Object} AseTrackParams

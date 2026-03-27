@@ -92,7 +92,7 @@ export class NetworkGlobals {
     NetworkGlobals.config = undefined;
     NetworkGlobals.platformRef = undefined;
     singletonInstance?.destroy();
-    singletonInstance = undefined;
+
   }
 
   /**

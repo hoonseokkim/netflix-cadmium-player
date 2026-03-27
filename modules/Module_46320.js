@@ -7,7 +7,6 @@
 // Webpack module 46320
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g, f, e, h;
 function d(k, l, m, n) {
     this.platform = k;
@@ -15,10 +14,7 @@ function d(k, l, m, n) {
     this.A$ = m;
     this.OA = n;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.$Ia = void 0;
+
 t = a(22970);
 p = a(22674);
 c = a(4203);
@@ -31,7 +27,7 @@ d.prototype.transform = function(k) {
     l = this;
     m = k.qb;
     n = {
-        Ye: void 0
+        Ye: undefined
     };
     return Promise.all([this.OA.ADb(n), this.OA.CDb(n), this.A$.zWa(h.Tr.$r)]).then(function(q) {
         var r, u;
@@ -50,14 +46,14 @@ d.prototype.transform = function(k) {
             videoProfiles: u.Osa(),
             audioLanguages: m.kdc,
             textLanguages: m.V0c,
-            videoLanguages: m.xXb ? [m.xXb] : void 0,
-            videoAspectRatios: m.uXb ? [m.uXb] : void 0,
+            videoLanguages: m.xXb ? [m.xXb] : undefined,
+            videoAspectRatios: m.uXb ? [m.uXb] : undefined,
             requestReference: m.n4a,
             additionalAudioAssets: m.jbc,
             additionalTextAssets: m.mbc,
-            useBetterTextUrls: !0
+            useBetterTextUrls: true
         }, {
-            DH: null === r || void 0 === r ? void 0 : r.Ml,
+            DH: null === r || undefined === r ? undefined : r.Ml,
             so: "studioManifest",
             X9: q,
             Nia: u
@@ -66,8 +62,8 @@ d.prototype.transform = function(k) {
 }
 ;
 a = d;
-b.$Ia = a;
-b.$Ia = a = t.__decorate([(0,
+export const $Ia = a;
+export const $Ia = a = t.__decorate([(0,
 p.aa)(), t.__param(0, (0,
 p.v)(g.Vt)), t.__param(1, (0,
 p.v)(c.Pc)), t.__param(2, (0,

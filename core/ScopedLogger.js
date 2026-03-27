@@ -65,4 +65,4 @@ function createScopedLogger({ N$: sessionId, ase_Apa: aseId, bufferTimeValue: ba
   };
 }
 
-export { MONTAGE_SCOPE as dFa, createScopedLogger as handleBufferUpdate };
+export { MONTAGE_SCOPE, createScopedLogger };

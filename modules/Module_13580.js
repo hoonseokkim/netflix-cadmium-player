@@ -7,14 +7,8 @@
 // Webpack module 13580
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.vcb = void 0;
+
 d = a(65161);
 p = a(91967);
 t = (function() {
@@ -26,17 +20,17 @@ t = (function() {
             get: function() {
                 return "EllaReporter";
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(c.prototype, {
         enabled: {
             get: function() {
-                return !0;
+                return true;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     c.prototype.Ph = function(g) {
@@ -47,7 +41,7 @@ t = (function() {
             e = this.SCb(d.l.U);
             f && (f = this.eBb(f, d.l.V)) && (g.gcd = f);
             e && (e = this.eBb(e, d.l.U)) && (g.qnd = e);
-            return 0 < Object.keys(g).length ? g : void 0;
+            return 0 < Object.keys(g).length ? g : undefined;
         }
     }
     ;
@@ -79,7 +73,6 @@ t = (function() {
     return c;
 }
 )();
-b.vcb = t;
-
+export const vcb = t;
 
 // Detected exports: vcb

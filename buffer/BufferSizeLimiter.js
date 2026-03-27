@@ -34,7 +34,7 @@ function getCertainContiguousBytes(usage, mediaType) {
   return Object.keys(usage.playgraphIdList)
     .map((key) => usage.playgraphIdList[key])
     .filter((entry) => entry.dB === undefined || entry.dB === 1)
-    .reduce((sum, entry) => sum + entry.internal_Caa[mediaType], 0);
+    .reduce((sum, entry) => sum + entry._prop_Caa[mediaType], 0);
 }
 
 /**

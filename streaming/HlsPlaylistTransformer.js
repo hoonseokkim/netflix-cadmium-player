@@ -13,12 +13,6 @@
  */
 
 // Dependencies
-// import { __decorate, __param } from 'tslib';
-// import { injectable, injectDecorator } from './modules/Module_22674';  // IoC
-// import { LoggerToken } from './modules/Module_87386';
-// import { fragmentValidator } from './modules/Module_35128';
-// import { jEa as VideoCodecMap } from './modules/Module_48617';
-// import { iEa as AudioCodecMap } from './modules/Module_12187';
 
 /**
  * CDN index pairs used for primary (0) and backup (1) URLs.
@@ -55,7 +49,7 @@ export class HlsPlaylistTransformer {
    * @param {Array} manifestData.videoBufferedSegments - Video track descriptors.
    * @param {number} manifestData.duration - Content duration in milliseconds.
    * @param {string} manifestData.$wb - Default audio track identifier.
-   * @param {string} manifestData.internal_Gnc - Default subtitle track identifier.
+   * @param {string} manifestData._Gnc - Default subtitle track identifier.
    * @param {object} cdnUrls - CDN URL resolver (keyed by stream/track ID).
    * @returns {string} Data-URI containing the encoded M3U8 playlist.
    */
@@ -68,7 +62,7 @@ export class HlsPlaylistTransformer {
 
     const { TEXT_MEDIA_TYPE: textTracks, audioBufferedSegments: audioTracks,
             videoBufferedSegments: videoTracks, duration,
-            $wb: defaultAudioId, internal_Gnc: defaultSubtitleId } = manifestData;
+            $wb: defaultAudioId, _Gnc: defaultSubtitleId } = manifestData;
 
     // --- Subtitle renditions ---
     textTracks.forEach((textEntry) => {
@@ -76,7 +70,7 @@ export class HlsPlaylistTransformer {
         const isPrimary = cdnIndex === 0;
         const { stream, track } = textEntry;
         const cdnEntry = cdnUrls.key(textEntry.id);
-        const cdn = isPrimary ? cdnEntry.m3 : cdnEntry.internal_Gza;
+        const cdn = isPrimary ? cdnEntry.m3 : cdnEntry._enum_Gza;
 
         const variantLines = this.#buildSubtitleVariantPlaylist({
           url: cdn.url,
@@ -107,7 +101,7 @@ export class HlsPlaylistTransformer {
         const isPrimary = cdnIndex === 0;
         const { stream, track, fragmentIndex, IV } = audioEntry;
         const cdnEntry = cdnUrls.key(stream.sh);
-        const cdn = isPrimary ? cdnEntry.m3 : cdnEntry.internal_Gza;
+        const cdn = isPrimary ? cdnEntry.m3 : cdnEntry._enum_Gza;
 
         const variantLines = this.#buildSegmentedVariantPlaylist({
           url: cdn.url,
@@ -141,7 +135,7 @@ export class HlsPlaylistTransformer {
         const isPrimary = cdnIndex === 0;
         const { stream, track, fragmentIndex, IV } = videoEntry;
         const cdnEntry = cdnUrls.key(stream.sh);
-        const cdn = isPrimary ? cdnEntry.m3 : cdnEntry.internal_Gza;
+        const cdn = isPrimary ? cdnEntry.m3 : cdnEntry._enum_Gza;
 
         const variantLines = this.#buildSegmentedVariantPlaylist({
           url: cdn.url,

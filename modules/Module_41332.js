@@ -7,11 +7,6 @@
 // Webpack module 41332
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.ygb = "ManifestPostProcessorSymbol";
-
+export const ygb = "ManifestPostProcessorSymbol";
 
 // Detected exports: ygb

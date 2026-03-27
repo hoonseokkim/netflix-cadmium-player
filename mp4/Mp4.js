@@ -9,17 +9,6 @@
  */
 
 // Dependencies
-// import { __extends, __assign } from 'tslib';              // webpack 22970
-// import { Mp4BoxParser } from './Mp4BoxParser';             // webpack 91562
-// import { TimeUtil } from './TimeUtil';                      // webpack 91176
-// import { EventEmitter } from './EventEmitter';             // webpack 90745
-// import { platform } from './Platform';                      // webpack 66164
-// import { concatenateArrayBuffers } from './BufferUtils';    // webpack 69575
-// import { outputList } from './Mixins';                      // webpack 85254
-// import { assert } from './Assert';                          // webpack 52571
-// import { MediaType, playerPhase } from './Constants';       // webpack 65161
-// import { RequestMetrics } from './RequestMetrics';          // webpack 83527
-// import { BaseMediaRequest } from './BaseMediaRequest';      // webpack 50247
 
 const mp4Console = new platform.Console("MP4", "media|asejs");
 

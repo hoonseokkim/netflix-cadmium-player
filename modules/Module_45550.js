@@ -7,14 +7,8 @@
 // Webpack module 45550
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.gP = void 0;
+
 d = a(15913);
 p = a(52571);
 t = (function() {
@@ -24,7 +18,7 @@ t = (function() {
     }
     c.instance = function() {
         (0,
-        p.assert)(void 0 !== c.mA);
+        p.assert)(undefined !== c.mA);
         return c.mA;
     }
     ;
@@ -51,7 +45,6 @@ t = (function() {
     return c;
 }
 )();
-b.gP = t;
-
+export const gP = t;
 
 // Detected exports: gP

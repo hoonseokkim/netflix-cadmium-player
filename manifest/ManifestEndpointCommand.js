@@ -18,15 +18,6 @@
  */
 
 // ─── Dependencies ──────────────────────────────────────────
-// import { __decorate, __param } from 'tslib';
-// import { FlavorType } from '../modules/Module_72639';          // PRE_FETCH, SUPPLEMENTAL
-// import { CommandCategory } from '../modules/Module_36129';     // ea.MANIFEST
-// import { EndpointNames } from '../modules/Module_19114';       // oj.manifestRef, oj.cGc
-// import { BaseCommand } from '../modules/Module_51658';         // lj
-// import { injectable, inject, optional, multiInject } from '../modules/Module_22674';
-// import { PlatformToken } from '../modules/Module_91581';
-// import { MslPreference } from '../modules/Module_34231';       // PreferNoMsl, PreferMsl
-// import { getMaxBitrateStream } from '../modules/Module_56039'; // JVa
 
 // ─── Endpoint Path Builder ─────────────────────────────────
 

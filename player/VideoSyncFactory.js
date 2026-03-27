@@ -10,15 +10,6 @@
  * @injectable
  */
 
-// import { __decorate, __param } from 'tslib';                    // Module 22970
-// import { injectable, inject } from './DependencyInjection';      // Module 22674
-// import { oq as MediaFactoryToken } from './LogBatcherSymbols';   // Module 45118
-// import { w7 as VideoSyncTrackerFactoryToken } from './Tokens';   // Module 98326
-// import { ConfigToken } from './Config';                          // Module 4203
-// import { PlayerCoreToken } from './PlayerCore';                  // Module 30869
-// import { ClockToken } from './Clock';                            // Module 81918
-// import { z7 as VideoSyncInstance } from './VideoSyncInstance';   // Module 99400
-
 /**
  * Injectable factory for creating VideoSync instances per playback session.
  *

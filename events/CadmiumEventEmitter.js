@@ -8,9 +8,6 @@
  * @original Module_70402
  */
 
-// import { EventEmitter as BaseEventEmitter } from '...'; // Module 90745
-// import { Deferred } from '...';                          // Module 91176
-
 /**
  * A Deferred that resolves when a specific event fires on an emitter.
  * Automatically unsubscribes from the event upon resolution.

@@ -6,14 +6,9 @@
 // function(t, b, a) 
 {
                         var d;
-                        Object.defineProperties(b, {
-                            __esModule: {
-                                value: !0
-                            }
-                        });
-                        b.vdc = b.Vga = void 0;
+
                         d = a(21875)["default"];
-                        b.Vga = {
+                        export const Vga = {
                             first: function() {
                                 return a(58223)["default"];
                             },
@@ -57,5 +52,5 @@
                                 return d;
                             }
                         };
-                        b.vdc = ["selectaudio", "selectaudioadaptive"];
+                        export const vdc = ["selectaudio", "selectaudioadaptive"];
                     }

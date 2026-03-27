@@ -7,14 +7,6 @@
 // Webpack module 33951
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.Zkb = void 0;
-b.Zkb = new Set(("response-time-average throughput-trend throughput-coefficient-of-variation throughput-switches low-throughput throughput-bucket-percentiles response-time-bucket-percentiles").split(" "));
-
+export const Zkb = new Set(("response-time-average throughput-trend throughput-coefficient-of-variation throughput-switches low-throughput throughput-bucket-percentiles response-time-bucket-percentiles").split(" "));
 
 // Detected exports: Zkb

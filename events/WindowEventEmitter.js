@@ -10,10 +10,6 @@
  * @original Module_37509
  */
 
-// import { EventEmitter } from './EventEmitter';
-// import { scheduleAsync } from '../utils/Scheduler';
-// import { document as doc } from '../utils/PlatformGlobals';
-
 /**
  * Window event type identifiers.
  * @enum {number}

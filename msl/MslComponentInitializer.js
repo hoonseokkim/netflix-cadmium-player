@@ -337,8 +337,8 @@ export function registerMslComponent() {
 
             const stackTrace = getStackTrace(cause.errorMessage);
             const externalCode = parseInteger(cause.$ca) || parseInteger(cause.error?..$ca);
-            const internalData = cause.internal_Zaa !== undefined
-                ? parseMslInternalError(cause.internal_Zaa)
+            const internalData = cause._enum_Zaa !== undefined
+                ? parseMslInternalError(cause._enum_Zaa)
                 : undefined;
 
             if (stackTrace) result.configFlag = stackTrace;

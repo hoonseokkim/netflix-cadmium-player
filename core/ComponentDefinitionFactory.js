@@ -9,9 +9,6 @@
  */
 
 // Dependencies
-// import { context } from './modules/Module_39090';                   // global context
-// import { dataQuery as createDataQuery } from './modules/Module_27851';  // data query builder
-// import { instantiateComponent as instantiateComponent } from './modules/Module_3359';  // component instantiator
 
 /**
  * Creates a component definition descriptor.

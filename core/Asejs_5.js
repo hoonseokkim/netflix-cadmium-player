@@ -10,9 +10,6 @@
  */
 
 // Dependencies
-// import { platform } from './modules/Platform';
-// import { viewableId } from './modules/ViewableId';
-// import { TimeUtil, assert } from './modules/TimeUtil';
 
 /**
  * Stub viewable for inter-break padding segments.

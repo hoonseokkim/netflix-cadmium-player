@@ -92,10 +92,10 @@ export class VideoCodecMap {
         map[VideoProfile.d6]            = CodecStrings.$Da;
         map[VideoProfile.f6]            = CodecStrings.aEa;
         map[VideoProfile.h6]            = CodecStrings.bEa;
-        map[VideoProfile.internal_Pja]  = CodecStrings.ZDa;
-        map[VideoProfile.internal_Qja]  = CodecStrings.$Da;
-        map[VideoProfile.internal_Rja]  = CodecStrings.aEa;
-        map[VideoProfile.internal_Sja]  = CodecStrings.bEa;
+        map[VideoProfile.hevc_dv5_main10_L40_dash_cenc_prk_qc]  = CodecStrings.ZDa;
+        map[VideoProfile.hevc_dv5_main10_L41_dash_cenc_prk_qc]  = CodecStrings.$Da;
+        map[VideoProfile.hevc_dv5_main10_L50_dash_cenc_prk_qc]  = CodecStrings.aEa;
+        map[VideoProfile.hevc_dv5_main10_L51_dash_cenc_prk_qc]  = CodecStrings.bEa;
         map[VideoProfile.Z5]            = CodecStrings.XDa;
         map[VideoProfile.b6]            = CodecStrings.YDa;
         map[VideoProfile.c6]            = CodecStrings.ZDa;

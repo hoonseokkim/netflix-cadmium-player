@@ -19,10 +19,6 @@
  * @module ProbeManager
  */
 
-// import { platform }     from '../core/AsejsEngine.js';
-// import { assert }       from '../ads/AdPoliciesManager.js';
-// import { r$a as ProbeRequest } from '../modules/Module_72681.js';
-
 /**
  * Computes the next probe retry delay using exponential back-off with
  * optional jitter.

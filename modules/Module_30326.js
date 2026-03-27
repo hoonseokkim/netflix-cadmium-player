@@ -7,12 +7,8 @@
 // Webpack module 30326
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.kPa = function(p) {
+export function kPa(p) {
     var c, g, f, e;
     c = p.Ys;
     g = p.loadTime;
@@ -31,9 +27,9 @@ b.kPa = function(p) {
         else {
             l = k.type;
             if ("count" === l)
-                (void 0 === e[h] && (e[h] = 0),
+                (undefined === e[h] && (e[h] = 0),
                 ++e[h]);
-            else if (void 0 !== k.value) {
+            else if (undefined !== k.value) {
                 if ("array" === l) {
                     l = e[h];
                     m = k.adjust;
@@ -52,6 +48,5 @@ b.kPa = function(p) {
 }
 ;
 d = a(32687);
-
 
 // Detected exports: kPa

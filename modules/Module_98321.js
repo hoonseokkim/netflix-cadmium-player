@@ -7,14 +7,8 @@
 // Webpack module 98321
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f, e, h, k, l, m, n, q, r, u, v, w, x, y;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.Zgb = void 0;
+
 d = a(91176);
 p = a(66164);
 c = a(65161);
@@ -42,8 +36,8 @@ t = (function() {
     }
     A.prototype.append = function(z, B) {
         var C, D, E, G, F, H;
-        void 0 === this.track ? this.Mta(z.stream) : this.track !== z.stream.track && ((0,
-        g.assert)(void 0 !== this.Vg),
+        export const undefined = == this.track ? this.Mta(z.stream) : this.track !== z.stream.track && ((0,
+        g.assert)(undefined !== this.Vg),
         (0,
         g.assert)(this.mediaType !== c.l.V || this.track.Ha),
         (0,
@@ -53,33 +47,33 @@ t = (function() {
             return J.yt(z.stream);
         }));
         (0,
-        g.assert)(void 0 !== this.Vg);
+        g.assert)(undefined !== this.Vg);
         E = this.Vg.reduce(function(J, M) {
             return M.append(J, B);
         }, {
             Na: z,
             offset: z.Eya || d.I.ia,
             qf: this.config.U3,
-            Ih: !1
+            Ih: false
         });
         G = E.Na;
         F = E.offset;
         H = E.Ih;
         E = E.Sh;
-        E = void 0 === E ? [] : E;
+        E = undefined === E ? [] : E;
         G.pa && ((0,
         g.assert)(z.pa, "Fragments must be marked for edit at request time"),
         z.Nh(G.pa));
-        if (H || null === (C = this.P_a) || void 0 === C || !C.dgc(z))
+        if (H || null === (C = this.P_a) || undefined === C || !C.dgc(z))
             return {
                 offset: F,
                 Ih: H
             };
-        C = this.P_a.pa(z, !(null === (D = z.K) || void 0 === D || !D.Sq));
+        C = this.P_a.pa(z, !(null === (D = z.K) || undefined === D || !D.Sq));
         D = C.success;
         G = C.Sh;
         C = C.kv;
-        Array.prototype.push.apply(E, void 0 === G ? [] : G);
+        Array.prototype.push.apply(E, undefined === G ? [] : G);
         return {
             offset: F,
             Ih: !D,
@@ -89,7 +83,7 @@ t = (function() {
     }
     ;
     A.prototype.reset = function() {
-        this.Vg = this.track = void 0;
+        this.Vg = this.track = undefined;
     }
     ;
     A.prototype.Mta = function(z) {
@@ -101,16 +95,16 @@ t = (function() {
         this.config.U3 && this.Vg.push(new h.mlb(this.config,this.console)),
         this.Vg.push(new w.bmb(this.console)),
         z.ci && z.Ge && this.pYa(z.L.J) && this.Vg.push(new m.Heb(this.config)),
-        this.config.vea || (this.console.log(("MediaSplicer: NegativePtsGuard:  ").concat(null === (B = z.Ge) || void 0 === B ? void 0 : B.ca())),
+        this.config.vea || (this.console.log(("MediaSplicer: NegativePtsGuard:  ").concat(null === (B = z.Ge) || undefined === B ? undefined : B.ca())),
         this.Vg.push(new k.yhb(this.config,this.console))),
         this.nGb() ? (this.config.Xn || this.Vg.push(new n.G$a(this.config,this.Fg,this.console)),
         this.config.U3 && this.Vg.push(new u.TCa(this.console)),
-        !1 !== (null === (C = p.platform.MediaSource.Fg) || void 0 === C ? void 0 : C.Ukd) && this.Vg.push(new e.Nhb(this.console)),
+        false !== (null === (C = p.platform.MediaSource.Fg) || undefined === C ? undefined : C.Ukd) && this.Vg.push(new e.Nhb(this.console)),
         this.config.U1c && ((0,
         g.assert)(z.Ha),
         this.Vg.push(new l.Umb(z.Ha,this.console)))) : (this.Vg.push(new q.I$a(this.console)),
         this.config.U3 && this.Vg.push(new u.TCa(this.console))));
-        if (z.L.Ab || (null === (D = z.L.jk) || void 0 === D ? 0 : D.Ab))
+        if (z.L.Ab || (null === (D = z.L.jk) || undefined === D ? 0 : D.Ab))
             (this.Vg.push(new y.Ifb()),
             this.nGb() && this.Vg.push(new x.Ieb(this.console)));
         this.Vg.forEach(function(E) {
@@ -129,7 +123,6 @@ t = (function() {
     return A;
 }
 )();
-b.Zgb = t;
-
+export const Zgb = t;
 
 // Detected exports: Zgb

@@ -25,16 +25,6 @@
  */
 
 // Dependencies (commented out — resolved by the module bundler):
-// import { __extends, __read, __awaiter, __generator } from './modules/Module_22970';  // tslib helpers
-// import { TimeUtil, findLast } from './modules/Module_91176';                          // time utilities
-// import { platform } from './modules/Module_66164';                                    // platform services
-// import { laser, fVb as formatContentType } from './modules/Module_97685';             // telemetry / logging
-// import { BranchCallbackHandler } from './modules/Module_81392';                       // base class (bP)
-// import { MediaType, PlaybackState, timeSlice as isBufferingState } from './modules/Module_65161'; // media enums
-// import { assert } from './modules/Module_52571';                                      // assertion utility
-// import { PipelineCollection } from './modules/Module_32412';                          // vX — typed pipeline list
-// import { eQb as computeTruncationPoints } from './modules/Module_99548';              // truncation helper
-// import { mathTanh as createScopedConsole } from './modules/Module_69575';             // scoped console logger
 
 export default function NormalizedBranchModule(t, b, a) {
   var tslib, TimeUtil, findLastUtil, platformModule, telemetry,
@@ -54,13 +44,7 @@ export default function NormalizedBranchModule(t, b, a) {
       (a.mediaType === mediaEnums.MediaType.U ? 0 : 1) -
       (b.mediaType === mediaEnums.MediaType.U ? 0 : 1)
     );
-  }
-
-  Object.defineProperties(b, {
-    __esModule: { value: true },
-  });
-
-  b.ZHa = b.h5b = undefined;
+  }b.ZHa = b.h5b = undefined;
 
   // ── Module imports ──────────────────────────────────────────────────
   tslib = a(22970);

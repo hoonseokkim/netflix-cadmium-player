@@ -7,13 +7,7 @@
 // Webpack module 56226
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(93334);
 t = (function(c) {
@@ -36,15 +30,15 @@ t = (function(c) {
         this.eub = this.N.ib(2);
         this.N.ib(3);
         (this.mYa = this.N.ib(1)) ? this.pFb = this.N.ib(4) : this.N.ib(4);
-        if (null === f || void 0 === f ? 0 : f.yh) {
-            for (var k = void 0, l = this.parent; l; ) {
-                k = null === (h = null === (e = l.wn("tkhd")) || void 0 === e ? void 0 : e.Uc) || void 0 === h ? void 0 : h.trackId;
-                if (void 0 !== k)
+        if (null === f || undefined === f ? 0 : f.yh) {
+            for (var k = undefined, l = this.parent; l; ) {
+                k = null === (h = null === (e = l.wn("tkhd")) || undefined === e ? undefined : e.Uc) || undefined === h ? undefined : h.trackId;
+                if (undefined !== k)
                     break;
                 l = l.parent;
             }
             (0,
-            p.assert)(void 0 !== k, "trackId is undefined");
+            p.assert)(undefined !== k, "trackId is undefined");
             f.yh[k].lcd = {
                 VRb: this.VRb,
                 URb: this.URb,
@@ -59,11 +53,11 @@ t = (function(c) {
                 pFb: this.pFb
             };
         }
-        return !0;
+        return true;
     }
     ;
     g.Ae = "av1C";
     return g;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

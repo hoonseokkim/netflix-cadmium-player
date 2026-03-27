@@ -9,11 +9,6 @@
  * @original Module_61494
  */
 
-// import { ea as ErrorCodes, EventTypeEnum } from '../core/ErrorCodes';
-// import { we as NfError } from '../core/NfError';
-// import { PlayerEvents, streamState } from '../player/PlayerEvents';
-// import { ri as seconds } from '../timing/TimeUnits';
-
 /**
  * Error subclass for branching segment management failures.
  * @private
@@ -117,7 +112,7 @@ export class BranchingSegmentManager {
         const segmentId = event.position.segmentId;
 
         if (this.segments.size === 0) {
-            Object.entries(this.playerState.internal_Jba()).forEach(([id, data]) => {
+            Object.entries(this.playerState._fn_Jba()).forEach(([id, data]) => {
                 this.segments.set(id, new PlaygraphSegment(id, data));
             });
         }
@@ -206,7 +201,7 @@ export class BranchingSegmentManager {
      */
     isNextSegment(segmentId) {
         if (!this.currentSegment) return false;
-        return this.playerState.internal_Jba()[this.currentSegment.id]?.next?.[segmentId] !== undefined;
+        return this.playerState._fn_Jba()[this.currentSegment.id]?.next?.[segmentId] !== undefined;
     }
 
     /**
@@ -422,7 +417,7 @@ export class BranchingSegmentManager {
         this.queuedSegment = {
             id: segmentId,
             promise: new Promise((resolve, reject) => {
-                this.delayedSeekHandle = this.momentObserver.internal_Uvb(
+                this.delayedSeekHandle = this.momentObserver._fn_Uvb(
                     { $Cb: () => ellaSendRateMultiplier(100) },
                     () => this.player.null() || 0
                 );

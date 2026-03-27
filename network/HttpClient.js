@@ -10,19 +10,6 @@
  * @original Module_61726
  */
 
-// import { jl as EventEmitter } from '../events/EventEmitter';
-// import { config } from '../core/PlayerConfig';
-// import { SUCCESS } from '../core/StatusCodes';
-// import { BGb as isValidUrl } from '../utils/url';
-// import { jy as getTimestamp } from '../timing/Clock';
-// import { ea as ErrorCodes, EventTypeEnum, eG as formatError } from '../core/ErrorCodes';
-// import { getCategoryLog, fetchOperation } from '../core/ServiceLocator';
-// import { assert, jaa as assertUrl } from '../assert';
-// import { random as random } from '../utils/random';
-// import { scheduleAsync } from '../utils/scheduler';
-// import { arrayCheck as isString } from '../utils/typeCheck';
-// import { vkb as isOnline } from '../core/StatusCodes';
-
 /** Event: download started */
 export const EVENT_DOWNLOAD_STARTED = 1;
 

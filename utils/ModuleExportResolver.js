@@ -10,11 +10,6 @@
  * @original Module_29919
  */
 
-// import factoryFn from './Module_4090';   // The module factory function
-// import args from './Module_49638';       // Arguments to pass to factory
-// import context from './Module_68418';    // `this` context for the call
-// import cachedValue from './Module_36476'; // Pre-computed cached value (may be falsy)
-
 /**
  * Resolves a module export, preferring a cached value over invoking the factory.
  *

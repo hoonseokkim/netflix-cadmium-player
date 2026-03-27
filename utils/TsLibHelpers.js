@@ -219,7 +219,7 @@ export function __runInitializers(thisArg, initializers, value) {
     var useValue = arguments.length > 2;
     for (var i = 0; i < initializers.length; i++)
         value = useValue ? initializers[i].call(thisArg, value) : initializers[i].call(thisArg);
-    return useValue ? value : void 0;
+    return useValue ? value : undefined;
 }
 
 /**
@@ -346,7 +346,7 @@ export function __generator(thisArg, body) {
             }
         if (op[0] & 5)
             throw op[1];
-        return { value: op[0] ? op[1] : void 0, done: true };
+        return { value: op[0] ? op[1] : undefined, done: true };
     }
 
     f = {
@@ -388,7 +388,7 @@ export function __values(obj) {
     if (obj && typeof obj.length === "number")
         return {
             next: function () {
-                if (obj && i >= obj.length) obj = void 0;
+                if (obj && i >= obj.length) obj = undefined;
                 return { value: obj && obj[i++], done: !obj };
             }
         };

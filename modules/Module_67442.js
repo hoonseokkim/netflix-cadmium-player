@@ -7,14 +7,8 @@
 // Webpack module 67442
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.iFa = void 0;
+
 d = a(50214);
 p = a(85068);
 t = (function() {
@@ -22,7 +16,7 @@ t = (function() {
         var e;
         this.console = g;
         this.Ig = f.Ig;
-        this.sPa = null !== (e = f.sPa) && void 0 !== e ? e : !1;
+        this.sPa = null !== (e = f.sPa) && undefined !== e ? e : false;
         this.clear();
     }
     Object.defineProperties(c.prototype, {
@@ -30,8 +24,8 @@ t = (function() {
             get: function() {
                 return this.rg.length;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(c.prototype, {
@@ -39,8 +33,8 @@ t = (function() {
             get: function() {
                 return this.x9.size;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     c.prototype.Ytb = function() {
@@ -107,19 +101,19 @@ t = (function() {
         });
         e && this.rg.remove(e);
         this.x9.delete(g);
-        null === (f = g.q1a) || void 0 === f ? void 0 : f.call(g);
+        null === (f = g.q1a) || undefined === f ? undefined : f.call(g);
         this.Ytb();
     }
     ;
     c.prototype.clear = function() {
         var g, f;
-        null === (g = this.x9) || void 0 === g ? void 0 : g.forEach(function(e) {
+        null === (g = this.x9) || undefined === g ? undefined : g.forEach(function(e) {
             var h;
-            return null === (h = e.q1a) || void 0 === h ? void 0 : h.call(e);
+            return null === (h = e.q1a) || undefined === h ? undefined : h.call(e);
         });
-        null === (f = this.rg) || void 0 === f ? void 0 : f.map(function(e) {
+        null === (f = this.rg) || undefined === f ? undefined : f.map(function(e) {
             var h, k;
-            return null === (k = (h = e.item).q1a) || void 0 === k ? void 0 : k.call(h);
+            return null === (k = (h = e.item).q1a) || undefined === k ? undefined : k.call(h);
         });
         this.rg = new d.LP([],function(e, h) {
             return e.item.priority - h.item.priority;
@@ -131,7 +125,6 @@ t = (function() {
     return c;
 }
 )();
-b.iFa = t;
-
+export const iFa = t;
 
 // Detected exports: iFa

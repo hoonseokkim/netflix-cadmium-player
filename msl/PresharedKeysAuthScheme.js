@@ -46,7 +46,7 @@ class PresharedKeysAuthScheme extends BaseAuthScheme {
             throw new MslEncodingException("Incorrect authentication data type " + authData + ".");
         }
 
-        const keyData = authData.internal_Lga;
+        const keyData = authData._enum_Lga;
 
         if (!authData.NT || !keyData) {
             throw new MslEntityAuthException(MslEntityAuthErrorCode.r3b).iteratorValue(authData);

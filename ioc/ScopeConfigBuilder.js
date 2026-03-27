@@ -15,11 +15,6 @@
  *   Module 75714 - EagerScopeBinding (eP)
  */
 
-// import { ErrorMessages } from '../core/ErrorMessages';
-// import { EventTypeName } from '../ioc/EventTypeName';
-// import { ScopeBinding } from '../ioc/ScopeBinding';
-// import { EagerScopeBinding } from '../ioc/EagerScopeBinding';
-
 /**
  * Fluent builder for configuring IoC scope bindings.
  *
@@ -81,7 +76,7 @@ export class ScopeConfigBuilder {
      * @returns {ScopeBinding} The created scope binding
      */
     toDynamicValue(provider) {
-        this.scopeConfig.type = 'DynamicValue'; // EventTypeName.internal_Ybb
+        this.scopeConfig.type = 'DynamicValue'; // EventTypeName.DynamicValue
         this.scopeConfig.cache = null;
         this.scopeConfig.w_ = provider;
         this.scopeConfig.$q = null;

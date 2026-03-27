@@ -24,19 +24,6 @@
  */
 
 // ── Dependencies (webpack IDs for reference) ──
-// import { __extends, __spreadArray, __read } from 'tslib';            // 22970
-// import { EventEmitter, ClockWatcher } from './EventEmitter';         // 90745
-// import { platform } from './Platform';                               // 66164
-// import { assert } from './Assert';                                   // 43529
-// import { createComparator } from './Comparator';                     // 70248
-// import { TimeUtil } from './TimeUtil';                               // 44847
-// import { PriorityQueue } from './PriorityQueue';                     // 50214
-// import { DisposableGroup } from './DisposableGroup';                 // 73550
-// import { debugEnabled } from './Debug';                              // 32910
-// import { scheduleTimer, cancelTimer } from './Settimeout';           // 95130
-// import { completionState } from './CompletionState';                 // 47061
-// import { WakeUpTimeType } from './WakeUpTimeType';                   // 36992
-// import { SchedulerStats } from './SchedulerStats';                   // 56161
 
 // ────────────────────────────────────────────────────────────────────────────
 // Enums

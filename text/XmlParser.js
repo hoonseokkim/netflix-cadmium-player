@@ -8,13 +8,7 @@
  * @source Module_78857
  */
 export default function XmlParser(module, exports, require) {
-    var LogModule, StringUtils;
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-
-    /**
+    var LogModule, StringUtils;/**
      * Parses an XML string into a DOM Document.
      * Throws an error if the string is not valid XML or not a string.
      *

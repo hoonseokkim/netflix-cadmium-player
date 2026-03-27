@@ -7,13 +7,7 @@
 // Webpack module 84379
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(75589);
 c = a(49420);
@@ -28,7 +22,7 @@ a = (function(e) {
     h.prototype.parse = function() {
         this.oi();
         this.ZR = this.N.dc();
-        return !0;
+        return true;
     }
     ;
     h.prototype.OH = function(k) {
@@ -39,18 +33,18 @@ a = (function(e) {
         l instanceof g.default ? this.Ha = new c.I(l.mS,l.samplerate) : l instanceof f.default && (l = l.Se[p.QHa]) && l.length && (l = l[0].Uc,
         1E3 !== l.pw && 1001 !== l.pw || 0 !== l.Zy % 1E3 ? this.N.console.warn("Unexpected frame rate in NetflixFrameRateBox: " + l.Zy + "/" + l.pw) : this.Ha = new c.I(l.pw,l.Zy)),
         k && this.Ha && (k.Ha = this.Ha)));
-        return !0;
+        return true;
     }
     ;
     h.prototype.XPb = function(k) {
-        void 0 !== this.Se[k] && 0 !== this.Se[k].length && (this.Ec.fo(this.ZR - 1, this.byteOffset + 12),
+        undefined !== this.Se[k] && 0 !== this.Se[k].length && (this.Ec.fo(this.ZR - 1, this.byteOffset + 12),
         k = this.Se[k][0],
         this.xr(k.byteLength, k.byteOffset));
     }
     ;
     h.Ae = "stsd";
-    h.Fd = !0;
+    h.Fd = true;
     return h;
 }
 )(t.Kf);
-b["default"] = a;
+export default a;

@@ -14,12 +14,7 @@
 export default function PropertyAliasMapper(module, exports, require) {
     var tslib, inversify, AliasConfigModule;
 
-    function PropertyAliasMapperClass() {}
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.TEa = void 0;
+    function PropertyAliasMapperClass() {}exports.TEa = undefined;
 
     tslib = require(22970);
     inversify = require(22674);

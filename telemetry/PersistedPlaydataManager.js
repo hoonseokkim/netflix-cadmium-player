@@ -18,18 +18,6 @@
  * @original Module_95480
  */
 
-// import { __decorate, __param } from 'tslib';                   // Module 22970
-// import { injectable, inject } from 'inversify';                 // Module 22674
-// import { ConfigToken } from '../core/AseConfig';                // Module 4203
-// import { ea, EventTypeEnum } from '../core/ErrorCodeEnums';     // Module 36129
-// import { symbolMarker } from '../utils/TypeCheckers';           // Module 42207
-// import { we as CadmiumError } from '../core/CadmiumError';     // Module 31149
-// import { PersistableStore as PersistableStore } from '../player/PersistableStore'; // Module 52657
-// import { PJ as StorageSymbol } from '../player/StorageSymbols'; // Module 17892
-// import { QC as DeviceConfigSymbol } from '../core/DeviceConfig';// Module 33554
-// import { qla as PlaydataCodec } from '../telemetry/PlaydataCodec'; // Module 23048
-// import { ValidatorSymbol as ValidatorSymbol } from '../telemetry/ValidatorSymbol'; // Module 36258
-
 /**
  * Codec for individual playdata entries.
  * @private

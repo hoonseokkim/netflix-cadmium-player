@@ -10,13 +10,6 @@
  * @original Module_97444
  */
 
-// import { ReportEventTypes } from '../telemetry/ReportEventTypes.js'; // webpack 18169
-// import { formatInteger, formatSeconds, assignProperties } from '../utils/ObjectUtils.js'; // webpack 3887
-// import { getPageLoadTime, findMaxValue } from '../utils/DomUtils.js'; // webpack 52569
-// import { errorCodes } from '../core/ErrorCodes.js'; // webpack 36129
-// import { PlayerEvents, PresentingState } from '../player/PlayerEvents.js'; // webpack 85001
-// import { MILLISECONDS } from '../utils/ConfigUtils.js'; // webpack 5021
-
 /**
  * @enum {number} Bitflags for logblob field inclusion
  */

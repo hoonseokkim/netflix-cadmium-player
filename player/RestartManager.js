@@ -10,9 +10,6 @@
  */
 
 // Dependencies
-// import { MediaType } from './modules/Module_45247';
-// import { ea as ErrorCodes } from './modules/Module_36129';
-// import { wb as DrmUtils } from './modules/Module_17612';
 
 /**
  * Manages player restarts for non-seamless media transitions.
@@ -82,7 +79,7 @@ export class RestartManager {
     return this.playerState
       .handleStreamRestart()
       .then(() => this.streamingSession.fVc())
-      .then(() => this.streamingSession.internal_Faa(this.playerState.R))
+      .then(() => this.streamingSession._fn_Faa(this.playerState.R))
       .catch((error) => {
         this.log.error("Restart player for non-seamless transition failed.", {
           error,

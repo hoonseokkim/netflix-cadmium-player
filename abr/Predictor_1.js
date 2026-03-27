@@ -13,9 +13,6 @@
  */
 
 // Dependencies
-// import { platform }                     from '../core/AsejsEngine.js';
-// import { TJ as ThroughputPredictor }    from './StddevPredictor.js';
-// import { interpolateQualityMetric }     from './modules/Module_28847.js';
 
 /**
  * Margin-based bandwidth predictor.

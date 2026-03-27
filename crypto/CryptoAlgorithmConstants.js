@@ -36,7 +36,7 @@ export const algorithms = {
     rsaAlgorithm: { name: "RSA-OAEP", hash: { name: "SHA-1" } },
 
     /** RSAES-PKCS1-v1_5 (legacy encryption) */
-    internal_Kla: { name: "RSAES-PKCS1-v1_5" },
+    _Kla: { name: "RSAES-PKCS1-v1_5" },
 
     /** RSASSA-PKCS1-v1_5 with SHA-1 (signing) */
     F5b: { name: "RSASSA-PKCS1-v1_5", hash: { name: "SHA-1" } },
@@ -80,7 +80,7 @@ export function isHmacAlgorithm(algorithm) {
 export function isRsaAlgorithm(algorithm) {
     switch (algorithm.name) {
         case algorithms.rsaAlgorithm.name:
-        case algorithms.internal_Kla.name:
+        case algorithms._Kla.name:
         case algorithms.F5b.name:
         case algorithms.G5b.name:
         case algorithms.X7.name:

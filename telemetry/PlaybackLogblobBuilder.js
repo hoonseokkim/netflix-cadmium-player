@@ -15,16 +15,6 @@
  * @original Module_74098
  */
 
-// import { EventEmitter } from './EventEmitter';
-// import { LogblobEventType, LogblobFields } from './LogblobBuilderSymbols';
-// import { formatInteger, formatSeconds, assignProperties, forEachProperty } from './FormatUtils';
-// import { findMaxValue, getPerformanceData, getEndianness } from './PlatformUtils';
-// import { MILLISECONDS, ellaSendRateMultiplier } from './TimeUnits';
-// import { MediaType } from './MediaType';
-// import { PlayerState, PresentingState } from './PlayerState';
-// import { isDefined } from './TypeChecks';
-// import { LogblobFlags } from './LogblobFlags';
-
 /**
  * Builds and dispatches logblob events for all playback lifecycle phases.
  * Aggregates player state, streaming metrics, buffer levels, DRM info,

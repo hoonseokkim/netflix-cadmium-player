@@ -7,14 +7,8 @@
 // Webpack module 16290
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.lLa = void 0;
+
 d = a(79048);
 p = a(91176);
 c = a(66164);
@@ -26,9 +20,9 @@ t = (function() {
     }
     f.prototype.vAa = function(e, h, k, l, m, n, q) {
         var r, u;
-        void 0 === m && (m = !1);
-        void 0 === n && (n = void 0);
-        void 0 === q && (q = !1);
+        export const undefined = == m && (m = false);
+        export const undefined = == n && (n = undefined);
+        export const undefined = == q && (q = false);
         r = e.K;
         u = this.Ivc(r);
         this.transition = {
@@ -54,10 +48,10 @@ t = (function() {
         Lqa: {
             get: function() {
                 var e;
-                return null === (e = this.transition) || void 0 === e ? void 0 : e.Lqa;
+                return null === (e = this.transition) || undefined === e ? undefined : e.Lqa;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     f.prototype.XVa = function(e) {
@@ -74,7 +68,7 @@ t = (function() {
             D = v.fe;
             E = v.K1c;
             v = v.ESc;
-            this.transition = void 0;
+            this.transition = undefined;
             G = this.aVa(e).LPa;
             F = this.evc(z.K.id, e, w);
             G = this.KIb(F.weight, G);
@@ -113,10 +107,10 @@ t = (function() {
                 nextExitPositionAtRequest: x
             };
             v && (x.reasonCodes = v);
-            y = null !== (k = null === (h = this.Z.Z.ba[e]) || void 0 === h ? void 0 : h.type) && void 0 !== k ? k : d.ed.content;
-            h = null !== (m = null === (l = this.Z.Z.ba[z.K.id]) || void 0 === l ? void 0 : l.type) && void 0 !== m ? m : d.ed.content;
-            e = null !== (q = null === (n = this.Z.Z.ba[e]) || void 0 === n ? void 0 : n.J) && void 0 !== q ? q : void 0;
-            n = null !== (u = null === (r = this.Z.Z.ba[z.K.id]) || void 0 === r ? void 0 : r.J) && void 0 !== u ? u : void 0;
+            y = null !== (k = null === (h = this.Z.Z.ba[e]) || undefined === h ? undefined : h.type) && undefined !== k ? k : d.ed.content;
+            h = null !== (m = null === (l = this.Z.Z.ba[z.K.id]) || undefined === l ? undefined : l.type) && undefined !== m ? m : d.ed.content;
+            e = null !== (q = null === (n = this.Z.Z.ba[e]) || undefined === n ? undefined : n.J) && undefined !== q ? q : undefined;
+            n = null !== (u = null === (r = this.Z.Z.ba[z.K.id]) || undefined === r ? undefined : r.J) && undefined !== u ? u : undefined;
             e && n && (e !== n || -1 < [y, h].indexOf("adBreak") || -1 < [y, h].indexOf("ad")) && (x.auxMidType = y,
             x.auxSrcmidType = h,
             x.auxMid = e,
@@ -137,7 +131,7 @@ t = (function() {
             p.assert)(this.Z);
             if (!q)
                 return n;
-            n.weight = null === (m = null === (l = this.Z.Z.ba[e].next) || void 0 === l ? void 0 : l[h]) || void 0 === m ? void 0 : m.weight;
+            n.weight = null === (m = null === (l = this.Z.Z.ba[e].next) || undefined === l ? undefined : l[h]) || undefined === m ? undefined : m.weight;
         }
         return n;
     }
@@ -151,7 +145,7 @@ t = (function() {
     f.prototype.Wxc = function(e, h) {
         var k, l, m;
         l = e.nb.add(h);
-        null === (k = e.kz) || void 0 === k ? void 0 : k.some(function(n) {
+        null === (k = e.kz) || undefined === k ? undefined : k.some(function(n) {
             l.lessThan(n.qa) && (m = n.qa.G);
         });
         return m;
@@ -191,11 +185,11 @@ t = (function() {
     f.prototype.aVa = function(e) {
         var h, k;
         e = this.Z.q0(e);
-        h = 0 < e.length ? e[0] : void 0;
-        e = null === h || void 0 === h ? void 0 : h.sS();
+        h = 0 < e.length ? e[0] : undefined;
+        e = null === h || undefined === h ? undefined : h.sS();
         if (!h || !e)
             return {
-                eEb: !1,
+                eEb: false,
                 LPa: {
                     jW: 0,
                     MQ: 0,
@@ -224,7 +218,6 @@ t = (function() {
     return f;
 }
 )();
-b.lLa = t;
-
+export const lLa = t;
 
 // Detected exports: lLa

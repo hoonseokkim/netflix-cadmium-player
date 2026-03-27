@@ -7,14 +7,8 @@
 // Webpack module 56841
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f, e, h;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.l7 = void 0;
+
 d = a(22970);
 p = a(26388);
 c = a(33923);
@@ -25,7 +19,7 @@ h = a(7559);
 t = (function() {
     function k() {}
     k.prototype.Ivb = function(l, m, n, q, r, u, v, w) {
-        void 0 === v && (v = []);
+        export const undefined = == v && (v = []);
         m = this.Ewc(l, m, n, r, u, q, w);
         switch (l.lFc) {
         case "videofirst":
@@ -47,7 +41,7 @@ t = (function() {
             x = A.bitrate - x.bitrate + (z.bitrate - y.bitrate);
             return 0 !== x ? (C - B) / x : 0;
         }
-        n = 0 < n.length ? n[0] : void 0;
+        n = 0 < n.length ? n[0] : undefined;
         u = [];
         v = 0;
         w = 0;
@@ -97,7 +91,7 @@ t = (function() {
     k.prototype.zlc = function(l, m, n) {
         var q, r, u;
         r = [];
-        n = 0 < n.length ? n[0] : void 0;
+        n = 0 < n.length ? n[0] : undefined;
         (0,
         f.assert)(0 < l.length && 0 < m.length, "We should have at least one video stream and one audio stream");
         if (0 < l.length) {
@@ -138,27 +132,27 @@ t = (function() {
         var r, u;
         r = m && m.fj(p.l.V);
         if (q === e.Yb.Ul || !r)
-            return !1;
+            return false;
         u = m.fj(p.l.V);
         if (!n.some(function(v) {
             return v === u;
         }))
-            return !1;
+            return false;
         m = u.profile;
-        return l.cq && 0 <= l.cq.indexOf(m) ? !1 : !0;
+        return l.cq && 0 <= l.cq.indexOf(m) ? false : true;
     }
     ;
     k.prototype.Ewc = function(l, m, n, q, r, u, v) {
         if (this.PYc(l, v, q, u))
             q = [v.fj(p.l.V)];
-        else if ((q = new g.j$a(l).Oh(q, void 0, void 0, void 0, u),
+        else if ((q = new g.j$a(l).Oh(q, undefined, undefined, undefined, u),
         v = q[0],
         r = r[0],
         !(0,
         h.PFb)(v.profile, l))) {
             l = 0;
-            v && v.er && v.Db && v.Db.confidence ? (m = m(v.Db, n, u, 0, !1),
-            l = Math.floor(m.lower) || 1) : r && r.er && r.Db && r.Db.confidence && (m = m(r.Db, n, u, 0, !1),
+            v && v.er && v.Db && v.Db.confidence ? (m = m(v.Db, n, u, 0, false),
+            l = Math.floor(m.lower) || 1) : r && r.er && r.Db && r.Db.confidence && (m = m(r.Db, n, u, 0, false),
             l = Math.floor(m.lower) || 1);
             m = q.length - 1;
             for (m; 0 < m && !(l && q[m].bitrate < .15 * l); --m)
@@ -171,7 +165,6 @@ t = (function() {
     return k;
 }
 )();
-b.l7 = t;
-
+export const l7 = t;
 
 // Detected exports: l7

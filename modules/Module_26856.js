@@ -7,13 +7,7 @@
 // Webpack module 26856
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -28,11 +22,11 @@ t = (function(p) {
         this.N.ib(1);
         this.N.ib(5);
         this.N.ib(5);
-        return !0;
+        return true;
     }
     ;
     c.Ae = "dac3";
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

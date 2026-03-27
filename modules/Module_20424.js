@@ -7,15 +7,11 @@
 // Webpack module 20424
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g;
 function d(f) {
     this.config = f;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.AGa = void 0;
+
 t = a(22970);
 p = a(4203);
 c = a(22674);
@@ -60,7 +56,7 @@ d.prototype.process = function(f) {
                 q = Fa(n);
                 n = q.next().value;
                 q = q.next().value;
-                q.urls && 0 < (null === (r = q.urls) || void 0 === r ? void 0 : r.length) && (q.urls = [q.urls[0]],
+                q.urls && 0 < (null === (r = q.urls) || undefined === r ? undefined : r.length) && (q.urls = [q.urls[0]],
                 r = Object.assign(Object.assign({}, l), {
                     downloadableId: m.downloadableIds[n]
                 }),
@@ -83,10 +79,9 @@ d.prototype.UWa = function(f, e) {
 }
 ;
 a = d;
-b.AGa = a;
-b.AGa = a = t.__decorate([(0,
+export const AGa = a;
+export const AGa = a = t.__decorate([(0,
 c.aa)(), t.__param(0, (0,
 c.v)(p.Pc))], a);
-
 
 // Detected exports: AGa

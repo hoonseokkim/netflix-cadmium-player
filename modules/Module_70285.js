@@ -7,11 +7,6 @@
 // Webpack module 70285
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Lib = "PboBindDeviceCommandSymbol";
-
+export const Lib = "PboBindDeviceCommandSymbol";
 
 // Detected exports: Lib

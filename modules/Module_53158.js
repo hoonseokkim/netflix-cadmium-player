@@ -7,13 +7,7 @@
 // Webpack module 53158
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(93334);
 t = (function(c) {
@@ -36,26 +30,26 @@ t = (function(c) {
                 Afd: n
             };
         }
-        if (null === f || void 0 === f ? 0 : f.yh) {
-            k = void 0;
+        if (null === f || undefined === f ? 0 : f.yh) {
+
             for (l = this.parent; l; ) {
-                k = null === (h = null === (e = l.wn("tkhd")) || void 0 === e ? void 0 : e.Uc) || void 0 === h ? void 0 : h.trackId;
-                if (void 0 !== k)
+                k = null === (h = null === (e = l.wn("tkhd")) || undefined === e ? undefined : e.Uc) || undefined === h ? undefined : h.trackId;
+                if (undefined !== k)
                     break;
                 l = l.parent;
             }
             (0,
-            p.assert)(void 0 !== k, "Failed to find trackId in track hierarchy");
+            p.assert)(undefined !== k, "Failed to find trackId in track hierarchy");
             f = f.yh[k];
             if (!f)
-                return !0;
+                return true;
             f.Oub = this.Oub;
         }
-        return !0;
+        return true;
     }
     ;
     g.Ae = "colr";
     return g;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

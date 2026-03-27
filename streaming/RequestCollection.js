@@ -31,14 +31,6 @@
  */
 
 // -- Dependencies (resolved by the webpack bundler at runtime) --
-// import { __extends, __read, __spreadArray } from '../ads/AdBreakMismatchLogger.js';  // tslib
-// import { assert }                           from '../ads/AdPoliciesManager.js';  // assertion
-// import { PartitionedCollection }            from './MediaRequestQueue.js';  // base class (PartitionedCollection)
-// import { outputList }                       from '../network/AseMediaRequest.js';  // mixin applicator
-// import { RequestList (mja) }                from './MediaRequestQueue.js';  // ordered request list
-// import { processingContext }                from './MediaFragment.js';  // processing context mixin
-// import { bP as BranchCallbackHandler }      from '../network/AseMediaRequest.js';  // branch callback mixin
-// import { ContiguousRange (WF) }             from './MediaFragment.js';   // contiguous range tracker
 
 import { __extends, __read, __spreadArray } from '../ads/AdBreakMismatchLogger.js';
 import { assert } from '../ads/AdPoliciesManager.js';
@@ -226,7 +218,7 @@ class RequestCollection extends PartitionedCollection {
    * @type {Object|undefined}
    */
   get last() {
-    return this.internal_Pdc();
+    return this._fn_Pdc();
   }
 
   /**
@@ -321,7 +313,7 @@ class RequestCollection extends PartitionedCollection {
   get segmentEndTime() {
     if (this._completeList.empty) {
       const startTime = this.presentationStartTime;
-      return startTime === null || startTime === void 0 ? void 0 : startTime.playbackSegment;
+      return startTime === null || startTime === undefined ? undefined : startTime.playbackSegment;
     }
     return this._completeList.segmentEndTime.playbackSegment;
   }
@@ -334,7 +326,7 @@ class RequestCollection extends PartitionedCollection {
   get previousSegment() {
     if (this._completeList.empty) {
       const ts = this.timestamp;
-      return ts === null || ts === void 0 ? void 0 : ts.playbackSegment;
+      return ts === null || ts === undefined ? undefined : ts.playbackSegment;
     }
     return this._completeList.previousState.playbackSegment;
   }
@@ -346,8 +338,8 @@ class RequestCollection extends PartitionedCollection {
   get lastActiveOrCompleteSegment() {
     const activeState = this._activeList.previousState;
     const completeState = this._completeList.previousState;
-    return (activeState === null || activeState === void 0 ? void 0 : activeState.playbackSegment)
-      || (completeState === null || completeState === void 0 ? void 0 : completeState.playbackSegment);
+    return (activeState === null || activeState === undefined ? undefined : activeState.playbackSegment)
+      || (completeState === null || completeState === undefined ? undefined : completeState.playbackSegment);
   }
 
   // ---------------------------------------------------------------------------
@@ -519,7 +511,7 @@ class RequestCollection extends PartitionedCollection {
       }
 
       // Verify contiguous range consistency.
-      const range = this.internal_Caa;
+      const range = this._prop_Caa;
       if (this.empty) {
         assert(range === undefined);
       } else {

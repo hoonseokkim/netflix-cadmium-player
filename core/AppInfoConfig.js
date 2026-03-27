@@ -88,7 +88,7 @@ export class AppInfoConfig extends ConfigBase {
   get logsEndpoint() {
     let hostname;
     switch (this._environment.aS) {
-      case Environment.internal_Test:
+      case Environment.Test:
       case Environment.YFa:
         hostname = 'logs.test.netflix.com';
         break;
@@ -108,7 +108,7 @@ export class AppInfoConfig extends ConfigBase {
       case Environment.Staging:
         subdomain = 'www.stage';
         break;
-      case Environment.internal_Test:
+      case Environment.Test:
         subdomain = 'www-qa.test';
         break;
       case Environment.YFa:

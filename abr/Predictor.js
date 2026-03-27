@@ -17,11 +17,8 @@
  */
 
 // Dependencies
-// import { platform }           from '../core/AsejsEngine.js';
-// import { constrainValue, parseCurve as parseCurve, zTa as evaluateCurve,
 //          $rc as evaluateNiqrFactor, RVc as blendCurves }
 //   from '../streaming/StreamingExports.js';
-// import { TJ as ThroughputPredictor } from './StddevPredictor.js';
 
 /**
  * Manifold-based bandwidth predictor.

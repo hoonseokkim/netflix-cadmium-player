@@ -9,9 +9,6 @@
  * @original Module_88502
  */
 
-// import { MediaType } from '../media/MediaType';          // Module 65161
-// import { dk as hasAudioStream } from '../streaming/StreamUtils'; // Module 8149
-
 /**
  * Calculate a bandwidth confidence factor based on download progress.
  *

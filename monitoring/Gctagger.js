@@ -7,10 +7,6 @@
  * @module GcTagger
  */
 
-// import { __extends, __spreadArray, __read } from 'tslib';
-// import { platform } from './Module_66164';
-// import { DEBUG } from './Module_48170';
-
 /**
  * Sort comparator for ascending numeric order.
  * @param {number} a

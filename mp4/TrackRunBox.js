@@ -450,7 +450,7 @@ export class TrackRunBox extends /* FullBox */ BaseBox {
       if (gainValues[i] === -Infinity) {
         // Complete silence: replace with silence frame
         if (silenceFrame && this.hasSampleSize) {
-          mdatEditor.internal_Yya(sampleSize, silenceFrame, dataPos);
+          mdatEditor._fn_Yya(sampleSize, silenceFrame, dataPos);
           const extraBytes = this.sampleEntrySize - (this.hasSampleDuration ? 4 : 0);
           this.readFloat64.offset -= extraBytes;
           this.readFloat64.fo(silenceFrame.byteLength);

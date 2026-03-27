@@ -22,9 +22,9 @@ NetworkRequestEnums.abortMessage = Object.freeze({
     /** Manual request abort (reason 1) */
     Shb: 'mr1',
     /** Internal abort (reason 2) */
-    internal_Rhb: 'mr2',
+    mr2: 'mr2',
     /** Timeout abort (reason 3) */
-    internal_Thb: 'mr3',
+    mr3: 'mr3',
     /** Overridden by higher-priority request (reason 4) */
     O7: 'mr4',
     /** Superseded during seek (reason 5) */

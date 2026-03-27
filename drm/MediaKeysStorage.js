@@ -14,9 +14,6 @@
  * @module drm/MediaKeysStorage
  */
 
-// import { EventTypeEnum } from '../core/ErrorCodes.js'; // Module 36129
-// import { PromiseTimerSymbol } from '../utils/PromiseTimer.js'; // Module 59818
-
 /**
  * Reason codes for storage operation failures.
  * @enum {number}

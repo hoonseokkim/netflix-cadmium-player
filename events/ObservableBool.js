@@ -9,9 +9,6 @@
  */
 
 // Dependencies
-// import { __extends } from 'tslib';
-// import { Deferred } from './modules/Module_91176';
-// import { EventEmitter } from './modules/Module_90745';
 
 /**
  * An observable boolean value backed by an EventEmitter.

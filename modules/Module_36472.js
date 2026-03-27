@@ -7,20 +7,14 @@
 // Webpack module 36472
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.slb = void 0;
+
 d = a(22970);
 p = a(91176);
 c = a(99548);
 g = a(52571);
 f = a(8149);
-b.slb = (function() {
+export const slb = (function() {
     function e() {}
     e.qAc = function(h, k, l) {
         var m, n;
@@ -44,12 +38,12 @@ b.slb = (function() {
                     FXb: h
                 };
             }
-            k = null === (n = m.uk) || void 0 === n ? void 0 : n.$b;
+            k = null === (n = m.uk) || undefined === n ? undefined : n.$b;
             (0,
             g.assert)(k);
             h = h.oa.reduce(function(q, r) {
                 var u;
-                return (null === (u = r.uk) || void 0 === u ? 0 : u.$b) ? p.I.min(q, r.uk.$b) : q;
+                return (null === (u = r.uk) || undefined === u ? 0 : u.$b) ? p.I.min(q, r.uk.$b) : q;
             }, k);
             return {
                 EXb: k,
@@ -61,6 +55,5 @@ b.slb = (function() {
     return e;
 }
 )();
-
 
 // Detected exports: slb

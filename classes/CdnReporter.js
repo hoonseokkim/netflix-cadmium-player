@@ -7,11 +7,6 @@
  * @module CdnReporter
  */
 
-// import { TimeUtil, flattenArray } from './Module_91176';
-// import { MediaType, PlaybackState } from './Module_65161';
-// import { BufferType } from './Module_89527';
-// import { TelemetryEvent, LogEvent } from './Module_91967';
-
 /**
  * Gathers CDN usage data and formats it for telemetry event payloads.
  */

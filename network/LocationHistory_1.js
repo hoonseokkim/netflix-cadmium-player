@@ -8,10 +8,6 @@
  * @module NetworkInterruptionHistory
  */
 
-// import { __importStar } from 'tslib';
-// import * as utils from './Module_17267';
-// import { platform } from './Module_66164';
-
 /**
  * Tracks network interruption timing for adaptive streaming decisions.
  * Maintains a time-windowed log of network events to help detect

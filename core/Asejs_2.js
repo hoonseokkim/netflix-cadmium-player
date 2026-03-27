@@ -9,8 +9,6 @@
  */
 
 // Dependencies
-// import { platform } from './modules/Platform';
-// import { mathTanh as createScopedConsole } from './modules/ConsoleFactory';
 
 /**
  * Factory that vends index-scoped console loggers under the ASEJS namespace.

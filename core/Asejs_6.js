@@ -13,15 +13,6 @@
  */
 
 // Dependencies
-// import { __generator, __values, __read, __spreadArray, __decorate, __param } from 'tslib';
-// import { EventEmitter } from './modules/EventEmitter';
-// import { TimeUtil, observableBool, flatten, findLast, XY, hn, np, assert } from './modules/TimeUtil';
-// import { platform } from './modules/Platform';
-// import { assert as softAssert } from './modules/Assert';
-// import { timeSlice, F7 as ALL_MEDIA_TYPES } from './modules/StreamConstants';
-// import { gz as decorators } from './modules/Decorators';
-// import { u as DEBUG } from './modules/Debug';
-// import { oAb as findBranchForPosition } from './modules/BranchUtils';
 
 /**
  * Represents the download state for a single media type within a viewable.

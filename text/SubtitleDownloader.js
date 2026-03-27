@@ -10,7 +10,7 @@
  */
 
 import { WP as TrackState } from "./TrackState";                    // Module 26159
-import { internal_Hmb as TextTrackPoller } from "./TextTrackPoller"; // Module 7953
+import { _Hmb as TextTrackPoller } from "./TextTrackPoller"; // Module 7953
 import { jl as EventEmitterImpl } from "./EventEmitter";             // Module 94886
 import { config as playerConfig } from "./PlayerConfig";             // Module 29204
 import { fetchOperation as getLogger } from "./LoggerFactory";       // Module 31276
@@ -197,7 +197,7 @@ class TimedTextManager {
             }
 
             selectedTrack
-                .internal_Hta(this.sizeProvider)
+                ._fn_Hta(this.sizeProvider)
                 .then(this._onTrackActivationResult)
                 .catch(this._onTrackActivationResult);
         } else {
@@ -238,7 +238,7 @@ class TimedTextManager {
             this.playerState.presentingState.value !== PresentingState.WAITING
         ) {
             if (this._imageSubRenderer) {
-                captionStatus = this._textTrackPoller.internal_Tuc();
+                captionStatus = this._textTrackPoller._fn_Tuc();
             } else if (this.playerState.tracks.textTrackSelection) {
                 captionStatus =
                     TRACK_STATE_TO_CAPTION_STATUS[
@@ -590,7 +590,7 @@ class TimedTextManager {
      */
     preloadTrack(track) {
         if (this._isTrackValid(track)) {
-            return track.internal_Hta(this.sizeProvider).then(() => {});
+            return track._fn_Hta(this.sizeProvider).then(() => {});
         }
         return Promise.resolve();
     }
@@ -642,7 +642,7 @@ class TimedTextManager {
         const currentTrack = this.playerState.tracks.textTrackSelection;
         if (this._isTrackValid(currentTrack) && !currentTrack.isImageBased) {
             currentTrack
-                .internal_Hta(this.sizeProvider)
+                ._fn_Hta(this.sizeProvider)
                 .then(this._onTrackActivationResult)
                 .catch(this._onTrackActivationResult);
         }
@@ -817,7 +817,7 @@ class TimedTextManager {
             this._retryTimeoutHandle = Da.setTimeout(() => {
                 this._retryCount++;
                 track
-                    .internal_Hta(this.sizeProvider)
+                    ._fn_Hta(this.sizeProvider)
                     .then(this._onTrackActivationResult)
                     .catch(this._onTrackActivationResult);
             }, playerConfig.j1c);

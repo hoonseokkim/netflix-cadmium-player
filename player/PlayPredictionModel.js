@@ -326,7 +326,7 @@ export class PlayPredictionModel {
         const contexts = event.xc || [];
 
         if (this.isModelInitialized) {
-            return ActionTypes.internal_Rcb;
+            return ActionTypes._enum_Rcb;
         }
 
         if (contexts.some(this._hasPlayEvent)) {
@@ -334,12 +334,12 @@ export class PlayPredictionModel {
             return ActionTypes.P7;
         }
 
-        if (contexts[0].context === ContextTypes.internal_Ula) {
-            return ActionTypes.internal_Ula;
+        if (contexts[0].context === ContextTypes._flag_Ula) {
+            return ActionTypes._flag_Ula;
         }
 
         if (direction === DirectionTypes.xkb || direction === DirectionTypes.ifb) {
-            return ActionTypes.internal_Wkb;
+            return ActionTypes._enum_Wkb;
         }
 
         return ActionTypes.pG;

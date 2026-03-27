@@ -8,11 +8,6 @@
  */
 
 // Dependencies
-// import { __extends, __assign } from 'tslib';          // webpack 22970
-// import { platform } from './Platform';                 // webpack 66164
-// import { assert } from './Assert';                     // webpack 52571
-// import { BitrateCalculator } from './BitrateCalc';     // webpack 95591
-// import { FragmentKey, FrameDurationInfo, materializeArray } from './Fragments_1'; // webpack 82149
 
 const logger = new platform.Console("FRAGMENTS", "media|asejs");
 

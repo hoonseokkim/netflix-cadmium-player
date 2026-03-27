@@ -21,7 +21,7 @@ import { assert } from "../../util/Assert"; // Module 52571
 import { stateEnum, HTTPRequestWrapper } from "./HTTPRequestWrapper"; // Module 75539
 import { MediaType, TimeUtil } from "../../media/MediaTypes"; // Module 45247
 import { isLiveStream, isLiveStreamTrack } from "../../media/LiveStreamUtil"; // Module 8149
-import { internal_Rla } from "../../config/RequestConfig"; // Module 24940
+import { _prop_Rla } from "../../config/RequestConfig"; // Module 24940
 import { RequestListenerMixin } from "./RequestListenerMixin"; // Module 81392 (t$a)
 import { BaseMediaRequest } from "./BaseMediaRequest"; // Module 78015 (xW)
 
@@ -76,7 +76,7 @@ export class AseMediaRequest extends BaseMediaRequest {
         this.console = console;
 
         /** @type {number} Expected response type from platform config */
-        this.platformResponseType = internal_Rla.responseType;
+        this.platformResponseType = _prop_Rla.responseType;
 
         /** @type {EventEmitter} Event emitter for request lifecycle events */
         this.events = new EventEmitter();
@@ -164,7 +164,7 @@ export class AseMediaRequest extends BaseMediaRequest {
 
     /** @returns {boolean} True if request is stalled (waiting for byte range) */
     get isStalled() {
-        return void 0 !== this.stalledRange;
+        return undefined !== this.stalledRange;
     }
 
     /** @returns {string} The request URL */
@@ -287,7 +287,7 @@ export class AseMediaRequest extends BaseMediaRequest {
     hasOpenRangeError() {
         return (0 >= this.la) &&
             (1 <= this.completedRequests.length) &&
-            (void 0 !== this.completedRequests[0].errorCode);
+            (undefined !== this.completedRequests[0].errorCode);
     }
 
     /**
@@ -297,7 +297,7 @@ export class AseMediaRequest extends BaseMediaRequest {
     changeStream(newStream) {
         assert(0 >= this.la, "AseRequest.changeStream is only supported for open range requests");
         assert(
-            1 <= this.completedRequests.length && void 0 !== this.completedRequests[0].errorCode,
+            1 <= this.completedRequests.length && undefined !== this.completedRequests[0].errorCode,
             "AseRequest.changeStream only supported when open range request has failed"
         );
         assert(
@@ -346,10 +346,10 @@ export class AseMediaRequest extends BaseMediaRequest {
      * @returns {boolean} True if the request was successfully resumed
      */
     resume() {
-        assert(void 0 !== this.stalledRange, "invalid attempt to resume request hat is not stalled");
+        assert(undefined !== this.stalledRange, "invalid attempt to resume request hat is not stalled");
         const success = this._validateAndRequestByteRange(this.stalledRange.offset, this.stalledRange.la);
         if (success) {
-            this.stalledRange = void 0;
+            this.stalledRange = undefined;
         }
         return success;
     }
@@ -364,7 +364,7 @@ export class AseMediaRequest extends BaseMediaRequest {
             const wasOpened = this.opened;
             this.requestState = stateEnum.ABORTED;
             this.completedRequests.forEach((subReq) => subReq.abort());
-            this.stalledRange = void 0;
+            this.stalledRange = undefined;
             this._notifyAborted(this, wasActive, wasOpened);
         }
         return true;
@@ -375,7 +375,7 @@ export class AseMediaRequest extends BaseMediaRequest {
      */
     dispose() {
         this.completedRequests.forEach((subReq) => subReq.dispose());
-        this.stalledRange = void 0;
+        this.stalledRange = undefined;
     }
 
     /**
@@ -480,7 +480,7 @@ export class AseMediaRequest extends BaseMediaRequest {
      * @param {number|undefined} actualEnd - The actual available end, or undefined
      */
     _handleRangeResponse(subRequest, requestedEnd, actualEnd) {
-        if (void 0 === actualEnd) {
+        if (undefined === actualEnd) {
             this._handleRangeUnavailable(subRequest);
         } else {
             const remaining = actualEnd - requestedEnd;
@@ -503,7 +503,7 @@ export class AseMediaRequest extends BaseMediaRequest {
     onFirstByte(subRequest) {
         if (isLiveStream(this.stream)) {
             // Extract next segment content-length hint from OC header
-            if (this.config.enableNextSegmentSizeFromOC && void 0 !== this.properties.index) {
+            if (this.config.enableNextSegmentSizeFromOC && undefined !== this.properties.index) {
                 let nextContentLength = subRequest.getResponseHeader("X-NFLX-NCL", false);
                 if (nextContentLength) {
                     nextContentLength = Number(nextContentLength);
@@ -544,14 +544,14 @@ export class AseMediaRequest extends BaseMediaRequest {
 
         // Update segment size estimate from content-length
         const contentLength = subRequest.getContentLength();
-        if (void 0 !== this.properties.index && void 0 !== contentLength) {
+        if (undefined !== this.properties.index && undefined !== contentLength) {
             this.stream.setSegmentSize(this.properties.index, contentLength);
         }
 
         // For open-range (non-range) requests, negotiate content length
         if (0 >= this.la && !this.isRangeRequest) {
             this._handleRangeResponse(subRequest, this.offset + subRequest.la, contentLength);
-            if (void 0 !== contentLength) {
+            if (undefined !== contentLength) {
                 this._processFirstByteReceived(subRequest);
                 this._onContentLengthChanged(subRequest, contentLength, this.la);
             }
@@ -707,7 +707,7 @@ export class AseMediaRequest extends BaseMediaRequest {
             const offset = properties.offset;
             let fetchSize;
 
-            if (void 0 !== properties.index) {
+            if (undefined !== properties.index) {
                 fetchSize = this.stream.getSegmentSize(properties.index);
             }
 
@@ -875,7 +875,7 @@ export class AseMediaRequest extends BaseMediaRequest {
         if (this._rangeUnavailableCount <= 1) {
             this._removeSubRequest(subRequest);
             subRequest.abort();
-            this.stalledRange = void 0;
+            this.stalledRange = undefined;
             this._initializeSubRequests(subRequest.requestLabel, this.label, this.properties);
         }
     }
@@ -888,7 +888,7 @@ export class AseMediaRequest extends BaseMediaRequest {
      */
     _updateRequestStats(subRequest, bytesReceived) {
         if (this._activeFailedRequest === subRequest) {
-            this._activeFailedRequest = void 0;
+            this._activeFailedRequest = undefined;
         }
         this._lastRequestTimestamp = Math.max(this._lastRequestTimestamp, subRequest.requestTimestamp);
         this.previousBytesReceived += bytesReceived;
@@ -915,9 +915,9 @@ export class AseMediaRequest extends BaseMediaRequest {
         const presentationOffset = boxInfo.compositionOffset;
         const fragmentDuration = boxInfo.fragmentDuration;
 
-        if (void 0 === presentationOffset || void 0 === fragmentDuration) {
+        if (undefined === presentationOffset || undefined === fragmentDuration) {
             // Fallback: use frame duration for video or 0 for audio
-            const fallback = (void 0 === presentationOffset)
+            const fallback = (undefined === presentationOffset)
                 ? (this.mediaType === MediaType.VIDEO
                     ? this.stream.frameDuration.downloadState(this.sampleMultiplier).value
                     : 0)

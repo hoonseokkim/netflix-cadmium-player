@@ -18,13 +18,6 @@
  * @original Module_41161
  */
 
-// import { default as TimeoutError } from './TimeoutError';           // Module 10690
-// import { default as ensureCallback } from './EnsureCallback';       // Module 42979
-// import { S5 as DeferredQueue } from './DeferredQueue';              // Module 89752
-// import { default as safeExecute } from './SafeExecute';             // Module 79804
-// import { wja as WriteBuffer } from './WriteBuffer';                 // Module 25078
-// import { default as StreamClosedError } from './StreamClosedError'; // Module 48795
-
 export class HttpOutputStream {
   /**
    * @param {Object} httpClient - The underlying HTTP client for sending requests.

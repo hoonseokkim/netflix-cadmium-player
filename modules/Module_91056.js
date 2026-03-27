@@ -7,13 +7,7 @@
 // Webpack module 91056
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(75589);
 t = a(72905);
@@ -27,7 +21,7 @@ t = (function(g) {
         this.oi();
         this.fileSize = this.N.Am();
         this.O = this.N.Am();
-        this.duration = this.N.Am(!1, !0);
+        this.duration = this.N.Am(false, true);
         this.NLc = this.N.Am();
         this.N.Am();
         this.RLc = this.N.Am();
@@ -60,12 +54,12 @@ t = (function(g) {
             offset: this.PLc,
             size: this.sKc
         });
-        return !0;
+        return true;
     }
     ;
     f.Ae = c;
-    f.Fd = !1;
+    f.Fd = false;
     return f;
 }
 )(t.Kf);
-b["default"] = t;
+export default t;

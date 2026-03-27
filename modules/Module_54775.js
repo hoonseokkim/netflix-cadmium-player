@@ -7,14 +7,8 @@
 // Webpack module 54775
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f, e, h, k, l;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.gab = void 0;
+
 d = a(22970);
 p = a(90745);
 c = a(91176);
@@ -43,12 +37,12 @@ t = (function() {
             B = A.ma;
             return B.K.xO ? (h.u && y.console.trace(("").concat(B.K.id, " does not need tracking")),
             {
-                result: !1
+                result: false
             }) : z(A);
         }
         , function() {
             return {
-                result: !0
+                result: true
             };
         }
         ];
@@ -72,7 +66,7 @@ t = (function() {
     m.prototype.YV = function(n, q, r) {
         var u, v, w;
         u = this;
-        void 0 === r && (r = !1);
+        export const undefined = == r && (r = false);
         v = n.K;
         r = c.$F.vM({
             ma: n,
@@ -82,7 +76,7 @@ t = (function() {
         h.u && this.console.trace(("tracking ").concat(n.K.id), {
             Jld: r
         });
-        if (!1 === r.result)
+        if (false === r.result)
             this.xVb !== n && this.reset();
         else {
             this.reset();
@@ -93,31 +87,31 @@ t = (function() {
             h.u && this.console.trace(("tracking ").concat(n.K.id), {
                 M: v.id,
                 Kdd: q,
-                ild: null === r || void 0 === r ? void 0 : r.G
+                ild: null === r || undefined === r ? undefined : r.G
             });
-            this.UVc(v, q ? r : void 0);
+            this.UVc(v, q ? r : undefined);
             if (q)
                 this.CTa.on(n.events, "branchEdited", function() {
-                    u.YV(n, u.tc.Qa.currentTime, !0);
+                    u.YV(n, u.tc.Qa.currentTime, true);
                 });
         }
     }
     ;
     m.prototype.oub = function() {
         var n;
-        null === (n = this.Xwb) || void 0 === n ? void 0 : n.La();
-        this.Xwb = void 0;
+        null === (n = this.Xwb) || undefined === n ? undefined : n.La();
+        this.Xwb = undefined;
     }
     ;
     m.prototype.reset = function() {
         this.oub();
         this.CTa.clear();
-        this.xVb = void 0;
+        this.xVb = undefined;
     }
     ;
     m.prototype.pfc = function(n) {
         var q, r, u, v, w;
-        v = 1 < n.K.PB.length || 0 < (null !== (r = null === (q = n.K.km) || void 0 === q ? void 0 : q.length) && void 0 !== r ? r : 0);
+        v = 1 < n.K.PB.length || 0 < (null !== (r = null === (q = n.K.km) || undefined === q ? undefined : q.length) && undefined !== r ? r : 0);
         r = m.xvc(n);
         q = c.I.Ca(v ? this.config.Gea : this.config.UGb);
         w = c.I.Ca(this.config.NJc + this.config.Fea);
@@ -127,7 +121,7 @@ t = (function() {
         if (n = this.qfc(n, v))
             if ((h.u && this.console.log("Calculated live decision", {
                 reason: n.reason,
-                type: null === (u = n.ng) || void 0 === u ? void 0 : u.type
+                type: null === (u = n.ng) || undefined === u ? undefined : u.type
             }),
             n.ng)) {
                 if ("immediate" === n.ng.type)
@@ -195,13 +189,12 @@ t = (function() {
         this.CTa.clear();
         q = this.MBb(n);
         h.u && this.console.trace(("BranchDecisionMaker making decision for ").concat(n.id, ", decision is ").concat(q));
-        this.YLc(n.id, q, !0);
+        this.YLc(n.id, q, true);
     }
     ;
     return m;
 }
 )();
-b.gab = t;
-
+export const gab = t;
 
 // Detected exports: gab

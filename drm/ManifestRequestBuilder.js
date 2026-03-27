@@ -22,10 +22,6 @@
  * @module drm/ManifestRequestBuilder
  */
 
-// import { DrmScheme } from './DrmScheme.js';
-// import { KeySystemHelper } from './KeySystemIds.js';
-// import { MediaKeySystemAccessServices } from './MediaKeySystemAccessServices.js';
-
 /**
  * Builds manifest request payloads.
  */

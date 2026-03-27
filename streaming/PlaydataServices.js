@@ -10,21 +10,6 @@
  * @injectable
  */
 
-// import { __decorate, __param } from 'tslib'; // webpack 22970
-// import { injectable, inject } from 'inversify'; // webpack 22674
-// import { ellaSendRateMultiplier } from '../utils/ConfigUtils.js'; // webpack 5021
-// import { LoggerToken, LogLevel } from '../core/LoggerToken.js'; // webpack 87386
-// import { valueList as SchedulerToken } from '../core/Scheduler.js'; // webpack 53085
-// import { TIa as PlaydataStoreToken } from '../streaming/PlaydataStore.js'; // webpack 32979
-// import { PlaydataFactoryToken as PlaydataFactoryToken } from '../streaming/PlaydataFactory.js'; // webpack 62278
-// import { xjb as PlaydataConfigToken } from '../streaming/PlaydataConfig.js'; // webpack 95398
-// import { errorCodes, internal_Yka } from '../core/ErrorCodes.js'; // webpack 36129
-// import { qla as PlaydataEncoder } from '../streaming/PlaydataEncoder.js'; // webpack 23048
-// import { pla as PlaydataEventType, internal_Oib } from '../streaming/PlaydataEventTypes.js'; // webpack 10469
-// import { zN as partition } from '../utils/ArrayUtils.js'; // webpack 45266
-// import { PlayerCoreToken } from '../player/PlayerCore.js'; // webpack 30869
-// import { T7 as ViewableConfigToken } from '../core/ViewableConfig.js'; // webpack 79274
-
 /**
  * Manages a single playdata monitoring session for one playback.
  * Periodically saves playdata to IDB and handles final send on stop.

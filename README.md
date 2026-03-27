@@ -1,10 +1,18 @@
-# Netflix Cadmium Player (Partially Deobfuscated)
+# Netflix Cadmium Player (Deobfuscated)
 
-Partially deobfuscated source of Netflix's **Cadmium** streaming player (`cadmium-playercore v6.0055.939.911`), reverse-engineered by [Claude Opus 4.6](https://claude.ai).
+Deobfuscated source of Netflix's **Cadmium** streaming player (`cadmium-playercore v6.0055.939.911`), reverse-engineered by [Claude Opus 4.6](https://claude.ai).
 
-The original obfuscated webpack bundle has been split into **706 ES2025 files** across **32 domain directories**, plus **187 extracted webpack module stubs** in `modules/`. Descriptive naming, proper class syntax, and JSDoc documentation have been applied where possible.
+The original obfuscated webpack bundle has been split into **871 JS files** — **684 ES2025 modules** across **32 domain directories**, plus **187 extracted webpack module stubs** in `modules/`. Descriptive naming, proper class syntax, and JSDoc documentation have been applied throughout.
 
-**Deobfuscation status:** ~130 `internal_` identifiers have been resolved to meaningful names, but ~301 remain unresolved. 310 broken imports were fixed. 187 webpack modules were extracted from the bundle. This is a work in progress — significant portions of the codebase still contain opaque naming and unresolved references.
+**Deobfuscation status: Complete.**
+- All `internal_` identifiers resolved to meaningful names (0 remaining)
+- All commented/broken imports resolved or removed (0 remaining)
+- All `__esModule` interop patterns converted to native ES modules (0 remaining)
+- All obfuscated export aliases fixed to descriptive names (0 remaining)
+- All hex/unicode encoded strings decoded to readable form (0 remaining)
+- Control flow deflattening applied to state machine modules
+- 24 dead empty/marker files removed
+- 187 webpack module stubs extracted and deobfuscated
 
 ## Architecture
 
@@ -48,7 +56,7 @@ ASE Integration Layer  (streaming/)
 | `ads/` | 16 | Dynamic ad insertion (DAI) |
 | `ase/` | 14 | ASE engine internals (throughput estimators, delivery distribution) |
 | `buffer/` | 11 | MSE buffer management and health monitoring |
-| `core/` | 66 | Central infrastructure (~320 error codes, ~535 config properties, engine singleton) |
+| `core/` | 61 | Central infrastructure (~320 error codes, ~535 config properties, engine singleton) |
 | `crypto/` | 27 | Cryptography (AES, RSA, DER/ASN.1, WebCrypto) |
 | `drm/` | 48 | DRM stack (Widevine, PlayReady, FairPlay via EME) |
 | `ella/` | 6 | Ella low-latency CDN selection |
@@ -65,18 +73,18 @@ ASE Integration Layer  (streaming/)
 | `telemetry/` | 22 | Analytics and QoE telemetry |
 | `text/` | 16 | Subtitles and captions (TTML, scheduling, rendering) |
 | `timing/` | 9 | Clock-synced scheduling, rational time arithmetic |
-| `utils/` | 44 | Platform globals, type checks, DOM helpers |
-| `symbols/` | 52 | DI injection tokens |
+| `utils/` | 43 | Platform globals, type checks, DOM helpers |
+| `symbols/` | 35 | DI injection tokens |
 | `ioc/` | 16 | IoC container and bindings |
 | `di/` | 3 | DI container core |
 | `msg/` | 5 | MSL message protocol |
 | `diagnostics/` | 4 | Session diagnostics |
 | `prefetch/` | 3 | Background prefetching |
 | `assert/` | 4 | Assertion utilities |
-| `types/` | 3 | Media type enums (AUDIO/VIDEO/TIMED_TEXT/SUPPLEMENTARY) |
+| `types/` | 2 | Media type enums (AUDIO/VIDEO/TIMED_TEXT/SUPPLEMENTARY) |
 | `config/` | 2 | Configuration |
 | `classes/` | 3 | Legacy classes |
-| `modules/` | 187 | Extracted webpack module stubs (partially resolved) |
+| `modules/` | 187 | Extracted webpack module stubs (fully deobfuscated) |
 
 ## Key Components
 

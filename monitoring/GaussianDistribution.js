@@ -12,8 +12,6 @@
  * @original Module_32201
  */
 
-// import { erfc as erfc, cCc as erfcInverse } from './ErrorFunction'; // Module 68157
-
 export default class GaussianDistribution {
     /**
      * @param {number} mean - Mean (mu) of the distribution

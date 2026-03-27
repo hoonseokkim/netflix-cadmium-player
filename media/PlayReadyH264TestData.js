@@ -17,7 +17,7 @@ export default function PlayReadyH264TestData(module, exports, require) {
             value: true
         }
     });
-    exports.X = void 0;
+    exports.X = undefined;
 
     var parentTemplateData = require(19034);
 

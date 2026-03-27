@@ -92,7 +92,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
     get Hk() { return this.completedRequests.complete.previousState; }
 
     /** @returns {number} The last attached position */
-    get L$() { return this.completedRequests.internal_Uub; }
+    get L$() { return this.completedRequests._enum_Uub; }
 
     /** @returns {*} Request index counter */
     get UQa() { return this.completedRequests.ric; }
@@ -113,7 +113,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
             la: this.completedRequests.ypa,
             G: this.completedRequests.empty
                 ? 0
-                : Math.max(this.completedRequests.internal_Uub - this.completedRequests.timestamp.playbackSegment, 0),
+                : Math.max(this.completedRequests._enum_Uub - this.completedRequests.timestamp.playbackSegment, 0),
         };
     }
 
@@ -152,7 +152,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
         const doCancel = () => {
             const requestsCopy = requests.map(r => r);
             if (requestsCopy.length > 0) {
-                self.xm.internal_Kwa(requestsCopy);
+                self.xm._fn_Kwa(requestsCopy);
             }
             requests.forEach(r => { r.abort(); r.dispose(); });
         };
@@ -189,7 +189,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
             endMarked: this.readInt32.length !== undefined,
             queueCount: this.readInt32.length,
             isComplete: this.readInt32.mI,
-            itemCount: this.readInt32.internal_Vub,
+            itemCount: this.readInt32._flag_Vub,
             continuousEndPts: this.readInt32.buildPath().reduce((acc, item) => {
                 if (item && !item.done) {
                     const val = item.value;
@@ -209,8 +209,8 @@ class MediaRequestBranch extends BaseBranchPipeline {
      * Serializes the internal state for debugging/telemetry.
      * @returns {Object} Serialized request state
      */
-    internal_Pvc() {
-        return { completedRequests: this.completedRequests.internal_Qvc() };
+    _fn_Pvc() {
+        return { completedRequests: this.completedRequests._fn_Qvc() };
     }
 
     /**
@@ -339,7 +339,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
             const threshold = calculateAttachThreshold({
                 dfc: request.la,
                 KHc: track.downloadables[0].bitrate,
-                internal_Smc: bitrate,
+                _Smc: bitrate,
                 CJc: this.config.streamModeAppendAttachThreshold,
                 wUc: request.offset.ri,
                 isLive: this.isLive.viewableSession.isAdPlaygraph,
@@ -431,7 +431,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
             this.branchPruner?.reuseOnErrorCacheSize();
         }
 
-        this.internal_Sgc();
+        this._fn_Sgc();
         if (request.stateInfo) this.pba = false;
     }
 
@@ -455,12 +455,12 @@ class MediaRequestBranch extends BaseBranchPipeline {
 
         if (hadRequests) {
             const requestsCopy = oldRequests.map(r => r);
-            this.xm.internal_Kwa(requestsCopy);
+            this.xm._fn_Kwa(requestsCopy);
         }
     }
 
     /** @private */
-    internal_Sgc() {
+    _fn_Sgc() {
         if (!this.pba) this.pba = true;
     }
 
@@ -488,7 +488,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
             const removed = this.completedRequests.splice(0, 1);
             if (this.VE > 0) this.VE--;
 
-            this.xm.internal_Kwa(removed);
+            this.xm._fn_Kwa(removed);
         }
     }
 

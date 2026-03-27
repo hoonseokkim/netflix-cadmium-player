@@ -22,10 +22,6 @@
  * @module drm/EmeSessionAdapter
  */
 
-// import { buildTransportPacket } from '../utils/Mixins.js';         // Module 66523
-// import { ErrorCode, EventTypeEnum } from '../core/ErrorCodes.js';  // Module 36129
-// import { DrmError } from '../drm/DrmError.js';                     // Module 61731
-
 // ---------------------------------------------------------------------------
 // Internal: Lightweight wrapper around a native MediaKeySession
 // ---------------------------------------------------------------------------

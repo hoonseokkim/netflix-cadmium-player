@@ -7,11 +7,6 @@
 // Webpack module 67658
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Uib = "PboManifestRequestTransformerSymbol";
-
+export const Uib = "PboManifestRequestTransformerSymbol";
 
 // Detected exports: Uib

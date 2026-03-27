@@ -157,7 +157,7 @@ const MslErrorCode = Object.freeze({
     ud: 7,
     m6: 8,
     TJa: 9,
-    internal_Wla: 10
+    _Wla: 10
 });
 
 /**

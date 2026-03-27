@@ -9,10 +9,6 @@
  * @module ioc/InjectableDecorator
  */
 
-// import { ERROR_ALREADY_INJECTABLE as Z2b } from '../modules/Module_25640';
-// import { DI_METADATA_KEY as Q7 } from '../modules/Module_37425';
-// import { Metadata } from '../modules/Module_67258';
-
 /**
  * Class decorator that registers a constructor as injectable.
  *

@@ -7,14 +7,8 @@
 // Webpack module 70179
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.o8 = void 0;
+
 d = a(22970);
 p = a(81969);
 c = a(93334);
@@ -22,7 +16,7 @@ g = a(66988);
 t = (function(f) {
     function e(h, k, l, m, n) {
         h = f.call(this, h, k, l, m, n) || this;
-        h.Nqa = !1;
+        h.Nqa = false;
         return h;
     }
     d.__extends(e, f);
@@ -39,8 +33,8 @@ t = (function(f) {
             get: function() {
                 return !!(this.flags & 1);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -48,8 +42,8 @@ t = (function(f) {
             get: function() {
                 return !!(this.flags & 4);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -57,8 +51,8 @@ t = (function(f) {
             get: function() {
                 return !!(this.flags & 256);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -66,8 +60,8 @@ t = (function(f) {
             get: function() {
                 return !!(this.flags & 512);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -75,8 +69,8 @@ t = (function(f) {
             get: function() {
                 return !!(this.flags & 1024);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -84,8 +78,8 @@ t = (function(f) {
             get: function() {
                 return !!(this.flags & 2048);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -94,8 +88,8 @@ t = (function(f) {
                 return this.uza ? (this.N.offset = this.UA + this.dO - 4,
                 0 === this.version ? this.N.dc() : this.N.Ufa()) : 0;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     e.prototype.parse = function(h) {
@@ -104,7 +98,7 @@ t = (function(f) {
         this.EPa = this.N.offset;
         this.Vd = this.N.dc();
         this.zl = this.Swb ? this.N.Ufa() : 0;
-        this.mUa = this.qba ? this.N.dc() : void 0;
+        this.mUa = this.qba ? this.N.dc() : undefined;
         this.dO = (this.S3 ? 4 : 0) + (this.T3 ? 4 : 0) + (this.wza ? 4 : 0) + (this.uza ? 4 : 0);
         this.UA = this.N.offset;
         (0,
@@ -115,7 +109,7 @@ t = (function(f) {
             h.Na.zl = this.zl;
             h.Na.Vd = this.Vd;
             this.Kl = [];
-            m = null === (l = null === (k = this.parent) || void 0 === k ? void 0 : k.wn("tfhd")) || void 0 === l ? void 0 : l.Y4;
+            m = null === (l = null === (k = this.parent) || undefined === k ? undefined : k.wn("tfhd")) || undefined === l ? undefined : l.Y4;
             for (k = 0; k < this.Vd; k++)
                 (l = {},
                 this.S3 ? l.R3 = this.N.dc() : h.Na.YD ? l.R3 = h.Na.YD : m && h.yh && h.yh[m] && (l.R3 = h.yh[m].YD),
@@ -132,7 +126,7 @@ t = (function(f) {
                     (h.Na.Kl[m].QFa = h.Na.eV[m].QFa,
                     h.Na.Kl[m].O6a = h.Na.eV[m].O6a);
         }
-        return !0;
+        return true;
     }
     ;
     e.prototype.wna = function(h, k, l) {
@@ -146,19 +140,19 @@ t = (function(f) {
             vza: h,
             iJ: n,
             R3: m,
-            ykd: (l || 0) + q - (void 0 !== k ? k : q)
+            ykd: (l || 0) + q - (undefined !== k ? k : q)
         };
     }
     ;
     e.prototype.ASc = function(h) {
         (0,
-        c.assert)(void 0 !== this.zl);
+        c.assert)(undefined !== this.zl);
         (0,
-        c.assert)(void 0 !== this.UA);
+        c.assert)(undefined !== this.UA);
         (0,
-        c.assert)(void 0 !== this.Vd);
+        c.assert)(undefined !== this.Vd);
         (0,
-        c.assert)(void 0 !== this.dO);
+        c.assert)(undefined !== this.dO);
         if (!this.T3)
             return Array.from({
                 length: this.Vd
@@ -167,25 +161,25 @@ t = (function(f) {
             });
         for (var k = [], l = this.UA + (this.S3 ? 4 : 0), m = 0; m < this.Vd; (++m,
         l += this.dO))
-            k.push(this.N.view.getUint32(l, !1));
+            k.push(this.N.view.getUint32(l, false));
         return k;
     }
     ;
     e.prototype.wSc = function() {
         var h, m;
         (0,
-        c.assert)(void 0 !== this.zl);
+        c.assert)(undefined !== this.zl);
         (0,
-        c.assert)(void 0 !== this.UA);
+        c.assert)(undefined !== this.UA);
         (0,
-        c.assert)(void 0 !== this.Vd);
+        c.assert)(undefined !== this.Vd);
         (0,
-        c.assert)(void 0 !== this.dO);
+        c.assert)(undefined !== this.dO);
         h = [];
         if (this.wza)
             for (var k = this.UA + (this.S3 ? 4 : 0) + (this.T3 ? 4 : 0), l = 0; l < this.Vd; (++l,
             k += this.dO)) {
-                m = this.N.view.getUint32(k, !1);
+                m = this.N.view.getUint32(k, false);
                 2 !== e.fRb(m) && e.gRb(m) || h.push(l);
             }
         else
@@ -196,15 +190,15 @@ t = (function(f) {
     e.prototype.pa = function(h, k, l, m, n, q, r) {
         var u, v, w, x;
         (0,
-        c.assert)(void 0 !== this.zl);
+        c.assert)(undefined !== this.zl);
         (0,
-        c.assert)(void 0 !== this.UA);
+        c.assert)(undefined !== this.UA);
         (0,
-        c.assert)(void 0 !== this.EPa);
+        c.assert)(undefined !== this.EPa);
         (0,
-        c.assert)(void 0 !== this.Vd);
+        c.assert)(undefined !== this.Vd);
         (0,
-        c.assert)(void 0 !== h.CA);
+        c.assert)(undefined !== h.CA);
         u = 0;
         v = 0;
         this.Ec.offset = this.UA;
@@ -225,14 +219,14 @@ t = (function(f) {
             if ((this.bQb = this.zl + u,
             this.B3 = 0,
             m === this.Vd))
-                return !0;
+                return true;
         } else if ((this.bQb = this.zl,
         this.B3 = u,
         0 === m))
-            return !0;
+            return true;
         if (0 === m || m === this.Vd)
-            return !1;
-        this.Nqa = !0;
+            return false;
+        this.Nqa = true;
         if (r) {
             this.B3 += w.iJ;
             for (r = m + 1; r < this.Vd; ++r)
@@ -254,28 +248,28 @@ t = (function(f) {
             this.Ec.d9a(q, this.zl),
             this.qba && (this.N.offset += 4),
             this.xr(k, this.Ec.offset));
-        null === l || void 0 === l ? void 0 : l.xr(this.B3, h.CA + this.bQb);
-        return !0;
+        null === l || undefined === l ? undefined : l.xr(this.B3, h.CA + this.bQb);
+        return true;
     }
     ;
     e.prototype.WJc = function(h, k, l, m, n, q, r, u) {
         var v, x, y, A, z;
-        void 0 === r && (r = !1);
+        export const undefined = == r && (r = false);
         (0,
-        c.assert)(void 0 !== this.zl);
+        c.assert)(undefined !== this.zl);
         (0,
-        c.assert)(void 0 !== this.UA);
+        c.assert)(undefined !== this.UA);
         (0,
-        c.assert)(void 0 !== this.Vd);
+        c.assert)(undefined !== this.Vd);
         (0,
-        c.assert)(void 0 !== this.dO);
+        c.assert)(undefined !== this.dO);
         (0,
-        c.assert)(void 0 !== h.CA);
+        c.assert)(undefined !== h.CA);
         for (var w = m.length; w < this.Vd; ++w)
             m[w] = m[w - 1];
         m.some(function(B) {
             return 0 >= B;
-        }) && (x = null === (v = this.y8b(n, q)) || void 0 === v ? void 0 : v.iAa);
+        }) && (x = null === (v = this.y8b(n, q)) || undefined === v ? undefined : v.iAa);
         this.N.offset = this.UA;
         h = h.CA + this.zl;
         n = -1 !== n.indexOf("xheaac") ? "xheaac" : -1 !== n.indexOf("heaac") ? "aac" : "ddp";
@@ -314,16 +308,15 @@ t = (function(f) {
             return ((0,
             c.assert)("reset" !== k && "standard" !== k),
             g.VQ[k]);
-        if (void 0 !== h)
+        if (undefined !== h)
             return k ? g.VQ.reset[h] || g.VQ.standard[h] : g.VQ.standard[h];
     }
     ;
     e.Ae = "trun";
-    e.Fd = !1;
+    e.Fd = false;
     return e;
 }
 )(a(72905).Kf);
-b.o8 = t;
-
+export const o8 = t;
 
 // Detected exports: o8

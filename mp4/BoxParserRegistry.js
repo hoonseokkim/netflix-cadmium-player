@@ -259,11 +259,11 @@ SidxBox.prototype.P7b = function (ma, ra) {
     const scaleFactor = targetTimescale / localTimescale;
 
     // Read segment sizes (12 bytes per reference entry, sizes at byte offset)
-    const segmentSizes = this.bitReader.internal_Kya(ra, 12, false);
+    const segmentSizes = this.bitReader._fn_Kya(ra, 12, false);
 
     // Read segment durations, applying scale factor if needed
     const segmentDurations = (1 === scaleFactor)
-        ? this.bitReader.internal_Kya(ra, 12, false)
+        ? this.bitReader._fn_Kya(ra, 12, false)
         : ArrayFrom.from(Uint32Array, { length: ra }, function () {
             const duration = Math.round(this.bitReader.dc() * scaleFactor);
             this.bitReader.offset += 8;
@@ -430,9 +430,9 @@ TencBox.prototype.videoSampleEntry = function (ma) {
     this.xB.toString = bufferToHexString;
 
     if (ma && ma.ce) {
-        ma.ce.internal_Wdd = this.ixb;
+        ma.ce._prop_Wdd = this.ixb;
         ma.ce.hxb = this.gxb;
-        ma.ce.internal_Xdd = this.xB;
+        ma.ce._prop_Xdd = this.xB;
     }
 
     // If isProtected=1 and per_sample_IV_size=0, read constant IV
@@ -474,7 +474,7 @@ CustomKeyedBox.prototype.constructor = CustomKeyedBox;
 CustomKeyedBox.prototype.videoSampleEntry = function () {
     this.oi();
     this.length = this.bitReader.sg();
-    this.YIc = this.bitReader.internal_Kya(this.length, undefined, true);
+    this.YIc = this.bitReader._fn_Kya(this.length, undefined, true);
     return true;
 };
 
@@ -546,7 +546,7 @@ AdditionalSapBox.prototype.videoSampleEntry = function (ma) {
     } else if (1 === this.version) {
         const segmentIndices = this.bitReader.tSc(this.length);
         this.bitReader.offset += 4;
-        this.offsetGet = this.bitReader.internal_Kya(this.length, 10, false);
+        this.offsetGet = this.bitReader._fn_Kya(this.length, 10, false);
         this.bitReader.offset -= 8;
 
         this.Q3 = ArrayFrom.from(Uint16Array, { length: this.length }, function () {
@@ -625,7 +625,7 @@ TrafBox.prototype.constructor = TrafBox;
 TrafBox.prototype.supportsOperation = function () {
     const tfhd = this.findBox('tfhd');
     if (tfhd) {
-        this.CA = tfhd.internal_Nsb ? tfhd.CA : this.parent.startOffset;
+        this.CA = tfhd._prop_Nsb ? tfhd.CA : this.parent.startOffset;
     }
     return true;
 };
@@ -754,11 +754,11 @@ Object.defineProperties(TfhdBox.prototype, {
         get: function () { return this.flags & 2; }
     },
     /** @type {boolean} default-sample-duration-present flag (0x000008) */
-    internal_Qnc: {
+    _prop_Qnc: {
         get: function () { return this.flags & 8; }
     },
     /** @type {boolean} default-sample-size-present flag (0x000010) */
-    internal_Rnc: {
+    _prop_Rnc: {
         get: function () { return this.flags & 16; }
     },
     /** @type {boolean} default-sample-flags-present flag (0x000020) */
@@ -776,10 +776,10 @@ Object.defineProperties(TfhdBox.prototype, {
 TfhdBox.prototype.videoSampleEntry = function (ma) {
     this.oi();
     this.Y4 = this.bitReader.dc();                                       // track_ID
-    this.CA = this.internal_Nsb ? this.bitReader.longValue() : undefined; // base_data_offset
+    this.CA = this._prop_Nsb ? this.bitReader.longValue() : undefined; // base_data_offset
     this.eRb = this.LVc ? this.bitReader.dc() : undefined;               // sample_description_index
-    this.YD = this.internal_Qnc ? this.bitReader.dc() : undefined;       // default_sample_duration
-    this.ZD = this.internal_Rnc ? this.bitReader.dc() : undefined;       // default_sample_size
+    this.YD = this._prop_Qnc ? this.bitReader.dc() : undefined;       // default_sample_duration
+    this.ZD = this._prop_Rnc ? this.bitReader.dc() : undefined;       // default_sample_size
     this.AH = this.jxb ? this.bitReader.dc() : undefined;                // default_sample_flags
 
     if (ma && ma.data) {
@@ -986,7 +986,7 @@ SaioBox.prototype.videoSampleEntry = function (ma) {
         const ivSize = ma.ce.hxb;
         const sampleCount = ma.data.GVc;
 
-        assert(0 < ivSize || void 0 !== ma.ce.constantIV, 'Expected per sample or constant IV');
+        assert(0 < ivSize || undefined !== ma.ce.constantIV, 'Expected per sample or constant IV');
         assert(0 < sampleCount, 'Expected saix box parsing to find sample count');
 
         ma.data.eV = [];

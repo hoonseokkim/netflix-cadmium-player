@@ -13,8 +13,6 @@
  */
 
 // Dependencies
-// import { __values } from 'tslib';
-// import { TimeUtil } from './modules/Module_91176';
 
 /**
  * Filters ads in a live ad break based on time constraints.

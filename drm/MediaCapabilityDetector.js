@@ -12,18 +12,6 @@
  * @injectable
  */
 
-// import { injectable, inject } from './DependencyInjection';
-// import { AudioProfile, VideoProfile } from './ContentProfiles';
-// import { LoggerToken } from './Logger';
-// import { NavigatorToken } from './Navigator';
-// import { MediaKeyServicesSymbol } from './MediaKeyServices';
-// import { ConfigToken } from './Config';
-// import { getKeySystemRobustness } from './DrmUtils';
-// import { MediaSourcePolyfill } from './MediaSourcePolyfill';
-// import { AudioCodec } from './AudioCodec';
-// import { Base64Decoder } from './Base64';
-// import { INIT_SEGMENT_DATA } from './InitSegmentData';
-
 /**
  * Detects media playback capabilities using the Media Capabilities API,
  * checking codec, resolution, HDR, and DRM support.

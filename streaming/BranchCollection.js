@@ -210,7 +210,7 @@ class BranchCollection {
     E2c(newPlaygraph, branchFactory, logger) {
         const self = this;
         const newTree = this._buildNewBranchTree(newPlaygraph, branchFactory, logger);
-        const reconcileResult = newTree.internal_Gxb(this.valuesMap);
+        const reconcileResult = newTree._fn_Gxb(this.valuesMap);
         const addedBranches = reconcileResult.NY;
         const removedBranches = reconcileResult.removed;
         const resetBranches = reconcileResult.c4a;

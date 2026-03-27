@@ -17,12 +17,6 @@
  * @module buffer/MemoryDeadlockProtector
  */
 
-// import { __values, __decorate } from 'tslib';
-// import { DEBUG } from '../modules/Module_48170';
-// import { sortByPriority } from '../modules/Module_62629';
-// import { MediaType } from '../modules/Module_65161';
-// import { SessionMetricsClass, consoleLogger } from '../modules/Module_61996';
-
 export class MemoryDeadlockProtector {
   /**
    * @param {Function} getMemoryLimits       - Returns `{ total: { V, U, TEXT } }` memory limits.

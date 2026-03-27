@@ -89,7 +89,7 @@ class MediaSplicer {
             return handler.applying(state, context);
         }, {
             Na: fragment,
-            offset: fragment.internal_Eya || TimeUtil.seekToSample,
+            offset: fragment._enum_Eya || TimeUtil.seekToSample,
             qf: this.config.seamlessAudio,
             getBoxData: false
         });
@@ -195,7 +195,7 @@ class MediaSplicer {
                     this.eventHandlersMap.push(new SeamlessVideoSplicer(this.console));
                 }
                 const msCapabilities = platform.MediaSource.codecProfilesMap;
-                if (msCapabilities && msCapabilities.internal_Ukd !== false) {
+                if (msCapabilities && msCapabilities._flag_Ukd !== false) {
                     this.eventHandlersMap.push(new OverlapGuard(this.console));
                 }
                 if (this.config.truncateEndOfStreamAudio) {
@@ -247,4 +247,4 @@ class MediaSplicer {
     }
 }
 
-export { MediaSplicer as internal_Zgb };
+export { MediaSplicer as _Zgb };

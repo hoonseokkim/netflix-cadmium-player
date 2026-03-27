@@ -196,7 +196,7 @@ function getMemoryStats(callback) {
  * @returns {Object} The cadmium namespace object.
  */
 module.exports = function createCadmiumPlatform(platformConfig) {
-    platformApi = platformConfig.internal_Wxa;
+    platformApi = platformConfig._enum_Wxa;
     getCategoryLog = platformConfig.getCategoryLog;
     backingStorage = platformConfig.storage;
     storageCache = platformConfig.storageCache;
@@ -208,13 +208,13 @@ module.exports = function createCadmiumPlatform(platformConfig) {
     clearTimeoutFn = platformConfig.clearTimeout;
     SourceBufferRef = platformConfig.SourceBuffer;
     MediaSourceRef = platformConfig.MediaSource;
-    internalVersion = platformConfig.internal_Zgd;
+    internalVersion = platformConfig._enum_Zgd;
     sdkConfig = platformConfig.SD;
 
     return {
         name: "cadmium",
         SD: sdkConfig,
-        internal_Wxa: platformApi,
+        _enum_Wxa: platformApi,
         storage: new Storage(),
         Storage: Storage,
         platform: new PlatformClock(),

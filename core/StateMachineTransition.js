@@ -32,7 +32,7 @@
  * @returns {Object} Transition result
  * @returns {string} result.Yy - The next state after transition
  * @returns {string} result.UQc - The current state before transition
- * @returns {boolean} result.internal_Lq - Whether the state changed
+ * @returns {boolean} result._Lq - Whether the state changed
  * @returns {string} result.event - The event that triggered the transition
  */
 function resolveTransition(stateDefinition, currentState, event) {
@@ -60,7 +60,7 @@ function resolveTransition(stateDefinition, currentState, event) {
   return {
     Yy: nextState,
     UQc: currentState,
-    internal_Lq: nextState !== currentState,
+    _Lq: nextState !== currentState,
     event: event,
   };
 }

@@ -7,12 +7,6 @@
 // Webpack module 41066
 // Parameters: t (module), b (exports), a (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 t = a(22970);
 t.__exportStar(a(33884), b);
 t.__exportStar(a(74041), b);

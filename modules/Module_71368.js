@@ -7,13 +7,7 @@
 // Webpack module 71368
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -39,12 +33,12 @@ t = (function(p) {
         }, {
             duration: "int32"
         }]);
-        return !0;
+        return true;
     }
     ;
     c.Ae = "mvhd";
-    c.Fd = !1;
+    c.Fd = false;
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

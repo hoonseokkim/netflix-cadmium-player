@@ -9,14 +9,6 @@
  * @original Module_62439
  */
 
-// import { writeBytes as keyboardManager, gM as KEYDOWN_EVENT } from '../events/KeyboardManager';
-// import { createElement } from '../utils/dom';
-// import { disposableList } from '../core/ServiceLocator';
-// import { enumConstants as debugSymbol } from '../core/DebugConfig';
-// import { kX as KeyCodes } from '../core/KeyCodes';
-// import { PlayerEvents } from '../player/PlayerEvents';
-// import { MediaType } from '../types/MediaType';
-
 /**
  * A debug overlay UI for manually selecting audio/video bitrates and CDNs.
  *
@@ -147,7 +139,7 @@ export class StreamManagerOverlay {
                     max = stream.bitrate;
                 } else if (min !== undefined && max !== undefined) {
                     ranges.push({ min, max });
-                    min = max = undefined;
+
                 }
             });
 
@@ -196,7 +188,7 @@ export class StreamManagerOverlay {
             const currentCdn = this.playerState.sourceBufferArray[MediaType.VIDEO].value;
 
             if (targetCdn && targetCdn !== currentCdn) {
-                targetCdn.internal_Itb = {
+                targetCdn.cdnsel = {
                     testreason: "streammanager",
                     selreason: "userselection",
                 };

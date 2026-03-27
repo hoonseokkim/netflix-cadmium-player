@@ -7,11 +7,7 @@
 // Webpack module 25978
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
 d = a(22970);
 t = (function(p) {
     function c(g, f) {
@@ -21,4 +17,4 @@ t = (function(p) {
     return c;
 }
 )(d.__importDefault(a(18595)).default);
-b["default"] = t;
+export default t;

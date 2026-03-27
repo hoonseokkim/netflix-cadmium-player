@@ -7,14 +7,9 @@
 // Webpack module 15160
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.ZEa = "EventSourceSymbol";
-b.pFa = "GlobalEventSourceSymbol";
-b.Vja = "DebugEventSourceSymbol";
-b.Hbb = "DiagnosticsEventSourceSymbol";
-
+export const ZEa = "EventSourceSymbol";
+export const pFa = "GlobalEventSourceSymbol";
+export const Vja = "DebugEventSourceSymbol";
+export const Hbb = "DiagnosticsEventSourceSymbol";
 
 // Detected exports: ZEa, pFa, Vja, Hbb

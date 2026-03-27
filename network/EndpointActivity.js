@@ -15,10 +15,6 @@
  * @module EndpointActivity
  */
 
-// import { platform }   from '../core/AsejsEngine.js';
-// import { BandwidthEstimator as BandwidthEstimator } from '../modules/Module_56089.js';
-// import { MediaType }  from '../core/AsejsEngine.js';
-
 /**
  * Per-endpoint bandwidth activity tracker used by {@link NetworkMonitor}.
  */

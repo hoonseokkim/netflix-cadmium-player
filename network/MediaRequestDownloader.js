@@ -11,16 +11,6 @@
  * @injectable
  */
 
-// import { injectable, inject } from './DependencyInjection';
-// import { ClockToken } from './Clock';
-// import { LoggerToken } from './Logger';
-// import { HttpToken } from './HttpClient';
-// import { ConfigToken } from './Config';
-// import { MediaType } from './MediaType';
-// import { TrackType } from './TrackType';
-// import { MediaRequestState, MediaRequestEvent } from './MediaRequestEvents';
-// import { MILLISECONDS } from './TimeUnits';
-
 /**
  * Maps a MediaType to the corresponding TrackType for request metadata.
  * @param {string} mediaType

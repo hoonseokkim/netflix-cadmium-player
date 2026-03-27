@@ -8,15 +8,6 @@
  * @original Module_21306
  */
 
-// import { __extends, __read, __spreadArray } from 'tslib';
-// import { assert } from '../assert/Assert';                    // Module 52571
-// import { SortedArray } from '../classes/SortedArray';         // Module 99735
-// import { registerClass } from '../core/Registry';            // Module 85254
-// import { RequestBucket } from '../streaming/RequestBucket';  // Module 71472
-// import { processingContext } from '../streaming/ProcessingContext'; // Module 71808
-// import { bP } from '../streaming/StreamingTokens';           // Module 81392
-// import { ContiguousRange } from '../streaming/ContiguousRange'; // Module 5800
-
 /**
  * A queue of media requests organized by state: complete, active, and pending.
  * Tracks total received bytes, contiguous byte ranges, and provides request
@@ -122,7 +113,7 @@ export class MediaRequestQueue extends SortedArray {
 
     /** @type {Object|undefined} Last request in the queue */
     get lastRequest() {
-        return this.internal_Pdc();
+        return this._fn_Pdc();
     }
 
     /**
@@ -271,7 +262,7 @@ export class MediaRequestQueue extends SortedArray {
             }
 
             // Verify contiguous range
-            const contiguous = this.internal_Caa;
+            const contiguous = this._prop_Caa;
             if (this.empty) {
                 assert(contiguous === undefined);
             } else {

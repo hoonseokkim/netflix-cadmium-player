@@ -7,12 +7,8 @@
 // Webpack module 41962
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.ghb = void 0;
+
 t = a(22970);
 d = t.__importDefault(a(20754));
 t.__importDefault(a(42979));
@@ -36,7 +32,6 @@ a = (function() {
     return p;
 }
 )();
-b.ghb = a;
-
+export const ghb = a;
 
 // Detected exports: ghb

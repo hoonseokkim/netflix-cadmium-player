@@ -37,10 +37,6 @@
  */
 
 // Dependencies (resolved by module bundler):
-// import { __assign, __values } from './modules/Module_22970';       // tslib helpers
-// import { TimeUtil, YX as TimeRange, vG as TimeFormat } from './modules/Module_91176'; // time utilities
-// import { EYa as isImmediate } from './modules/Module_4152';        // transition mode check
-// import { ed as SegmentType } from './modules/Module_58304';        // segment type enum
 
 /**
  * Builds a map of BranchWeight objects for each branch of a segment.

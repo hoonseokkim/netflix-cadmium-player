@@ -7,13 +7,7 @@
 // Webpack module 28721
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(32296);
 t = (function(c) {
@@ -37,15 +31,15 @@ t = (function(c) {
         this.Uc.lXa = (0,
         p.wK)(this.Uc.lXa);
         if (f && f.yh) {
-            m = null === (l = null === (k = null === (h = null === (e = this.parent) || void 0 === e ? void 0 : e.parent) || void 0 === h ? void 0 : h.wn("tkhd")) || void 0 === k ? void 0 : k.Uc) || void 0 === l ? void 0 : l.trackId;
+            m = null === (l = null === (k = null === (h = null === (e = this.parent) || undefined === e ? undefined : e.parent) || undefined === h ? undefined : h.wn("tkhd")) || undefined === k ? undefined : k.Uc) || undefined === l ? undefined : l.trackId;
             "number" === typeof m && f.yh[m] && (f.yh[m].sE = this.Uc.lXa);
         }
-        return !0;
+        return true;
     }
     ;
     g.Ae = "hdlr";
-    g.Fd = !1;
+    g.Fd = false;
     return g;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

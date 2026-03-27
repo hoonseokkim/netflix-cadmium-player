@@ -10,12 +10,6 @@
  * @original Module_78719
  */
 
-// import { config } from './PlayerConfig';
-// import { globalEvents, UNHANDLED_ERROR_EVENT } from './GlobalEvents';
-// import { initializeModel } from './ErrorModel';
-// import { ErrorCodes } from './ErrorCodes';
-// import { PlayerEvents } from './PlayerEvents';
-
 /**
  * Registers a global unhandled exception handler for the player.
  * The handler:

@@ -9,15 +9,6 @@
  */
 
 // Dependencies
-// import { __awaiter, __generator, __decorate } from 'tslib';  // webpack 22970
-// import { EventEmitter } from './EventEmitter';               // webpack 90745
-// import { TimeUtil, assert, AbortController, RetryQueue } from './TimeUtil'; // webpack 91176
-// import { Mp4BoxParser, MediaType, EventBoxParser, Scte35BoxParser } from './Mp4BoxParser'; // webpack 91562
-// import { platform } from './Platform';                        // webpack 66164
-// import { TaskScheduler } from './TaskScheduler';              // webpack 40666
-// import { isLiveStream, isLiveDownloadable } from './LiveUtils'; // webpack 8149
-// import { SessionMetricsClass, consoleLogger } from './SessionMetrics'; // webpack 61996
-// import { ko } from './Pipeline';                              // webpack 54366
 
 /**
  * @class MediaEventsFetcher

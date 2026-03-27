@@ -141,4 +141,4 @@ export class AleKeyExchangeFactory {
   }
 }
 
-export { AleKeyExchangeFactory as a$a };
+export { AleKeyExchangeFactory };

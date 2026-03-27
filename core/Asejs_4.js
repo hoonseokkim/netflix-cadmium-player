@@ -13,9 +13,6 @@
  */
 
 // Dependencies
-// import { platform } from './modules/Platform';
-// import { TimeUtil, Deferred, assert } from './modules/TimeUtil';
-// import { u as DEBUG } from './modules/Debug';
 
 // ─────────────────────────────────────────────────────────────
 //  DeltaTracker — rolling window of clock-delta samples

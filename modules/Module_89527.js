@@ -7,14 +7,8 @@
 // Webpack module 89527
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.OW = void 0;
+
 d = a(22970);
 p = a(90745);
 c = a(52571);
@@ -33,8 +27,8 @@ t = (function(e) {
         k = this;
         this.zfa = new p.sf();
         this.zfa.on(this.Mb.player, "skipped", function(l) {
-            k.gF && ((null === l || void 0 === l ? 0 : l.yOb) && k.I$(l.yOb),
-            k.gF = void 0);
+            k.gF && ((null === l || undefined === l ? 0 : l.yOb) && k.I$(l.yOb),
+            k.gF = undefined);
         });
         this.zfa.on(this.Mb.player, "paused", function() {
             k.gF && k.Mb.Sd && k.I$(k.Mb.Rd);
@@ -88,9 +82,9 @@ t = (function(e) {
         n = k.Vb;
         k = k.Sb;
         (0,
-        c.assert)(void 0 !== n);
+        c.assert)(undefined !== n);
         (0,
-        c.assert)(void 0 !== k);
+        c.assert)(undefined !== k);
         g.u && this.console.trace(("Media appended ").concat(n.ca(), "-").concat(k.ca()));
         this.BOa({
             stream: l,
@@ -106,7 +100,7 @@ t = (function(e) {
         var l, m;
         m = k.Mt;
         k = m.md;
-        m = null === (l = m.stream.L.S.FA) || void 0 === l ? void 0 : l.Sf;
+        m = null === (l = m.stream.L.S.FA) || undefined === l ? undefined : l.Sf;
         return ("").concat(k, "::").concat(m);
     }
     ;
@@ -120,17 +114,17 @@ t = (function(e) {
         var l, m, n, q, r, u, v, w, x;
         (0,
         c.assert)(this.gF);
-        if (null === (l = this.VRa) || void 0 === l ? 0 : l.lessThan(k))
+        if (null === (l = this.VRa) || undefined === l ? 0 : l.lessThan(k))
             k = this.VRa;
         r = this.gF;
         l = this.di;
         u = r.Mt;
         v = u.stream;
         u = u.md;
-        w = null === (m = v.vT) || void 0 === m ? void 0 : m.sh;
+        w = null === (m = v.vT) || undefined === m ? undefined : m.sh;
         m = k.da(this.J$ || r.timestamp).G;
-        if (void 0 !== u && void 0 !== w) {
-            x = null === (n = v.L.S.FA) || void 0 === n ? void 0 : n.Sf;
+        if (undefined !== u && undefined !== w) {
+            x = null === (n = v.L.S.FA) || undefined === n ? undefined : n.Sf;
             n = v.track.R;
             r = this.Pwc(r);
             l = (q = (l[r] || (l[r] = {
@@ -151,7 +145,7 @@ t = (function(e) {
     }
     ;
     h.prototype.clone = function(k, l) {
-        l = void 0 === l ? {} : l;
+        l = undefined === l ? {} : l;
         k = new (l.$ld || h)(k,this.yNc,this.Mb,this.loa,this.events,this.ax,this.tc,l.priority);
         this.Whc(k);
         k.gF = this.gF;
@@ -164,7 +158,7 @@ t = (function(e) {
     ;
     h.prototype.reset = function() {
         e.prototype.reset.call(this);
-        this.J$ = void 0;
+        this.J$ = undefined;
     }
     ;
     h.prototype.GM = function(k) {
@@ -174,7 +168,6 @@ t = (function(e) {
     return h;
 }
 )(a(546).yla);
-b.OW = t;
-
+export const OW = t;
 
 // Detected exports: OW

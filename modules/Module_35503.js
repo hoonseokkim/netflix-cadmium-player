@@ -7,13 +7,7 @@
 // Webpack module 35503
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -26,15 +20,15 @@ t = (function(p) {
         }, {
             c4c: "int32"
         }]);
-        if (null === g || void 0 === g ? 0 : g.ce)
+        if (null === g || undefined === g ? 0 : g.ce)
             (g.ce.mgd = this.Uc.IBc,
             g.ce.mnd = this.Uc.c4c);
-        return !0;
+        return true;
     }
     ;
     c.Ae = "pasp";
-    c.Fd = !1;
+    c.Fd = false;
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

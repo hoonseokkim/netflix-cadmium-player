@@ -9,25 +9,6 @@
  * @original Module_91562
  */
 
-// import { sidxBox, internal_Pgb, internal_Mmb, internal_Lmb } from '../mp4/BoxDefinitions.js'; // webpack 98516
-// import { TypedArrayUtils } from '../mp4/TypedArrayUtils.js'; // webpack 2050
-// import { ArrayCopyUtils } from '../mp4/ArrayCopyUtils.js'; // webpack 24500
-// import { audioSampleRegistry } from '../mp4/AudioSampleRegistry.js'; // webpack 66988
-// import { boxParser } from '../mp4/BoxParser.js'; // webpack 43607
-// import { mp4ParseConsole } from '../mp4/Mp4ParseConsole.js'; // webpack 87349
-// import { mp4BoxParserClass, M1 } from '../mp4/Mp4BoxParserClass.js'; // webpack 66789
-// import { I7 } from '../mp4/TrackFragmentParser.js'; // webpack 72978
-// import { p7 } from '../mp4/SampleTableParser.js'; // webpack 47407
-// import { mp4BoxParser } from '../mp4/Mp4BoxParser.js'; // webpack 35982
-// import { wK } from '../mp4/SegmentIndexParser.js'; // webpack 32296
-// import { o8 } from '../mp4/FragmentParser.js'; // webpack 70179
-// import { MediaType } from '../mp4/MediaType.js'; // webpack 61049
-// import { BX as BoxTypes } from '../mp4/BoxTypes.js'; // webpack 11526
-// import { fla as FragmentLayout } from '../mp4/FragmentLayout.js'; // webpack 80735
-// import { TX, e8 } from '../mp4/TrackParser.js'; // webpack 42328
-// import { bma as SampleDescriptionParser } from '../mp4/SampleDescriptionParser.js'; // webpack 51061
-// import { vma as EncryptionParser } from '../mp4/EncryptionParser.js'; // webpack 44248
-
 /** @type {Object} SIDX box definition */
 export { sidxBox as sidxDefinition } from '../mp4/BoxDefinitions.js';
 
@@ -56,7 +37,7 @@ export { mp4BoxParser } from '../mp4/Mp4BoxParser.js';
 export { wK } from '../mp4/SegmentIndexParser.js';
 
 /** @type {*} Internal box constants */
-export { internal_Pgb, internal_Mmb, internal_Lmb } from '../mp4/BoxDefinitions.js';
+export { _Pgb, _Mmb, _Lmb } from '../mp4/BoxDefinitions.js';
 
 /** @type {Function} Fragment parser (o8) */
 export { o8 } from '../mp4/FragmentParser.js';

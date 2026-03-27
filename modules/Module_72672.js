@@ -7,12 +7,8 @@
 // Webpack module 72672
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f, e, h, k, l, m, n, q, r;
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.$Ka = void 0;
+
 t = a(22970);
 d = t.__importDefault(a(42979));
 p = t.__importDefault(a(42458));
@@ -31,9 +27,9 @@ a = (function() {
     function u(v, w, x, y, A) {
         this.Ik = v;
         this.id = w;
-        this.uw = null === x || void 0 === x ? void 0 : x.gx;
-        this.pJ = null === y || void 0 === y ? void 0 : y.gx;
-        this.wrapKey = null === A || void 0 === A ? void 0 : A.gx;
+        this.uw = null === x || undefined === x ? undefined : x.gx;
+        this.pJ = null === y || undefined === y ? undefined : y.gx;
+        this.wrapKey = null === A || undefined === A ? undefined : A.gx;
     }
     u.prototype.encrypt = function(v, w, x, y) {
         var A;
@@ -148,7 +144,7 @@ a = (function() {
         d.default(y, function() {
             if (!z.wrapKey)
                 throw new p.default(c.default.dnb,"no wrap/unwrap key");
-            e.hh.unwrapKey("raw", v, z.wrapKey, z.wrapKey.algorithm, w, !1, x).then(function(B) {
+            e.hh.unwrapKey("raw", v, z.wrapKey, z.wrapKey.algorithm, w, false, x).then(function(B) {
                 A(B);
             }, function(B) {
                 y.error(new p.default(c.default.tLa,null,B));
@@ -170,7 +166,7 @@ a = (function() {
                                 result: y.result,
                                 error: function(C) {
                                     d.default(y, function() {
-                                        C instanceof f.default && (C = new p.default(c.default.alb,void 0,C));
+                                        C instanceof f.default && (C = new p.default(c.default.alb,undefined,C));
                                         y.error(C);
                                     });
                                 }
@@ -197,7 +193,7 @@ a = (function() {
                         var B;
                         B = y.result;
                         e.hh.verify(A.pJ.algorithm, A.pJ, z.mha, v).then(B, function(C) {
-                            y.error(new p.default(c.default.tka,void 0,C));
+                            y.error(new p.default(c.default.tka,undefined,C));
                         });
                     });
                 },
@@ -209,4 +205,4 @@ a = (function() {
     return u;
 }
 )();
-b.$Ka = a;
+export const $Ka = a;

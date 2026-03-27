@@ -15,9 +15,6 @@
  * @original Module_43341
  */
 
-// import { __values, __generator, __spreadArray, __read } from '../utils/TsLibHelpers';
-// import { TimeUtil, assert, findLast } from '../streaming/SegmentUtils';
-
 /**
  * Finds a segment in a successor chain that matches a target timeline.
  *
@@ -254,7 +251,6 @@ export class PlaygraphPositionMapper {
                 if (prevEnd) {
                     intervals.push({ time: prevEnd, segment: seg, isEnd: false });
                 }
-                prevEnd = undefined;
 
                 if (seg.timeline === timeline) {
                     intervals.push({ time: seg.startTime, segment: seg, isEnd: false });

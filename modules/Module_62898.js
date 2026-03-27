@@ -7,11 +7,6 @@
 // Webpack module 62898
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Kib = "PboBindCommandSymbol";
-
+export const Kib = "PboBindCommandSymbol";
 
 // Detected exports: Kib

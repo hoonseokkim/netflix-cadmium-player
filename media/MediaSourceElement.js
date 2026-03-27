@@ -47,7 +47,7 @@ import {
     NP as NativeMediaSource,
     $i as documentRef,
     totalTime as toMediaTime,
-    internal_Tka as absPts
+    _Tka as absPts
 } from '../utils/IpAddressUtils.js';                                        // x = a(22365)
 import { gd as isDefined, wc as isNumber } from '../utils/IpAddressUtils.js'; // y = a(32687)
 import { ofb as mediaElementBindingKey } from '../modules/Module_80012.js'; // A = a(80012)
@@ -526,7 +526,7 @@ class MediaSourceElement {
             this.nativeMediaSource.addEventListener('sourceopen', (event) => {
                 this._onSourceOpen(event);
             });
-            this._mediaElementBinding.internal_Fac(this._onLicenseAdded);
+            this._mediaElementBinding._fn_Fac(this._onLicenseAdded);
             this._attachVideoEventListeners(this.htmlVideoElement);
             this._attachToContainer(this.htmlVideoElement);
             this.htmlVideoElement.src = this._objectURL;
@@ -628,7 +628,7 @@ class MediaSourceElement {
         this._cachedValues.push(cached);
         return () => {
             cached.refresh();
-            return cached.internal_Wvc();
+            return cached._fn_Wvc();
         };
     }
 

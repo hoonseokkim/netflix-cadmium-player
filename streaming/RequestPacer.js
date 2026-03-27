@@ -20,13 +20,6 @@
  */
 
 // Dependencies (webpack module references):
-// import { __awaiter, __generator, __decorate } from './Module_22970';  // 22970 - tslib helpers
-// import { platform } from './Module_66164';           // 66164 - platform abstraction (now(), Console)
-// import { ie, TimeUtil } from './Module_91176';       // 91176 - time utilities (millisecondsDelay, fromMilliseconds)
-// import { laser } from './Module_97685';              // 97685 - laser diagnostic logger
-// import { assert } from './Module_52571';             // 52571 - assertion utility
-// import { consoleLogger, SessionMetricsClass } from './Module_61996';  // 61996 - console logging decorator + metrics
-// import { jh as RunningStatistic } from './Module_69575';  // 69575 - running statistic / sliding window
 
 import { __awaiter, __generator, __decorate } from '../core/tslib.js';
 import { platform } from '../core/platform.js';

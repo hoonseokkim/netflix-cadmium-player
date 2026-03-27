@@ -10,9 +10,6 @@
  * @original Module_66412
  */
 
-// import { __assign } from 'tslib';         // Module 22970
-// import { NI as freeze } from './Freeze';   // Module 54520 - Object.freeze utility
-
 /**
  * Creates a frozen version of `source` whose `toJSON()` omits the given fields.
  *

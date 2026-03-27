@@ -18,13 +18,6 @@
  *   Module 11479 - Component keys (vk)
  */
 
-// import { config } from '../core/PlayerConfig';
-// import { SUCCESS } from '../core/ResultConstants';
-// import { LifecycleEvents } from '../core/LifecycleEvents';
-// import { disposableList } from '../core/DisposableList';
-// import { ftlTracker } from '../telemetry/FtlTracker';
-// import { componentKeys } from '../core/ComponentKeys';
-
 /**
  * Registers the FTL initialization handler.
  *

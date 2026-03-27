@@ -15,7 +15,7 @@ import { ea as EventTypes } from '../core/EventTypes.js';
 import { assert } from '../assert/Assert.js';
 import { disposableList } from '../core/DisposableList.js';
 import { forEachProperty, initializeModel as stringifyError } from '../utils/ObjectUtils.js';
-import { internal_Tka as absValue } from '../utils/MathUtils.js';
+import { _Tka as absValue } from '../utils/MathUtils.js';
 import { storage as storageAvailable } from '../core/Platform.js';
 import { EM as isValidNumber } from '../utils/TypeChecks.js';
 import { vk as componentKey } from '../core/ComponentKeys.js';

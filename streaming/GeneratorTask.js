@@ -43,7 +43,7 @@ const GeneratorTask = (function (BaseTaskClass) {
     GeneratorTask.prototype.create = function () {
         if (this.requestState === TaskState.running || this.requestState === TaskState.pending) {
             var _a, _b;
-            (_b = (_a = this.generator) === null || _a === void 0 ? void 0 : _a.return) === null || _b === void 0 ? void 0 : _b.call(_a);
+            (_b = (_a = this.generator) === null || _a === undefined ? undefined : _a.return) === null || _b === undefined ? undefined : _b.call(_a);
         }
         BaseTaskClass.prototype.create.call(this);
         this.generator = this.generatorFactory();
@@ -78,7 +78,7 @@ const GeneratorTask = (function (BaseTaskClass) {
         var result;
         try {
             this.isExecuting = true;
-            result = ((_a = this.generator) === null || _a === void 0 ? void 0 : _a.next()) || { done: true };
+            result = ((_a = this.generator) === null || _a === undefined ? undefined : _a.next()) || { done: true };
         } finally {
             this.isExecuting = false;
             this.lastRunMono = platform.platform.now();
@@ -87,7 +87,7 @@ const GeneratorTask = (function (BaseTaskClass) {
 
         if (result.done) {
             this.nextWakeup = WakeupSchedule.completed;
-            (_c = (_b = this.generator) === null || _b === void 0 ? void 0 : _b.return) === null || _c === void 0 ? void 0 : _c.call(_b);
+            (_c = (_b = this.generator) === null || _b === undefined ? undefined : _b.return) === null || _c === undefined ? undefined : _c.call(_b);
             this.generator = undefined;
         } else {
             this.nextWakeup = result.value;
@@ -113,7 +113,7 @@ const GeneratorTask = (function (BaseTaskClass) {
             this.cancelRequested = true;
         } else {
             this.cancelRequested = false;
-            (_b = (_a = this.generator) === null || _a === void 0 ? void 0 : _a.return) === null || _b === void 0 ? void 0 : _b.call(_a);
+            (_b = (_a = this.generator) === null || _a === undefined ? undefined : _a.return) === null || _b === undefined ? undefined : _b.call(_a);
             this.generator = undefined;
         }
     };

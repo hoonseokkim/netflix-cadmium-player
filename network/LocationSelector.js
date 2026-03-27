@@ -18,17 +18,6 @@
  */
 
 // --- external dependency stubs ---
-// import * as helpers       from '../ads/AdBreakMismatchLogger.js';
-// import * as util          from '../abr/InitialStreamSelector.js';
-// import { EventEmitter }   from '../core/AsejsEngine.js';
-// import { platform }       from '../core/AsejsEngine.js';
-// import { Deferred, qB }   from '../core/AsejsEngine.js';
-// import { laser, mediaTypeToString } from '../classes/DISABLED.js';
-// import { dk as isTimedText }        from './AseMediaRequest.js';
-// import NodeType           from '../streaming/MediaFragment.js';
-// import { assert }         from '../ads/AdPoliciesManager.js';
-// import { statusEnum, MJa as LocationState } from '../modules/Module_36670.js';
-// import { nK as OcNetwork } from './OcNetwork.js';
 
 const logger = new platform.Console('ASEJS_LOCATION_SELECTOR', 'media|asejs');
 

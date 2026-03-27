@@ -7,8 +7,6 @@
  * @original Module_88257
  */
 
-// import MslException from './MslException'; // Module 63053
-
 /**
  * @class MslEncodingException
  * @extends MslException

@@ -7,7 +7,6 @@
 // Webpack module 90762
 // Parameters: t (module), b (exports), a (require)
 
-
 var c, g, f, e, h, k, l, m, n, q, r, u;
 function d(v) {
     v = Error.call(this, v);
@@ -21,51 +20,51 @@ function p(v, w, x, y) {
     this.j = v;
     this.type = w;
     this.log = y;
-    this.bna = new f.Ac(!1);
+    this.bna = new f.Ac(false);
     this.hQ = {
-        data: void 0,
+        data: undefined,
         state: "",
         operation: ""
     };
-    this.error = void 0;
+    this.error = undefined;
     this.mimeType = this.vzb((this.type === u.l.U ? this.j.oa.Mc : this.j.oa.Cc).streams);
     this.Wm = new e.jl();
     this.SMa = {
         Type: this.type
     };
     if (g.config.B1) {
-        z = !0;
-        this.hUa = new f.Ac(!1);
+        z = true;
+        this.hUa = new f.Ac(false);
     }
     this.log.trace("Adding source buffer", this.SMa, {
         TypeId: this.mimeType
     });
     this.Zl = x.addSourceBuffer(this.mimeType);
     this.Zl.addEventListener("updatestart", function() {
-        !1;
+        false;
         A.hQ.state = "updatestart";
     });
     this.Zl.addEventListener("update", function() {
-        !1;
+        false;
         A.hQ.state = "update";
     });
     this.Zl.addEventListener("updateend", function() {
         var B;
-        !1;
-        A.bna.set(!1);
+        false;
+        A.bna.set(false);
         A.eob && A.eob();
         A.hQ.state = "updateend";
         B = 0;
         try {
             B = A.Zl.buffered.length;
         } catch (C) {}
-        z && B && (z = !1,
-        A.hUa.set(!0),
-        !1);
+        z && B && (z = false,
+        A.hUa.set(true),
+        false);
     });
     this.Zl.addEventListener("error", function(B) {
         var C;
-        !1;
+        false;
         try {
             C = B.target.error && B.target.error.message;
             (B.message || C) && y.error("error event received on sourcebuffer", {
@@ -80,16 +79,13 @@ function p(v, w, x, y) {
         v.Gg(k.ea.U4b, B);
     });
     this.Zl.addEventListener("abort", function() {
-        !1;
+        false;
     });
     v.addEventListener(n.ja.closed, function() {
-        A.Zl = void 0;
+        A.Zl = undefined;
     });
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.n_b = b.rHa = void 0;
+
 c = a(93294);
 g = a(29204);
 f = a(81734);
@@ -109,7 +105,7 @@ p.prototype.ak = function() {
 }
 ;
 p.prototype.updating = function() {
-    return this.Zl ? this.Zl.updating : !1;
+    return this.Zl ? this.Zl.updating : false;
 }
 ;
 p.prototype.bha = function(v) {
@@ -179,7 +175,7 @@ p.prototype.bsa = function() {
 ;
 p.prototype.Jrb = function(v, w) {
     var x;
-    !1;
+    false;
     try {
         (0,
         l.ta)(this.Zl.buffered && 1 >= this.Zl.buffered.length, "Gaps in media are not allowed: " + JSON.stringify(this.bsa()));
@@ -188,13 +184,13 @@ p.prototype.Jrb = function(v, w) {
     l.ta)(!this.ak());
     x = w && w.Qfa / 1E3;
     (0,
-    m.wc)(x) && this.Zl.timestampOffset !== x && (!1,
+    m.wc)(x) && this.Zl.timestampOffset !== x && (false,
     this.gAa("timestampOffset", x),
     this.Zl.timestampOffset = x);
-    this.gAa((null === w || void 0 === w ? 0 : w.Ee) ? "headerappend" : "mediaappend");
+    this.gAa((null === w || undefined === w ? 0 : w.Ee) ? "headerappend" : "mediaappend");
     this.Zl.appendBuffer(v);
-    !1;
-    this.bna.set(!0);
+    false;
+    this.bna.set(true);
 }
 ;
 p.prototype.remove = function(v, w) {
@@ -202,9 +198,9 @@ p.prototype.remove = function(v, w) {
     l.ta)(!this.ak());
     try {
         this.gAa("remove");
-        !1;
+        false;
         this.Zl.remove(v, w);
-        this.bna.set(!0);
+        this.bna.set(true);
     } catch (x) {
         this.log.error("SourceBuffer remove exception", x, this.SMa);
     }
@@ -250,7 +246,7 @@ p.prototype.Bgc = function(v) {
 ;
 p.prototype.appendBuffer = function(v, w) {
     !w || w.Ee ? this.VY(v, w) : this.YOa(v, w);
-    return !0;
+    return true;
 }
 ;
 p.prototype.VY = function(v, w) {
@@ -259,7 +255,7 @@ p.prototype.VY = function(v, w) {
 ;
 p.prototype.YOa = function(v, w) {
     v = this.Qic(v, w);
-    !1;
+    false;
     this.j.ae.YOa(v);
 }
 ;
@@ -289,7 +285,7 @@ p.prototype.Qic = function(v, w) {
         bitrate: w.bitrate,
         response: v,
         hBc: v && 0 < v.byteLength,
-        rB: !0,
+        rB: true,
         get Ee() {
             return !this.rB;
         },
@@ -315,8 +311,8 @@ p.prototype.Qic = function(v, w) {
 p.prototype.endOfStream = function() {
     var v;
     this.j.NQ("EndOfStream");
-    null === (v = this.j.ae) || void 0 === v ? void 0 : v.Fwa(this.mediaType);
-    return !0;
+    null === (v = this.j.ae) || undefined === v ? undefined : v.Fwa(this.mediaType);
+    return true;
 }
 ;
 p.prototype.GTb = function(v) {
@@ -339,30 +335,29 @@ p.prototype.vzb = function(v) {
 ;
 Ha.Object.defineProperties(p.prototype, {
     mediaType: {
-        configurable: !0,
-        enumerable: !0,
+        configurable: true,
+        enumerable: true,
         get: function() {
             return this.type;
         }
     },
     HTb: {
-        configurable: !0,
-        enumerable: !0,
+        configurable: true,
+        enumerable: true,
         get: function() {
             return this.s$b;
         }
     },
     Xic: {
-        configurable: !0,
-        enumerable: !0,
+        configurable: true,
+        enumerable: true,
         get: function() {
             return 0 === this.type ? "audio" : "video";
         }
     }
 });
-b.rHa = p;
+export const rHa = p;
 Ia(d, Error);
-b.n_b = d;
-
+export const n_b = d;
 
 // Detected exports: n_b, rHa

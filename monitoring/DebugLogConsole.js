@@ -9,7 +9,7 @@ import { __decorate, __param } from '@nfx/22970'; // tslib decorators
 import { injectable, injectDecorator } from '@nfx/22674'; // inversify DI
 import { updateMap } from '@nfx/74870'; // element factory token
 import { uK } from '@nfx/45842'; // log service token
-import { internal_Uja } from '@nfx/34043'; // throttled scheduler token
+import { DebouncerFactorySymbol } from '@nfx/34043'; // throttled scheduler token
 import { valueList } from '@nfx/53085'; // scheduler token
 import { PlayerCoreToken } from '@nfx/30869';
 import { ri, ellaSendRateMultiplier, seekToSample, millisecondsUnit } from '@nfx/5021'; // time units
@@ -18,10 +18,10 @@ import { QC } from '@nfx/33554'; // device registration token
 import { ep as LogLevel } from '@nfx/87386'; // log levels (ERROR, WARN, INFO, TRACE, DEBUG)
 import { oX } from '@nfx/36410'; // log sinks token
 import { TGa } from '@nfx/34126'; // log event types
-import { internal_Wfb } from '@nfx/52476'; // config token
+import { LogDisplayConfigSymbol } from '@nfx/52476'; // config token
 import { PJ } from '@nfx/17892'; // init param token
 import { kX as KeyCodes } from '@nfx/43193';
-import { internal_Sab } from '@nfx/44133'; // ESN utilities
+import { _prop_Sab } from '@nfx/44133'; // ESN utilities
 
 // ---------------------------------------------------------------------------
 // SvgIconBuilder -- fluent builder for SVG toolbar icons
@@ -453,11 +453,11 @@ class DebugLogConsole {
                         if (event.keyCode === KeyCodes.d2b) {
                             this.toggle();
                         } else if (event.keyCode === KeyCodes.utils) {
-                            internal_Sab.jjc(this.deviceRegistration().wj);
+                            _prop_Sab.jjc(this.deviceRegistration().wj);
                         }
                     }
                 });
-                this.logSinks.internal_Qya(TGa.E_b, this.onLogEntry);
+                this.logSinks._fn_Qya(TGa.E_b, this.onLogEntry);
                 resolve();
             });
         }
@@ -1028,10 +1028,10 @@ const DecoratedDebugLogConsole = __decorate(
         __param(2, injectDecorator(updateMap)),
         __param(3, injectDecorator(valueList)),
         __param(4, injectDecorator(oX)),
-        __param(5, injectDecorator(internal_Wfb)),
+        __param(5, injectDecorator(LogDisplayConfigSymbol)),
         __param(6, injectDecorator(QC)),
         __param(7, injectDecorator(uK)),
-        __param(8, injectDecorator(internal_Uja)),
+        __param(8, injectDecorator(DebouncerFactorySymbol)),
         __param(9, injectDecorator(PJ)),
     ],
     DebugLogConsole

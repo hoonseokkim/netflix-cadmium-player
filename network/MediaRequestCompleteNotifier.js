@@ -7,9 +7,6 @@
  * @original Module_24427
  */
 
-// import { PlayerEvents } from '../player/PlayerEvents'; // Module 85001
-// import { responseType } from '../network/ResponseType';   // Module 61726
-
 /**
  * Creates a media download wrapper that notifies the player when a request completes.
  *

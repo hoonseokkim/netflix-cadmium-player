@@ -8,12 +8,7 @@
  * @module DrmServicesSymbol
  * @source Module_47737
  */
-export default function DrmServicesSymbol(module, exports, require) {
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-
-    /** Symbol identifier for the DRM services binding */
+export default function DrmServicesSymbol(module, exports, require) {/** Symbol identifier for the DRM services binding */
     exports.DrmServicesSymbol = "DrmServicesSymbol";
 
     /** Symbol identifier for the DRM services provider binding */

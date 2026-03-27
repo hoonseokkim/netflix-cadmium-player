@@ -9,10 +9,6 @@
  */
 
 // Dependencies
-// import { __extends } from 'tslib';                  // webpack 91176 (inherits helper)
-// import { TimeUtil } from './TimeUtil';               // webpack 91176
-// import { platform } from './Platform';               // webpack 66164
-// import { assert } from './Assert';                   // webpack 52571
 
 const logger = new platform.Console("FRAGMENTS", "media|asejs");
 

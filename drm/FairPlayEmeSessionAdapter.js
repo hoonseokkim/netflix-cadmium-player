@@ -21,8 +21,6 @@
 
 import { EmeSessionAdapter } from './EmeSessionAdapter.js';
 import { FairPlayPsshBuilder } from './FairPlayPsshBuilder.js';
-// import { LicenseUpdateType } from './LicenseUpdateType.js';   // Module 27995
-// import { KeyIdMapper } from './KeyIdMapper.js';               // Module 47450
 
 /**
  * FairPlay EME session adapter.

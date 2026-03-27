@@ -9,11 +9,6 @@
  * @original Module_91967
  */
 
-// import { __read, __values, __assign } from 'tslib'; // webpack 22970
-// import * as configExports from '../types/ConfigExports.js'; // webpack 91176
-// import { SerializationError } from '../utils/SerializationError.js'; // webpack 67164
-// import { BaseReporter } from '../telemetry/BaseReporter.js'; // webpack 29739
-
 /**
  * Debug flag for reporting diagnostics
  * @type {boolean}

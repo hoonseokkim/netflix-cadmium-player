@@ -10,16 +10,6 @@
  * @original Module_74045
  */
 
-// import { objectValues } from './ObjectUtils';
-// import { handleBufferUpdate, LOG_PREFIX } from './Logger';
-// import { EventBus } from './EventBus';
-// import { createComponentId } from './ComponentId';
-// import { unwrapComponent } from './ComponentWrapper';
-// import { createScopedId } from './ScopedId';
-// import { getReservedPropertyNames } from './ReservedProperties';
-// import { createSubComponent } from './SubComponentFactory';
-// import { BaseComponent } from './BaseComponent';
-
 /**
  * A compound component that composes multiple child components
  * into a unified interface, merging their properties and methods.

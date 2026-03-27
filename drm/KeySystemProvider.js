@@ -17,10 +17,6 @@
  * @module drm/KeySystemProvider
  */
 
-// import { KeySystemHelper } from './KeySystemIds.js';             // Module 17612
-// import { EmeConstants } from './EmeConstants.js';                 // Module 82100
-// import { MediaKeyServicesSymbol } from './MediaKeyServicesSymbol.js'; // Module 21103
-
 /**
  * @typedef {Object} KeySystemCandidate
  * @property {{ keySystem: string, robustness?: string }} config - Key system + robustness.

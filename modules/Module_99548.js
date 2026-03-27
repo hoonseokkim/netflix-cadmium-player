@@ -7,26 +7,25 @@
 // Webpack module 99548
 // Parameters: t (module), b (exports), a (require)
 
-
 var c, g, f, e, h;
 function d(k, l) {
     var C, D;
-    for (var m = [], n = 0, q = k[n], r = null === q || void 0 === q ? void 0 : q[0], u = null === q || void 0 === q ? void 0 : q[1], v = l.Lc.index, w = l.track.uk, x = 0, y = l.Kc.qa, A = l.Kc.wa.G > q[0], z = A, B = l.Kc.index; B <= v; ++B) {
-        C = !1;
+    for (var m = [], n = 0, q = k[n], r = null === q || undefined === q ? undefined : q[0], u = null === q || undefined === q ? undefined : q[1], v = l.Lc.index, w = l.track.uk, x = 0, y = l.Kc.qa, A = l.Kc.wa.G > q[0], z = A, B = l.Kc.index; B <= v; ++B) {
+        C = false;
         if (q) {
             D = w.get(B);
-            A && (D.qa.G >= u ? (A = !1,
-            ++n >= k.length ? u = r = q = void 0 : (q = k[n],
-            r = null === q || void 0 === q ? void 0 : q[0],
-            u = null === q || void 0 === q ? void 0 : q[1])) : z ? z = !1 : (m.push(new g.Mla(x,y,D.qa)),
+            A && (D.qa.G >= u ? (A = false,
+            ++n >= k.length ? u = r = q = undefined : (q = k[n],
+            r = null === q || undefined === q ? undefined : q[0],
+            u = null === q || undefined === q ? undefined : q[1])) : z ? z = false : (m.push(new g.Mla(x,y,D.qa)),
             y = D.qa,
-            C = !0));
-            !A && q && D.wa.G > r && (A = !0,
+            C = true));
+            !A && q && D.wa.G > r && (A = true,
             C = D.qa,
             (D = l.track.pB.Eu(B).nAb(r)) && 0 !== D.Jl && (C = c.I.Ca(D.yd)),
             m.push(new g.Mla(x,y,C)),
             y = C,
-            C = !0);
+            C = true);
         }
         C && ++x;
     }
@@ -38,9 +37,9 @@ function p(k, l, m) {
     (0,
     e.assert)(k.S && k.Rh, "Unexpected sanitizeLiveEndTimestamp.");
     q = k.S.Vi;
-    r = null === q || void 0 === q ? void 0 : q.cS;
+    r = null === q || undefined === q ? undefined : q.cS;
     q = "none";
-    if (null === (n = k.Ic) || void 0 === n ? 0 : n.cS)
+    if (null === (n = k.Ic) || undefined === n ? 0 : n.cS)
         if (r) {
             h && m.trace("PipelineNormalizer.sanitizeLiveEndTimestamp setting end timestamp:", "manifestEndTime:", r);
             q = "manifest";
@@ -58,30 +57,24 @@ function p(k, l, m) {
         eb: u,
         source: q
     };
-}
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.eQb = function(k, l, m) {
+}eQb = function(k, l, m) {
     var n, q;
     n = l.get(f.l.V);
     q = l.get(f.l.U);
     l = l.get(f.l.Ea);
-    q = null === q || void 0 === q ? void 0 : q.track.RL(k, m, q.Xn);
-    n = null === n || void 0 === n ? void 0 : n.track.RL(k, (null === q || void 0 === q ? void 0 : q.wa) || m, n.Xn);
-    k = null === l || void 0 === l ? void 0 : l.track.RL(k, (null === q || void 0 === q ? void 0 : q.wa) || (null === n || void 0 === n ? void 0 : n.wa) || m, l.Xn);
+    q = null === q || undefined === q ? undefined : q.track.RL(k, m, q.Xn);
+    n = null === n || undefined === n ? undefined : n.track.RL(k, (null === q || undefined === q ? undefined : q.wa) || m, n.Xn);
+    k = null === l || undefined === l ? undefined : l.track.RL(k, (null === q || undefined === q ? undefined : q.wa) || (null === n || undefined === n ? undefined : n.wa) || m, l.Xn);
     return [n, q, k];
 }
 ;
-b.YKc = function(k, l) {
+export function YKc(k, l) {
     (0,
     e.assert)(l, "missing pipeline");
     return l.qa;
 }
 ;
-b.oIc = function(k, l, m) {
+export function oIc(k, l, m) {
     var n;
     if (!l.km || 0 === l.km.length)
         return (h && k.trace("markExitZones, no exit zones"),
@@ -94,8 +87,8 @@ b.oIc = function(k, l, m) {
     return m;
 }
 ;
-b.Cid = d;
-b.zza = function(k, l, m, n) {
+export const Cid = d;
+export function zza(k, l, m, n) {
     var q;
     q = n;
     n = m.AM ? q : c.I.min(q, l);
@@ -103,8 +96,8 @@ b.zza = function(k, l, m, n) {
     return n;
 }
 ;
-b.Wfd = p;
-b.Hga = function(k, l, m, n) {
+export const Wfd = p;
+export function Hga(k, l, m, n) {
     var q, r, u, v;
     (0,
     e.assert)(m.S && m.Rh, "Unexpected sanitizeLiveEndTimestamp.");
@@ -114,18 +107,18 @@ b.Hga = function(k, l, m, n) {
     r = p(m, l, k);
     u = r.eb;
     r = r.source;
-    if (isFinite(u) && ("oc" === r || null === n || void 0 === n || !n.isFinite())) {
+    if (isFinite(u) && ("oc" === r || null === n || undefined === n || !n.isFinite())) {
         r = m.Ic.HAa.G;
         v = u - r;
         0 > v && k.error("PipelineNormalizer.sanitizeLiveEndTimestamp negative pts. ", "liveMetadata:", JSON.stringify(q), "eventEndTime:", m.Rh.endTime);
         (0,
         e.assert)(0 <= v, "endPts is negative");
-        n = (null === n || void 0 === n ? 0 : n.isFinite()) ? c.I.min(n, c.I.Ca(v)) : c.I.Ca(v);
+        n = (null === n || undefined === n ? 0 : n.isFinite()) ? c.I.min(n, c.I.Ca(v)) : c.I.Ca(v);
         h && k.trace("PipelineNormalizer.sanitizeLiveEndTimestamp. ", "new contentEndTimestamp:", n.G, "startTimeMs:", r, "endTimeMs:", u);
     }
-    return l.tV && (l = m.Ic.Al(!0),
+    return l.tV && (l = m.Ic.Al(true),
     l = c.I.Ca(l + 1E4),
-    null === n || void 0 === n ? 0 : n.greaterThan(l)) ? (k.trace("PipelineNormalizer.sanitizeLiveEndTimestamp. ", "performing simulated override:", n.G, "startTimeMs:", l, "endTimeMs:", u),
+    null === n || undefined === n ? 0 : n.greaterThan(l)) ? (k.trace("PipelineNormalizer.sanitizeLiveEndTimestamp. ", "performing simulated override:", n.G, "startTimeMs:", l, "endTimeMs:", u),
     c.I.uh) : n;
 }
 ;
@@ -133,7 +126,6 @@ c = a(91176);
 g = a(79048);
 f = a(65161);
 e = a(52571);
-h = !1;
-
+h = false;
 
 // Detected exports: eQb, YKc, oIc, Cid, zza, Wfd, Hga

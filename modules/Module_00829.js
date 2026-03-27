@@ -7,11 +7,6 @@
 // Webpack module 829
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.JIa = "PboLicenseResponseTransformerSymbol";
-
+export const JIa = "PboLicenseResponseTransformerSymbol";
 
 // Detected exports: JIa

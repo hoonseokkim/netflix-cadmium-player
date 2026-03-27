@@ -12,8 +12,6 @@
  * @original Module_4203
  */
 
-// import { P6c as AseConfigValues, O6c as AseConfigExtensions } from './AseConfigExtended'; // Module 45247
-
 /**
  * Re-exported ASE config values.
  * @see Module 45247

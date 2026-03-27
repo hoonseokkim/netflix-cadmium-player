@@ -7,8 +7,6 @@
  * @original Module_24571
  */
 
-// import MslException from './MslException'; // Module 63053
-
 /**
  * @class MslEntityAuthException
  * @extends MslException

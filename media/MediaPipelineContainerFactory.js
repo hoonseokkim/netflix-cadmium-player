@@ -20,7 +20,7 @@ export default function MediaPipelineContainerFactory(module, exports, require) 
         MediaKeyServicesSymbol, NGaToken, HqaToken, VBToken, VHToken;
 
     function MediaPipelineContainerFactoryClass(
-        TUb, mediaFactory, RTa, eventBus, internal_Hqa, responseType,
+        TUb, mediaFactory, RTa, eventBus, _prop_Hqa, responseType,
         config, session, playerCore, lastVideoSync, platform, VB, wI,
         seekableCheck, VH, FT, containerScope, keySystem, EE
     ) {
@@ -28,7 +28,7 @@ export default function MediaPipelineContainerFactory(module, exports, require) 
         this.mediaFactory = mediaFactory;
         this.RTa = RTa;
         this.eventBus = eventBus;
-        this.internal_Hqa = internal_Hqa;
+        this._prop_Hqa = _prop_Hqa;
         this.responseType = responseType;
         this.config = config;
         this.session = session;
@@ -43,12 +43,7 @@ export default function MediaPipelineContainerFactory(module, exports, require) 
         this.containerScope = containerScope;
         this.keySystem = keySystem;
         this.EE = EE;
-    }
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.GP = void 0;
+    }exports.GP = undefined;
 
     tslib = require(22970);
     TUbToken = require(87549);
@@ -83,7 +78,7 @@ export default function MediaPipelineContainerFactory(module, exports, require) 
     MediaPipelineContainerFactoryClass.prototype.create = function (param1, param2) {
         return new MediaPipelineModule.x7(
             param1, param2, this.TUb, this.mediaFactory, this.RTa,
-            this.eventBus, this.internal_Hqa, this.responseType, this.config,
+            this.eventBus, this._prop_Hqa, this.responseType, this.config,
             this.session, this.playerCore, this.lastVideoSync, this.VB,
             this.wI, this.seekableCheck, this.VH, this.FT,
             this.containerScope, this.keySystem, this.EE
@@ -98,7 +93,7 @@ export default function MediaPipelineContainerFactory(module, exports, require) 
         tslib.__param(1, (0, inversify.injectDecorator)(MediaFactoryToken.oq)),
         tslib.__param(2, (0, inversify.injectDecorator)(ResponseTypeToken.aFa)),
         tslib.__param(3, (0, inversify.injectDecorator)(EventBusToken.updateMap)),
-        tslib.__param(4, (0, inversify.injectDecorator)(InternalObbToken.internal_Obb)),
+        tslib.__param(4, (0, inversify.injectDecorator)(InternalObbToken.DownloadReportBuilderSymbol)),
         tslib.__param(5, (0, inversify.injectDecorator)(HttpToken.HttpToken)),
         tslib.__param(6, (0, inversify.injectDecorator)(ConfigToken.ConfigToken)),
         tslib.__param(7, (0, inversify.injectDecorator)(SessionToken.SessionToken)),

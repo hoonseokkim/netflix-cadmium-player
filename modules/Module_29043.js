@@ -7,13 +7,7 @@
 // Webpack module 29043
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -44,11 +38,11 @@ t = (function(p) {
         2 <= this.byteLength - (this.N.offset - f) && (this.N.ib(7),
         f = this.N.ib(1),
         g.kyb.dcd = 1 === f));
-        return !0;
+        return true;
     }
     ;
     c.Ae = "dec3";
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

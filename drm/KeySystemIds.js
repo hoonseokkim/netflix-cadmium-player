@@ -12,9 +12,6 @@
  */
 
 import { DrmScheme } from './DrmScheme.js';
-// import { PlaybackError } from '../core/PlaybackError.js';   // Module 31149
-// import { ErrorCode } from '../core/ErrorCodes.js';           // Module 36129
-// import { SecurityLevel } from './EmeConstants.js';            // Module 82100
 
 /**
  * Well-known EME key-system identifier strings.

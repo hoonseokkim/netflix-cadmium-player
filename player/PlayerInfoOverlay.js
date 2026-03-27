@@ -154,7 +154,7 @@ export class PlayerInfoOverlay {
                 this.playerState.addEventListener(evt, this.scheduleUpdate);
             });
             this.visible = true;
-            this.hdrDetector.internal_Eha().then(result => {
+            this.hdrDetector._fn_Eha().then(result => {
                 this.hdrInfo = result;
                 this.scheduleUpdate();
             });

@@ -12,14 +12,6 @@
  */
 
 // Dependencies:
-// import { createScheduledInterval } from '../ella';                 // webpack 5021  (ellaSendRateMultiplier)
-// import { assert } from '../assert';                                // webpack 45146
-// import { isDefined } from '../utils/TypeGuards';                   // webpack 32687 (wc)
-// import { PlayerEvents, streamState } from '../events/PlayerEvents';// webpack 85001
-// import { SlateState } from './LivePlaybackConstants';              // webpack 30873
-// import { Observable } from '../classes/Observable';                // webpack 81734 (currentBitrate)
-// import { TimeUtil } from '../timing/TimeUtil';                    // webpack 45247
-// import { isLiveManifestType, hasSegmentAvailabilityWindow } from '../streaming/ManifestUtils'; // webpack 91176
 
 /**
  * @typedef {Object} LiveBookmark

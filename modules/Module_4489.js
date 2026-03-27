@@ -6,14 +6,9 @@
 // function(t, b, a) 
 {
                         var d;
-                        Object.defineProperties(b, {
-                            __esModule: {
-                                value: !0
-                            }
-                        });
-                        b.sBb = void 0;
+
                         d = a(59839);
-                        b.sBb = function(p, c) {
+                        export function sBb(p, c) {
                             return p.reduce(function(g, f) {
                                 var e;
                                 e = c(f);

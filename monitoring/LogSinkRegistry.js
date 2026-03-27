@@ -10,8 +10,6 @@
  * @injectable
  */
 
-// import { injectable } from './DependencyInjection';
-
 /**
  * Manages a set of named log sinks (logging output destinations).
  *

@@ -15,12 +15,7 @@
 export default function CiphertextEnvelope(module, exports, require) {
     var tslib, MslEncodable, AsyncExecutor, CipherSpecModule, Base64Utils,
         MslEncodingException, MslObjectMissingException, MslCryptoException,
-        MslErrorCodes, MslInternalException;
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.Z1a = exports.ARa = exports.k3b = exports.uf = void 0;
+        MslErrorCodes, MslInternalException;exports.Z1a = exports.ARa = exports.k3b = exports.uf = undefined;
 
     tslib = require(22970);
     MslEncodable = require(48235);
@@ -156,7 +151,7 @@ export default function CiphertextEnvelope(module, exports, require) {
                     }
                     if (!isValidVersion) {
                         throw new MslEncodingException.default(
-                            MslErrorCodes.default.internal_Ymb,
+                            MslErrorCodes.default._enum_Ymb,
                             "ciphertext envelope " + mslObject
                         );
                     }
@@ -192,7 +187,7 @@ export default function CiphertextEnvelope(module, exports, require) {
                     try {
                         if (mslObject.xS("version") != exports.uf.eA) {
                             throw new MslEncodingException.default(
-                                MslErrorCodes.default.internal_Ymb,
+                                MslErrorCodes.default._enum_Ymb,
                                 "ciphertext envelope " + mslObject
                             );
                         }

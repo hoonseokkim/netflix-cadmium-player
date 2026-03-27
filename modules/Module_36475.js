@@ -7,11 +7,6 @@
 // Webpack module 36475
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Iib = "AleProvisionCommand";
-
+export const Iib = "AleProvisionCommand";
 
 // Detected exports: Iib

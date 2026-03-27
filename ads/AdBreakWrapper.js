@@ -14,8 +14,6 @@
  */
 
 // Dependencies
-// import { TimeUtil } from './modules/TimeUtil';
-// import { oja as TimingMarkerPosition } from './modules/TimingMarkerPosition';
 
 // ─────────────────────────────────────────────────────────────
 //  Helpers
@@ -383,7 +381,7 @@ class AdBreakWrapper {
 
   /** @returns {number} Display color code. */
   get displayColor() {
-    return this.adDisplayColor ?? this.adBreakData.metadata.internal_Zp;
+    return this.adDisplayColor ?? this.adBreakData.metadata.segmentationTypeId;
   }
 
   /** @returns {number} Current ad sequence index. */
@@ -653,7 +651,7 @@ class AdBreakWrapperWithPadding {
 
   /** @returns {number} Display color code. */
   get displayColor() {
-    return this.adBreak.internal_Zp;
+    return this.adBreak.segmentationTypeId;
   }
 
   /** @returns {boolean} Whether insertion was acknowledged. */

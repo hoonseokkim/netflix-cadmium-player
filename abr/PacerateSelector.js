@@ -21,9 +21,6 @@
  */
 
 // Dependencies
-// import { platform }            from '../core/AsejsEngine.js';
-// import { MediaType, OP }       from '../core/AsejsEngine.js';
-// import { GX as PacingResult }  from './modules/Module_29217.js';
 
 // ---------------------------------------------------------------------------
 // Utility helpers (module-private)
@@ -161,7 +158,7 @@ const filterPacingCoefficients = (coefficients, playerState, confidenceLevel) =>
     result = filtered.filter((entry) => !entry.MKb || entry.MKb.length === 0);
   }
 
-  return result.sort((a, b) => a.internal_Roa - b.internal_Roa);
+  return result.sort((a, b) => a._flag_Roa - b._flag_Roa);
 };
 
 /**
@@ -232,7 +229,7 @@ const computeRegressionPacingRate = (streamState, config) => {
     }
     case "capacityPercentage":
       bufferFullness = Math.max(
-        streamState.internal_Dec / streamState.internal_Bec || 0,
+        streamState._Dec / streamState._Bec || 0,
         streamState.bufferLevelMs / config.maxMediaBufferAllowed,
       );
       break;
@@ -243,7 +240,7 @@ const computeRegressionPacingRate = (streamState, config) => {
   // Find the bracket
   let bracketIndex = -1;
   for (let i = 0; i < coefficients.length; i++) {
-    if (coefficients[i].internal_Roa >= bufferFullness) {
+    if (coefficients[i]._flag_Roa >= bufferFullness) {
       bracketIndex = i;
       break;
     }
@@ -260,9 +257,9 @@ const computeRegressionPacingRate = (streamState, config) => {
   }
 
   // Linear interpolation between the two bracketing coefficient sets
-  const lowerThreshold = coefficients[bracketIndex - 1].internal_Roa;
+  const lowerThreshold = coefficients[bracketIndex - 1]._flag_Roa;
   const lowerRate = evaluatePacingModel(streamState, coefficients[bracketIndex - 1].NQa);
-  const upperThreshold = coefficients[bracketIndex].internal_Roa;
+  const upperThreshold = coefficients[bracketIndex]._flag_Roa;
   const upperRate = evaluatePacingModel(streamState, coefficients[bracketIndex].NQa);
 
   const alpha = Math.min((bufferFullness - lowerThreshold) / (upperThreshold - lowerThreshold), 1);
@@ -488,6 +485,6 @@ export class ResolutionSelector {
 // Exported helpers (used by other ABR modules)
 // ---------------------------------------------------------------------------
 
-export { filterPacingCoefficients as filterPacingCoefficients };
-export { getObservedThroughput as $fd };
-export { computeTargetBufferLevel as computeTargetBufferLevel };
+export { filterPacingCoefficients };
+export { getObservedThroughput };
+export { computeTargetBufferLevel };

@@ -9,21 +9,6 @@
  */
 
 // Dependencies
-// import { __awaiter, __generator, __assign, __decorate, __read, __spreadArray } from 'tslib';
-// import { EventEmitter } from './modules/EventEmitter';
-// import { AbortController, Deferred, assert, findLast, gd, ooa, jic, wKb } from './modules/Utils';
-// import { TimeUtil, observableBool } from './modules/TimeUtil';
-// import { platform } from './modules/Platform';
-// import { MediaType } from './modules/MediaType';
-// import { timeSlice, F7 } from './modules/StreamConstants';
-// import { dataBucketSymbol } from './modules/SegmentMap';
-// import { ie } from './modules/SchedulerEvents';
-// import { u as DEBUG } from './modules/Debug';
-// import { oAb } from './modules/BranchUtils';
-// import { SessionMetricsClass, consoleLogger } from './modules/SessionMetrics';
-// import { ko } from './modules/SessionMetricsSink';
-// import { mathTanh as createScopedConsole } from './modules/ConsoleFactory';
-// import { bD as ErrorParser } from './modules/ErrorParser';
 
 /** Error codes that allow ad-break playback to continue after a failed hydration. */
 export const RECOVERABLE_AD_BREAK_ERRORS = ["AD_BREAK_UNAVAILABLE"];

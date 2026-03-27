@@ -7,14 +7,8 @@
 // Webpack module 11758
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.KCa = void 0;
+
 d = a(22970);
 a(66164);
 p = a(52571);
@@ -34,14 +28,13 @@ t = (function(c) {
             get: function() {
                 return this.bf;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     return g;
 }
 )(a(47743).HCa);
-b.KCa = t;
-
+export const KCa = t;
 
 // Detected exports: KCa

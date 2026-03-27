@@ -17,12 +17,6 @@
  *   Module 11031 - AseStream base class (O5)
  */
 
-// import { __extends } from '../tslib';
-// import { assert } from '../assert/Assert';
-// import { FragmentIndex } from './FragmentIndex';
-// import { debugFlags } from '../core/DebugFlags';
-// import { AseStream } from './AseStream';
-
 /**
  * An AseStream subclass that manages a fragment index built from
  * stream header data. Supports profile timestamp offset adjustment
@@ -146,7 +140,7 @@ export class AseStreamWithFragmentIndex /* extends AseStream */ {
         this.headerKey = headerKey;
         this.track.duplicate(this, trackParam1, trackParam2, fragmentsData, trackParam3, indexParam3);
         this.fragmentIndex = new FragmentIndex(
-            this.internal_Tpb,
+            this._prop_Tpb,
             this.track.unknownDuration,
             fragmentsData,
             indexParam,

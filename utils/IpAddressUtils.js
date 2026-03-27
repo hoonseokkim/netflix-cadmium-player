@@ -8,12 +8,6 @@
  * @original Module_37353
  */
 
-// import { lgb as MAX_IPV6_SEGMENT } from './Constants';   // Module 33096
-// import { jaa as assertString } from './Assertions';       // Module 45146
-// import { uX as ceilDiv } from './MathUtils';              // Module 22365
-// import { arrayCheck as isString, EM as isInRange } from './TypeCheckers'; // Module 32687
-// import { parseInteger } from './NumberUtils';              // Module 3887
-
 /** @type {RegExp} Pattern matching IPv4-like strings (digits and dots only) */
 export const IPV4_PATTERN = /^[0-9.]*$/;
 

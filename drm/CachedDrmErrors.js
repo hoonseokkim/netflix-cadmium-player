@@ -16,8 +16,6 @@
  * @module drm/CachedDrmErrors
  */
 
-// import { KeySystemHelper } from './KeySystemIds.js';   // Module 17612
-
 /**
  * IndexedDB storage key for cached DRM errors.
  * @type {string}

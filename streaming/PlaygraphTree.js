@@ -9,10 +9,6 @@
  * @original Module_61520
  */
 
-// import { u as DEBUG } from '../core/debug';
-// import { RJa as BiMap } from '../utils/BiMap';
-// import { assert } from '../assert';
-
 /**
  * Formats a tree as a string for debugging.
  *

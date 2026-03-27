@@ -21,7 +21,7 @@ import { buildFunction } from '../buffer/BufferUtils.js';
 import { StreamSelectorClass } from '../abr/StreamSelectorResult.js';
 import simulateBufferFill from '../abr/BufferSimulator.js';
 import { playerPhase } from '../player/PlayerPhase.js';
-import { internal_Glb as FragmentCollector } from '../buffer/FragmentCollector.js';
+import { _Glb as FragmentCollector } from '../buffer/FragmentCollector.js';
 
 /**
  * Calculates the simulation duration based on buffer state.
@@ -38,7 +38,7 @@ function calculateSimulationDuration(config, bufferSize, streamInfo) {
         return config.minSimulationDuration;
     }
 
-    const bufferRatio = (streamInfo.internal_Sha || streamInfo.bufferLength) / streamInfo.bufferLength;
+    const bufferRatio = (streamInfo._enum_Sha || streamInfo.bufferLength) / streamInfo.bufferLength;
 
     if (bufferRatio <= 1) {
         return config.maxSimulationDuration;
@@ -151,8 +151,8 @@ function simulateStreamFeasibility(config, currentStream, primaryFragments, seco
             partial: isPartialBuffer,
             fl: bufferStart,
             startPosition: sampleCount,
-            internal_Jtc: sampleCount + primaryBlockCount,
-            internal_Jqa: playerState,
+            _Jtc: sampleCount + primaryBlockCount,
+            _enum_Jqa: playerState,
             WAb: pendingBytes,
             bufferLength: (totalBufferLength - offsetBytes) / simulationDuration,
             FJc: playbackRate,
@@ -163,8 +163,8 @@ function simulateStreamFeasibility(config, currentStream, primaryFragments, seco
 
     // No fragments to simulate - check if buffer exceeds stream end
     return totalBufferLength > firstStream.endedChangedEvent
-        ? { result: true, internal_Zda: 0, canAutoSelect: true }
-        : { result: false, internal_Zda: 0, canAutoSelect: true };
+        ? { result: true, _enum_Zda: 0, canAutoSelect: true }
+        : { result: false, _enum_Zda: 0, canAutoSelect: true };
 }
 
 /**
@@ -176,7 +176,7 @@ function simulateStreamFeasibility(config, currentStream, primaryFragments, seco
  * @param {Object} params.config - ABR configuration
  * @param {Object} params.player - Player state (buffer, position, playback rate, etc.)
  * @param {Object} params.el - Stream list with candidates
- * @param {boolean} params.internal_Mca - Internal flag
+ * @param {boolean} params._enum_Mca - Internal flag
  * @param {boolean} params.h0 - Whether to use fast upswitch for next segment
  * @param {Object} params.metadataResult - Currently selected stream
  * @param {number} params.playerPositionMs - Last downswitch position in ms
@@ -187,7 +187,7 @@ function selectStream(params) {
     const config = params.config;
     const player = params.player;
     const streamList = params.el;
-    const internalMca = params.internal_Mca;
+    const internalMca = params._enum_Mca;
     const isFastUpswitchNextSegment = params.h0;
     let selectedStream = params.metadataResult;
     const lastDownswitchPosition = params.playerPositionMs;
@@ -200,7 +200,7 @@ function selectStream(params) {
     }
     assert(NumberUtils.wc(player.startPosition), "invalid player fragmentIndex");
     assert(typeof player.buffer.ru === "number");
-    assert(typeof player.internal_Jqa === "number");
+    assert(typeof player._enum_Jqa === "number");
 
     const candidates = streamList.first;
     const result = new StreamSelectorClass();
@@ -233,7 +233,7 @@ function selectStream(params) {
     });
 
     // Build throughput samples and calculate pending bytes
-    const throughputSamples = buildFunction.internal_Tpa(player.buffer.fragmentIndex);
+    const throughputSamples = buildFunction._fn_Tpa(player.buffer.fragmentIndex);
     const pendingBytes = player.buffer.ru - throughputSamples.la;
 
     // Determine how many candidates to evaluate
@@ -342,11 +342,11 @@ function selectStream(params) {
                 playbackPosition + throughputOffset - bufferStartPts, maxTrailingBuffer,
                 downloadPosition - bufferStartPts, bufferStart - bufferStartPts, startPosition,
                 throughputSamples.length, partialBuffer, pendingBytes, highBlocks, lowBlocks,
-                lowestWaterMark, player.internal_Jqa, player.playbackRate, combinedCw
+                lowestWaterMark, player._enum_Jqa, player.playbackRate, combinedCw
             );
 
             if (simResult?.result) {
-                result.iid = simResult.internal_Zda;
+                result.iid = simResult._enum_Zda;
             }
 
             previousEvaluation = {

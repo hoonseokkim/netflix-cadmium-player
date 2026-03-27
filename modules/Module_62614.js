@@ -7,13 +7,7 @@
 // Webpack module 62614
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.Fxc = function(a) {
+export function Fxc(a) {
     var d;
     a = a.Vi;
     if (!a)
@@ -25,6 +19,5 @@ b.Fxc = function(a) {
     }, 0);
 }
 ;
-
 
 // Detected exports: Fxc

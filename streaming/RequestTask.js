@@ -79,7 +79,7 @@ class RequestTask extends AsyncRequest {
      * otherwise destroys it.
      */
     reuseOnErrorCacheSize() {
-        if (this.options.internal_Ild) {
+        if (this.options._flag_Ild) {
             super.create();
             this.XG.zga(this);
         } else {

@@ -7,12 +7,7 @@
 // Webpack module 49917
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.oCa = "AdEventPboCommandSymbol";
-b.mCa = "AdBreakEventPboCommandSymbol";
-
+export const oCa = "AdEventPboCommandSymbol";
+export const mCa = "AdBreakEventPboCommandSymbol";
 
 // Detected exports: oCa, mCa

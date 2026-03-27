@@ -7,11 +7,6 @@
 // Webpack module 82229
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Snb = "ZuulRetryPolicyParserSymbol";
-
+export const Snb = "ZuulRetryPolicyParserSymbol";
 
 // Detected exports: Snb

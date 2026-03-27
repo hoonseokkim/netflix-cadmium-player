@@ -10,14 +10,6 @@
  */
 
 // Dependencies
-// import MaxMessageId from './modules/Module_51411';          // max message ID constant
-// import MslError from './modules/Module_10690';              // MSL error class
-// import asyncExecutor from './modules/Module_42979';         // async execution wrapper
-// import MslErrorCode from './modules/Module_36114';          // error code constants
-// import MslException from './modules/Module_20754';          // MSL exception class
-// import { MessageHeader as MessageHeader, MessageCapabilities as MessageCapabilities, SZ as sendMessage } from './modules/Module_54449';
-// import defaultMessageId from './modules/Module_32260';      // message ID utilities
-// import { readBytes as isMslError } from './modules/Module_32260';
 
 /**
  * Increments a message ID, wrapping around at the maximum value.

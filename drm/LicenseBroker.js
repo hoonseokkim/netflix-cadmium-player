@@ -95,7 +95,7 @@ export class LicenseBroker extends BaseBroker {
       this.session.getKeyStatus(viewable.R),
       this._licenseProviderFactory(),
     ]).then(([cachedResult, licenseProvider]) => {
-      return cachedResult.internal_Tza.then((mediaKeysResult) => {
+      return cachedResult._promise_Tza.then((mediaKeysResult) => {
         const currentKeys = this._mediaKeysManager.mediaKeys;
         if (currentKeys && currentKeys !== mediaKeysResult.mediaKeys) {
           this.log.RETRY('Cannot use cached license session as its uses different MediaKeys');
@@ -216,7 +216,7 @@ export class LicenseBroker extends BaseBroker {
     return {
       type: getLicenseType(this.config, false),
       initData: viewable.JU.map((data) => fetchOperation(data)),
-      internal_Zta: codecProfile,
+      _Zta: codecProfile,
       wB: securityLevel,
       sessionInfo: {
         R: viewable.R,

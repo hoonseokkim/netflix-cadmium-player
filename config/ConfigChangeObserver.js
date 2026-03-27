@@ -8,8 +8,6 @@
  * @module config/ConfigChangeObserver
  */
 
-// import { id as generateId } from '../modules/Module_72632';
-
 export class ConfigChangeObserver {
   /**
    * @param {Function} onConfigChanged - Callback invoked when configuration changes.

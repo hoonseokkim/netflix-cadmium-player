@@ -7,16 +7,12 @@
 // Webpack module 45830
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g;
 function d(f, e) {
     this.Ql = f;
     this.dy = e;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.IIa = void 0;
+
 t = a(22970);
 p = a(22674);
 c = a(74870);
@@ -30,7 +26,7 @@ d.prototype.CVb = function(f) {
         return e.Ql.Cxa(k.substring(k.indexOf("?") + 1));
     });
     return {
-        success: !0,
+        success: true,
         o1: f.map(function(k, l) {
             return {
                 id: k.drmSessionId,
@@ -48,11 +44,10 @@ d.prototype.CVb = function(f) {
 }
 ;
 g = d;
-b.IIa = g;
-b.IIa = g = t.__decorate([(0,
+export const IIa = g;
+export const IIa = g = t.__decorate([(0,
 p.aa)(), t.__param(0, (0,
 p.v)(c.Um)), t.__param(1, (0,
 p.v)(a.Km))], g);
-
 
 // Detected exports: IIa

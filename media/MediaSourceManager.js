@@ -499,7 +499,7 @@ export class MediaPresenterASE {
     }
 
     const liveMetadata = this.playerState.manifestRef?.manifestContent?.liveMetadata;
-    const hasInternalJxb = liveMetadata?.internal_Jxb ?? false;
+    const hasInternalJxb = liveMetadata?.disableLiveUi ?? false;
 
     if (
       this.playerState.liveController.isLive &&
@@ -585,12 +585,12 @@ export class MediaPresenterASE {
       this._playerEventHandlers[PlayerEvents.clearTimeoutFn]
     );
     this.playerState.removeEventListener(
-      PlayerEvents.internal_Aga,
-      this._playerEventHandlers[PlayerEvents.internal_Aga]
+      PlayerEvents.restarting,
+      this._playerEventHandlers[PlayerEvents.restarting]
     );
     this.playerState.removeEventListener(
-      PlayerEvents.internal_Fga,
-      this._playerEventHandlers[PlayerEvents.internal_Fga]
+      PlayerEvents.safePlayRequested,
+      this._playerEventHandlers[PlayerEvents.safePlayRequested]
     );
     this.playerState.removeEventListener(
       PlayerEvents.ZM,
@@ -669,7 +669,7 @@ export class MediaPresenterASE {
       this.log.RETRY("Movie is not DRM protected", {
         MovieId: this.playerState.R,
       });
-      this.playerState.streamingSession?.internal_Faa(this.playerState.R);
+      this.playerState.streamingSession?._fn_Faa(this.playerState.R);
     }
 
     // Process any licenses that arrived before source buffers were created
@@ -712,14 +712,14 @@ export class MediaPresenterASE {
     );
 
     this.playerState.addEventListener(
-      PlayerEvents.internal_Aga,
-      (this._playerEventHandlers[PlayerEvents.internal_Aga] = () =>
+      PlayerEvents.restarting,
+      (this._playerEventHandlers[PlayerEvents.restarting] = () =>
         this.close())
     );
 
     this.playerState.addEventListener(
-      PlayerEvents.internal_Fga,
-      (this._playerEventHandlers[PlayerEvents.internal_Fga] = () =>
+      PlayerEvents.safePlayRequested,
+      (this._playerEventHandlers[PlayerEvents.safePlayRequested] = () =>
         this._playVideoElement())
     );
 
@@ -867,7 +867,7 @@ export class MediaPresenterASE {
         config.decoderTimeoutMilliseconds,
         () => {
           const errorInfo =
-            disposableList.key(TimeoutErrorFactory).internal_Bxb(
+            disposableList.key(TimeoutErrorFactory)._fn_Bxb(
               this.playerState
             );
           this._fireError(errorInfo.code, errorInfo);
@@ -885,7 +885,7 @@ export class MediaPresenterASE {
         () => {
           if (this.playerState.mediaSourceManager?.getDecodedFrameCount() === 0) {
             const errorInfo =
-              disposableList.key(TimeoutErrorFactory).internal_Bxb(
+              disposableList.key(TimeoutErrorFactory)._fn_Bxb(
                 this.playerState
               );
             this._fireError(errorInfo.code, errorInfo);
@@ -967,7 +967,7 @@ export class MediaPresenterASE {
       "textBufferingState"
     );
     addObservableListener(this.playerState.state, "state");
-    addEventHandler(this.playerState, PlayerEvents.internal_Hoa);
+    addEventHandler(this.playerState, PlayerEvents.autoplayWasAllowed);
     addEventHandler(this.playerState, PlayerEvents.logBlobEvent);
     addEventHandler(this.playerState, PlayerEvents.OZa);
     addEventHandler(this.playerState, PlayerEvents.bza, () => updateFn(true));
@@ -1003,7 +1003,7 @@ export class MediaPresenterASE {
       "textBufferingState"
     );
     removeObservable(this.playerState.state, "state");
-    removeEvent(this.playerState, PlayerEvents.internal_Hoa);
+    removeEvent(this.playerState, PlayerEvents.autoplayWasAllowed);
     removeEvent(this.playerState, PlayerEvents.logBlobEvent);
     removeEvent(this.playerState, PlayerEvents.OZa);
     removeEvent(this.playerState, PlayerEvents.bza);
@@ -1216,7 +1216,7 @@ export class MediaPresenterASE {
         this._autoplayBlocked = false;
         this.htmlVideoElement.style.display = null;
         this.playerState.logBlobEvent = false;
-        this.playerState.fireEvent(PlayerEvents.internal_Hoa);
+        this.playerState.fireEvent(PlayerEvents.autoplayWasAllowed);
       })
       .catch((err) => {
         if (err.name === "NotAllowedError") {
@@ -1320,7 +1320,7 @@ export class MediaPresenterASE {
       ? undefined
       : this.textStreamBuilder.zvc();
 
-    const seekResult = this._seekEngine.internal_Txc(
+    const seekResult = this._seekEngine._fn_Txc(
       requestedTime,
       cause,
       movieId,
@@ -1581,7 +1581,7 @@ export class MediaPresenterASE {
   _emitMediaTime(forceNotify) {
     this.playerState.mediaTime.set(this.mediaTime);
     if (forceNotify) {
-      this.playerState.internal_Qtc();
+      this.playerState._fn_Qtc();
     }
   }
 
@@ -1597,7 +1597,7 @@ export class MediaPresenterASE {
     if (this._initialized) {
       this._scheduledRenderTick();
     }
-    this.textStreamBuilder.internal_Vtb();
+    this.textStreamBuilder._fn_Vtb();
   }
 
   /**
@@ -1672,7 +1672,7 @@ export class MediaPresenterASE {
    */
   _onLicenseAdded(licenseId) {
     this.playerState.recordPlayDelay("ld", licenseId);
-    this.playerState.streamingSession?.internal_Faa(licenseId);
+    this.playerState.streamingSession?._fn_Faa(licenseId);
     this.playerState.fireEvent(PlayerEvents.OZa);
   }
 

@@ -9,10 +9,7 @@
                         function d(k) {
                             return f.lj.call(this, k, c.ea.i9a) || this;
                         }
-                        Object.defineProperty(b, "__esModule", {
-                            value: !0
-                        });
-                        b.nCa = void 0;
+
                         t = a(22970);
                         p = a(22674);
                         c = a(36129);
@@ -33,8 +30,8 @@
                             var m, n, q;
                             m = this;
                             n = this.dR(l);
-                            !1;
-                            !1;
+                            false;
+                            false;
                             q = {
                                 url: l.href,
                                 name: g.oj.events,
@@ -99,8 +96,8 @@
                         }
                         ;
                         a = d;
-                        b.nCa = a;
-                        b.nCa = a = t.__decorate([(0,
+                        export const nCa = a;
+                        export const nCa = a = t.__decorate([(0,
                         p.aa)(), t.__param(0, (0,
                         p.v)(e.io))], a);
                     }

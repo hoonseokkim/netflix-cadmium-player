@@ -7,13 +7,7 @@
 // Webpack module 41116
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(72905);
 t = (function(c) {
@@ -29,17 +23,17 @@ t = (function(c) {
             if ((this.N.offset -= 4,
             p.u && this.N.console.trace("SchemeTypeBoxTranslator: writing type piff at offset " + this.N.offset),
             this.Ec.a9a("piff"),
-            null === f || void 0 === f ? 0 : f.ce))
+            null === f || undefined === f ? 0 : f.ce))
                 f.ce.urc = "piff";
-        } else if (null === f || void 0 === f ? 0 : f.ce)
+        } else if (null === f || undefined === f ? 0 : f.ce)
             f.ce.urc = this.Y4a;
         this.N.dc();
-        return !0;
+        return true;
     }
     ;
     g.Ae = "schm";
-    g.Fd = !1;
+    g.Fd = false;
     return g;
 }
 )(p.Kf);
-b["default"] = t;
+export default t;

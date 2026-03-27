@@ -4,9 +4,5 @@
  * Original signature: function(t, b)
  */
 // function(t, b) 
-{
-                        Object.defineProperty(b, "__esModule", {
-                            value: !0
-                        });
-                        b.JIa = "PboLicenseResponseTransformerSymbol";
+{JIa = "PboLicenseResponseTransformerSymbol";
                     }

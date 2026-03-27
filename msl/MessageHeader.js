@@ -22,7 +22,7 @@ import MslMessageException from '../msl/MslMessageException.js';
 import MslCryptoException from '../msl/MslCryptoException.js';
 import HeaderKeys from '../msl/HeaderKeys.js';
 import { hNb as parseServiceTokens } from '../msl/ServiceTokenParser.js';
-import { internal_Exa as parseKeyExchangeData } from '../msl/KeyExchangeParser.js';
+import { _Exa as parseKeyExchangeData } from '../msl/KeyExchangeParser.js';
 import { d2a as parseUserIdToken } from '../msl/UserIdTokenParser.js';
 import { WMb as parseKeyRequestData } from '../msl/KeyRequestParser.js';
 import { XMb as parseKeyResponseData } from '../msl/KeyResponseParser.js';

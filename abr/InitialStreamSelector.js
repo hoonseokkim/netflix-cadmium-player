@@ -17,12 +17,6 @@
  */
 
 // --- Dependency stubs (webpack imports in original) ---
-// import * as typeUtils from '../utils/typeUtils';          // Module 17267 — wc, typeofChecker, isEmpty
-// import { findIndex, findLast } from '../utils/array';     // Module 91176 — hn, findLast
-// import { MediaType } from '../media/MediaType';           // Module 65161
-// import { TDigestHistogram } from '../stats/TDigest';      // Module 88318 — rmb.syc
-// import { sigmoid } from '../utils/math';                  // Module 65167 — ZYc (sigmoid function)
-// import {
 //   constrainValue,
 //   StreamSelectorClass,
 //   kbpsToBytes,
@@ -31,9 +25,6 @@
 
 import * as typeUtils from '../utils/typeUtils.js';
 import { findIndex, findLast } from '../utils/array.js';
-// import { MediaType } from '../media/MediaType.js';
-// import { TDigestHistogram } from '../stats/TDigest.js';
-// import { sigmoid } from '../utils/math.js';
 import {
   constrainValue,
   StreamSelectorClass,
@@ -212,7 +203,7 @@ function isWithinMaxBitrateLimits(stream, config) {
         ? findAudioProfileOverride(profileName, config.switchableAudioProfilesOverride)
         : findAudioProfileOverride(profileName, config.audioProfilesOverride);
   } else {
-    audioProfile = undefined;
+
   }
 
   const maxAudioBitrate = audioProfile

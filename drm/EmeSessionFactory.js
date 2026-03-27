@@ -16,9 +16,6 @@
  * @module drm/EmeSessionFactory
  */
 
-// import { EmeSession } from './EmeSession.js';                               // Module 97737
-// import { MediaKeySystemAccessServices } from './MediaKeySystemAccessServices.js'; // Module 9717
-
 /**
  * Factory for creating EmeSession instances.
  *

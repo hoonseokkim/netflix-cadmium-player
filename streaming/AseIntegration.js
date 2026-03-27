@@ -37,25 +37,6 @@
  */
 
 // Dependencies (commented out — resolved by the module bundler)
-// import { playerPhase, getByteOffset, TimeUtil, p8, u8, platform, PlaybackState, bD } from '../core/AseConfigConstants.js';
-// import { EventEmitter } from '../core/AsejsEngine.js';
-// import { scheduleAsync } from '../text/SubtitleDownloader.js';
-// import { ea as ErrorCategory, EventTypeEnum } from '../drm/MediaKeySystemAccessServices.js';
-// import { kPa as processLogData } from './modules/Module_30326.js';
-// import { zh as BufferingState, PlayerEvents, streamState } from '../drm/LicenseBroker.js';
-// import { createMediaRequestConfig, createFormatConfig } from '../drm/MicrosoftScreenSizeFilter.js';
-// import { gd as isValidMediaType } from '../utils/IpAddressUtils.js';
-// import { ellaSendRateMultiplier, MILLISECONDS, seekToSample } from '../drm/LicenseBroker.js';
-// import { vzc as computeStartPosition } from './modules/Module_64302.js';
-// import { zk as formatMediaTime } from './modules/Module_8825.js';
-// import { currentBitrate as ObservableValue } from '../drm/EmeSession.js';
-// import { ManifestCacheClass } from './AsePrefetcherAdapter.js';
-// import { MediaType, DT as MediaTypeToString, supplementaryMediaType } from './MediaRequestEventReporter.js';
-// import { SegmentManager } from './modules/Module_45240.js';
-// import { y$a as AseUtilities } from './modules/Module_26668.js';
-// import { we as NfError } from '../drm/EmeSession.js';
-// import { EventEmitter as NodeEventEmitter } from './modules/Module_17187.js';
-// import { playgraphConfigBuilder } from '../core/PlayerConfig.js';
 
 /**
  * @typedef {object} AseGcSettings
@@ -77,7 +58,7 @@
  * @typedef {object} StreamState
  * @property {string} id - Current segment ID
  * @property {number} IPa - Quality descriptor in playback time
- * @property {number} internal_Ipa - Segment start time
+ * @property {number} _Ipa - Segment start time
  * @property {number} Vic - Segment end time
  * @property {number} BPc - Timed text update time
  * @property {number} B2a - Box timestamp
@@ -261,13 +242,13 @@ class AseIntegrationImpl {
     }
 
     /**
-     * Resolves the leaf-level ASE player by following internal_Xca chains.
+     * Resolves the leaf-level ASE player by following _flag_Xca chains.
      * @returns {object|undefined}
      */
     get leafPlayer() {
         let player = this.asePlayer;
-        while (player?.internal_Xca) {
-            player = player.internal_Xca;
+        while (player?._flag_Xca) {
+            player = player._flag_Xca;
         }
         return player;
     }
@@ -553,7 +534,7 @@ class AseIntegrationImpl {
 
             this.debug.assert(this.internalLogger, 'has access to internalLogger');
 
-            const hasTrackChange = trackEvent.bZ || trackEvent.internal_Lia || (trackEvent.M4 && this.playerState.liveController.isLive);
+            const hasTrackChange = trackEvent.bZ || trackEvent._flag_Lia || (trackEvent.M4 && this.playerState.liveController.isLive);
 
             if (!trackEvent.forceSetTrack && !hasTrackChange) {
                 this.internalLogger.pauseTrace('No tracks to process', {
@@ -569,7 +550,7 @@ class AseIntegrationImpl {
             if (trackEvent.bZ) {
                 trackIds.ew = trackEvent.UE?.trackId;
             }
-            if (trackEvent.internal_Lia) {
+            if (trackEvent._flag_Lia) {
                 trackIds.trackIdentifier = trackEvent.qwa?.trackId;
             }
             if (trackEvent.M4 && this.playerState.liveController.isLive) {
@@ -581,7 +562,7 @@ class AseIntegrationImpl {
 
         // ── Server switch ──
         playgraphEvents.addListener('serverSwitch', (event) => {
-            this.playerState.fireEvent(PlayerEvents.internal_Xga, event);
+            this.playerState.fireEvent(PlayerEvents.serverSwitch, event);
 
             let mediaType;
             if (event.mediatype === MediaTypeToString[MediaType.V]) {
@@ -652,7 +633,7 @@ class AseIntegrationImpl {
             }
 
             const segmentExists = this.playerState.rEb(segmentId);
-            const viewableExists = segmentMapEntry && this.playerState.internal_Aca(segmentMapEntry.J);
+            const viewableExists = segmentMapEntry && this.playerState._fn_Aca(segmentMapEntry.J);
 
             if (!segmentExists) {
                 this.processSegmentManifest(segmentId);
@@ -716,7 +697,7 @@ class AseIntegrationImpl {
 
         // ── Transport report ──
         playgraphEvents.addListener('transportReport', (event) => {
-            const cadmiumResponse = event.internal_Wrc?.cadmiumResponse;
+            const cadmiumResponse = event._Wrc?.cadmiumResponse;
             if (cadmiumResponse) {
                 this.playerState.fireEvent(PlayerEvents.MEDIA_REQUEST_COMPLETE, {
                     response: cadmiumResponse,
@@ -976,7 +957,7 @@ class AseIntegrationImpl {
         return {
             id: String(currentSegment?.id),
             IPa: qualityDescriptor?.playbackSegment ?? 0,
-            internal_Ipa: currentSegment?.startTime.playbackSegment ?? Infinity,
+            _Ipa: currentSegment?.startTime.playbackSegment ?? Infinity,
             Vic: currentSegment?.endTime.playbackSegment ?? 0,
             BPc: timedTextUpdateTime?.playbackSegment ?? Infinity,
             B2a: boxTimestamp?.playbackSegment ?? 0,
@@ -1806,7 +1787,7 @@ class AseIntegrationImpl {
         }
 
         return prerequisite
-            .then(() => this.playerState.internal_Jya(viewableData))
+            .then(() => this.playerState._fn_Jya(viewableData))
             .then(() => viewableData.manifestRef)
             .catch((error) => {
                 throw new bD('Failed to request manifest', {
@@ -1843,9 +1824,9 @@ class AseIntegrationImpl {
 
         // Handle auxiliary manifest linking
         if (
-            !this.playerState.internal_Aca(viewableId) &&
+            !this.playerState._fn_Aca(viewableId) &&
             auxiliaryInfo?.auxiliaryManifestInfo?.parentManifestId &&
-            this.playerState.internal_Aca(auxiliaryInfo.auxiliaryManifestInfo.parentManifestId)
+            this.playerState._fn_Aca(auxiliaryInfo.auxiliaryManifestInfo.parentManifestId)
         ) {
             const parentData = this.playerState.bk(auxiliaryInfo.auxiliaryManifestInfo.parentManifestId);
             const parentToken = parentData.manifestRef?.manifestContent.auxiliaryManifestToken;
@@ -1860,7 +1841,7 @@ class AseIntegrationImpl {
         }
 
         let viewableData;
-        if (this.playerState.internal_Aca(viewableId)) {
+        if (this.playerState._fn_Aca(viewableId)) {
             viewableData = this.playerState.bk(viewableId);
         }
 
@@ -2049,7 +2030,7 @@ class AseIntegrationImpl {
             playbackRate: {
                 get: () => Math.max(this.playerState.playbackRate.value, 0.01),
             },
-            internal_Kxc: {
+            _Kxc: {
                 value: () => {
                     this.debug.assert(this.playerState.mediaSourceElement, 'has access to mediaElement');
                     return this.playerState.mediaSourceElement;
@@ -2063,7 +2044,7 @@ class AseIntegrationImpl {
         });
 
         // Add codec negotiation if configured
-        if (this.config.internal_Vqc) {
+        if (this.config._flag_Vqc) {
             this.debug.assert(this.internalLogger, 'has access to internalLogger');
             this.segmentManager = new SegmentManager(this.playerState, this.config, this.internalLogger);
 

@@ -16,12 +16,12 @@ export default function BufferHealthMonitor(module, exports, require) {
      * Determines the health level of a buffer based on current level and thresholds.
      *
      * @param {number} bufferLevel - Current buffer level in seconds
-     * @param {Object} thresholds - Object with JHc (healthy) and internal_Omc (low) thresholds
+     * @param {Object} thresholds - Object with JHc (healthy) and _flag_Omc (low) thresholds
      * @returns {number} Health state enum value
      */
     function determineHealthLevel(bufferLevel, thresholds) {
         if (bufferLevel > thresholds.JHc) return BufferHealthState.HEALTHY;
-        if (bufferLevel > thresholds.internal_Omc) return BufferHealthState.LOW;
+        if (bufferLevel > thresholds._flag_Omc) return BufferHealthState.LOW;
         if (bufferLevel > 0) return BufferHealthState.CRITICAL;
         return BufferHealthState.EMPTY;
     }
@@ -31,7 +31,7 @@ export default function BufferHealthMonitor(module, exports, require) {
             value: true
         }
     });
-    exports.createPipelineHealthMonitor = exports.cjb = void 0;
+    exports.createPipelineHealthMonitor = exports.cjb = undefined;
 
     tslib = require(22970);
     TimeUtil = require(91176);
@@ -141,7 +141,7 @@ export default function BufferHealthMonitor(module, exports, require) {
             },
 
             start: function () {
-                return tslib.__awaiter(void 0, void 0, void 0, function () {
+                return tslib.__awaiter(undefined, undefined, undefined, function () {
                     return tslib.__generator(this, function () {
                         if (monitor.isCancelled) return [2];
                         timerHandle = config.forceEstRelativeLiveBookmark.startMonitoring(

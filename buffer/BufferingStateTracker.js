@@ -446,13 +446,13 @@ export class BufferingStateTracker {
 
     /**
      * Compute and update the buffering progress percentage (0-99).
-     * @param {Object} status - Prebuffer status with optional `progress`, `internal_Xda`, `hw` fields.
+     * @param {Object} status - Prebuffer status with optional `progress`, `_flag_Xda`, `hw` fields.
      * @private
      */
     _updateBufferingProgress(status) {
         let ratio = status.progress;
 
-        if (status.internal_Xda) {
+        if (status._flag_Xda) {
             // Time-based progress: elapsed / limit
             ratio = (platform.platform.now() - Math.max(this._bufferingStartTime, this._seekTimestamp)) /
                 this.config.prebufferTimeLimit;

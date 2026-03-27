@@ -7,7 +7,6 @@
 // Webpack module 24500
 // Parameters: t (module), exports (exports), N/A (require)
 
-
 var b;
 b = (function() {
     var a;

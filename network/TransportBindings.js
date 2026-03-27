@@ -10,16 +10,6 @@
  */
 
 // Dependencies
-// import { readFloat32 as ContainerModule } from './modules/Module_22674';  // IoC container module
-// import { q8 as TransportConfigToken } from './modules/Module_70865';
-// import { ohb as MslTransportToken, DirectTransportToken as DirectTransportToken, TransportSelectorToken as TransportSelectorToken } from './modules/Module_14543';
-// import { OHa as MslTransportImpl } from './modules/Module_60204';
-// import { QKa as DirectTransportImpl } from './modules/Module_89146';
-// import { mLa as TransportConfigImpl } from './modules/Module_74429';
-// import { LKa as SocketRouterTransportToken, KKa as SocketRouterTransportImpl } from './modules/Module_99306';
-// import { ZC as MslPreference } from './modules/Module_34231';
-// import { nativeProcessor as NativeProcessorToken } from './modules/Module_7605';
-// import { fma as MatrixPlaybackToken } from './modules/Module_54861';
 
 /**
  * IoC container module that registers all transport-related bindings.
@@ -44,7 +34,7 @@ export const transports = new ContainerModule((bind) => {
       const nativeProcessor = context.onConfigChanged.key(NativeProcessorToken);
       const matrixPlayback = context.onConfigChanged.key(MatrixPlaybackToken);
 
-      const cdnConfig = cdnId ? nativeProcessor.internal_Sza[cdnId] : undefined;
+      const cdnConfig = cdnId ? nativeProcessor._Sza[cdnId] : undefined;
 
       // Use socket router when CDN supports it, request allows it,
       // matrix playback is available, and the transport supports it

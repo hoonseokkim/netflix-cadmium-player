@@ -9,10 +9,6 @@
  * @original Module_27259
  */
 
-// import { assert } from './utils';                           // Module 52571
-// import { FlexiblePaddingCodecSelector } from './flexible';  // Module 36974
-// import { StrictPaddingCodecSelector } from './strict';      // Module 603
-
 /**
  * Factory that creates a padding codec selector based on the player's
  * configuration setting.

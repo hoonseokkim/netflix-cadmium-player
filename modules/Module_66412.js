@@ -7,14 +7,8 @@
 // Webpack module 66412
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.mcc = function(c, g) {
+export function mcc(c, g) {
     return (0,
     p.NI)(c, {
         toJSON: function() {
@@ -30,6 +24,5 @@ b.mcc = function(c, g) {
 ;
 d = a(22970);
 p = a(54520);
-
 
 // Detected exports: mcc

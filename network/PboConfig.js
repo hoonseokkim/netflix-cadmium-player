@@ -8,10 +8,6 @@
  * @original Module_17705
  */
 
-// import { injectable, inject } from 'inversify';  // Module 22674
-// import { ConfigBase } from '...';                 // Module 64174
-// import { config, types } from '...';              // Module 12501
-
 /**
  * @class PboConfig
  * @extends ConfigBase

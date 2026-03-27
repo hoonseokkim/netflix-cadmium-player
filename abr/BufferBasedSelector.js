@@ -12,9 +12,6 @@
  * @original Module_62737
  */
 
-// import { __assign, __read } from 'tslib';
-// import { console as abrConsole } from '../core/logging';
-
 /**
  * Evaluates whether the buffer has enough data to sustain playback.
  *
@@ -31,8 +28,8 @@
  * @param {number} params.partial - Partial fragment bytes downloaded
  * @param {number} params.fl - Total downloaded duration
  * @param {number} params.startPosition - Start fragment index
- * @param {number} params.internal_Jtc - Fragment count threshold
- * @param {number} params.internal_Jqa - Min required playback position
+ * @param {number} params._Jtc - Fragment count threshold
+ * @param {number} params._enum_Jqa - Min required playback position
  * @param {number} params.WAb - Download watermark
  * @param {number} params.bufferLength - Buffer length in bytes
  * @param {number} params.FJc - Minimum gap threshold (before considering rebuffer)
@@ -40,7 +37,7 @@
  * @param {boolean} [params.sqc] - Whether to collect per-fragment gap stats
  * @returns {Object} Result with:
  *   - result {boolean} - true if buffer is sufficient
- *   - internal_Zda {number} - Minimum gap found (in ms)
+ *   - _enum_Zda {number} - Minimum gap found (in ms)
  *   - canAutoSelect {boolean} - Whether auto-selection is allowed
  *   - Soa {number[]} - (if sqc) Per-fragment gap values in ms
  */
@@ -54,8 +51,8 @@ export function evaluateBufferLevel(params) {
         partial: partialBytes,
         fl: downloadedDuration,
         startPosition: startFragIdx,
-        internal_Jtc: fragmentCountThreshold,
-        internal_Jqa: minPlaybackPosition,
+        _Jtc: fragmentCountThreshold,
+        _enum_Jqa: minPlaybackPosition,
         WAb: downloadWatermark,
         bufferLength,
         FJc: minGapThreshold,
@@ -141,7 +138,7 @@ export function evaluateBufferLevel(params) {
             if (collectStats) gapStats.push(gap / timescaleToMs);
             return {
                 result: false,
-                internal_Zda: gap / timescaleToMs,
+                _enum_Zda: gap / timescaleToMs,
                 canAutoSelect: false,
                 ...(collectStats && { Soa: gapStats }),
             };
@@ -170,7 +167,7 @@ export function evaluateBufferLevel(params) {
             // Buffer is sufficient
             return {
                 result: true,
-                internal_Zda: minGap / timescaleToMs,
+                _enum_Zda: minGap / timescaleToMs,
                 canAutoSelect: true,
                 ...(collectStats && { Soa: gapStats }),
             };
@@ -195,7 +192,7 @@ export function evaluateBufferLevel(params) {
             if (collectStats) gapStats.push(gap / timescaleToMs);
             return {
                 result: false,
-                internal_Zda: Math.min(gap, minGap) / timescaleToMs,
+                _enum_Zda: Math.min(gap, minGap) / timescaleToMs,
                 canAutoSelect: true,
                 ...(collectStats && { Soa: gapStats }),
             };
@@ -205,7 +202,7 @@ export function evaluateBufferLevel(params) {
     // Made it through all fragments - buffer is sufficient
     return {
         result: true,
-        internal_Zda: minGap / timescaleToMs,
+        _enum_Zda: minGap / timescaleToMs,
         canAutoSelect: true,
         ...(collectStats && { Soa: gapStats }),
     };

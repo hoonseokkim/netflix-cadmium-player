@@ -7,13 +7,6 @@
 // Webpack module 66917
 // Parameters: t (module), b (exports), a (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.QP = void 0;
 new (a(66164).platform.Console)("ASEJS_PACING_FILTER","media|asejs");
 t = (function() {
     function d(p, c) {
@@ -28,25 +21,25 @@ t = (function() {
         var e, h, k;
         k = f.ZN;
         if (!k || !k.jua())
-            return !0;
+            return true;
         switch (this.config.hCc) {
         case "requested":
-            return !1;
+            return false;
         case "requested-low":
             return (k = k.R4a(this.config.VSa),
-            k.iKb() > ((null === (e = f.uz) || void 0 === e ? void 0 : e.HN) || 0));
+            k.iKb() > ((null === (e = f.uz) || undefined === e ? undefined : e.HN) || 0));
         case "inferred":
             k = k.R4a(this.config.VSa);
             p = k.F_a(p, c, g, this.config.ifa);
             if (!p)
                 break;
-            return k.iKb() > ((null === (h = f.uz) || void 0 === h ? void 0 : h.HN) || 0);
+            return k.iKb() > ((null === (h = f.uz) || undefined === h ? undefined : h.HN) || 0);
         case "inferred-strict":
             if ((k = k.R4a(this.config.VSa),
             k.F_a(p, c, g, this.config.ifa)))
-                return !1;
+                return false;
         }
-        return !0;
+        return true;
     }
     ;
     d.prototype.add = function(p, c, g, f) {
@@ -77,7 +70,6 @@ t = (function() {
     return d;
 }
 )();
-b.QP = t;
-
+export const QP = t;
 
 // Detected exports: QP

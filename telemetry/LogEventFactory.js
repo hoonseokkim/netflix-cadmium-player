@@ -112,7 +112,7 @@ class LogEvent {
                 let allocationLabel = sessionContext.abTestAllocation;
                 const parts = sessionContext.abTestAllocation.split(".");
                 if (parts && parts.length > 1 && parts[0][0] !== "S") {
-                    allocationLabel = "SABTest" + parts[0] + ".internal_Cell" + parts[1];
+                    allocationLabel = "SABTest" + parts[0] + "._Cell" + parts[1];
                 }
                 this.data.groupname = this.data.groupname
                     ? this.data.groupname + "|" + allocationLabel

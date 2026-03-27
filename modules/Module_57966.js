@@ -7,14 +7,8 @@
 // Webpack module 57966
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.A9a = void 0;
+
 d = a(79048);
 p = a(66164);
 c = a(91176);
@@ -35,13 +29,13 @@ t = (function() {
     e.prototype.asc = function(h) {
         var k, l, m, n, q, r, u, v;
         k = this;
-        l = !1;
+        l = false;
         if (!this.od.Gw())
             return {
                 fW: l,
                 xF: h
             };
-        m = !0;
+        m = true;
         n = [];
         q = [];
         u = this.za.TS.Ib;
@@ -49,14 +43,14 @@ t = (function() {
             var y, A, z, B, C, D;
             if (!(x || !w.K.IYa || k.CEc() && k.od.XSb(k.za.Fm)))
                 return (k.console.trace("Hydration: Not checking root segment"),
-                !0);
+                true);
             A = u.get(w.K.id);
             (0,
             f.assert)(A, "Hydration: Segment must be present in innermost playgraph");
             z = A.J;
-            B = !1;
+            B = false;
             if (A.type && -1 < [d.ed.vc, d.ed.padding].indexOf(A.type))
-                B = !0;
+                B = true;
             else {
                 C = u.zI(A.id);
                 C && (C = k.za.Ib.get(C)) && C.J !== A.J && (k.console.trace("Hydration: segment evaluated is a content playgraph modification, get viewableId from equivalent segment. " + ("auxiliary viewableId: ").concat(A.J, ", ") + ("main content viewableId: ").concat(C.J)),
@@ -71,8 +65,8 @@ t = (function() {
                 g.u && k.console.log("Checking Parent location for adBreak", {
                     M: A.id,
                     startTime: A.Va,
-                    knd: null === B || void 0 === B ? void 0 : B.id,
-                    Xmd: null === C || void 0 === C ? void 0 : C.offset.ca()
+                    knd: null === B || undefined === B ? undefined : B.id,
+                    Xmd: null === C || undefined === C ? undefined : C.offset.ca()
                 }),
                 B && C)) {
                     z = B.J;
@@ -107,10 +101,10 @@ t = (function() {
                 if (B.sj)
                     if (D.k4)
                         k.console.trace("Hydration: Ignore skippable unhydrated ad break");
-                    else if ((A = null === (y = null === x || void 0 === x ? void 0 : x.ma) || void 0 === y ? void 0 : y.duration,
+                    else if ((A = null === (y = null === x || undefined === x ? undefined : x.ma) || undefined === y ? undefined : y.duration,
                     k.od.KFc && A && 5E3 > A))
                         (k.console.trace("Hydration: Skipping unhydrated ad break too close to previous"),
-                        C = !0);
+                        C = true);
                     else {
                         if (m && 0 === q.length || r === x)
                             (q.push({
@@ -121,21 +115,21 @@ t = (function() {
                             r = x);
                         if (B.cda)
                             return (n.push(w),
-                            !1);
+                            false);
                     }
                 C && (g.u && k.console.log("marking MissedOpportunity"),
-                D.MB = !0);
+                D.MB = true);
                 g.u && k.console.log("Not Blocking branch progression");
-                m = !1;
+                m = false;
                 if (B.cda)
                     return (g.u && k.console.log("Hydration: Blocking further branches"),
-                    !1);
+                    false);
             } else
                 g.u && k.console.log("Could not find adbreak for segment", {
                     startTime: A.Va,
                     M: A.id
                 });
-            return !0;
+            return true;
         });
         l || (l = 0 < n.length);
         n.forEach(function(w) {
@@ -146,7 +140,7 @@ t = (function() {
             v = u.get(h.root.K.id);
             (0,
             f.assert)(v, "root segment must exist in innermost playgraph");
-            (v = this.Eh.OUa(v.J, v.nb)) && v.k4 && (v.k4 = !1);
+            (v = this.Eh.OUa(v.J, v.nb)) && v.k4 && (v.k4 = false);
         }
         return {
             fW: l,
@@ -164,17 +158,17 @@ t = (function() {
         n = this.za.Io;
         q = h.ZSb;
         r = h.ZSb;
-        u = !1;
+        u = false;
         (k = this.XWa(k)) && q && (k = this.t4c.get(k.J),
         (0,
         f.assert)(k, "AdBreakHydrationPolicy::getHydratableContext: main aseViewable should exist"),
-        k.Ab && (null === (m = null === (l = k.S) || void 0 === l ? void 0 : l.wd) || void 0 === m ? 0 : m.Uj) && (r && (r = n),
+        k.Ab && (null === (m = null === (l = k.S) || undefined === l ? undefined : l.wd) || undefined === m ? 0 : m.Uj) && (r && (r = n),
         this.config.fgc || r || (m = k.Ic,
-        l = c.I.Ca(m.Al(!0)),
+        l = c.I.Ca(m.Al(true)),
         m = m.Jpa(l),
         n = l.G - h.Ga.G,
-        n < this.config.IGc && (r = q = !1,
-        u = !0,
+        n < this.config.IGc && (r = q = false,
+        u = true,
         g.u && this.console.log("Hydration: Too close to live edge", {
             m_a: new Date(m.G),
             Vhd: n,
@@ -195,7 +189,6 @@ t = (function() {
     return e;
 }
 )();
-b.A9a = t;
-
+export const A9a = t;
 
 // Detected exports: A9a

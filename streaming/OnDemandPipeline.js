@@ -10,21 +10,6 @@
  * @original Module_95052
  */
 
-// import { __extends, __decorate, __assign } from 'tslib'; // webpack 22970
-// import { platform } from '../core/Platform.js'; // webpack 66164
-// import { EventEmitter } from '../events/EventEmitter.js'; // webpack 90745
-// import { MediaType, PlaybackState } from '../types/MediaTypes.js'; // webpack 65161
-// import { assert } from '../assert/Assert.js'; // webpack 52571
-// import { u as DEBUG } from '../core/Debug.js'; // webpack 48170
-// import { processingContext } from '../streaming/ProcessingContext.js'; // webpack 71808
-// import { mixin } from '../utils/Mixin.js'; // webpack 85254
-// import { loggable } from '../utils/Loggable.js'; // webpack 97757
-// import { WJ as RequestCache } from '../streaming/RequestCache.js'; // webpack 42431
-// import { RequestManager } from '../streaming/RequestManager.js'; // webpack 99021
-// import { BasePipeline } from '../streaming/BasePipeline.js'; // webpack 46512
-// import { calculatePacingDelay, PacingType } from '../streaming/RequestPacing.js'; // webpack 15908
-// import { calculateLiveLikePacing } from '../streaming/LiveLikePacing.js'; // webpack 75100
-
 /**
  * Pipeline for on-demand (SVOD) content streaming. Issues media segment
  * requests sequentially, handles fragment navigation, audio fades, and

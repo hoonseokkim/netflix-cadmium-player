@@ -17,21 +17,6 @@
  */
 
 // --- external dependency stubs (webpack imports) ---
-// import * as helpers        from '../ads/AdBreakMismatchLogger.js';
-// import * as util           from '../abr/InitialStreamSelector.js';
-// import { EventEmitter }    from '../core/AsejsEngine.js';
-// import { platform }        from '../core/AsejsEngine.js';
-// import { Deferred }        from '../core/AsejsEngine.js';
-// import { j6 as SlidingWindowBucket } from '../modules/Module_72697.js';
-// import { hFa as FilterFactory }      from '../modules/Module_97315.js';
-// import { ase_Chb as NetworkConfidence } from '../monitoring/NetworkConfidence.js';
-// import { QP as ConfidenceFilter }       from '../modules/Module_66917.js';
-// import { OEc as isTraceCandidate }      from '../modules/Module_5593.js';
-// import { REa as EndpointActivity }      from '../network/EndpointActivity.js';
-// import { PaceReportLogger as PaceReportLogger } from '../modules/Module_75640.js';
-// import SessionTraceSummary              from '../modules/Module_21487.js';
-// import { PERSISTENT_FILTER_NAMES as PERSISTENT_FILTER_NAMES } from '../modules/Module_33951.js';
-// import { nzc as buildTraceSummaryMap }  from '../modules/Module_28838.js';
 
 const logger = new platform.Console('ASEJS_NETWORK_MONITOR', 'media|asejs');
 

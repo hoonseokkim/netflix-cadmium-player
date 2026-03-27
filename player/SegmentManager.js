@@ -31,7 +31,7 @@ function segmentDetails(segment) {
     logicalEnd: segment.logicalEnd,
     params: segment.manifestSessionData ? {
       trackingId: segment.manifestSessionData.TrackingId,
-      authParams: segment.manifestSessionData.internal_Goa,
+      authParams: segment.manifestSessionData._flag_Goa,
       sessionParams: segment.manifestSessionData.sessionParams,
       disableTrackStickiness: segment.manifestSessionData.ESa,
       uiPlayStartTime: segment.manifestSessionData.JC,
@@ -175,7 +175,7 @@ class SegmentSession {
       // Load immediately if flagged
       this.onPreloadPointReached(this);
     } else {
-      const watcher = this.timeWatcher.internal_Uvb(this.config, () => {
+      const watcher = this.timeWatcher._fn_Uvb(this.config, () => {
         return this.player ? (this.player.XH() || 0) : 0;
       });
 
@@ -621,6 +621,6 @@ export class SegmentManager {
       }
       newPlayer.addEventListener(binding.event, binding.handler);
     });
-    this.eventBus.emit(PlayerEvents.JX.internal_Rga, { player: newPlayer });
+    this.eventBus.emit(PlayerEvents.JX.playgraphsegmenttransition, { player: newPlayer });
   }
 }

@@ -13,9 +13,6 @@
  */
 
 // Dependencies
-// import { assert, DeferredPromise, lazyInitializer } from '../core/AsejsEngine.js';
-// import { platform } from '../core/AsejsEngine.js';
-// import { DEBUG_ENABLED } from '../ads/AdPoliciesManager.js';
 
 /**
  * @class ParentBranchHelper

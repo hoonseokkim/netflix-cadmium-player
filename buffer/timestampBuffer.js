@@ -9,8 +9,6 @@
  */
 
 // Dependencies
-// import { TDigest } from './TDigest';   // webpack 15913
-// import { assert } from './Assert';      // webpack 52571
 
 /**
  * @class JSBridgePerfTracker

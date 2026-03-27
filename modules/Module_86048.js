@@ -7,23 +7,17 @@
 // Webpack module 86048
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c;
 function d(g, f) {
     return f === p.l.yk ? 0 : Object.keys(g.GN).map(function(e) {
         return g.GN[e];
     }).filter(function(e) {
-        return void 0 === e.dB || 1 === e.dB;
+        return undefined === e.dB || 1 === e.dB;
     }).reduce(function(e, h) {
         return e + h.lw[f];
     }, 0);
 }
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.$lb = void 0;
+
 p = a(65161);
 c = a(48170);
 t = (function() {
@@ -52,12 +46,12 @@ t = (function() {
         if (m && (!n || l))
             return (c.u && this.console.log(("canIssueRequest ").concat(this.Z.id, " [").concat(e, "] static limit: ") + ("").concat(h, ", usage: ").concat(JSON.stringify(f), ", failed ").concat(m)),
             {
-                lU: !1,
+                lU: false,
                 reason: m
             });
         c.u && this.console.log(("canIssueRequest ").concat(this.Z.id, " [").concat(e, "] static limit: ") + ("").concat(h, ", usage: ").concat(JSON.stringify(f), ", success ").concat(m));
         return {
-            lU: !0,
+            lU: true,
             reason: m
         };
     }
@@ -70,12 +64,12 @@ t = (function() {
     }
     ;
     g.prototype.chc = function(f) {
-        return f.GN[this.Z.id].total.total > (this.Z.zsa() || Infinity) ? "playgraphMemoryLimit" : void 0;
+        return f.GN[this.Z.id].total.total > (this.Z.zsa() || Infinity) ? "playgraphMemoryLimit" : undefined;
     }
     ;
     g.prototype.ahc = function(f, e, h) {
         f = f.global;
-        return h ? h[p.l.V] + h[p.l.U] > (e.z6a.total || Infinity) ? "staticMemoryLimit" : void 0 : f.total > (e.total.total || Infinity) ? "globalMemoryLimit" : void 0;
+        return h ? h[p.l.V] + h[p.l.U] > (e.z6a.total || Infinity) ? "staticMemoryLimit" : undefined : f.total > (e.total.total || Infinity) ? "globalMemoryLimit" : undefined;
     }
     ;
     g.prototype.bhc = function(f, e, h, k) {
@@ -83,10 +77,10 @@ t = (function() {
         l = f.global;
         if (k !== p.l.yk)
             return h ? (c.u && this.console.log(("checkRequestByMediaTypeMemory [").concat(k, "]:") + (" using static limit ").concat(e.z6a[k], ", usage: ").concat(h) + (" (global: ").concat(l[k], " ") + (" - certain contiguous: ").concat(d(f, k), ")")),
-            h[k] > (e.z6a[k] || Infinity) ? k === p.l.U ? "staticVideoMemoryLimit" : "staticAudioMemoryLimit" : void 0) : l[k] > (e.total[k] || Infinity) ? k === p.l.U ? "globalVideoMemoryLimit" : "globalAudioMemoryLimit" : void 0;
+            h[k] > (e.z6a[k] || Infinity) ? k === p.l.U ? "staticVideoMemoryLimit" : "staticAudioMemoryLimit" : undefined) : l[k] > (e.total[k] || Infinity) ? k === p.l.U ? "globalVideoMemoryLimit" : "globalAudioMemoryLimit" : undefined;
     }
     ;
     return g;
 }
 )();
-b.$lb = t;
+export const $lb = t;

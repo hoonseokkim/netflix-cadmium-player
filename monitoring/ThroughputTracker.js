@@ -18,9 +18,6 @@
  * @original Module_72697
  */
 
-// import { u as DEBUG } from '../utils/AseGlobals';       // Module 48170
-// import { assert } from '../assert/AssertionUtils';       // Module 52571
-
 export class ThroughputTracker {
     /**
      * @param {number} windowDuration - Total window duration in ms

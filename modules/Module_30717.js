@@ -7,13 +7,7 @@
 // Webpack module 30717
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -46,7 +40,7 @@ t = (function(p) {
             Sdd: l,
             Tdd: f
         };
-        (null === g || void 0 === g ? 0 : g.yh) && g.yh[e] && (g.yh[e].jSa = h,
+        (null === g || undefined === g ? 0 : g.yh) && g.yh[e] && (g.yh[e].jSa = h,
         g.yh[e].YD = k,
         g.yh[e].AH = l,
         g.yh[e].ZD = f);
@@ -55,12 +49,12 @@ t = (function(p) {
         this.YD = k;
         this.ZD = f;
         this.AH = l;
-        return !0;
+        return true;
     }
     ;
     c.Ae = "trex";
-    c.Fd = !1;
+    c.Fd = false;
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

@@ -7,7 +7,6 @@
 // Webpack module 81214
 // Parameters: t (module), b (exports), a (require)
 
-
 var c, g, f;
 function d(e) {
     return e == c.default.kf ? 1 : e + 1;
@@ -19,10 +18,7 @@ function p(e) {
         h = d(h);
     return h;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.xlb = void 0;
+
 t = a(22970);
 c = t.__importDefault(a(51411));
 g = t.__importDefault(a(79804));
@@ -34,7 +30,7 @@ a = (function() {
         this.M8 = this.bi = 0;
     }
     e.prototype.cancel = function(h) {
-        this.$m[h] && (this.$m[h].call(this, !1),
+        this.$m[h] && (this.$m[h].call(this, false),
         delete this.$m[h],
         h == this.bi && (this.bi = p(this)));
     }
@@ -50,7 +46,7 @@ a = (function() {
         if (0 < this.fY)
             return (--this.fY,
             setTimeout(function() {
-                k.result(!0);
+                k.result(true);
             }, 0),
             0);
         m = d(this.M8);
@@ -92,14 +88,13 @@ a = (function() {
             h = this.$m[this.bi];
             delete this.$m[this.bi];
             this.bi = p(this);
-            h.call(this, !0);
+            h.call(this, true);
         }
     }
     ;
     return e;
 }
 )();
-b.xlb = a;
-
+export const xlb = a;
 
 // Detected exports: xlb

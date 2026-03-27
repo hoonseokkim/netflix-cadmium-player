@@ -97,11 +97,11 @@ export class MilestonesEventBuilder {
         const timestamps = sessionData.playDelayTimestamps;
         const transactionId = sessionData.sourceTransactionId;
         const maxTimestamp = sessionData.JTb === undefined ? null : sessionData.JTb;
-        const storedEvents = this.playDelayStore.internal_Dxc(transactionId);
+        const storedEvents = this.playDelayStore._fn_Dxc(transactionId);
 
         const linkedSessions = sessionData.streamingSession?.Qmc;
         if (linkedSessions) {
-            linkedSessions.forEach(id => storedEvents.push(...this.playDelayStore.internal_Cxc(id)));
+            linkedSessions.forEach(id => storedEvents.push(...this.playDelayStore._fn_Cxc(id)));
         }
 
         this.playDelayStore.PTc(sessionData.sourceTransactionId);
@@ -127,10 +127,10 @@ export class MilestonesEventBuilder {
             .reduce((max, e) => Math.max(max, e.ts), -Infinity);
 
         if (bufferingStart !== Infinity) {
-            allEvents.push({ eventName: PlayDelayEvent.internal_Gja, eventId: 'content-buffering', ts: bufferingStart, comp: 'buffering', cat: 'cdn', step: 'start' });
+            allEvents.push({ eventName: PlayDelayEvent.contentBufferingStart, eventId: 'content-buffering', ts: bufferingStart, comp: 'buffering', cat: 'cdn', step: 'start' });
         }
         if (bufferingEnd !== -Infinity) {
-            allEvents.push({ eventName: PlayDelayEvent.internal_Fja, eventId: 'content-buffering', ts: bufferingEnd, comp: 'buffering', cat: 'cdn', step: 'end' });
+            allEvents.push({ eventName: PlayDelayEvent.contentBufferingEnd, eventId: 'content-buffering', ts: bufferingEnd, comp: 'buffering', cat: 'cdn', step: 'end' });
         }
 
         allEvents.forEach(e => { if (e.step === 'end') completedEventIds.add(e.eventId); });
@@ -154,18 +154,18 @@ export class MilestonesEventBuilder {
                 events.push({ name, $n: timestamp(this.adjustTimestamp(timestamp(timestamps[key]), {}, true)), sourceTransactionId: transactionId, correlationId });
             }
         };
-        add(PlayDelayEvent.internal_Ila, 'pr_ats', 'request-pre-manifest');
-        add(PlayDelayEvent.internal_Gla, 'ats', 'request-manifest');
-        add(PlayDelayEvent.internal_Hla, 'pr_at', 'request-pre-manifest');
-        add(PlayDelayEvent.internal_Fla, 'at', 'request-manifest');
-        add(PlayDelayEvent.internal_Ela, 'lg', 'request-license');
+        add(PlayDelayEvent.RequestPrefetchManifestStart, 'pr_ats', 'request-pre-manifest');
+        add(PlayDelayEvent.RequestManifestStart, 'ats', 'request-manifest');
+        add(PlayDelayEvent.RequestPrefetchManifestEnd, 'pr_at', 'request-pre-manifest');
+        add(PlayDelayEvent.RequestManifestEnd, 'at', 'request-manifest');
+        add(PlayDelayEvent.RequestLicenseStart, 'lg', 'request-license');
         if ('lr' in timestamps) {
-            add(PlayDelayEvent.internal_Dla, 'lr', 'request-license');
+            add(PlayDelayEvent.RequestLicenseEnd, 'lr', 'request-license');
             add(PlayDelayEvent.dja, 'lr', 'apply-license');
         }
         if ('ld' in timestamps) {
             add(PlayDelayEvent.cja, 'ld', 'apply-license');
-            add(PlayDelayEvent.internal_Nja, 'ld', 'drm');
+            add(PlayDelayEvent.drmEnd, 'ld', 'drm');
         }
         add(PlayDelayEvent.FW, 'tt_start', 'request-timed-text');
         add(PlayDelayEvent.EW, 'tt_comp', 'request-timed-text');
@@ -174,11 +174,11 @@ export class MilestonesEventBuilder {
 
         const firstManifestSent = this.findFirstAvailableKey(timestamps, ['ats', 'pr_ats']);
         const firstManifestReceived = this.findFirstAvailableKey(timestamps, ['at', 'pr_at']);
-        if (firstManifestSent) add(PlayDelayEvent.internal_Qka, firstManifestSent, 'manifest');
-        if (firstManifestReceived) add(PlayDelayEvent.internal_Pka, firstManifestReceived, 'manifest');
+        if (firstManifestSent) add(PlayDelayEvent.manifestFetchStart, firstManifestSent, 'manifest');
+        if (firstManifestReceived) add(PlayDelayEvent.manifestFetchEnd, firstManifestReceived, 'manifest');
 
         const drmStartKey = this.findFirstAvailableKey(timestamps, ['drm_start', 'lg']);
-        if (drmStartKey) add(PlayDelayEvent.internal_Oja, drmStartKey, 'drm');
+        if (drmStartKey) add(PlayDelayEvent.drmStart, drmStartKey, 'drm');
 
         return events;
     }
@@ -251,21 +251,21 @@ export class MilestonesEventBuilder {
     /** @private */
     getComponent(name) {
         switch (name) {
-            case PlayDelayEvent.internal_Ila: case PlayDelayEvent.internal_Hla:
-            case PlayDelayEvent.internal_Gla: case PlayDelayEvent.internal_Fla:
-            case PlayDelayEvent.internal_Qka: case PlayDelayEvent.internal_Pka:
+            case PlayDelayEvent.RequestPrefetchManifestStart: case PlayDelayEvent.RequestPrefetchManifestEnd:
+            case PlayDelayEvent.RequestManifestStart: case PlayDelayEvent.RequestManifestEnd:
+            case PlayDelayEvent.manifestFetchStart: case PlayDelayEvent.manifestFetchEnd:
                 return 'manifest';
-            case PlayDelayEvent.internal_Ela: case PlayDelayEvent.internal_Dla:
+            case PlayDelayEvent.RequestLicenseStart: case PlayDelayEvent.RequestLicenseEnd:
             case PlayDelayEvent.kKa: case PlayDelayEvent.jKa:
             case PlayDelayEvent.lka: case PlayDelayEvent.kka:
             case PlayDelayEvent.dja: case PlayDelayEvent.cja:
-            case PlayDelayEvent.internal_Oja: case PlayDelayEvent.internal_Nja:
+            case PlayDelayEvent.drmStart: case PlayDelayEvent.drmEnd:
                 return 'license';
             case PlayDelayEvent.FW: case PlayDelayEvent.EW:
             case PlayDelayEvent.DW: case PlayDelayEvent.BW:
             case PlayDelayEvent.HW: case PlayDelayEvent.GW:
             case PlayDelayEvent.bCa: case PlayDelayEvent.aCa:
-            case PlayDelayEvent.internal_Gja: case PlayDelayEvent.internal_Fja:
+            case PlayDelayEvent.contentBufferingStart: case PlayDelayEvent.contentBufferingEnd:
                 return 'buffering';
             case PlayDelayEvent.nIa: case PlayDelayEvent.mIa:
             case PlayDelayEvent.qma: case PlayDelayEvent.ika:
@@ -277,12 +277,12 @@ export class MilestonesEventBuilder {
     /** @private */
     classifyComponent(name) {
         switch (name) {
-            case PlayDelayEvent.internal_Ila: case PlayDelayEvent.internal_Hla:
-            case PlayDelayEvent.internal_Gla: case PlayDelayEvent.internal_Fla:
-            case PlayDelayEvent.internal_Qka: case PlayDelayEvent.internal_Pka:
+            case PlayDelayEvent.RequestPrefetchManifestStart: case PlayDelayEvent.RequestPrefetchManifestEnd:
+            case PlayDelayEvent.RequestManifestStart: case PlayDelayEvent.RequestManifestEnd:
+            case PlayDelayEvent.manifestFetchStart: case PlayDelayEvent.manifestFetchEnd:
                 return 'aws';
-            case PlayDelayEvent.internal_Ela: case PlayDelayEvent.internal_Dla:
-            case PlayDelayEvent.internal_Oja: case PlayDelayEvent.internal_Nja:
+            case PlayDelayEvent.RequestLicenseStart: case PlayDelayEvent.RequestLicenseEnd:
+            case PlayDelayEvent.drmStart: case PlayDelayEvent.drmEnd:
                 return 'mixed';
             case PlayDelayEvent.nIa: case PlayDelayEvent.mIa:
             case PlayDelayEvent.kKa: case PlayDelayEvent.jKa:
@@ -294,7 +294,7 @@ export class MilestonesEventBuilder {
             case PlayDelayEvent.FW: case PlayDelayEvent.EW:
             case PlayDelayEvent.DW: case PlayDelayEvent.BW:
             case PlayDelayEvent.HW: case PlayDelayEvent.GW:
-            case PlayDelayEvent.internal_Gja: case PlayDelayEvent.internal_Fja:
+            case PlayDelayEvent.contentBufferingStart: case PlayDelayEvent.contentBufferingEnd:
                 return 'cdn';
             default: return assertNever(name);
         }
@@ -303,21 +303,21 @@ export class MilestonesEventBuilder {
     /** @private */
     getStep(name) {
         switch (name) {
-            case PlayDelayEvent.internal_Ila: case PlayDelayEvent.nIa:
-            case PlayDelayEvent.internal_Gla: case PlayDelayEvent.internal_Ela:
+            case PlayDelayEvent.RequestPrefetchManifestStart: case PlayDelayEvent.nIa:
+            case PlayDelayEvent.RequestManifestStart: case PlayDelayEvent.RequestLicenseStart:
             case PlayDelayEvent.bCa: case PlayDelayEvent.FW:
             case PlayDelayEvent.DW: case PlayDelayEvent.HW:
             case PlayDelayEvent.kKa: case PlayDelayEvent.lka:
-            case PlayDelayEvent.dja: case PlayDelayEvent.internal_Qka:
-            case PlayDelayEvent.internal_Oja: case PlayDelayEvent.internal_Gja:
+            case PlayDelayEvent.dja: case PlayDelayEvent.manifestFetchStart:
+            case PlayDelayEvent.drmStart: case PlayDelayEvent.contentBufferingStart:
                 return 'start';
-            case PlayDelayEvent.internal_Hla: case PlayDelayEvent.mIa:
-            case PlayDelayEvent.internal_Fla: case PlayDelayEvent.internal_Dla:
+            case PlayDelayEvent.RequestPrefetchManifestEnd: case PlayDelayEvent.mIa:
+            case PlayDelayEvent.RequestManifestEnd: case PlayDelayEvent.RequestLicenseEnd:
             case PlayDelayEvent.jKa: case PlayDelayEvent.kka:
             case PlayDelayEvent.cja: case PlayDelayEvent.aCa:
             case PlayDelayEvent.EW: case PlayDelayEvent.BW:
-            case PlayDelayEvent.GW: case PlayDelayEvent.internal_Pka:
-            case PlayDelayEvent.internal_Nja: case PlayDelayEvent.internal_Fja:
+            case PlayDelayEvent.GW: case PlayDelayEvent.manifestFetchEnd:
+            case PlayDelayEvent.drmEnd: case PlayDelayEvent.contentBufferingEnd:
                 return 'end';
             case PlayDelayEvent.qma: case PlayDelayEvent.ika:
                 return 'discrete';

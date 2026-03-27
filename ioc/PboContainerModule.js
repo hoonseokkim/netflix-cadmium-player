@@ -26,7 +26,7 @@ import { PboConfigSymbol as PboConfigSymbol } from '../modules/Module_16257.js';
 import { HIa as PboConfigImpl } from '../modules/Module_46303.js';
 import { JIa as PboDispatcherSymbol } from '../modules/Module_829.js';
 import { IIa as PboDispatcherImpl } from '../modules/Module_45830.js';
-import { internal_Rlb, internal_Wlb, $eb, internal_Olb, internal_Gib, internal_Qkb, internal_Bcb, $o as PboEventType, XEa as PboEventLookupSymbol } from '../telemetry/PboEventSender.js';
+import { StartEventPboCommandSymbol, StopEventPboCommandSymbol, $eb, SpliceEventPboCommandSymbol, PauseEventPboCommandSymbol, ResumeEventPboCommandSymbol, EngageEventPboCommandSymbol, $o as PboEventType, XEa as PboEventLookupSymbol } from '../telemetry/PboEventSender.js';
 import { RKa as StartEventImpl } from '../modules/Module_84860.js';
 import { VKa as TimerEventImpl } from '../modules/Module_35329.js';
 import { we as NfError } from '../drm/EmeSession.js';
@@ -98,13 +98,13 @@ export const pboContainerModule = new ContainerModule((bind) => {
   bind(PboDispatcherSymbol).to(PboDispatcherImpl);
 
   // PBO event handlers (start, timer, wua, splice, pause, resume, end)
-  bind(internal_Rlb).to(StartEventImpl);
-  bind(internal_Wlb).to(TimerEventImpl);
+  bind(StartEventPboCommandSymbol).to(StartEventImpl);
+  bind(StopEventPboCommandSymbol).to(TimerEventImpl);
   bind($eb).to(WuaEventImpl);
-  bind(internal_Olb).to(SpliceEventImpl);
-  bind(internal_Gib).to(PauseEventImpl);
-  bind(internal_Qkb).to(ResumeEventImpl);
-  bind(internal_Bcb).to(EndEventImpl);
+  bind(SpliceEventPboCommandSymbol).to(SpliceEventImpl);
+  bind(PauseEventPboCommandSymbol).to(PauseEventImpl);
+  bind(ResumeEventPboCommandSymbol).to(ResumeEventImpl);
+  bind(EngageEventPboCommandSymbol).to(EndEventImpl);
 
   // PBO transform, CDN, headers
   bind(PboTransformSymbol).to(PboTransformImpl);
@@ -120,19 +120,19 @@ export const pboContainerModule = new ContainerModule((bind) => {
     return (eventType) => {
       switch (eventType) {
         case PboEventType.start:
-          return context.onConfigChanged.key(internal_Rlb);
+          return context.onConfigChanged.key(StartEventPboCommandSymbol);
         case PboEventType.aseTimer:
-          return context.onConfigChanged.key(internal_Wlb);
+          return context.onConfigChanged.key(StopEventPboCommandSymbol);
         case PboEventType.wua:
           return context.onConfigChanged.key($eb);
         case PboEventType.splice:
-          return context.onConfigChanged.key(internal_Olb);
+          return context.onConfigChanged.key(SpliceEventPboCommandSymbol);
         case PboEventType.pause:
-          return context.onConfigChanged.key(internal_Gib);
+          return context.onConfigChanged.key(PauseEventPboCommandSymbol);
         case PboEventType.resume:
-          return context.onConfigChanged.key(internal_Qkb);
+          return context.onConfigChanged.key(ResumeEventPboCommandSymbol);
         case PboEventType.O_:
-          return context.onConfigChanged.key(internal_Bcb);
+          return context.onConfigChanged.key(EngageEventPboCommandSymbol);
       }
       throw new NfError(
         ErrorCodes.PBO_EVENTLOOKUP_FAILURE,

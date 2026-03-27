@@ -7,15 +7,11 @@
 // Webpack module 76427
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g, f, e;
 function d(h) {
     return f.lj.call(this, h, c.ea.hZb) || this;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.AIa = void 0;
+
 t = a(22970);
 p = a(22674);
 c = a(36129);
@@ -39,10 +35,9 @@ d.prototype.ef = function(h, k) {
 }
 ;
 e = d;
-b.AIa = e;
-b.AIa = e = t.__decorate([(0,
+export const AIa = e;
+export const AIa = e = t.__decorate([(0,
 p.aa)(), t.__param(0, (0,
 p.v)(a.io))], e);
-
 
 // Detected exports: AIa

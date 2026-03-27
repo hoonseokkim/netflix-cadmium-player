@@ -9,10 +9,6 @@
  * @original Module_74015
  */
 
-// import { MAX_TICKET_NUMBER } from './TicketConstants';
-// import { asyncCallback } from './asyncCallback';
-// import { MslInternalException } from './MslInternalException';
-
 /**
  * A readers-writer lock supporting multiple concurrent readers
  * and exclusive write access with ticket-based queue management.

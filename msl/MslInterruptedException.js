@@ -8,8 +8,6 @@
  * @original Module_25978
  */
 
-// import MslException from './MslException'; // Module 18595
-
 /**
  * Exception thrown when an MSL operation is interrupted.
  * Extends MslException with a specific "MslInterruptedException" type name.

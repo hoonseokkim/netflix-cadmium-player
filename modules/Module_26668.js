@@ -7,20 +7,16 @@
 // Webpack module 26668
 // Parameters: t (module), b (exports), N/A (require)
 
-
 function a(d) {
     this.log = d.rR("AseUtilsImpl");
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.y$a = void 0;
+
 a.prototype.ptc = function(d, p) {
     var c, g, f;
-    !1;
+    false;
     c = p.slice(0).sort(function(e, h) {
         var k, l;
-        return (null !== (k = e.Gc) && void 0 !== k ? k : 0) - (null !== (l = h.Gc) && void 0 !== l ? l : 0);
+        return (null !== (k = e.Gc) && undefined !== k ? k : 0) - (null !== (l = h.Gc) && undefined !== l ? l : 0);
     }).sort(function(e, h) {
         var k, l, m;
         k = e.profile === d.profile ? 0 : 1;
@@ -39,10 +35,10 @@ a.prototype.ptc = function(d, p) {
     f && p.some(function(e, h) {
         if (e === f)
             return (g = h,
-            !0);
+            true);
     });
-    !1;
+    false;
     return g;
 }
 ;
-b.y$a = a;
+export const y$a = a;

@@ -222,7 +222,7 @@ class AdCollectionView {
      * @returns {number|undefined}
      */
     get segmentationTypeId() {
-        return this.#collectionData.internal_Zp;
+        return this.#collectionData.segmentationTypeId;
     }
 
     /**
@@ -398,7 +398,7 @@ class AdInfoView {
      * @returns {number} Value between 0 and 1
      */
     get adProgress() {
-        return this.#adInfoData.internal_Eqb;
+        return this.#adInfoData.adProgress;
     }
 
     /**
@@ -490,7 +490,7 @@ class AdBreakView {
      * @returns {number|undefined}
      */
     get segmentationTypeId() {
-        return this.#adBreakData.internal_Zp;
+        return this.#adBreakData.segmentationTypeId;
     }
 
     /**

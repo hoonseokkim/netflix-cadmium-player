@@ -8,8 +8,6 @@
  * @original Module_61567
  */
 
-// import { MediaType } from '../types/MediaType';
-
 /**
  * Calculates the available buffer for a single media type.
  *

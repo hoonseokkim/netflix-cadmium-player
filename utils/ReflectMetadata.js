@@ -397,15 +397,15 @@ function createArrayIterator(keys, values, mode) {
                         return { value: [keys[i], values[i]], done: false };
                 }
             }
-            keys = values = undefined;
+
             return { value: undefined, done: true };
         },
         throw(error) {
-            keys = values = undefined;
+
             throw error;
         },
         return(value) {
-            keys = values = undefined;
+
             return { value, done: true };
         },
     };

@@ -7,11 +7,6 @@
 // Webpack module 17391
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Jib = "PboBackoffManagerSymbol";
-
+export const Jib = "PboBackoffManagerSymbol";
 
 // Detected exports: Jib

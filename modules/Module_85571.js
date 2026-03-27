@@ -7,13 +7,7 @@
 // Webpack module 85571
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -71,16 +65,16 @@ t = (function(p) {
         this.Uc.Hmd = !!(this.flags & 2);
         this.Uc.Imd = !!(this.flags & 4);
         this.Uc.Jmd = !!(this.flags & 8);
-        if (null === g || void 0 === g ? 0 : g.ce)
+        if (null === g || undefined === g ? 0 : g.ce)
             (g.ce.width = this.Uc.width / 65536,
             g.ce.height = this.Uc.height / 65536);
         g && g.yh && (g.yh[this.Uc.trackId] = {});
-        return !0;
+        return true;
     }
     ;
     c.Ae = "tkhd";
-    c.Fd = !1;
+    c.Fd = false;
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

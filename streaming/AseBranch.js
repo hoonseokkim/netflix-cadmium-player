@@ -155,7 +155,7 @@ export class AseBranch /* extends BaseBranch */ {
 
     /** @returns {boolean} Whether any pipeline has pending partial buffers */
     get XOa() {
-        return this.$A().some(s => s.internal_Pbc);
+        return this.$A().some(s => s._enum_Pbc);
     }
 
     /** @returns {boolean} Whether this is the last segment in the playgraph */

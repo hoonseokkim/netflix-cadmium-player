@@ -19,17 +19,6 @@
  * @original Module_18447
  */
 
-// import { __extends } from 'tslib';                           // Module 22970
-// import { assert, TimeUtil } from './TimeUtil';                // Module 91176
-// import { MediaType } from './MediaType';                      // Module 26388
-// import { debugEnabled } from './Debug';                       // Module 48170
-// import { PipelineCollection } from './PipelineCollection';    // Module 32412
-// import { LiveMediaPipeline } from './LiveMediaPipeline';      // Module 95324
-// import { NormalizedBranch } from './NormalizedBranch';        // Module 33928
-// import { outputList } from './OutputList';                    // Module 85254
-// import { LiveTimestampNormalizer } from './LiveTimestampNormalizer'; // Module 98561
-// import { isAdPlaygraph } from './LiveStreamChecks';            // Module 8149
-
 /**
  * Calculates the target presentation delay (latency from live edge) in milliseconds.
  *

@@ -15,7 +15,7 @@
 export class SegmentRequestDescriptor {
   /**
    * @param {Object} viewableSession - The owning viewable session
-   * @param {Object} requestContext - Contains stream and internal_Hzc properties
+   * @param {Object} requestContext - Contains stream and _fn_Hzc properties
    */
   constructor(viewableSession, requestContext) {
     /** @type {Object} The viewable session this request belongs to */
@@ -31,7 +31,7 @@ export class SegmentRequestDescriptor {
     this.AA = 'available';
 
     const stream = requestContext.stream;
-    const params = requestContext.internal_Hzc();
+    const params = requestContext._fn_Hzc();
 
     /** @type {string} Unique identifier combining stream ID, media type, and bitrate */
     this.identifier = `${stream.J}-${stream.mediaType}-${stream.bitrate}`;

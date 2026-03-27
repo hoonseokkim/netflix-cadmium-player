@@ -8,8 +8,6 @@
  * @module Module_32687
  */
 
-// import { typeChecker } from './TypeChecks.js'; // webpack module 76564
-
 import { typeChecker } from './Module_76564.js';
 
 /** @type {Object} The underlying type checker instance */

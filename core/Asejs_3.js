@@ -21,25 +21,8 @@
  */
 
 // Dependencies (representative — actual imports are from the webpack graph)
-// import { __extends, __assign, __awaiter, __generator, __values, __read,
 //          __spreadArray, __decorate, __param } from 'tslib';
-// import { EventEmitter } from './modules/EventEmitter';
-// import { TimeUtil, observableBool, flatten, findLast, XY, hn, np, assert,
 //          qB, hasSegmentAvailabilityWindow } from './modules/TimeUtil';
-// import { platform } from './modules/Platform';
-// import { Sidechannel, internal_Ilc, tmc } from './network/Sidechannel';
-// import { ErrorDirectorClass } from './monitoring/ErrorDirector';
-// import { MediaType, F7 as ALL_MEDIA_TYPES } from './modules/MediaType';
-// import { assert as softAssert } from './modules/Assert';
-// import { isLiveStream } from './modules/StreamUtils';
-// import { MediaEventsStore as MediaEventsStore } from './events/MediaEventsStore';
-// import { EventProcessingPipeline as EventProcessingPipeline } from './modules/EventProcessingPipeline';
-// import { ServerClock, DeltaTracker } from './core/Asejs_4';
-// import { HeaderManager as HeaderManager } from './modules/HeaderManager';
-// import { NetworkStateManager as NetworkStateManager } from './modules/NetworkStateManager';
-// import { PendingRequest as PendingRequest } from './modules/PendingRequest';
-// import { $ab as PaddingViewableEventProcessor } from './modules/PaddingViewableEventProcessor';
-// import { BaseViewable (bP) } from './modules/BaseViewable';
 
 /**
  * Holds per-media-type download state for a viewable.
@@ -111,7 +94,7 @@ class AseViewable extends BaseViewable {
       rga: requestGroupAggregator,
       networkMonitor,
       throughputMonitor,
-      internal_Xrc: errorHandlers,
+      _Xrc: errorHandlers,
       sharedMediaSourceExtensions,
       bufferSizeLimiter,
       configWrapper,
@@ -510,10 +493,10 @@ class AseViewable extends BaseViewable {
       // Adjust ad-break content timestamps based on program-start event.
       if (
         this.adverts &&
-        this.mediaEventsStore.store?.internal_Dra?.programStartEvent
+        this.mediaEventsStore.store?._prop_Dra?.programStartEvent
       ) {
         const programStartTime =
-          this.mediaEventsStore.store.internal_Dra.programStartEvent?.timeValue;
+          this.mediaEventsStore.store._prop_Dra.programStartEvent?.timeValue;
         this.adverts.adBreaks.forEach((ab) => {
           ab.timeValue = ab.location.item(programStartTime);
           if (ab.duration !== ab.ads) {
@@ -833,7 +816,7 @@ class AseViewable extends BaseViewable {
         Ia: String(sourceTransactionId),
         s_: !!s_,
         UIc: this.config.OCSCBufferQuantizationConfig.mx,
-        internal_Aec: this.config.OCSCBufferQuantizationConfig.lv,
+        _prop_Aec: this.config.OCSCBufferQuantizationConfig.lv,
         bOc: this.config.padOcaSideChannelRequests,
         enableBlackBoxNotification: this.config.enableBlackBoxNotification,
       }, logWarning);
@@ -897,12 +880,12 @@ class AseViewable extends BaseViewable {
 
     // Live event times.
     if (
-      sideChannelData.title?.internal_Yua ||
-      sideChannelData.title?.internal_Xua
+      sideChannelData.title?._Yua ||
+      sideChannelData.title?._Xua
     ) {
       this.updateLiveEventTimes(
-        sideChannelData.title.internal_Yua?.platform,
-        sideChannelData.title.internal_Xua?.platform
+        sideChannelData.title._Yua?.platform,
+        sideChannelData.title._Xua?.platform
       );
     }
 
@@ -1342,7 +1325,7 @@ class AseViewable extends BaseViewable {
     this.pendingHeaderRequests.push({
       K: requestKey,
       stream,
-      internal_Hzc: callback,
+      _fn_Hzc: callback,
     });
   }
 

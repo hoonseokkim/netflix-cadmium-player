@@ -11,15 +11,6 @@
  * @original Module_39480
  */
 
-// import { listenerPriority } from '../events/ListenerPriority';
-// import { config } from '../core/PlayerConfig';
-// import { now } from '../timing/Clock';
-// import { clamp } from '../utils/MathUtils';
-// import { document as doc } from '../utils/PlatformGlobals';
-// import { scheduleAsync } from '../utils/Scheduler';
-// import { isFiniteNumber } from '../utils/TypeChecks';
-// import { PlayerState, PresentingState, PlaygraphState } from '../types/PlayerEnums';
-
 /**
  * Installs the buffering progress tracker on a player session.
  *
@@ -66,7 +57,7 @@ export function installBufferingProgressTracker(session) {
             }
         } else if (pollIntervalId) {
             clearInterval(pollIntervalId);
-            pollIntervalId = undefined;
+
             scheduleAsync(computeProgress);
         }
     }
@@ -117,14 +108,14 @@ export function installBufferingProgressTracker(session) {
             if (progress < previousProgress) {
                 if (previousProgress - progress < config.progressBackwardsMinPercent / 100) {
                     progress = previousProgress;
-                    progressBackwardsTimestamp = undefined;
+
                 } else if (progressBackwardsTimestamp) {
                     if (
                         currentTime - progressBackwardsTimestamp >
                         config.progressBackwardsGraceTimeMilliseconds
                     ) {
                         isProgressRollback = true;
-                        progressBackwardsTimestamp = undefined;
+
                     } else {
                         progress = previousProgress;
                     }
@@ -135,9 +126,7 @@ export function installBufferingProgressTracker(session) {
             }
         } else {
             // Reset buffering tracking when not showing progress
-            progressBackwardsTimestamp = undefined;
-            minBufferingEndTime = undefined;
-            bufferingStartTime = undefined;
+
         }
 
         const newValue = shouldShowProgress

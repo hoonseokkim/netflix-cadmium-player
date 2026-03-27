@@ -591,7 +591,7 @@ export class PlayReadyCapabilityDetector extends VideoCapabilityDetector {
         const dv1080pEntries = [
             { profiles: [VideoProfiles.Z5, VideoProfiles.Y5], codec: 'hev1.2.6.L90.timerHandle' },
             { profiles: [VideoProfiles.b6, VideoProfiles.a6], codec: 'hev1.2.6.L93.timerHandle' },
-            { profiles: [VideoProfiles.c6, VideoProfiles.internal_Pja, VideoProfiles.SW], codec: 'hev1.2.6.L120.timerHandle' },
+            { profiles: [VideoProfiles.c6, VideoProfiles.hevc_dv5_main10_L40_dash_cenc_prk_qc, VideoProfiles.SW], codec: 'hev1.2.6.L120.timerHandle' },
         ];
         for (const { profiles, codec } of dv1080pEntries) {
             const entry = { Dd: codec, keySystem: KeySystemIds.playready, features: dv1080p };
@@ -600,9 +600,9 @@ export class PlayReadyCapabilityDetector extends VideoCapabilityDetector {
 
         // -- Dolby Vision QHD profiles --
         const dvQhdEntries = [
-            { profiles: [VideoProfiles.e6, VideoProfiles.internal_Qja, VideoProfiles.d6], codec: 'hev1.2.6.L123.timerHandle' },
-            { profiles: [VideoProfiles.g6, VideoProfiles.internal_Rja, VideoProfiles.f6], codec: 'hev1.2.6.L150.timerHandle' },
-            { profiles: [VideoProfiles.i6, VideoProfiles.internal_Sja, VideoProfiles.h6], codec: 'hev1.2.6.L153.timerHandle' },
+            { profiles: [VideoProfiles.e6, VideoProfiles.hevc_dv5_main10_L41_dash_cenc_prk_qc, VideoProfiles.d6], codec: 'hev1.2.6.L123.timerHandle' },
+            { profiles: [VideoProfiles.g6, VideoProfiles.hevc_dv5_main10_L50_dash_cenc_prk_qc, VideoProfiles.f6], codec: 'hev1.2.6.L150.timerHandle' },
+            { profiles: [VideoProfiles.i6, VideoProfiles.hevc_dv5_main10_L51_dash_cenc_prk_qc, VideoProfiles.h6], codec: 'hev1.2.6.L153.timerHandle' },
         ];
         for (const { profiles, codec } of dvQhdEntries) {
             const entry = { Dd: codec, keySystem: KeySystemIds.playready, features: dvQhd };

@@ -12,7 +12,7 @@
 
 import { __assign } from '../ads/AdBreakMismatchLogger.js'; // tslib helpers
 import { AbortController } from '../modules/Module_41674.js'; // abort controller polyfill
-import { internal_Jka as LruCache } from '../modules/Module_57086.js'; // LRU cache implementation
+import { _fn_Jka as LruCache } from '../modules/Module_57086.js'; // LRU cache implementation
 import { iFa as PriorityQueue } from '../modules/Module_67442.js'; // priority queue
 
 /**

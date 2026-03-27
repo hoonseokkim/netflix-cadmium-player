@@ -7,9 +7,6 @@
  * @original Module_660
  */
 
-// import { injectable, inject } from 'inversify'; // Module 22674
-// import { LoggerToken } from '...';              // Module 87386
-
 /**
  * @class LicenseProvider
  */

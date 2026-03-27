@@ -8,8 +8,6 @@
  * @module LiveTextParser
  */
 
-// import { findLast } from './Module_91176';
-
 /**
  * Maximum PTS gap (in ticks) to keep past segments before eviction.
  * @type {number}

@@ -7,14 +7,8 @@
 // Webpack module 88874
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.Hjb = void 0;
+
 d = a(22970);
 p = a(91176);
 c = a(69575);
@@ -30,8 +24,8 @@ t = (function() {
             get: function() {
                 return this.bb.empty;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(e.prototype, {
@@ -39,8 +33,8 @@ t = (function() {
             get: function() {
                 return this.bb.size;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     e.prototype.reset = function() {
@@ -57,10 +51,10 @@ t = (function() {
         var m, n;
         m = this.bb.get(h);
         if (k) {
-            n = null === m || void 0 === m ? void 0 : m.filter(function(q) {
+            n = null === m || undefined === m ? undefined : m.filter(function(q) {
                 return q.K.Va === k;
             });
-            0 === (null === n || void 0 === n ? void 0 : n.length) && (null === l || void 0 === l ? void 0 : l.trace(("getBranches ").concat(h, " startTimeMs: ").concat(k, " no matches, have ").concat(null === m || void 0 === m ? void 0 : m.map(function(q) {
+            0 === (null === n || undefined === n ? undefined : n.length) && (null === l || undefined === l ? undefined : l.trace(("getBranches ").concat(h, " startTimeMs: ").concat(k, " no matches, have ").concat(null === m || undefined === m ? undefined : m.map(function(q) {
                 return q.K.Va;
             }))));
             return n;
@@ -206,19 +200,19 @@ t = (function() {
             if (u) {
                 v = n.get(u);
                 if (!v)
-                    return !0;
+                    return true;
             }
             w = (0,
             p.kc)(m.yn(r.K.id, r.K.Va, l), function(y) {
                 return m.Lr.parent(y) === v || !u;
             });
-            null === l || void 0 === l ? void 0 : l.trace(("createNewBranchTree ").concat(r.K.id, " reusableBranch: ").concat(!!w));
+            null === l || undefined === l ? undefined : l.trace(("createNewBranchTree ").concat(r.K.id, " reusableBranch: ").concat(!!w));
             x = w || k(r.K.id, v);
             x.xh = r.xh;
             n.set(r, x);
             q.add(x, v);
             w && x.update(r.K);
-            return !0;
+            return true;
         });
         return q;
     }
@@ -226,7 +220,6 @@ t = (function() {
     return e;
 }
 )();
-b.Hjb = t;
-
+export const Hjb = t;
 
 // Detected exports: Hjb

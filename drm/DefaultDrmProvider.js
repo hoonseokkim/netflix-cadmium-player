@@ -29,7 +29,7 @@ export class DefaultDrmProvider extends BaseDrmProvider {
      * @param {Object} fragmentHealthRef - Fragment health and display capability reference
      */
     constructor(config, platformMediaSource, hdcpChecker, fragmentHealthRef) {
-        super(config, platformMediaSource, MediaType.internal_Video, fragmentHealthRef);
+        super(config, platformMediaSource, MediaType.Video, fragmentHealthRef);
 
         /** @type {Function} Configuration accessor */
         this.config = config;

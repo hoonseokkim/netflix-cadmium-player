@@ -19,12 +19,6 @@
  *   Module 11479 - Component keys (vk)
  */
 
-// import { config } from '../core/PlayerConfig';
-// import { SUCCESS } from '../core/ResultConstants';
-// import { noOpStorageFactory } from '../player/NoOpStorageFactory';
-// import { indexedDbStorageFactory } from '../player/IndexedDbStorageFactory';
-// import { localStorageFactory } from '../player/LocalStorageFactory';
-
 /**
  * The current storage instance, set during initialization.
  * @type {Object|undefined}

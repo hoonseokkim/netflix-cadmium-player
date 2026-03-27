@@ -14,9 +14,6 @@
  * @original Module 33923
  */
 
-// import { assert } from '../assert';  // Module 91176
-// import { MediaType } from '../types/MediaType';  // Module 65161
-
 /**
  * @typedef {Object} JointStreamComponents
  * @property {StreamInfo} [audio] - The audio stream component
@@ -256,12 +253,12 @@ export class JointStream {
 
     /** @type {*} Internal tracking state */
     get internalTrackingState() {
-        return this.#videoStream.internal_Sha;
+        return this.#videoStream._enum_Sha;
     }
 
     /** @param {*} value */
     set internalTrackingState(value) {
-        this.#videoStream.internal_Sha = value;
+        this.#videoStream._enum_Sha = value;
     }
 
     /**

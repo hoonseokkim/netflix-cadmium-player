@@ -7,10 +7,6 @@
  * @module ErrorMap
  */
 
-// import { __importDefault } from 'tslib';
-// import { platform } from './Module_66164';
-// import NetworkConstants from './Module_14282';
-
 // Error scope levels from NetworkConstants
 // const { ErrorScope } = NetworkConstants;
 // ErrorScope.CONNECTION = connection-level scope

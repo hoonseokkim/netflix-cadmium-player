@@ -9,10 +9,6 @@
  */
 
 // Dependencies
-// import { __awaiter, __generator, __importStar } from 'tslib';
-// import { platform } from './modules/Platform';
-// import { PrefetchManager } from './modules/PrefetchManager';
-// import { getAsejsInstance } from './core/Asejs';
 
 /** @type {PrefetchManager|undefined} Cached prefetch manager. */
 let prefetchManagerInstance;

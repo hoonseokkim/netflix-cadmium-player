@@ -49,12 +49,7 @@ export default function AdVisibilityMonitor(module, exports, require) {
         };
 
         this.logger = logger.createSubLogger("AdVisibilityMonitor");
-    }
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.wCa = void 0;
+    }exports.wCa = undefined;
 
     tslib = require(22970);
     inversify = require(22674);

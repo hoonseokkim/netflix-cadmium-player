@@ -7,13 +7,7 @@
 // Webpack module 95797
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(26388);
 c = a(49420);
@@ -28,12 +22,12 @@ t = (function(g) {
             h = this.Nt("mdia");
             h && (h = h.Nt("mdhd")) && h.O !== e.Ha.O && (e.Ha = new c.I(e.Ha).Rc(h.O));
         }
-        return !0;
+        return true;
     }
     ;
     f.Ae = "trak";
-    f.Fd = !0;
+    f.Fd = true;
     return f;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

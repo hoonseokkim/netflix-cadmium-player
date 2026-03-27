@@ -7,14 +7,8 @@
 // Webpack module 72681
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.r$a = void 0;
+
 d = a(22970);
 t = a(66164);
 p = a(90745);
@@ -44,8 +38,8 @@ a = (function(g) {
             get: function() {
                 return this.Yma;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     f.prototype.Ue = function() {
@@ -66,4 +60,4 @@ a = (function(g) {
     return f;
 }
 )(c);
-b.r$a = a;
+export const r$a = a;

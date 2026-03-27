@@ -9,11 +9,6 @@
  */
 
 // Dependencies
-// import { __spreadArray, __read } from 'tslib';
-// import { $F as PlaygraphComposer } from './modules/Module_91176';  // pipeline composer
-// import { u as DEBUG } from './modules/Module_48170';               // debug flag
-// import { OCa as BasePlaygraph } from './modules/Module_62819';     // base playgraph class
-// import { getTrackIndex } from './modules/Module_28871';            // track index resolver
 
 /**
  * Creates a playgraph from the given configuration and track list.

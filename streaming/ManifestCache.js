@@ -29,14 +29,6 @@
  */
 
 // Dependencies (webpack module references):
-// import { __values, __read, __spreadArray, __awaiter, __generator } from './Module_22970';  // tslib helpers
-// import { mathTanh, internal_Jka, jkb, lfb, pX, ExpiryTracker, observableBool, np } from './Module_91176'; // utilities
-// import { platform } from './Module_66164';           // platform abstraction
-// import { EventEmitter } from './Module_90745';       // event emitter
-// import { mJa } from './Module_2300';                 // playback lease/cache stats
-// import { DormantQueue } from './Module_84726';       // DormantManifestQueue
-// import { wCb } from './Module_37349';                // computeManifestTtl
-// import { fHa } from './Module_52885';                // ManifestCacheItem
 
 /**
  * Reasons a manifest can be removed from the active cache.
@@ -105,7 +97,7 @@ class ManifestCache {
          * @private @type {Object} Reference-counted map of active (primary) manifest items.
          * Each entry is lease-counted; when all leases are released the item is evicted.
          */
-        this.manifestCount = new internal_Jka(this.console, "manifest-primary");
+        this.manifestCount = new _fn_Jka(this.console, "manifest-primary");
 
         /**
          * @private @type {Object} Throttler that rate-limits concurrent manifest fetches.
@@ -123,7 +115,7 @@ class ManifestCache {
                     NBa: viewableId.J,
                 });
 
-                const fetchHandle = this._manifestFetcher.internal_Qsc({
+                const fetchHandle = this._manifestFetcher._fn_Qsc({
                     tb: [{
                         Xa: viewableId,
                         waitTimeMs,
@@ -137,7 +129,7 @@ class ManifestCache {
                 return {
                     item: fetchHandle,
                     key: throttleEntry,
-                    uT: () => fetchHandle.internal_Nfa(viewableId),
+                    uT: () => fetchHandle._fn_Nfa(viewableId),
                 };
             },
         }, options.config.SIb);
@@ -265,7 +257,7 @@ class ManifestCache {
 
         this.events.on("deleted", (event) => {
             for (const plugin of this.plugins) {
-                plugin.internal_Aid(event.LE);
+                plugin._fn_Aid(event.LE);
             }
         });
     }
@@ -513,7 +505,7 @@ class ManifestCache {
 
         // Promote prefetch items to required
         if (!viewableId.isPrefetch) {
-            lease.value.internal_Nfa();
+            lease.value._fn_Nfa();
         }
 
         return lease;
@@ -557,7 +549,7 @@ class ManifestCache {
             eR: 0,
             SA: { absolute: Infinity },
             viewableId,
-            internal_Nfa: () => {
+            _fn_Nfa: () => {
                 this.console.pauseTrace("Promote to required", { key: hash });
                 throttleHandle.value.uT();
                 this._updateDormantCapacity(0);
@@ -567,7 +559,7 @@ class ManifestCache {
         // Initiate the async fetch
         const manifestPromise = this._fetchWithFallback(hash, throttleHandle.value.item, cacheItem, getFallbackItem);
         this._registerManifestItem(hash, cacheItem, manifestPromise).then(() => {
-            fallbackItem = undefined;
+
         });
 
         // Wire up removal/expiry handlers
@@ -641,7 +633,7 @@ class ManifestCache {
                     cacheItem.SA.absolute = 0;
                 }
             }
-            this._expiryTracker.internal_Zfa(cacheItem);
+            this._expiryTracker._fn_Zfa(cacheItem);
         }
         return manifest;
     }
@@ -707,7 +699,7 @@ class ManifestCache {
         if (aliases) {
             for (const alias of aliases) {
                 if (removeIfMatch(this._expiredManifests, alias)) {
-                    this._expiredManifests.internal_Wnc(hash, alias);
+                    this._expiredManifests._fn_Wnc(hash, alias);
                 }
             }
         }
@@ -850,7 +842,7 @@ class ManifestCache {
             if (item.hasManifest && !isFinite(item.SA.absolute)) {
                 const manifest = await item.S;
                 item.LOa(this._computeExpiryTimestamp(manifest));
-                this._expiryTracker.internal_Zfa(item);
+                this._expiryTracker._fn_Zfa(item);
             }
         }
     }

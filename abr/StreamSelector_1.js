@@ -12,13 +12,6 @@
  */
 
 // Dependencies
-// import { platform }         from '../core/AsejsEngine.js';
-// import { playerPhase, MediaType } from '../core/AsejsEngine.js';
-// import { i0 as forEachStream }    from '../core/AsejsEngine.js';
-// import { selectorRegistry }       from './modules/Module_3082.js';
-// import { ResolutionSelector }     from './abr/PacerateSelector.js';
-// import * as streamSelectorUtils   from './abr/StreamSelector.js';
-// import { ... } from remaining modules
 
 /**
  * Single-track adaptive bitrate stream selector.
@@ -180,7 +173,7 @@ export class SingleTrackStreamSelector {
       player,
       el: encoderLevelInfo,
       metadataResult: streamMetadata,
-      internal_Mca: !!previousManifest,
+      _enum_Mca: !!previousManifest,
       h0: isFirstSelection,
       KNc: switchReason,
       shouldWaitForBuffer: this.streamBundle.shouldWaitForBuffer,
@@ -233,7 +226,7 @@ export class SingleTrackStreamSelector {
         buffer,
         player,
         UH: downloadHint,
-        internal_Mca: previousManifest,
+        _enum_Mca: previousManifest,
         kva: firstSegments[0],
         mediaSource: selectedStream,
         vBa: computeUpswitchStream(firstSegments, selectedStream),
@@ -259,7 +252,7 @@ export class SingleTrackStreamSelector {
         } else {
           result.bufferingCompleteHandler = false;
           result.nextFragmentIndex = bufferingResult.nextFragmentIndex;
-          result.internal_Xda = bufferingResult.internal_Xda;
+          result._flag_Xda = bufferingResult._flag_Xda;
           result.progress = bufferingResult.progress;
         }
       } else {
@@ -357,7 +350,7 @@ export class SingleTrackStreamSelector {
             );
           }
           stream.bufferLength = Math.floor(lastPrediction.lower) || 1;
-          stream.internal_Sha = Math.floor(lastPrediction.upper || 1) || 1;
+          stream._enum_Sha = Math.floor(lastPrediction.upper || 1) || 1;
         } else {
           stream.bufferLength = self.config.defaultThroughput;
         }

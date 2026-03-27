@@ -7,13 +7,7 @@
 // Webpack module 31025
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = a(75589);
 a = a(72905);
@@ -30,12 +24,12 @@ a = (function(c) {
         }, {
             pw: "int16"
         }]);
-        return !0;
+        return true;
     }
     ;
     g.Ae = p;
-    g.Fd = !1;
+    g.Fd = false;
     return g;
 }
 )(a.Kf);
-b["default"] = a;
+export default a;

@@ -23,7 +23,7 @@
  *   Module 6198  - MediaType enum
  *   Module 52571 - assert utility
  *   Module 48170 - debug flags
- *   Module 92140 - AudioQualityScorer (internal_Klb)
+ *   Module 92140 - AudioQualityScorer (_Klb)
  *   Module 50468 - MediaFragment (buildFunction)
  */
 
@@ -367,8 +367,8 @@ export class AseStream {
      */
     get audioQualityScore() {
         if (this.mediaType !== MediaType.V) {
-            return AudioQualityScorer.internal_Klb
-                .internal_Ywc()
+            return AudioQualityScorer._Klb
+                ._fn_Ywc()
                 .audioQualityScore(this.bitrate, this.profile);
         }
         return undefined;

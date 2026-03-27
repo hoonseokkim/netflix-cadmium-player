@@ -7,10 +7,6 @@
  * @original Module_34731
  */
 
-// import { injectable, inject } from 'inversify';  // Module 22674
-// import { ConfigBase } from '...';                 // Module 64174
-// import { config, types } from '...';              // Module 12501
-
 /**
  * @class FtlProbeConfig
  * @extends ConfigBase

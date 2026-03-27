@@ -7,24 +7,18 @@
 // Webpack module 28838
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f, e, h;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.nzc = function(k, l) {
+export function nzc(k, l) {
     var m, n, q, r, u, v, w;
     if (k) {
         k = {};
-        if (null === (m = l.btc) || void 0 === m ? 0 : m.enabled)
+        if (null === (m = l.btc) || undefined === m ? 0 : m.enabled)
             k["response-time-average"] = new d.Mkb();
-        if (null === (n = l.ftc) || void 0 === n ? 0 : n.enabled)
+        if (null === (n = l.ftc) || undefined === n ? 0 : n.enabled)
             k["throughput-trend"] = new p.Amb();
-        if (null === (q = l.etc) || void 0 === q ? 0 : q.enabled)
+        if (null === (q = l.etc) || undefined === q ? 0 : q.enabled)
             k["throughput-coefficient-of-variation"] = new c.vmb();
-        if (null === (r = l.Uzb) || void 0 === r ? 0 : r.enabled)
+        if (null === (r = l.Uzb) || undefined === r ? 0 : r.enabled)
             (n = l.Uzb,
             m = n.ro,
             k["throughput-switches"] = new g.wmb({
@@ -32,11 +26,11 @@ b.nzc = function(k, l) {
                 $Na: n.$Na,
                 ro: m
             }));
-        if (null === (u = l.Rzb) || void 0 === u ? 0 : u.enabled)
+        if (null === (u = l.Rzb) || undefined === u ? 0 : u.enabled)
             k["low-throughput"] = new f.cgb({
                 LV: l.Rzb.LV
             });
-        if (null === (v = l.Tzb) || void 0 === v ? 0 : v.enabled)
+        if (null === (v = l.Tzb) || undefined === v ? 0 : v.enabled)
             (r = l.Tzb,
             m = r.ro,
             u = r.Q1,
@@ -52,7 +46,7 @@ b.nzc = function(k, l) {
                 dF: q,
                 P3: r
             }));
-        if (null === (w = l.Szb) || void 0 === w ? 0 : w.enabled)
+        if (null === (w = l.Szb) || undefined === w ? 0 : w.enabled)
             (l = l.Szb,
             m = l.ro,
             u = l.Q1,
@@ -79,6 +73,5 @@ g = a(6298);
 f = a(82071);
 e = a(20615);
 h = a(10138);
-
 
 // Detected exports: nzc

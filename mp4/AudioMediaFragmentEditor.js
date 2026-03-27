@@ -10,14 +10,6 @@
  * audible pops/clicks at segment boundaries.
  */
 
-// import { __extends, __spreadArray, __read, __values } from 'tslib';          // webpack 22970
-// import { Mp4BoxParser } from './Mp4BoxParser';                                // webpack 91562
-// import { TimeUtil } from '../timing/TimeUtil';                                // webpack 91176
-// import { concatenateArrayBuffers } from '../buffer/BufferUtils';              // webpack 69575
-// import { assert } from '../assert/assert';                                    // webpack 52571
-// import { MediaType } from '../types/MediaType';                               // webpack 65161
-// import { MediaFragmentEditor, allArrayBuffers } from './Mp4_1';              // webpack 47267
-
 /**
  * Converts a linear amplitude value to decibels.
  * @param {number} amplitude - Linear amplitude value (0..1)
@@ -338,7 +330,7 @@ export class AudioMediaFragmentEditor extends MediaFragmentEditor {
             "Should have a header for the stream that is being edited");
 
         const parser = new Mp4BoxParser(this.mp4Console, fragment.stream, moofData, {
-            ce: streamHeader?.internal_Lea,
+            ce: streamHeader?._Lea,
         });
 
         const editResult = parser.editStart({
@@ -348,7 +340,7 @@ export class AudioMediaFragmentEditor extends MediaFragmentEditor {
             y4a: false,
             aV: this.config.retainSbrOnFade,
             wT: amplitudeToDecibels(this.maximumFade),
-            internal_Cqa: hasNonArrayBufferResponses,
+            _Cqa: hasNonArrayBufferResponses,
         });
 
         if (!editResult) {
@@ -403,7 +395,7 @@ export class AudioMediaFragmentEditor extends MediaFragmentEditor {
             "Should have a header for the stream that is being edited");
 
         const parser = new Mp4BoxParser(this.mp4Console, fragment.stream, moofData, {
-            ce: streamHeader?.internal_Lea,
+            ce: streamHeader?._Lea,
         });
 
         const editResult = parser.editEnd({
@@ -413,7 +405,7 @@ export class AudioMediaFragmentEditor extends MediaFragmentEditor {
             y4a: false,
             aV: this.config.retainSbrOnFade,
             wT: amplitudeToDecibels(this.maximumFade),
-            internal_Cqa: hasNonArrayBufferResponses,
+            _Cqa: hasNonArrayBufferResponses,
         });
 
         if (!editResult) {

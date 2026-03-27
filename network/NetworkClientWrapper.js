@@ -14,12 +14,7 @@
 export default function NetworkClientWrapper(module, exports, require) {
     var tslib, inversify, GlobalRegistryModule;
 
-    function NetworkClientWrapperClass() {}
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.MKa = exports.internal_Dnb = void 0;
+    function NetworkClientWrapperClass() {}exports.MKa = exports._Dnb = undefined;
 
     tslib = require(22970);
     inversify = require(22674);
@@ -29,7 +24,7 @@ export default function NetworkClientWrapper(module, exports, require) {
      * Default queue configuration for each network message type.
      * Controls maximum payload size (bytes) and queue depth.
      */
-    exports.internal_Dnb = {
+    exports._Dnb = {
         logblob: {
             maxLengthBytes: 204800,   // 200 KB
             maxInQueue: 4

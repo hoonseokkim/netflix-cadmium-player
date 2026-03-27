@@ -39,7 +39,7 @@ export class AES_CBC_HS256_Cipher extends BaseCipher {
    */
   static create(cryptoEngine, drmKeyWrapper, keyId, aesKey, hmacKey) {
     if (hmacKey.algorithm !== 'HMAC-SHA256') {
-      throw new Error(BaseCipher.internal_Ddb);
+      throw new Error(BaseCipher.invalid_HMAC_key);
     }
     return new AES_CBC_HS256_Cipher(cryptoEngine, drmKeyWrapper, keyId, aesKey, hmacKey);
   }

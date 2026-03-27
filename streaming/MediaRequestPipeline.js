@@ -27,20 +27,6 @@
  */
 
 // Dependencies (webpack module references):
-// import { __extends, __generator, __decorate, __importStar } from './Module_22970';  // 22970 - tslib helpers
-// import * as TypeUtil from './Module_17267';         // 17267 - type checking utilities (wc, isUndefined)
-// import { TimeUtil } from './Module_91176';          // 91176 - time utilities
-// import { HCa } from './Module_47743';               // 47743 - media request factory (HCa.create)
-// import { l$a } from './Module_21306';               // 21306 - RequestList constructor
-// import { bP as BranchPipeline } from './Module_81392'; // 81392 - BranchPipeline base class
-// import { MediaType } from './Module_65161';         // 65161 - media type enum
-// import { assert } from './Module_52571';            // 52571 - assertion utility
-// import { RJ as AppendQueue } from './Module_89645'; // 89645 - AppendQueue (readInt32 -> appendQueue)
-// import { completionState, ie } from './Module_40666'; // 40666 - task/scheduler utilities
-// import { o0 } from './Module_97757';                // 97757 - decorator
-// import { CBb } from './Module_27977';               // 27977 - profile helper
-// import { kP } from './Module_3033';                 // 3033  - MediaPipelineFactory singleton
-// import { yDb } from './Module_58418';               // 58418 - attachment threshold calculator
 
 /**
  * @class MediaRequestPipeline
@@ -162,11 +148,11 @@ class MediaRequestPipeline extends BranchPipeline {
   }
 
   /**
-   * The buffered end position (internal_Uub).
+   * The buffered end position (_enum_Uub).
    * @type {number}
    */
   get bufferedEnd() {
-    return this.requestList.internal_Uub;
+    return this.requestList._enum_Uub;
   }
 
   /**
@@ -205,7 +191,7 @@ class MediaRequestPipeline extends BranchPipeline {
       la: this.requestList.ypa,
       G: this.requestList.empty
         ? 0
-        : Math.max(this.requestList.internal_Uub - this.requestList.timestamp.playbackSegment, 0),
+        : Math.max(this.requestList._enum_Uub - this.requestList.timestamp.playbackSegment, 0),
     };
   }
 
@@ -291,7 +277,7 @@ class MediaRequestPipeline extends BranchPipeline {
     function doCancel() {
       const copies = requests.map(r => r);
       if (copies.length > 0) {
-        self.streamSelector.internal_Kwa(copies);
+        self.streamSelector._fn_Kwa(copies);
       }
       requests.forEach(r => {
         r.abort();
@@ -346,7 +332,7 @@ class MediaRequestPipeline extends BranchPipeline {
       endMarked: this.appendQueue.length !== undefined,
       queueCount: this.appendQueue.length,
       isComplete: this.appendQueue.mI,
-      itemCount: this.appendQueue.internal_Vub,
+      itemCount: this.appendQueue._flag_Vub,
       continuousEndPts: this.appendQueue.buildPath().reduce((acc, entry) => {
         if (entry && !entry.done) {
           const val = entry.value;
@@ -366,9 +352,9 @@ class MediaRequestPipeline extends BranchPipeline {
    * Returns internal state for debugging/serialization.
    * @returns {Object}
    */
-  internal_Pvc() {
+  _fn_Pvc() {
     return {
-      completedRequests: this.requestList.internal_Qvc(),
+      completedRequests: this.requestList._fn_Qvc(),
     };
   }
 
@@ -646,7 +632,7 @@ class MediaRequestPipeline extends BranchPipeline {
       if (this._attachIndex > 0) {
         this._attachIndex--;
       }
-      this.streamSelector.internal_Kwa(removed);
+      this.streamSelector._fn_Kwa(removed);
     }
   }
 
@@ -755,7 +741,7 @@ class MediaRequestPipeline extends BranchPipeline {
       const attachThreshold = yDb({
         dfc: request.la,
         KHc: track.downloadables[0].bitrate,
-        internal_Smc: bitrate,
+        _Smc: bitrate,
         CJc: this.config.streamModeAppendAttachThreshold,
         wUc: request.offset.ri,
         isLive: this.isLive.viewableSession.isAdPlaygraph,
@@ -877,7 +863,7 @@ class MediaRequestPipeline extends BranchPipeline {
     // Notify stream selector about all released requests
     if (hadRequests) {
       const released = oldList.map(r => r);
-      this.streamSelector.internal_Kwa(released);
+      this.streamSelector._fn_Kwa(released);
     }
   }
 
@@ -933,7 +919,7 @@ class MediaRequestPipeline extends BranchPipeline {
     const purged = [];
     let indexAdjustment = 0;
 
-    this.requestList.internal_Ofa((request, index) => {
+    this.requestList._fn_Ofa((request, index) => {
       if (index < this._attachIndex) {
         ++indexAdjustment;
       }
@@ -942,7 +928,7 @@ class MediaRequestPipeline extends BranchPipeline {
 
     this._attachIndex -= indexAdjustment;
     this.branchPruner?.reuseOnErrorCacheSize();
-    this.streamSelector.internal_Kwa(purged);
+    this.streamSelector._fn_Kwa(purged);
   }
 
   // =========================================================================

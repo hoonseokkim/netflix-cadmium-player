@@ -14,7 +14,7 @@ import { assert } from '../assert/Assert.js';
 import { stateEnum, HTTPRequestWrapper } from '../network/HttpRequestWrapper.js';
 import { MediaType, TimeUtil, FI as getMediaTypeName } from '../media/MediaTypes.js';
 import { dk as isLiveStream } from '../streaming/StreamUtils.js';
-import { internal_Rla } from '../network/NetworkConfig.js';
+import { _prop_Rla } from '../network/NetworkConfig.js';
 import { t$a as aseRequestType } from '../network/NetworkTypes.js';
 import { xW as BaseMediaRequest } from '../network/BaseMediaRequest.js';
 import { outputList } from '../core/Registry.js';
@@ -62,7 +62,7 @@ export class AseRequest extends BaseMediaRequest {
         this.console = console;
 
         /** @type {string} */
-        this.YN = internal_Rla.responseType;
+        this.YN = _prop_Rla.responseType;
         /** @type {EventEmitter} */
         this.events = new EventEmitter();
         /** @type {number} */

@@ -9,13 +9,6 @@
  */
 
 // Dependencies
-// import { __values, __decorate } from 'tslib';              // webpack 22970
-// import { maxByComparator, removeSingle } from './TimeUtil'; // webpack 91176
-// import { platform } from './Platform';                      // webpack 66164
-// import { isBufferingState, resolveBlocking } from './StreamableUtils'; // webpack 57141
-// import { timeSlice, MediaType } from './Constants';         // webpack 65161
-// import { SessionMetricsClass, consoleLogger } from './SessionMetrics'; // webpack 61996
-// import { computePriority, getStreamableState } from './StreamablePriority'; // webpack 62629
 
 /**
  * Returns the furthest buffered position among streamables sharing the

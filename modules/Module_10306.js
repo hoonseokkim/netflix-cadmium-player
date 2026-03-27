@@ -7,12 +7,7 @@
 // Webpack module 10306
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.hmb = "SystemRandomSymbol";
-b.Lla = "RandomGeneratorSymbol";
-
+export const hmb = "SystemRandomSymbol";
+export const Lla = "RandomGeneratorSymbol";
 
 // Detected exports: hmb, Lla

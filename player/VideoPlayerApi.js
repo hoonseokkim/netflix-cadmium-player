@@ -9,9 +9,6 @@
  * @original Module_58343
  */
 
-// import { getCategoryLog } from '../core/logging';
-// import { assert } from '../assert';
-
 /**
  * Public-facing API for the Netflix video player.
  *
@@ -363,7 +360,7 @@ export class VideoPlayerApi {
 
     /** @param {number} rate */
     setPlaybackRate(rate) {
-        return this.getPlayerSubsystem().internal_Zza(rate);
+        return this.getPlayerSubsystem()._fn_Zza(rate);
     }
 
     // ─── Text/Subtitle Track Management ──────────────────────────────
@@ -476,8 +473,8 @@ export class VideoPlayerApi {
             getPlaygraphMap: () => this.viewEventEmitter.CS(),
             updatePlaygraphMap: (map) => this.viewEventEmitter.updatePlaygraphMap(map),
             getSegmentOffset: () => this.viewEventEmitter.rDb(),
-            getPlaygraphSessionOffset: () => this.viewEventEmitter.internal_Cyc(),
-            getPlaygraphDuration: () => this.viewEventEmitter.internal_Byc(),
+            getPlaygraphSessionOffset: () => this.viewEventEmitter._fn_Cyc(),
+            getPlaygraphDuration: () => this.viewEventEmitter._fn_Byc(),
         };
     }
 }

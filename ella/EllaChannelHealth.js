@@ -6,9 +6,6 @@
  * failure statistics used by the ABR and relay-failover logic.
  */
 
-// import { platform } from '../core/AsejsEngine.js';
-// import { XW as ChannelSubscriptionState } from './modules/Module_51330.js';
-
 const logger = new c.platform.Console("ASEJS_ELLA_CHANNEL_HEALTH", "media|asejs");
 
 /**

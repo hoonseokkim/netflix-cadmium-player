@@ -7,13 +7,8 @@
 // Webpack module 14543
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Pmb = "TransportFactorySymbol";
-b.ohb = "MslTransportSymbol";
-b.Plb = "SslTransportSymbol";
-
+export const Pmb = "TransportFactorySymbol";
+export const ohb = "MslTransportSymbol";
+export const Plb = "SslTransportSymbol";
 
 // Detected exports: Pmb, ohb, Plb

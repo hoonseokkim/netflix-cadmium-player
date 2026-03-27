@@ -7,11 +7,6 @@
 // Webpack module 15614
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.e5b = "PboPingCommandSymbol";
-
+export const e5b = "PboPingCommandSymbol";
 
 // Detected exports: e5b

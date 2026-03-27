@@ -12,10 +12,6 @@
  * @original Module_25293
  */
 
-// import { __decorate, __param } from 'tslib';        // Module 22970
-// import { injectable, inject } from 'inversify';      // Module 22674
-// import { ConfigToken } from '../core/AseConfig';     // Module 4203
-
 export class BufferInfoProvider {
     /**
      * @param {Function} config - Injected config provider that returns buffer info

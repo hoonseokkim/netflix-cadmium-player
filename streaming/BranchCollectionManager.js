@@ -121,7 +121,7 @@ export class BranchCollectionManager {
 
         this.eventSubscriptions = new ClockWatcher();
         this.eventSubscriptions.on(this.events, 'segmentPresenting', () => {
-            return __awaiter(this, void 0, void 0, function () {
+            return __awaiter(this, undefined, undefined, function () {
                 let gcConfig;
                 return __generator(this, function (state) {
                     switch (state.label) {
@@ -564,7 +564,7 @@ export class BranchCollectionManager {
      * Clears internal references on branches and resets the live edge detector.
      */
     clearReferences() {
-        this.activeBranches.forEach((branch) => branch.internal_Svb());
+        this.activeBranches.forEach((branch) => branch._fn_Svb());
         this.liveEdgeDetector = new LiveEdgeDetector(this.console, this.playgraph);
     }
 
@@ -777,7 +777,7 @@ export class BranchCollectionManager {
             const existingBranch = this._findBranchByMediaType(track.mediaType);
             if (existingBranch !== undefined) {
                 this.transitionEventEmitter.once(track.headerContainerRef, (event) => {
-                    return existingBranch.internal_Ltc(event);
+                    return existingBranch._fn_Ltc(event);
                 });
             }
         });
@@ -891,7 +891,7 @@ BranchCollectionManager.prototype._runBranchPrunerLoop = function () {
     return __generator(self, function (state) {
         switch (state.label) {
             case 0:
-                if (!self.branchQueue.internal_Vub && !self.completedBranches.length) {
+                if (!self.branchQueue._flag_Vub && !self.completedBranches.length) {
                     return [3, 2];
                 }
                 {

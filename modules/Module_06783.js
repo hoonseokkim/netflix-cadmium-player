@@ -7,16 +7,10 @@
 // Webpack module 6783
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.Ds = function(c, g, f, e) {
+export function Ds(c, g, f, e) {
     var h, k, l, q, r, u;
-    void 0 === e && (e = {});
+    export const undefined = == e && (e = {});
     l = p.I.max(f, p.I.ia);
     try {
         for (var m = d.__values(Object.keys(c.ba)), n = m.next(); !n.done; n = m.next()) {
@@ -24,7 +18,7 @@ b.Ds = function(c, g, f, e) {
             r = c.ba[q];
             if (r.J === g) {
                 u = p.I.Ca(r.Va);
-                if (l.$f(u) && (!isFinite(null !== (k = r.eb) && void 0 !== k ? k : NaN) || l.lessThan(p.I.Ca(r.eb))))
+                if (l.$f(u) && (!isFinite(null !== (k = r.eb) && undefined !== k ? k : NaN) || l.lessThan(p.I.Ca(r.eb))))
                     return {
                         M: q,
                         offset: f.da(u)
@@ -77,6 +71,5 @@ b.Ds = function(c, g, f, e) {
 ;
 d = a(22970);
 p = a(91176);
-
 
 // Detected exports: Ds

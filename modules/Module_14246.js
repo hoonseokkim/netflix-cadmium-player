@@ -7,14 +7,8 @@
 // Webpack module 14246
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g, f;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.pWa = b.TJ = void 0;
+
 d = a(93731);
 p = a(8367);
 c = a(93928);
@@ -22,13 +16,13 @@ g = a(53809);
 f = a(50612);
 Object.defineProperties(b, {
     TJ: {
-        enumerable: !0,
+        enumerable: true,
         get: function() {
             return f.TJ;
         }
     }
 });
-b.pWa = function(e) {
+export function pWa(e) {
     switch (e.sva) {
     case "manifold":
         return new d.oHa(e);
@@ -41,6 +35,5 @@ b.pWa = function(e) {
     }
 }
 ;
-
 
 // Detected exports: pWa, TJ

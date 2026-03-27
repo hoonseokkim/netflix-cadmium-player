@@ -7,19 +7,11 @@
 // Webpack module 35879
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.zDb = void 0;
-b.zDb = function(a, d) {
+export function zDb(a, d) {
     return a.reduce(function(p, c) {
         return p + c.hsa(d).G;
     }, 0);
 }
 ;
-
 
 // Detected exports: zDb

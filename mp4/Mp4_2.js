@@ -8,9 +8,6 @@
  */
 
 // Dependencies
-// import { __extends } from 'tslib';                      // webpack 22970
-// import { platform } from './Platform';                   // webpack 66164
-// import { Mp4BoxParser as BaseMp4BoxParser, mp4ParseConsole, M1, cma } from './Mp4BoxParser'; // webpack 91562
 
 // Re-export low-level parsing utilities
 export { mp4ParseConsole } from "./Mp4BoxParser";

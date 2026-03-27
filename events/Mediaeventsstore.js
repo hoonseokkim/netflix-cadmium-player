@@ -9,19 +9,6 @@
  */
 
 // Dependencies
-// import { __values, __assign, __decorate, __awaiter, __generator } from 'tslib'; // webpack 22970
-// import { EventEmitter } from './EventEmitter';            // webpack 90745
-// import { TimeUtil, YX, LP, assert, xM } from './TimeUtil'; // webpack 91176
-// import { MediaType } from './Mp4BoxParser';                // webpack 91562
-// import { platform } from './Platform';                     // webpack 66164
-// import { debugEnabled } from './Debug';                    // webpack 48170
-// import { isLiveStream } from './LiveUtils';                // webpack 8149
-// import { SessionMetricsClass, consoleLogger } from './SessionMetrics'; // webpack 61996
-// import { ko } from './Pipeline';                           // webpack 54366
-// import { MediaEventsFetcherFactory } from './MediaEventsFetcherFactory'; // webpack 45173
-// import { isNetflixEvent } from './MediaEventUtils';        // webpack 89025
-// import { MediaEventsDiagnostics } from './MediaEventsDiagnostics'; // webpack 12381
-// import { createBehavior } from './MediaEventsBehavior';    // webpack 4786
 
 /**
  * Event type priority for sorting events at the same presentation time.

@@ -7,11 +7,6 @@
 // Webpack module 80012
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.ofb = "LicenseBrokerFactorySymbol";
-
+export const ofb = "LicenseBrokerFactorySymbol";
 
 // Detected exports: ofb

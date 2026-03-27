@@ -7,15 +7,11 @@
 // Webpack module 69740
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g, f, e;
 function d(h) {
     return g.Yo.call(this, h, c.ea.clb, f.$o.splice, 1) || this;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.PKa = void 0;
+
 t = a(22970);
 p = a(22674);
 c = a(36129);
@@ -24,10 +20,9 @@ f = a(87607);
 a = a(83998);
 Ia(d, g.Yo);
 e = d;
-b.PKa = e;
-b.PKa = e = t.__decorate([(0,
+export const PKa = e;
+export const PKa = e = t.__decorate([(0,
 p.aa)(), t.__param(0, (0,
 p.v)(a.io))], e);
-
 
 // Detected exports: PKa

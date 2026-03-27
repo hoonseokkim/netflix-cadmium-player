@@ -9,13 +9,6 @@
  * @original Module_92049
  */
 
-// import { DrmType } from '../drm/DrmType.js'; // webpack 56800
-// import { DrmProfile } from '../drm/DrmProfile.js'; // webpack 75568
-// import { KeySystem } from '../drm/KeySystem.js'; // webpack 17612
-// import { BaseDrmCapabilities } from '../drm/BaseDrmCapabilities.js'; // webpack 31741
-// import { MsCapabilityQuery } from '../drm/MsCapabilityQuery.js'; // webpack 40290
-// import { CodecCapability } from '../drm/CodecCapability.js'; // webpack 73796
-
 /**
  * Microsoft PlayReady DRM capability checker.
  * Extends BaseDrmCapabilities to provide PlayReady-specific codec probing.

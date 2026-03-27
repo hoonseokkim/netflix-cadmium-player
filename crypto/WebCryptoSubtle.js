@@ -18,10 +18,6 @@
  */
 
 import { __importDefault } from 'tslib'; // Module 22970
-// import { kl } from './KeyFormat';           // Module 11475
-// import PromiseLib from './Promise';         // Module 90122
-// import { eD } from './Encoding';            // Module 69193
-// import DerKeyUtils from './DerKeyUtils';    // Module 69763
 
 /**
  * Enumeration of Web Crypto API versions detected across browsers.

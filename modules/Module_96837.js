@@ -7,12 +7,7 @@
 // Webpack module 96837
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.GDc = b.wEc = b.XDc = b.af = void 0;
-b.af = {
+export const af = {
     bja: {
         name: "AES-KW"
     },
@@ -77,33 +72,32 @@ b.af = {
         name: "SHA-384"
     }
 };
-b.XDc = function(a) {
+export function XDc(a) {
     return "HMAC" == a.name;
 }
 ;
-b.wEc = function(a) {
+export function wEc(a) {
     switch (a.name) {
-    case b.af.rG.name:
-    case b.af.Kla.name:
-    case b.af.F5b.name:
-    case b.af.G5b.name:
-    case b.af.X7.name:
-        return !0;
+    case af.rG.name:
+    case af.Kla.name:
+    case af.F5b.name:
+    case af.G5b.name:
+    case af.X7.name:
+        return true;
     default:
-        return !1;
+        return false;
     }
 }
 ;
-b.GDc = function(a) {
+export function GDc(a) {
     switch (a.name) {
-    case b.af.r0b.name:
-    case b.af.s0b.name:
-        return !0;
+    case af.r0b.name:
+    case af.s0b.name:
+        return true;
     default:
-        return !1;
+        return false;
     }
 }
 ;
-
 
 // Detected exports: GDc, wEc, XDc, af

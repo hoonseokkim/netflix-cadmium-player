@@ -26,25 +26,6 @@
  */
 
 // ─── Dependencies ───────────────────────────────────────────────────────────
-// import * as constants from './constants';          // Module 33096
-// import * as defaultConfig from './defaultConfig';  // Module 52569
-// import { log, disposableList } from './services';  // Module 31276
-// import { enumConstants } from './enums';            // Module 34231
-// import { assert } from './assert';                  // Module 45146
-// import { ks as VideoCapabilityType, XF as AudioCapabilityType } from './capabilities'; // Module 56800
-// import { gs as TimedTextProfile } from './timedText';  // Module 75568
-// import { forEachProperty, assignProperties, parseInteger } from './objectUtils';  // Module 3887
-// import { cla, forEach } from './browserUtils';     // Module 22365
-// import { typeofChecker, sB, gd, gGb, EM, wc, isArray, arrayCheck, n1 } from './typeChecks'; // Module 32687
-// import { pKa as SMALL_SEEK_DELTA } from './seekConstants'; // Module 93294
-// import { oq } from './logService';                 // Module 45118
-// import { hG } from './logBlob';                    // Module 31850
-// import { IX } from './platformDefaults';           // Module 5614
-// import { observableValue } from './abrDefaults';   // Module 45247
-// import { unitConversion, MILLISECONDS } from './timeUnits'; // Module 72574, 5021
-// import { PlatformToken } from './platformToken';   // Module 91581
-// import { ClockToken } from './clockToken';         // Module 81918
-// import { flattenAndMap } from './arrayUtils';      // Module 88195
 
 // ─── Configuration Value Parsers ────────────────────────────────────────────
 
@@ -95,7 +76,7 @@ function getConfigValue(key, defaultValue, transform) {
   try {
     if (transform) value = transform(value);
   } catch (_) {
-    value = undefined;
+
   }
   if (value !== undefined) return value;
   return defaultValue;

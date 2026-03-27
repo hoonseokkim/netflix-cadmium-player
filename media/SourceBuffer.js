@@ -9,19 +9,6 @@
  * @original Module_90762
  */
 
-// import { getMediaTypeName } from '../utils/MediaTypeUtils.js'; // webpack 93294
-// import { config as globalConfig } from '../core/Config.js'; // webpack 29204
-// import { ObservableValue } from '../utils/ObservableValue.js'; // webpack 81734
-// import { EventEmitter } from '../events/EventEmitter.js'; // webpack 94886
-// import { disposableList } from '../core/Registry.js'; // webpack 31276
-// import { errorCodes } from '../core/ErrorCodes.js'; // webpack 36129
-// import { assert } from '../assert/Assert.js'; // webpack 45146
-// import { isNumber } from '../utils/TypeChecks.js'; // webpack 32687
-// import { PlayerEvents } from '../player/PlayerEvents.js'; // webpack 85001
-// import { MimeTypeResolver } from '../media/MimeTypeResolver.js'; // webpack 95162
-// import { enumNamespace as HttpConstants } from '../network/HttpConstants.js'; // webpack 48220
-// import { MediaType } from '../types/MediaType.js'; // webpack 26388
-
 /**
  * Error thrown when codec switching fails
  */

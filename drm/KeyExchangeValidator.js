@@ -9,8 +9,6 @@
  * @original Module_80462
  */
 
-// import { isValidScheme, isValidSchemeVersion } from './DrmScheme';
-
 /**
  * Current key exchange data version
  * @type {number}

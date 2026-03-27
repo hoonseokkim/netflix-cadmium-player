@@ -14,16 +14,7 @@
  */
 
 // Dependencies
-// import { __extends, __assign, __spreadArray, __read }
 //   from '../ads/AdBreakMismatchLogger.js';
-// import { MediaType, TEXT_MEDIA_TYPE } from '../core/AseConfigConstants.js';
-// import { assert }              from '../ads/AdPoliciesManager.js';
-// import { timeSlice, D2a }      from '../core/AsejsEngine.js';
-// import { dGa as StreamListBuilder } from './modules/Module_44284.js';
-// import { pWa as createPredictor }   from './modules/Module_14246.js';
-// import { l7 as JointStreamBuilder } from './modules/Module_56841.js';
-// import { dk as isLiveSegment, isLiveStream } from '../network/AseMediaRequest.js';
-// import { BaseStreamSelector }  from './modules/Module_54477.js';
 
 /**
  * Dual stream selector for concurrent audio+video streams.
@@ -397,7 +388,7 @@ export class DualStreamSelector extends BaseStreamSelector {
 
     const singleStreamList = new StreamListBuilder();
     singleStreamList.OQ([selectedTrack]);
-    streamSelector.internal_Cfa(singleStreamList, getBufferingPhase(playerPhase), bufferStats, this.throughputPredictor);
+    streamSelector._fn_Cfa(singleStreamList, getBufferingPhase(playerPhase), bufferStats, this.throughputPredictor);
 
     const result = streamSelector.GA(bufferStats, playerPhase, playbackRate, selectedTrack, previousBufferingState);
 

@@ -19,7 +19,7 @@ export default function ManifestPropertyNormalizer(module, exports, require) {
             value: true
         }
     });
-    exports.XIb = exports.comparatorFn = void 0;
+    exports.XIb = exports.comparatorFn = undefined;
 
     ArrayUtils = require(27192);
 

@@ -10,14 +10,6 @@
  * @original Module_79014
  */
 
-// import { PRIORITY } from './Constants';
-// import { assert } from './Assert';
-// import { globalEvents, VISIBILITY_CHANGE_EVENT } from './GlobalEvents';
-// import { config } from './PlayerConfig';
-// import { TimedTextRenderer } from './TimedTextRenderer';
-// import { PlayerEvents } from './PlayerEvents';
-// import { MediaType } from './MediaType';
-
 /**
  * Controls the timed text rendering engine, connecting it to player state
  * changes for caption settings, track switches, and document visibility.

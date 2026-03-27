@@ -9,7 +9,7 @@
 import { __values, __read, __spreadArray, __awaiter, __generator } from '../core/tslib.js';
 import { platform } from '../core/Platform.js';
 import {
-    EventEmitter, internal_Jka as RefCounter, jkb as Throttler,
+    EventEmitter, _fn_Jka as RefCounter, jkb as Throttler,
     lfb as ExpiredMap, pX as BoundedCache, ExpiryTracker as ExpiryTracker,
     observableBool as ObservableBool, np as filterNewEntries, mathTanh as createLogger,
     c3a as manifestPriorityComparator
@@ -70,14 +70,14 @@ export class ManifestCache {
             fDc: (entry, waitTimeMs) => {
                 const viewable = entry.item;
                 this.console.pauseTrace('Fetching manifest', { NBa: viewable.J });
-                const fetchPromise = this.manifestFetcher.internal_Qsc({
+                const fetchPromise = this.manifestFetcher._fn_Qsc({
                     tb: [{ Xa: viewable, waitTimeMs, hasManifestCached: entry.hasManifestCached() }],
                     $dc: { Vs: viewable.isPrefetch }
                 });
                 return {
                     item: fetchPromise,
                     key: entry,
-                    uT: () => fetchPromise.internal_Nfa(viewable)
+                    uT: () => fetchPromise._fn_Nfa(viewable)
                 };
             }
         }, options.config.SIb);
@@ -129,7 +129,7 @@ export class ManifestCache {
             for (const plugin of this.plugins) plugin.zid(event.LE, event.manifestRef);
         });
         this.events.on('deleted', (event) => {
-            for (const plugin of this.plugins) plugin.internal_Aid(event.LE);
+            for (const plugin of this.plugins) plugin._fn_Aid(event.LE);
         });
     }
 
@@ -260,7 +260,7 @@ export class ManifestCache {
                 return this.acquireLease(viewableId, true);
             }
         }
-        if (!viewableId.isPrefetch) lease.value.internal_Nfa();
+        if (!viewableId.isPrefetch) lease.value._fn_Nfa();
         return lease;
     }
 
@@ -284,7 +284,7 @@ export class ManifestCache {
         });
         const item = new ManifestItem({
             ED: false, eR: 0, SA: { absolute: Infinity }, viewableId,
-            internal_Nfa: () => {
+            _fn_Nfa: () => {
                 this.console.pauseTrace('Promote to required', { key: hash });
                 throttlerEntry.value.uT();
                 this.adjustCapacity(0);
@@ -381,7 +381,7 @@ export class ManifestCache {
             if (item.hasManifest && !isFinite(item.SA.absolute)) {
                 const manifest = await item.S;
                 item.LOa(this.computeExpiryTime(manifest));
-                this.expiryTracker.internal_Zfa(item);
+                this.expiryTracker._fn_Zfa(item);
             }
         }
     }

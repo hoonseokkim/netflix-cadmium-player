@@ -8,15 +8,6 @@
  */
 
 // Dependencies
-// import { ReadyState } from '../network/ReadyState';         // Module 48220
-// import { M5 } from '../network/Tokens';                     // Module 24550
-// import { EventTypeEnum } from '../network/EventTypes';      // Module 36129
-// import { LoggerToken } from '../monitoring/LoggerToken';     // Module 87386
-// import { injectable, inject } from 'inversify';             // Module 22674
-// import { HttpToken } from '../network/HttpToken';           // Module 32934
-// import { symbolMarker } from '../network/SymbolMarker';     // Module 42207
-// import { ClockToken } from '../timing/ClockToken';          // Module 81918
-// import { MILLISECONDS } from '../timing/TimeUnit';          // Module 5021
 
 /**
  * Manages HTTP requests for media segment downloads.
@@ -172,7 +163,7 @@ export class MediaHttpService {
         let mappedError;
         switch (errorCode) {
             case 0: // HTTP_UNKNOWN
-                mappedError = errorNames.internal_Bab;
+                mappedError = errorNames._enum_Bab;
                 break;
             case 1: // HTTP_XHR
                 mappedError = errorNames.CFa;
@@ -190,7 +181,7 @@ export class MediaHttpService {
                 mappedError = errorNames.DFa;
                 break;
             case 4: // HTTP_OFFLINE
-                mappedError = errorNames.internal_Cab;
+                mappedError = errorNames._enum_Cab;
                 break;
             case 5: // HTTP_TIMEOUT
                 mappedError = errorNames.f7;
@@ -199,7 +190,7 @@ export class MediaHttpService {
                 mappedError = errorNames.f7;
                 break;
             case 7: // HTTP_PARSE
-                mappedError = errorNames.internal_Hdb;
+                mappedError = errorNames._enum_Hdb;
                 break;
             case 8: // HTTP_BAD_URL
                 mappedError = errorNames.vka;

@@ -13,7 +13,7 @@
 
 import { __decorate, __param } from '../_tslib.js';
 import { injectable, injectDecorator } from '../ioc/Decorators.js';
-import { anyPlaceholder, internal_Dcb } from '../manifest/ManifestConstants.js';
+import { anyPlaceholder, EnricherSymbol } from '../manifest/ManifestConstants.js';
 
 /**
  * Maps obfuscated manifest property names to human-readable names.
@@ -170,9 +170,9 @@ class ManifestSchemaMapper {
                 channels: "channels",
                 language: "language",
                 Igc: "channelsFormat",
-                internal_Gha: "surroundFormatLabel",
+                surroundFormatLabel: "surroundFormatLabel",
                 name: "languageDescription",
-                internal_Ioc: "disallowedSubtitleTracks",
+                disallowedSubtitleTracks: "disallowedSubtitleTracks",
                 fxb: "defaultTimedText",
                 isNative: "isNative",
                 isNone: "isNoneTrack",
@@ -201,7 +201,7 @@ class ManifestSchemaMapper {
                     type: "type",
                     channels: "channels",
                     Igc: "channelsFormat",
-                    internal_Gha: "surroundFormatLabel",
+                    surroundFormatLabel: "surroundFormatLabel",
                     language: "language",
                     hcd: "audioKey",
                     moov: ["moov", { size: "size", offset: "offset" }],
@@ -491,21 +491,21 @@ class ManifestSchemaMapper {
                 kra: "eventAvailabilityOffsetMs",
                 liveEventStartTime: "eventStartTime",
                 liveEventEndTime: "eventEndTime",
-                internal_Jxb: "disableLiveUi",
+                disableLiveUi: "disableLiveUi",
                 maxBitrate: "maxBitrate",
                 XQ: "availabilityStartTime",
                 iWc: "segmentAvailabilityWindowSeconds",
             }],
             mediaEventHistory: ["mediaEventHistory", {
                 O: "timescale",
-                internal_Zdc: "baseTimeMs",
-                internal_Wmc: "cutoffTimeMs",
+                baseTimeMs: "baseTimeMs",
+                cutoffTimeMs: "cutoffTimeMs",
                 mediaEvents: ["mediaEvents", {
                     type: "type",
                     id: "id",
                     timestamp: "timestamp",
                     duration: "duration",
-                    internal_Zp: "segmentationTypeId",
+                    segmentationTypeId: "segmentationTypeId",
                     hb: "adBreakTriggerId",
                     applicationScope: "applicationScope",
                 }],
@@ -595,7 +595,7 @@ class ManifestSchemaMapper {
             }],
             hasAdverts: "daiSupported",
             exb: "defaultPrefetchWindowDurationMs",
-            internal_Enc: "defaultPrefetchWindowOffsetMs",
+            defaultPrefetchWindowOffsetMs: "defaultPrefetchWindowOffsetMs",
             MCc: "initialPrefetchWindowDurationMs",
             NCc: "initialPrefetchWindowOffsetMs",
             vNc: "orderedAdBreakTriggerIds",
@@ -621,5 +621,5 @@ export { ManifestSchemaMapper };
 
 export const decoratedManifestSchemaMapper = __decorate([
     injectable(),
-    __param(0, injectDecorator(internal_Dcb)),
+    __param(0, injectDecorator(EnricherSymbol)),
 ], ManifestSchemaMapper);

@@ -14,16 +14,6 @@
  * @original Module_42654
  */
 
-// import { config } from '../core/PlayerConfig';
-// import { now } from '../timing/Clock';
-// import { FatalErrorCode } from '../core/ErrorCodeEnums';
-// import { PeriodicTimer } from '../utils/PeriodicTimer';
-// import { Math.max as maxOf } from '../utils/PlatformGlobals';
-// import { isDefined } from '../utils/TypeChecks';
-// import { PlayerState, PresentingState, PlayerEvents } from '../types/PlayerEnums';
-// import { DisposableTimer } from '../utils/DisposableTimer';
-// import { TimerFactory } from '../timing/TimerFactory';
-
 /**
  * Installs the pause timeout monitor on a player session.
  *

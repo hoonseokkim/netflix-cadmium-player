@@ -7,14 +7,8 @@
 // Webpack module 72697
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.j6 = void 0;
+
 d = a(48170);
 p = a(52571);
 t = (function() {
@@ -129,9 +123,9 @@ t = (function() {
                 null === e[g] && (e[g] = 0 < g ? e[g - 1] : 0);
         else if ("average" === g) {
             f = 1 - Math.pow(.5, 1 / ((f || 2E3) / this.rj));
-            h = void 0;
+
             for (g = 0; g < e.length; ++g)
-                null === e[g] ? e[g] = Math.floor(h || 0) : h = void 0 !== h ? f * e[g] + (1 - f) * h : e[g];
+                null === e[g] ? e[g] = Math.floor(h || 0) : h = undefined !== h ? f * e[g] + (1 - f) * h : e[g];
         }
         return e;
     }
@@ -149,7 +143,6 @@ t = (function() {
     return c;
 }
 )();
-b.j6 = t;
-
+export const j6 = t;
 
 // Detected exports: j6

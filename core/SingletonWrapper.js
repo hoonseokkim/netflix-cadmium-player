@@ -8,7 +8,6 @@
  */
 
 // Dependencies
-// import { tgb as WrappedService } from './modules/Module_53300';
 
 /**
  * Wraps a service in a singleton pattern with a static `instance` reference.

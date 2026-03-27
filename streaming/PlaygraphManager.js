@@ -13,13 +13,6 @@
  */
 
 // Dependencies
-// import { cb as PlayerEventNames, JX as PlaygraphEvents, setState as PresentingState, streamState as StreamState, PlayerEvents } from './modules/Module_85001';
-// import { PlaygraphIndex as PlaygraphIndex } from './modules/Module_98899';
-// import { PlaygraphNormalizer as PlaygraphNormalizer } from './modules/Module_15645';
-// import { ellaSendRateMultiplier as createThrottle } from './modules/Module_5021';
-// import { segmentDurationMs as SECONDS_PER_UNIT } from './modules/Module_33096';
-// import { disposableList } from './modules/Module_31276';
-// import { uK as ThrottleToken } from './modules/Module_45842';
 
 /**
  * Manages the playgraph lifecycle: segment index, state machine,
@@ -81,17 +74,17 @@ export class PlaygraphManager {
       const throttle = disposableList.key(ThrottleToken)(createThrottle(500));
 
       mediaSession.setActionHandler("play", () => {
-        this.playgraph.internal_Uca("play");
+        this.playgraph._fn_Uca("play");
         throttle.scheduleHydration(() => this.getPlayer().playing());
       });
 
       mediaSession.setActionHandler("pause", () => {
-        this.playgraph.internal_Uca("pause");
+        this.playgraph._fn_Uca("pause");
         throttle.scheduleHydration(() => this.getPlayer().pause());
       });
 
       mediaSession.setActionHandler("seekbackward", () => {
-        this.playgraph.internal_Uca("seekbackward");
+        this.playgraph._fn_Uca("seekbackward");
         throttle.scheduleHydration(() => {
           const player = this.getPlayer();
           const currentTime = player.XA();
@@ -102,7 +95,7 @@ export class PlaygraphManager {
       });
 
       mediaSession.setActionHandler("seekforward", () => {
-        this.playgraph.internal_Uca("seekforward");
+        this.playgraph._fn_Uca("seekforward");
         throttle.scheduleHydration(() => {
           const player = this.getPlayer();
           const currentTime = player.XA();
@@ -114,7 +107,7 @@ export class PlaygraphManager {
       });
 
       mediaSession.setActionHandler("seekto", (details) => {
-        this.playgraph.internal_Uca("seekto");
+        this.playgraph._fn_Uca("seekto");
         throttle.scheduleHydration(() => {
           const player = this.getPlayer();
           const seekTime = details.seekTime;
@@ -383,7 +376,7 @@ export class PlaygraphManager {
     if (manifestRef) {
       this.indexManager.updateManifestMetadata(viewableId, manifestRef);
     }
-    this.indexManager.internal_Oac(viewableId, sessionData);
+    this.indexManager._fn_Oac(viewableId, sessionData);
   }
 
   /**
@@ -404,7 +397,7 @@ export class PlaygraphManager {
       this.stateMachine.initializeHandler(event);
     });
 
-    this.addListener(PlaygraphEvents.internal_Rga, (event) => this.#onPlayerReady(event));
+    this.addListener(PlaygraphEvents.playgraphsegmenttransition, (event) => this.#onPlayerReady(event));
     this.addListener(PlayerEventNames.HFb, (event) => this.#onTransitionRequest(event));
   }
 
@@ -440,7 +433,7 @@ export class PlaygraphManager {
       this.lastPlayerId = playerId;
     }
 
-    this.eventBus.emit(PlayerEventNames.internal_Doa);
+    this.eventBus.emit(PlayerEventNames.audiotracklistchanged);
     this.eventBus.emit(PlayerEventNames.eventCallback);
     this.eventBus.emit(PlayerEventNames.EC);
     this.eventBus.emit(PlayerEventNames.gq);

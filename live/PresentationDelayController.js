@@ -10,13 +10,6 @@
  */
 
 // Dependencies
-// import { __assign } from 'tslib';                                // webpack 22970
-// import { platform } from './Platform';                            // webpack 66164
-// import { ObservableState, Algorithm, timerCondition, orCondition, transitionStateMachine } from './TimeUtil'; // webpack 91176
-// import { DISABLED } from './DisabledState';                       // webpack 97685
-// import { debugEnabled } from './Debug';                            // webpack 48170
-// import { presentationDelayStateDef } from './PresentationDelayState'; // webpack 23093
-// import { presentationDelayTransitions } from './PresentationDelayTransitions'; // webpack 19250
 
 // ---------------------------------------------------------------------------
 // Condition predicates — each receives (previousState, currentState, config)

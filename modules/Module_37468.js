@@ -7,14 +7,8 @@
 // Webpack module 37468
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.scb = void 0;
+
 d = a(50468);
 t = a(85254);
 p = a(75539);
@@ -29,22 +23,22 @@ a = (function() {
         h.ji = k.ji;
         h.active = !l;
         h.complete = l;
-        h.aborted = !1;
+        h.aborted = false;
         h.bytesReceived = 0;
         h.location = f.location || "";
-        h.Ee = !1;
-        h.Zg = void 0;
-        h.eE = void 0;
-        h.dh = void 0;
+        h.Ee = false;
+        h.Zg = undefined;
+        h.eE = undefined;
+        h.dh = undefined;
         h.status = 0;
         h.state = p.Ah.nq;
         f = e.data;
-        h.Gya(f.buffer.slice(f.byteOffset, f.byteLength), !0);
+        h.Gya(f.buffer.slice(f.byteOffset, f.byteLength), true);
         return h;
     }
     ;
     g.prototype.abort = function() {
-        return !1;
+        return false;
     }
     ;
     g.prototype.Ey = function() {
@@ -66,7 +60,7 @@ a = (function() {
     }
     ;
     g.prototype.uub = function() {
-        this.listener = void 0;
+        this.listener = undefined;
     }
     ;
     g.prototype.Uta = function() {
@@ -76,9 +70,8 @@ a = (function() {
     return g;
 }
 )();
-b.scb = a;
+export const scb = a;
 (0,
-t.Ol)(d.Xo, a, !1);
-
+t.Ol)(d.Xo, a, false);
 
 // Detected exports: scb

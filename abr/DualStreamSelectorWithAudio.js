@@ -10,21 +10,13 @@
  * 2. Uses a pair of throughput predictors — one for audio bandwidth
  *    allocation, one for video.
  * 3. Supports configurable audio bandwidth profiles (switchable profiles).
- * 4. Reports separate pacing rates for audio (`internal_Wza`) and video
+ * 4. Reports separate pacing rates for audio (`_prop_Wza`) and video
  *    (`T5a`).
  *
  * @module DualStreamSelectorWithAudio
  */
 
 // Dependencies
-// import { __extends, __assign } from '../ads/AdBreakMismatchLogger.js';
-// import { MediaType }           from '../core/AseConfigConstants.js';
-// import { timeSlice, D2a }      from '../core/AsejsEngine.js';
-// import { pWa as createPredictor } from './modules/Module_14246.js';
-// import { jLa as SingleStreamListBuilder } from './modules/Module_44284.js';
-// import { assert }              from '../ads/AdPoliciesManager.js';
-// import { isLiveStream }        from '../network/AseMediaRequest.js';
-// import { BaseStreamSelector }  from './modules/Module_54477.js';
 
 /**
  * Dual stream selector with independent audio handling.
@@ -49,7 +41,7 @@ export class DualStreamSelectorWithAudio extends BaseStreamSelector {
     const predictor = createPredictor(this.config);
 
     /** @type {Function} Sets the audio bitrate for bandwidth allocation */
-    this.setAudioBitrate = predictor.internal_Wza.bind(predictor);
+    this.setAudioBitrate = predictor._prop_Wza.bind(predictor);
 
     /** @type {Function} Sets the video bitrate for bandwidth allocation */
     this.setVideoBitrate = predictor.T5a.bind(predictor);
@@ -372,7 +364,7 @@ export class DualStreamSelectorWithAudio extends BaseStreamSelector {
     const singleList = new SingleStreamListBuilder();
     singleList.OQ([currentSelection]);
 
-    streamSelector.internal_Cfa(
+    streamSelector._fn_Cfa(
       singleList,
       getBufferingPhase(playerPhase),
       bufferStats,

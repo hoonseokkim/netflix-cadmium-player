@@ -6,12 +6,6 @@
  * handles HTTP/ELLA mixing proximity checks, and collects streaming telemetry.
  */
 
-// import { platform } from '../core/AsejsEngine.js';
-// import { findLast, assert } from '../core/AsejsEngine.js';
-// import { laser, mediaTypeToString } from './classes/DISABLED.js';
-// import { EllaAseClient } from './ella/EllaAseClient.js';
-// import { EllaSegmentSerializer } from './modules/Module_37468.js';
-
 const logger = new d.platform.Console("ASEJS_ELLA_MANAGER", "media|asejs");
 
 /**
@@ -565,7 +559,7 @@ class EllaManager {
             fia: this.intervalStats.duplicateSegments,
             hia: this.intervalStats.totalPacketsSent,
             gia: this.intervalStats.totalPacketsReceived,
-            internal_Jdc: this.intervalStats.queuingDelaySampleCount > 0
+            _prop_Jdc: this.intervalStats.queuingDelaySampleCount > 0
                 ? this.intervalStats.totalQueuingDelay / this.intervalStats.queuingDelaySampleCount
                 : 0,
             l$: Array.from(this.intervalStats.streamDurations.values()),

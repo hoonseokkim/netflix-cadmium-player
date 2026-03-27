@@ -7,13 +7,7 @@
 // Webpack module 97066
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(93334);
 t = (function(c) {
@@ -28,12 +22,12 @@ t = (function(c) {
             ((0,
             p.assert)(this.samplerate),
             this.mS = f.mS * this.samplerate / f.xza);
-        return !0;
+        return true;
     }
     ;
     g.Ae = "mp4a";
-    g.Fd = !0;
+    g.Fd = true;
     return g;
 }
 )(a(70428).default);
-b["default"] = t;
+export default t;

@@ -624,7 +624,7 @@ class AsePrefetcherAdapter {
       key: wishlistKey,
       phd: false,
       priority: viewableInfo.priority,
-      internal_Ooa: TimeUtil.fromMilliseconds(viewableInfo.manifestSessionData?.startPts ?? 0),
+      _Ooa: TimeUtil.fromMilliseconds(viewableInfo.manifestSessionData?.startPts ?? 0),
       manifestCache: this.manifestCache,
     };
 

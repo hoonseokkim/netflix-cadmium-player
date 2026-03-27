@@ -7,14 +7,8 @@
 // Webpack module 91772
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.a8 = void 0;
+
 d = a(22970);
 p = a(90745);
 t = (function(c) {
@@ -23,8 +17,8 @@ t = (function(c) {
         l = c.call(this) || this;
         l.ub = f;
         l.track = e;
-        l.pn = !1;
-        l.qM = !1;
+        l.pn = false;
+        l.qM = false;
         l.ek = new p.sf();
         l.ek.on(e, "networkfailing", function() {
             l.emit("networkfailing");
@@ -34,13 +28,13 @@ t = (function(c) {
             l.emit("error");
         });
         if (h)
-            (l.pn = !0,
+            (l.pn = true,
             Promise.resolve().then(function() {
                 return l.emit("created");
             }));
         else
             l.ek.on(e, "created", function() {
-                l.pn = !0;
+                l.pn = true;
                 l.emit("created");
             });
         l.qM = k;
@@ -52,8 +46,8 @@ t = (function(c) {
             get: function() {
                 return this.track.TTa;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(g.prototype, {
@@ -61,8 +55,8 @@ t = (function(c) {
             get: function() {
                 return this.track.Zg;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(g.prototype, {
@@ -70,8 +64,8 @@ t = (function(c) {
             get: function() {
                 return this.track.dh;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(g.prototype, {
@@ -79,8 +73,8 @@ t = (function(c) {
             get: function() {
                 return this.track.UTa;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(g.prototype, {
@@ -88,14 +82,14 @@ t = (function(c) {
             get: function() {
                 return this.track.config;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     g.prototype.Gb = function() {
         var f, e;
-        this.qM || (null === (e = (f = this.track).Gb) || void 0 === e ? void 0 : e.call(f),
-        this.qM = !0);
+        this.qM || (null === (e = (f = this.track).Gb) || undefined === e ? undefined : e.call(f),
+        this.qM = true);
     }
     ;
     g.prototype.toString = function() {
@@ -113,7 +107,6 @@ t = (function(c) {
     return g;
 }
 )(p.EventEmitter);
-b.a8 = t;
-
+export const a8 = t;
 
 // Detected exports: a8

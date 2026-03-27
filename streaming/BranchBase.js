@@ -9,16 +9,6 @@
  * @original Module_58049
  */
 
-// import { __awaiter, __generator } from 'tslib';
-// import { EventEmitter } from '../events/EventEmitter';
-// import { assert } from '../assert';
-// import { platform } from '../core/platform';
-// import { RJ as Deferred } from '../utils/Deferred';
-// import { u as DEBUG } from '../core/debug';
-// import { MediaType } from '../types/MediaType';
-// import { mathTanh as createLogger } from '../utils/logger';
-// import { ase_Fib as BranchBarrier } from '../streaming/BranchBarrier';
-
 /**
  * Enum for branch request states.
  * @enum {number}

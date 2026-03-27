@@ -7,15 +7,9 @@
 // Webpack module 81378
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.wIa = b.d$a = void 0;
-b.p5b = ["prefetch/license", "prefetch/license/live", "prefetch/license/linear"];
-b.l2b = ["license", "license/live", "license/linear"];
-b.d$a = [].concat(Ba(b.p5b), Ba(b.l2b));
-b.wIa = "PboAcquireLicenseCommandSymbol";
-
+export const p5b = ["prefetch/license", "prefetch/license/live", "prefetch/license/linear"];
+export const l2b = ["license", "license/live", "license/linear"];
+export const d$a = [].concat(Ba(p5b), Ba(l2b));
+export const wIa = "PboAcquireLicenseCommandSymbol";
 
 // Detected exports: wIa, p5b, l2b

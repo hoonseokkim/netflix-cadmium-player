@@ -770,7 +770,7 @@ class MediaPipeline extends BranchPipeline {
       }
 
       request.ZN = cprEnabled ? networkInfo : undefined;
-      request.internal_Skd = sideChannelData;
+      request._Skd = sideChannelData;
       request.rC = notifier.lwb(sideChannelData);
     } else if (viewable.viewableSession.blackBoxNotifier2) {
       // Legacy side channel path
@@ -873,7 +873,7 @@ class MediaPipeline extends BranchPipeline {
   get isAtLastSegment() {
     if (this.isDone()) return false;
     if (this.isPlaybackActive()) return true;
-    return this.track.internal_Nea;
+    return this.track._enum_Nea;
   }
 
   /**
@@ -962,13 +962,13 @@ class MediaPipeline extends BranchPipeline {
    * Returns an object with the list of fragments after the time, plus counts
    * of completed, partial, and z3 requests.
    * @param {Object} time - Time value with `playbackSegment` property
-   * @returns {{ Ta: Array, internal_Ixa: number, partial: number, z3: number }}
+   * @returns {{ Ta: Array, _Ixa: number, partial: number, z3: number }}
    */
   getBufferOccupancy(time) {
     const fragmentIndex = this.requestEventEmitter.fragmentIndex;
 
     if (fragmentIndex.length === 0) {
-      return { Ta: [], internal_Ixa: 0, partial: 0, z3: 0 };
+      return { Ta: [], _Ixa: 0, partial: 0, z3: 0 };
     }
 
     let searchIndex = fragmentIndex.iba(time.playbackSegment);
@@ -982,7 +982,7 @@ class MediaPipeline extends BranchPipeline {
 
     return {
       Ta: fragmentIndex.AWc(searchIndex),
-      internal_Ixa: Math.max(0, fragmentIndex.completedRequests - searchIndex),
+      _Ixa: Math.max(0, fragmentIndex.completedRequests - searchIndex),
       partial: fragmentIndex.partial,
       z3: fragmentIndex.z3,
     };
@@ -1097,8 +1097,8 @@ class MediaPipeline extends BranchPipeline {
             c0a: minimumDelay,
             QRa: startTime,
             bufferTargetMs,
-            internal_Hwb: this.config.logarithmicRequestPacingCurveCenterPositionMs ?? 0,
-            internal_Kwb: this.config.logarithmicRequestPacingCurveSharpness ?? 1,
+            _prop_Hwb: this.config.logarithmicRequestPacingCurveCenterPositionMs ?? 0,
+            _prop_Kwb: this.config.logarithmicRequestPacingCurveSharpness ?? 1,
           }
         );
 

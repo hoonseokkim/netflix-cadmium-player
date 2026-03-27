@@ -20,7 +20,7 @@ import { buildFunction } from '../streaming/AseStream.js'; // fragment index bui
 import { StreamSelectorClass } from './StreamSelector.js'; // stream selector result
 import runBufferSimulation from '../modules/Module_62737.js'; // buffer simulation runner
 import { playerPhase } from '../core/AsejsEngine.js'; // player state enum
-import { internal_Glb as SegmentSizeAccumulator } from '../modules/Module_20880.js'; // segment size accumulator
+import { _Glb as SegmentSizeAccumulator } from '../modules/Module_20880.js'; // segment size accumulator
 
 /**
  * Computes how long a buffer simulation should run based on the current
@@ -40,7 +40,7 @@ import { internal_Glb as SegmentSizeAccumulator } from '../modules/Module_20880.
  * @param {Object} stream - The candidate stream descriptor.
  * @param {number} stream.bufferLength - Buffer capacity in bytes for this stream.
  * @param {number} stream.bitrate - Bitrate of this stream in bits per second.
- * @param {number} [stream.internal_Sha] - Alternate buffer length metric.
+ * @param {number} [stream._enum_Sha] - Alternate buffer length metric.
  * @returns {number} Duration in seconds the simulation should run.
  */
 export function calculateSimulationDuration(config, throughputBps, stream) {
@@ -48,7 +48,7 @@ export function calculateSimulationDuration(config, throughputBps, stream) {
     return config.minSimulationDuration;
   }
 
-  const drainRatio = (stream.internal_Sha || stream.bufferLength) / stream.bufferLength;
+  const drainRatio = (stream._enum_Sha || stream.bufferLength) / stream.bufferLength;
 
   if (drainRatio <= 1) {
     return config.maxSimulationDuration;
@@ -95,9 +95,9 @@ export function calculateSimulationDuration(config, throughputBps, stream) {
  * @param {number} secondaryBlockCount - Number of secondary stream blocks to simulate.
  * @param {number} simulationDuration - Maximum duration for the simulation.
  * @param {number} playbackRate - Current playback rate multiplier.
- * @param {number} internal_Jqa - Internal scheduling parameter.
+ * @param {number} _enum_Jqa - Internal scheduling parameter.
  * @param {number} [bitrateOffset=0] - Bitrate offset for weighted calculation.
- * @returns {Object|false} Simulation result with `{ result, internal_Zda, canAutoSelect }`,
+ * @returns {Object|false} Simulation result with `{ result, _enum_Zda, canAutoSelect }`,
  *   or `false` if the stream is infeasible.
  */
 export function simulateFeasibility(
@@ -117,7 +117,7 @@ export function simulateFeasibility(
   primaryBlockCount,
   secondaryBlockCount,
   simulationDuration,
-  internal_Jqa,
+  _enum_Jqa,
   playbackRate,
   bitrateOffset
 ) {
@@ -202,8 +202,8 @@ export function simulateFeasibility(
       partial: partialBytes,
       fl: bufferFillLevel,
       startPosition: startBlockIndex,
-      internal_Jtc: startBlockIndex + primaryBlockCount,
-      internal_Jqa,
+      _Jtc: startBlockIndex + primaryBlockCount,
+      _enum_Jqa,
       WAb: pendingBytes,
       bufferLength: (bufferCapacity - bitrateOffset) / playbackRate,
       FJc: simulationDuration,
@@ -214,9 +214,9 @@ export function simulateFeasibility(
 
   // No blocks to simulate — check if buffer capacity exceeds stream's ended threshold
   if (bufferCapacity > candidateStream.endedChangedEvent) {
-    return { result: true, internal_Zda: 0, canAutoSelect: true };
+    return { result: true, _enum_Zda: 0, canAutoSelect: true };
   } else {
-    return { result: false, internal_Zda: 0, canAutoSelect: true };
+    return { result: false, _enum_Zda: 0, canAutoSelect: true };
   }
 }
 
@@ -233,7 +233,7 @@ export function simulateFeasibility(
  * @param {Object} params.config - ABR configuration with all tuning knobs.
  * @param {Object} params.player - Current player state (buffer, position, rate, etc.).
  * @param {Object} params.el - Stream list manager with `first`, `FWa`, and `TL` methods.
- * @param {boolean} params.internal_Mca - Whether cross-stream timestamp comparison is disabled.
+ * @param {boolean} params._enum_Mca - Whether cross-stream timestamp comparison is disabled.
  * @param {boolean} params.h0 - Whether this is a next-segment fast upswitch opportunity.
  * @param {Object} params.metadataResult - Currently selected stream (must not be null).
  * @param {number} [params.playerPositionMs] - Current player position in ms (for lock period).
@@ -244,7 +244,7 @@ export function refresh(params) {
   const config = params.config;
   const player = params.player;
   const streamList = params.el;
-  const disableTimestampComparison = params.internal_Mca;
+  const disableTimestampComparison = params._enum_Mca;
   const isNextSegmentUpswitch = params.h0;
   let selectedStream = params.metadataResult;
   const playerPositionMs = params.playerPositionMs;
@@ -259,7 +259,7 @@ export function refresh(params) {
 
   // Validate player state types
   assert("number" === typeof player.buffer.ru);
-  assert("number" === typeof player.internal_Jqa);
+  assert("number" === typeof player._enum_Jqa);
 
   // Get sorted stream list and initialize result
   const streams = streamList.first;
@@ -300,7 +300,7 @@ export function refresh(params) {
   });
 
   // Build throughput sample array from player's fragment index
-  const throughputSamples = buildFunction.internal_Tpa(player.buffer.fragmentIndex);
+  const throughputSamples = buildFunction._fn_Tpa(player.buffer.fragmentIndex);
   const pendingBytes = player.buffer.ru - throughputSamples.la;
 
   // Determine how many candidate streams to evaluate
@@ -472,14 +472,14 @@ export function refresh(params) {
         primaryBlockCount,
         secondaryBlockCount,
         lowestWaterMarkLevel,
-        player.internal_Jqa,
+        player._enum_Jqa,
         player.playbackRate,
         weightedBitrateOffset
       );
 
       // Track improvement in internal metric
       if (simResult && simResult.result) {
-        result.iid = simResult.internal_Zda;
+        result.iid = simResult._enum_Zda;
       }
 
       // Record this candidate for early-exit checks on subsequent candidates

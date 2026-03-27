@@ -7,13 +7,6 @@
  * @module Laser
  */
 
-// import { __awaiter, __generator } from 'tslib';
-// import { VERSION } from './Module_91877';
-// import { laser } from './DISABLED';
-// import { externalModules } from './Module_57349';
-// import { platform } from './Module_66164';
-// import { DEBUG } from './Module_48170';
-
 /** @type {string} The Cadmium platform build version */
 const PLATFORM_VERSION = "6.0055.939.911";
 

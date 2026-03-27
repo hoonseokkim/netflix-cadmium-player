@@ -7,11 +7,7 @@
 // Webpack module 19114
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.oj = {
+export const oj = {
     sT: "logblob",
     S: "manifest",
     cGc: "licensedmanifest",
@@ -23,7 +19,7 @@ b.oj = {
     wkd: "prefetchLiveAds",
     OOa: "aleProvision"
 };
-b.M5b = {
+export const M5b = {
     Hkb: "X-Netflix.Request.Id",
     Gkb: "X-Netflix.Request.Attempt",
     fKa: "X-Netflix.Client.Request.Name",
@@ -34,7 +30,7 @@ b.M5b = {
     Rab: "x-netflix.clienttype",
     Wmb: "x-netflix.uiversion"
 };
-b.cD = {
+export const cD = {
     Hkb: "reqId",
     Gkb: "reqAttempt",
     fKa: "reqName",
@@ -46,6 +42,5 @@ b.cD = {
     Wmb: "uiversion",
     $2b: "mainContentViewableId"
 };
-
 
 // Detected exports: oj, M5b, cD

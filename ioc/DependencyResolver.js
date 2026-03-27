@@ -5,7 +5,7 @@
  *              - ConstantValue (abb): returns cached constant
  *              - Function: returns cached function reference
  *              - Constructor (bbb): instantiates via constructor
- *              - DynamicValue (internal_Ybb): invokes factory with context
+ *              - DynamicValue (DynamicValue): invokes factory with context
  *              - Factory (eFa): invokes factory function with context
  *              - Provider (pkb): invokes provider with context
  *              - Instance: recursively resolves constructor dependencies
@@ -94,7 +94,7 @@ function createResolver(requestScope) {
     } else if (binding.type === eventTypeName.bbb) {
       // Constructor binding
       result = binding.$q;
-    } else if (binding.type === eventTypeName.internal_Ybb && binding.w_ !== null) {
+    } else if (binding.type === eventTypeName.DynamicValue && binding.w_ !== null) {
       // DynamicValue binding
       result = invokeSafely("toDynamicValue", binding.ti, () => binding.w_(request.V2));
     } else if (binding.type === eventTypeName.eFa && binding.audioMediaTypeId !== null) {

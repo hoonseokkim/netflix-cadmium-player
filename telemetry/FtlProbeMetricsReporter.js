@@ -64,7 +64,7 @@ class FtlProbeMetricsReporter {
     if (probeResult.nodeModuleRef) {
       const timing = probeResult.nodeModuleRef;
       FtlProbeMetricsReporter.setTimingField(payload, 'd', timing.duration);
-      FtlProbeMetricsReporter.setTimingField(payload, 'dns', timing.internal_Oxb);
+      FtlProbeMetricsReporter.setTimingField(payload, 'dns', timing._enum_Oxb);
       FtlProbeMetricsReporter.setTimingField(payload, 'tcp', timing.e7a);
       FtlProbeMetricsReporter.setTimingField(payload, 'tls', timing.x7a);
       FtlProbeMetricsReporter.setTimingField(payload, 'ttfb', timing.q7a);

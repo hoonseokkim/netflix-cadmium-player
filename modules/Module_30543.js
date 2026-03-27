@@ -7,22 +7,18 @@
 // Webpack module 30543
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g, f, e;
 function d(h) {
     h = f.lj.call(this, h, c.ea.i2b) || this;
     h.M8a = function(k) {
         var l, m;
-        if (null === (m = null === (l = null === k || void 0 === k ? void 0 : k.body) || void 0 === l ? void 0 : l.result) || void 0 === m || !m.nlp)
+        if (null === (m = null === (l = null === k || undefined === k ? undefined : k.body) || undefined === l ? undefined : l.result) || undefined === m || !m.nlp)
             throw Error("SocketRouter message not acknowledged");
     }
     ;
     return h;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.LIa = void 0;
+
 t = a(22970);
 p = a(22674);
 c = a(36129);
@@ -46,10 +42,9 @@ d.prototype.ef = function(h, k) {
 }
 ;
 e = d;
-b.LIa = e;
-b.LIa = e = t.__decorate([(0,
+export const LIa = e;
+export const LIa = e = t.__decorate([(0,
 p.aa)(), t.__param(0, (0,
 p.v)(a.io))], e);
-
 
 // Detected exports: LIa

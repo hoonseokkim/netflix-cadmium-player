@@ -17,9 +17,6 @@
  * @module drm/KeySystemAccessWrapper
  */
 
-// import { KeySystemHelper } from './KeySystemIds.js';       // Module 17612
-// import { detectRobustnessLevel } from './EmeConstants.js'; // Module 82100
-
 export class KeySystemAccessWrapper {
   /**
    * @param {string} keySystem - The resolved key-system identifier string.

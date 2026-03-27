@@ -7,16 +7,9 @@
 // Webpack module 51330
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-t = b.XW = {};
+t = XW = {};
 t[t.anb = 0] = "UNSUBSCRIBED";
 t[t.r6b = 1] = "SUBSCRIBING";
 t[t.uKa = 2] = "SUBSCRIBED";
-
 
 // Detected exports: XW

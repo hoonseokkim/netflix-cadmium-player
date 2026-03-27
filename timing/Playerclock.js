@@ -10,11 +10,6 @@
  */
 
 // Dependencies
-// import { EventEmitter } from './EventEmitter';       // webpack 90745
-// import { TimeUtil } from './TimeUtil';                // webpack 91176
-// import { platform } from './Platform';                // webpack 66164
-// import { playbackStateEnum } from './Constants';      // webpack 65161
-// import { outputList } from './Mixins';                // webpack 85254
 
 const logger = new platform.Console("PLAYERCLOCK");
 

@@ -16,18 +16,18 @@ var p, c, g, f, e, h, k, l;
         this.viewableConfig = B;
         this.currentSegment = C;
         this.playerState = z.create(C.R, C.timeOffset, y, D, E, C.manifestSessionData, C.id, C.manifestRef);
-        this.playerState.background.set(!0);
+        this.playerState.background.set(true);
         this.log = q.createSubLogger("VideoPlayer", this.playerState);
         /* @type {array} */ this.tNb = [];
         this.timecodes = [];
-        this.ended = !1;
+        this.ended = false;
         this.queueWorker();
         this.playerState.state.addListener(function(F) {
             F.newValue === c.pacingTargetBufferStrategy.NORMAL && G.getState(c.cb.XYa, {
                 movieId: C.R
             });
         });
-        this.playerState.sessionContext.isSeeking && (this.hZ = u.internal_Tkc(this, this.playerState),
+        this.playerState.sessionContext.isSeeking && (this.hZ = u._fn_Tkc(this, this.playerState),
         this.playerState.addEventListener(c.PlayerEvents.iO, function(F) {
             F = F.position.segmentId;
             G.LFc !== F && (G.LFc = F,
@@ -35,11 +35,7 @@ var p, c, g, f, e, h, k, l;
                 segmentId: F
             }));
         }));
-    }
-    Object.defineProperty(b, "__esModule", {
-        value: !0
-    });
-    b.internal_Jeb = void 0;
+    }b._Jeb = undefined;
     p = a(36129);
     c = a(85001);
     g = a(5021);
@@ -62,7 +58,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.VCb = function() {
         var m;
-        return null === (m = this.playerState.manifestRef) || void 0 === m ? void 0 : m.manifestContent.playbackContextId;
+        return null === (m = this.playerState.manifestRef) || undefined === m ? undefined : m.manifestContent.playbackContextId;
     }
     ;
     d.prototype.getConfiguration = function() {
@@ -100,7 +96,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.getPlaybackContainer = function() {
         var m;
-        return null === (m = this.playerState.getPlaybackContainer()) || void 0 === m ? void 0 : m.VR;
+        return null === (m = this.playerState.getPlaybackContainer()) || undefined === m ? undefined : m.VR;
     }
     ;
     d.prototype.livePlaybackManager = function() {
@@ -109,7 +105,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.XA = function() {
         var m;
-        return this.livePlaybackManager().isLive ? null !== (m = this.livePlaybackManager().getUIAdjustedCurrentContentPts()) && void 0 !== m ? m : null : this.null();
+        return this.livePlaybackManager().isLive ? null !== (m = this.livePlaybackManager().getUIAdjustedCurrentContentPts()) && undefined !== m ? m : null : this.null();
     }
     ;
     d.prototype.null = function() {
@@ -124,7 +120,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.XH = function() {
         var m;
-        return this.livePlaybackManager().isLive ? null !== (m = this.livePlaybackManager().getUIAdjustedCurrentContentPts()) && void 0 !== m ? m : null : this.playerState.bM();
+        return this.livePlaybackManager().isLive ? null !== (m = this.livePlaybackManager().getUIAdjustedCurrentContentPts()) && undefined !== m ? m : null : this.playerState.bM();
     }
     ;
     d.prototype.YL = function() {
@@ -146,10 +142,10 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.gBb = function(m) {
         var n, q;
-        return (null === (n = this.playerState.manifestRef) || void 0 === n ? 0 : n.links.A0("generateScreenshots")) ? this.hBb.execute({
+        return (null === (n = this.playerState.manifestRef) || undefined === n ? 0 : n.links.A0("generateScreenshots")) ? this.hBb.execute({
             log: this.log,
             links: this.playerState.manifestRef.links
-        }, m) : (n = null === (q = this.playerState.sessionContext) || void 0 === q ? void 0 : q.qcPackageId) ? this.hBb.execute({
+        }, m) : (n = null === (q = this.playerState.sessionContext) || undefined === q ? undefined : q.qcPackageId) ? this.hBb.execute({
             log: this.log
         }, Object.assign({
             packageId: n
@@ -170,7 +166,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.ACb = function() {
         var m;
-        return this.bca(this.playerState.supportedKeySystemList, null === (m = this.playerState.manifestRef) || void 0 === m ? void 0 : m.manifestContent.wJb);
+        return this.bca(this.playerState.supportedKeySystemList, null === (m = this.playerState.manifestRef) || undefined === m ? undefined : m.manifestContent.wJb);
     }
     ;
     d.prototype.NWa = function(m) {
@@ -183,7 +179,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.TVa = function(m) {
         var n;
-        return this.bca(this.getAudioTracksForMode(m), null === (n = this.playerState.manifestRef) || void 0 === n ? void 0 : n.manifestContent.xJb);
+        return this.bca(this.getAudioTracksForMode(m), null === (n = this.playerState.manifestRef) || undefined === n ? undefined : n.manifestContent.xJb);
     }
     ;
     d.prototype.KYa = function() {
@@ -196,13 +192,13 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.mBb = function() {
         var m, n;
-        n = (null === (m = this.pendingTrackHydration) || void 0 === m ? void 0 : m.audioTrackSelection) || this.playerState.tracks.audioTrackSelection;
+        n = (null === (m = this.pendingTrackHydration) || undefined === m ? undefined : m.audioTrackSelection) || this.playerState.tracks.audioTrackSelection;
         return n && this.mapTrackToExposedFormat(n);
     }
     ;
     d.prototype.MWa = function() {
         var m, n;
-        n = (null === (m = this.pendingTrackHydration) || void 0 === m ? void 0 : m.xJ) || this.playerState.tracks.textTrackSelection;
+        n = (null === (m = this.pendingTrackHydration) || undefined === m ? undefined : m.xJ) || this.playerState.tracks.textTrackSelection;
         return n && this.mapTrackToExposedFormat(n);
     }
     ;
@@ -218,7 +214,7 @@ var p, c, g, f, e, h, k, l;
         this.playerState.volume.set(this.vLc(m));
     }
     ;
-    d.prototype.internal_Zza = function(m) {
+    d.prototype._fn_Zza = function(m) {
         this.playerState.playbackRate.set(m);
     }
     ;
@@ -229,17 +225,17 @@ var p, c, g, f, e, h, k, l;
     d.prototype.setAudioTrack = function(m) {
         var n, q, r, u, v;
         m = this.findTrackById(m);
-        v = (null === (n = this.pendingTrackHydration) || void 0 === n ? void 0 : n.videoTrack) || this.playerState.tracks.videoTrack;
-        n = (null === (q = this.pendingTrackHydration) || void 0 === q ? void 0 : q.xJ) || this.playerState.tracks.textTrackSelection;
+        v = (null === (n = this.pendingTrackHydration) || undefined === n ? undefined : n.videoTrack) || this.playerState.tracks.videoTrack;
+        n = (null === (q = this.pendingTrackHydration) || undefined === q ? undefined : q.xJ) || this.playerState.tracks.textTrackSelection;
         if (m) {
             q = [];
             v && q.push(v);
             n && q.push(n);
-            q = this.playerState.tracks.EBb(m, q, null !== (u = null === (r = this.playerState.manifestRef) || void 0 === r ? void 0 : r.manifestContent.YIb) && void 0 !== u ? u : "v1");
+            q = this.playerState.tracks.EBb(m, q, null !== (u = null === (r = this.playerState.manifestRef) || undefined === r ? undefined : r.manifestContent.YIb) && undefined !== u ? u : "v1");
             (0,
             l.assert)(q.audioTrackSelection && q.textTrackSelection && q.videoTrack, "All tracks should be defined for track switching");
             if (!Object.values(q).some(function(w) {
-                return !1 === w.isMissing;
+                return false === w.isMissing;
             }))
                 return (this.log.info("Setting compatible tracks for audio track, \n                        video track: " + q.videoTrack.trackId + ", \n                        audio track: " + q.audioTrackSelection.trackId + ", \n                        text track: " + q.textTrackSelection.trackId),
                 this.playerState.tracks.canResume(q),
@@ -260,8 +256,8 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.setTextTrack = function(m) {
         var n, q, r, u, v;
-        v = (null === (n = this.pendingTrackHydration) || void 0 === n ? void 0 : n.audioTrackSelection) || this.playerState.tracks.audioTrackSelection;
-        n = (null === (q = this.pendingTrackHydration) || void 0 === q ? void 0 : q.videoTrack) || this.playerState.tracks.videoTrack;
+        v = (null === (n = this.pendingTrackHydration) || undefined === n ? undefined : n.audioTrackSelection) || this.playerState.tracks.audioTrackSelection;
+        n = (null === (q = this.pendingTrackHydration) || undefined === q ? undefined : q.videoTrack) || this.playerState.tracks.videoTrack;
         if (null !== v)
             for (var w = v.sk, x = 0; x < w.length; x++)
                 if ((q = w[x],
@@ -269,11 +265,11 @@ var p, c, g, f, e, h, k, l;
                     m = [];
                     n && m.push(n);
                     m.push(v);
-                    v = this.playerState.tracks.EBb(q, m, null !== (u = null === (r = this.playerState.manifestRef) || void 0 === r ? void 0 : r.manifestContent.YIb) && void 0 !== u ? u : "v1");
+                    v = this.playerState.tracks.EBb(q, m, null !== (u = null === (r = this.playerState.manifestRef) || undefined === r ? undefined : r.manifestContent.YIb) && undefined !== u ? u : "v1");
                     (0,
                     l.assert)(v.audioTrackSelection && v.textTrackSelection && v.videoTrack, "All tracks should be defined for track switching");
                     if (!Object.values(v).some(function(y) {
-                        return !1 === y.isMissing;
+                        return false === y.isMissing;
                     }))
                         return (this.log.info("Setting compatible tracks for text track, \n                                video track: " + v.videoTrack.trackId + ", \n                                audio track: " + v.audioTrackSelection.trackId + ", \n                                text track: " + v.textTrackSelection.trackId),
                         this.playerState.tracks.canResume(v),
@@ -302,7 +298,7 @@ var p, c, g, f, e, h, k, l;
             r = q.audioTrackSelection;
             u = q.xJ;
             q = q.videoTrack;
-            m.pendingTrackHydration = void 0;
+            m.pendingTrackHydration = undefined;
             m.log.info("Setting hydrated tracks, \n                        video track: " + q.trackId + ", \n                        audio track: " + r.trackId + ", \n                        text track: " + u.trackId);
             m.playerState.tracks.canResume({
                 Cc: r,
@@ -324,7 +320,7 @@ var p, c, g, f, e, h, k, l;
                     Ogd: n.videoTrack.languageCode
                 }
             }));
-            m.pendingTrackHydration = void 0;
+            m.pendingTrackHydration = undefined;
         });
     }
     ;
@@ -361,7 +357,7 @@ var p, c, g, f, e, h, k, l;
     }
     ;
     d.prototype.EOa = function(m, n) {
-        this.playerState.addEventListener(m, n, void 0);
+        this.playerState.addEventListener(m, n, undefined);
     }
     ;
     d.prototype.UPb = function(m, n) {
@@ -381,20 +377,20 @@ var p, c, g, f, e, h, k, l;
     d.prototype.loading = function() {
         var m;
         m = this;
-        this.loaded || (this.loaded = !0,
+        this.loaded || (this.loaded = true,
         this.playerState.loading(function(n, q) {
             try {
-                m.getState(c.cb.rIb, void 0, !0);
-                n.manifestRef && (n.manifestRef.manifestContent.watermarkInfo && m.getState(c.cb.I4c, n.manifestRef.manifestContent.watermarkInfo, !0),
+                m.getState(c.cb.rIb, undefined, true);
+                n.manifestRef && (n.manifestRef.manifestContent.watermarkInfo && m.getState(c.cb.I4c, n.manifestRef.manifestContent.watermarkInfo, true),
                 n.manifestRef.manifestContent.choiceMap && m.getState(c.cb.vWc, {
                     segmentMap: n.manifestRef.manifestContent.choiceMap
-                }, !0),
+                }, true),
                 n.manifestRef.manifestContent.timecodeAnnotations && (m.timecodes = n.manifestRef.manifestContent.timecodeAnnotations,
                 m.getState(c.cb.s7a, {
                     timecodes: m.timecodes
-                }, !0)));
+                }, true)));
                 q({
-                    success: !0
+                    success: true
                 });
             } catch (r) {
                 q({
@@ -411,7 +407,7 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.getChapters = function() {
         var m, n;
-        return null !== (n = null === (m = this.playerState.streamingSession) || void 0 === m ? void 0 : m.getChapters(this.playerState.R)) && void 0 !== n ? n : [];
+        return null !== (n = null === (m = this.playerState.streamingSession) || undefined === m ? undefined : m.getChapters(this.playerState.R)) && undefined !== n ? n : [];
     }
     ;
     d.prototype.closing = function(m) {
@@ -426,27 +422,27 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.playing = function() {
         this.playerState.recordPlayDelay("uiCalledPlay");
-        this.playerState.logBlobEvent ? this.playerState.fireEvent(c.PlayerEvents.internal_Fga) : (this.loading(),
-        this.playerState.paused.value && (this.playerState.paused.set(!1),
+        this.playerState.logBlobEvent ? this.playerState.fireEvent(c.PlayerEvents.safePlayRequested) : (this.loading(),
+        this.playerState.paused.value && (this.playerState.paused.set(false),
         this.playerState.fireEvent(c.PlayerEvents.mXb)));
     }
     ;
     d.prototype.pause = function() {
         this.loading();
-        this.playerState.paused.value || (this.playerState.paused.set(!0),
+        this.playerState.paused.value || (this.playerState.paused.set(true),
         this.playerState.fireEvent(c.PlayerEvents.G8a));
     }
     ;
     d.prototype.lNb = function() {
         this.loading();
-        this.playerState.paused.value || this.playerState.paused.set(!0, {
-            QB: !0
+        this.playerState.paused.value || this.playerState.paused.set(true, {
+            QB: true
         });
     }
     ;
     d.prototype.seek = function(m, n, q, r) {
-        n = void 0 === n ? c.streamState.SEEK : n;
-        this.playerState.hR() && (this.livePlaybackManager().isLive && this.livePlaybackManager().isWithinUILiveEdgeThreshold(this.livePlaybackManager().revertUIAdjustedTime(m)) && !this.livePlaybackManager().isLiveEventEnded(!0) ? this.livePlaybackManager().seekToLiveEdge() : this.playerState.mediaSourceManager ? (this.livePlaybackManager().isLive && (m = this.livePlaybackManager().revertUIAdjustedTime(m)),
+        n = undefined === n ? c.streamState.SEEK : n;
+        this.playerState.hR() && (this.livePlaybackManager().isLive && this.livePlaybackManager().isWithinUILiveEdgeThreshold(this.livePlaybackManager().revertUIAdjustedTime(m)) && !this.livePlaybackManager().isLiveEventEnded(true) ? this.livePlaybackManager().seekToLiveEdge() : this.playerState.mediaSourceManager ? (this.livePlaybackManager().isLive && (m = this.livePlaybackManager().revertUIAdjustedTime(m)),
         this.playerState.mediaSourceManager.seek(m, n, q, r)) : (this.livePlaybackManager().isLive && (m = this.livePlaybackManager().getLiveBookmark(m).hashQuery),
         this.playerState.hashQuery = m));
     }
@@ -494,14 +490,14 @@ var p, c, g, f, e, h, k, l;
     }
     ;
     d.prototype.KDb = function(m) {
-        return this.playerState.trickplayDownloader && this.playerState.trickplayDownloader.internal_Mwc(m) || null;
+        return this.playerState.trickplayDownloader && this.playerState.trickplayDownloader._fn_Mwc(m) || null;
     }
     ;
     d.prototype.lBb = function() {
         return this.eventBus.mergeConfig({
             playerver: this.config.version,
             jssid: this.config.oFc,
-            groupName: this.config.internal_Qwc(),
+            groupName: this.config._fn_Qwc(),
             xid: this.playerState.sourceTransactionId,
             pbi: this.playerState.index
         }, this.config.nPc, {
@@ -519,7 +515,7 @@ var p, c, g, f, e, h, k, l;
         this.tNb.push({
             url: m,
             name: n,
-            internal_Edc: q,
+            _Edc: q,
             options: r
         });
         this.JOb();
@@ -549,7 +545,7 @@ var p, c, g, f, e, h, k, l;
                 u && (m.rbfrs_decoder = u.dqa,
                 m.rbfrs_network = u.lwa);
                 m.rbfrs_delay = this.playerState.playDelayMetrics ? this.playerState.playDelayMetrics.rYa : 0;
-                m.init_vbr = this.playerState.internal_Lta;
+                m.init_vbr = this.playerState._fn_Lta;
                 v = this.G0();
                 this.downloadReportInterval.p_(v) && (m.pdltime = v);
                 w = this.playerState.targetBuffer.value;
@@ -574,11 +570,11 @@ var p, c, g, f, e, h, k, l;
             links: this.playerState.manifestRef.links
         }, m).then(function() {
             return {
-                success: !0
+                success: true
             };
         }).catch(function(n) {
             return {
-                success: !1,
+                success: false,
                 errorCode: n.code,
                 errorSubCode: n.errorSubCode,
                 errorExternalCode: n.errorExternalCode,
@@ -586,7 +582,7 @@ var p, c, g, f, e, h, k, l;
                 errorDetails: n.details
             };
         })) : Promise.resolve({
-            success: !1
+            success: false
         });
     }
     ;
@@ -613,7 +609,7 @@ var p, c, g, f, e, h, k, l;
             channels: m.channels
         });
         this.QYa(m) && (n.isNative = m.isNative,
-        n.surroundFormatLabel = m.internal_Gha);
+        n.surroundFormatLabel = m.surroundFormatLabel);
         this.RYa(m) && (n.isNoneTrack = m.dr(),
         n.isForcedNarrative = m.checkMethod(),
         n.isImageBased = m.isImageBased);
@@ -640,8 +636,8 @@ var p, c, g, f, e, h, k, l;
     ;
     d.prototype.getAudioTracksForMode = function(m) {
         var n, q;
-        m = this.findTrackById(m) || (null === (n = this.pendingTrackHydration) || void 0 === n ? void 0 : n.audioTrackSelection) || this.playerState.tracks.audioTrackSelection;
-        return null !== (q = null === m || void 0 === m ? void 0 : m.sk) && void 0 !== q ? q : [];
+        m = this.findTrackById(m) || (null === (n = this.pendingTrackHydration) || undefined === n ? undefined : n.audioTrackSelection) || this.playerState.tracks.audioTrackSelection;
+        return null !== (q = null === m || undefined === m ? undefined : m.sk) && undefined !== q ? q : [];
     }
     ;
     d.prototype.bca = function(m, n) {
@@ -682,31 +678,31 @@ var p, c, g, f, e, h, k, l;
             m.getState(c.cb.kWb);
         });
         this.playerState.addEventListener(c.PlayerEvents.sea, function() {
-            m.getState(c.cb.internal_Toa);
+            m.getState(c.cb.bufferedtimechanged);
         });
         this.playerState.addEventListener(c.PlayerEvents.pt, function() {
-            m.getState(c.cb.internal_Toa);
+            m.getState(c.cb.bufferedtimechanged);
         });
         this.playerState.addEventListener(c.PlayerEvents.U0, function(n) {
             m.getState(c.cb.U0, {
                 errorCode: n
             });
         });
-        this.playerState.addEventListener(c.PlayerEvents.internal_Hoa, function() {
+        this.playerState.addEventListener(c.PlayerEvents.autoplayWasAllowed, function() {
             m.getState(c.cb.xsb);
         });
         this.playerState.addEventListener(c.PlayerEvents.logBlobEvent, function(n) {
-            m.getState(c.cb.internal_Ioa, n);
+            m.getState(c.cb.autoplaywasblocked, n);
         });
         this.playerState.addEventListener(c.PlayerEvents.zVb, function() {
-            m.getState(c.cb.internal_Doa);
+            m.getState(c.cb.audiotracklistchanged);
             m.getState(c.cb.EC);
         });
         this.playerState.addEventListener(c.PlayerEvents.iIb, function(n) {
             var q, r;
             if (m.livePlaybackManager().isLive && m.currentSegment.R === n.J) {
                 q = n.jitteredStart;
-                if (void 0 !== q) {
+                if (undefined !== q) {
                     r = "execute" === n.action ? "ending" : "prefetch";
                     m.timecodes = m.timecodes.filter(function(u) {
                         return u.type !== r;
@@ -718,7 +714,7 @@ var p, c, g, f, e, h, k, l;
                     });
                     m.getState(c.cb.s7a, {
                         timecodes: m.timecodes
-                    }, !0);
+                    }, true);
                 }
             }
         });
@@ -727,8 +723,8 @@ var p, c, g, f, e, h, k, l;
                 chapters: m.getChapters()
             });
         });
-        this.playerState.addEventListener(c.PlayerEvents.internal_Tfa, function() {
-            m.getState(c.cb.internal_Tfa);
+        this.playerState.addEventListener(c.PlayerEvents.ratechange, function() {
+            m.getState(c.cb.ratechange);
         });
         this.playerState.mk.addListener(function() {
             m.getState(c.cb.I2a);
@@ -749,7 +745,7 @@ var p, c, g, f, e, h, k, l;
             m.tWb();
         });
         this.playerState.currentRequestedTime.addListener(function(n) {
-            m.pHc || m.playerState.state.value != c.pacingTargetBufferStrategy.NORMAL || n.newValue || (m.pHc = !0,
+            m.pHc || m.playerState.state.value != c.pacingTargetBufferStrategy.NORMAL || n.newValue || (m.pHc = true,
             m.getState(c.cb.loaded),
             setTimeout(function() {
                 m.log.debug.bind(m.log, "summary ", m.CWa());
@@ -772,7 +768,7 @@ var p, c, g, f, e, h, k, l;
             case c.pacingTargetBufferStrategy.NORMAL:
                 m.getState(c.cb.RSa);
                 m.getState(c.cb.P8a);
-                m.getState(c.cb.internal_Doa);
+                m.getState(c.cb.audiotracklistchanged);
                 m.getState(c.cb.EC);
                 m.getState(c.cb.qIb);
                 m.JOb();
@@ -789,7 +785,7 @@ var p, c, g, f, e, h, k, l;
         this.playerState.addEventListener(c.PlayerEvents.LIVE_EVENT_TIMES_CHANGED, function() {
             m.getState(c.cb.LIVE_EVENT_TIMES_CHANGED);
             m.getState(c.cb.currentTimeChanged);
-            m.getState(c.cb.internal_Toa);
+            m.getState(c.cb.bufferedtimechanged);
             m.getState(c.cb.RSa);
         });
     }
@@ -798,10 +794,10 @@ var p, c, g, f, e, h, k, l;
         var m, n, q, r, u;
         m = this;
         this.playerState.subtitlePlayer.addEventListener("showsubtitle", function(v) {
-            m.getState(c.cb.d6a, v, !0);
+            m.getState(c.cb.d6a, v, true);
         });
         this.playerState.subtitlePlayer.addEventListener("removesubtitle", function(v) {
-            m.getState(c.cb.W3a, v, !0);
+            m.getState(c.cb.W3a, v, true);
         });
         r = this.playerState.getPlaybackContainer();
         r.onAdPresenting.addListener(function(v) {
@@ -809,12 +805,12 @@ var p, c, g, f, e, h, k, l;
                 state: v.newValue ? "start" : "stop"
             });
         });
-        u = null === (n = this.playerState.streamingSession) || void 0 === n ? void 0 : n.getPlaybackContainer();
-        n = null === u || void 0 === u ? void 0 : u.sr.events;
-        null === n || void 0 === n ? void 0 : n.addListener("adPlaygraphUpdated", function() {
+        u = null === (n = this.playerState.streamingSession) || undefined === n ? undefined : n.getPlaybackContainer();
+        n = null === u || undefined === u ? undefined : u.sr.events;
+        null === n || undefined === n ? undefined : n.addListener("adPlaygraphUpdated", function() {
             m.getState(c.cb.prb);
         });
-        null === (q = this.playerState.streamingSession) || void 0 === q ? void 0 : q.addEventListener("adMetadataUpdated", function() {
+        null === (q = this.playerState.streamingSession) || undefined === q ? undefined : q.addEventListener("adMetadataUpdated", function() {
             m.getState(c.cb.prb);
         });
     }
@@ -823,7 +819,7 @@ var p, c, g, f, e, h, k, l;
         if (this.playerState.state.value == c.pacingTargetBufferStrategy.NORMAL) {
             for (var m, n, q; n = this.tNb.shift(); )
                 (m = this.playerState.subtitlePlayer.sOa(n.url, n.name, n.options),
-                n.internal_Edc && (q = m));
+                n._Edc && (q = m));
             q && this.playerState.tracks.setTextTrack(q);
         }
     }
@@ -832,11 +828,11 @@ var p, c, g, f, e, h, k, l;
         var m, n, q, r;
         n = this.ended;
         q = this.playerState.state.value == c.pacingTargetBufferStrategy.NORMAL && this.playerState.presentingState.value == c.setState.ENDED;
-        r = !1;
-        q && this.playerState.streamingSession && (r = null === (m = this.playerState.streamingSession) || void 0 === m ? void 0 : m.internal_Ayc());
+        r = false;
+        q && this.playerState.streamingSession && (r = null === (m = this.playerState.streamingSession) || undefined === m ? undefined : m._fn_Ayc());
         n === q || r || (this.ended = q,
         this.playerState.debugLog("Ended changed: " + q),
-        (q || this.playerState.state.value === c.pacingTargetBufferStrategy.CLOSING) && this.getState(c.cb.internal_Syb));
+        (q || this.playerState.state.value === c.pacingTargetBufferStrategy.CLOSING) && this.getState(c.cb.endedchanged));
     }
     ;
     d.prototype.G0 = function() {
@@ -851,5 +847,5 @@ var p, c, g, f, e, h, k, l;
         } catch (q) {}
     }
     ;
-    b.internal_Jeb = d;
+    b._Jeb = d;
 }

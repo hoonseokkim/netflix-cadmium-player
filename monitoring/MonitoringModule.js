@@ -7,7 +7,6 @@
  */
 
 // Inversify container module
-// import { ContainerModule } from 'inversify'; // Module 22674
 
 // Service tokens and implementations (by original module IDs):
 // Module 97996: J7 config key
@@ -30,7 +29,7 @@
 // Module 45118: oq / FGa / internal_Vfb tokens (base/buffer/deferred log blob tokens)
 // Module 98326: w7 / QGa tokens (metric tokens)
 // Module 52025: GP implementation (metric reporter)
-// Module 30895: internal_Obb token (download metrics token)
+// Module 30895: DownloadReportBuilderSymbol token (download metrics token)
 // Module 36792: DownloadMetricsBuilder implementation
 // Module 74714: PGa implementation (metric collector)
 // Module 73449: y7 token (secondary metric token)
@@ -50,7 +49,7 @@
  * - Primary metrics reporter (w7 -> GP)
  * - Metrics collector (QGa -> PGa)
  * - Secondary metrics reporter (y7 -> HP)
- * - Download metrics builder (internal_Obb -> DownloadMetricsBuilder)
+ * - Download metrics builder (DownloadReportBuilderSymbol -> DownloadMetricsBuilder)
  * - Log processor (f$a -> BCa)
  * - Deferred log blob (internal_Vfb): resolves lazily after config, feature flags,
  *   and KT flag are all available

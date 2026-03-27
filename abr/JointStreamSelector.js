@@ -15,14 +15,6 @@
  */
 
 // Dependencies
-// import { platform }            from '../core/AsejsEngine.js';
-// import { playerPhase, MediaType } from '../core/AsejsEngine.js';
-// import { i0 as forEachStream, findLast } from '../core/AsejsEngine.js';
-// import { selectorRegistry }    from './modules/Module_3082.js';
-// import { ResolutionSelector }  from './abr/PacerateSelector.js';
-// import { JointStream, F6a }   from '../streaming/JointStream.js';
-// import { wDb }                 from './modules/Module_44284.js';
-// import * as streamSelectorUtils from './abr/StreamSelector.js';
 // … remaining module imports …
 
 /**
@@ -233,7 +225,7 @@ export class JointStreamSelector {
       player,
       el: streamList,
       metadataResult,
-      internal_Mca: !!previousManifest,
+      _enum_Mca: !!previousManifest,
       h0: isFirstSelection,
       KNc: switchReason,
       shouldWaitForBuffer: this.videoBundle.shouldWaitForBuffer,
@@ -277,7 +269,7 @@ export class JointStreamSelector {
         buffer,
         player,
         UH: downloadHint,
-        internal_Mca: previousManifest,
+        _enum_Mca: previousManifest,
         kva: firstSegments[0].videoStream,
         mediaSource: selectedJointStream.videoStream,
         vBa: computeJointUpswitchStream(firstSegments, selectedJointStream),
@@ -303,7 +295,7 @@ export class JointStreamSelector {
         } else {
           selectionResult.bufferingCompleteHandler = false;
           selectionResult.nextFragmentIndex = bufferingResult.nextFragmentIndex;
-          selectionResult.internal_Xda = bufferingResult.internal_Xda;
+          selectionResult._flag_Xda = bufferingResult._flag_Xda;
           selectionResult.progress = bufferingResult.progress;
         }
       } else {
@@ -384,7 +376,7 @@ export class JointStreamSelector {
             lastPrediction = throughputPredictor(stream.getConfig, buffer, playerPhaseValue, 0, false);
           }
           stream.bufferLength = Math.floor(lastPrediction.lower) || 1;
-          stream.internal_Sha = lastPrediction.upper !== undefined ? Math.floor(lastPrediction.upper) : 1;
+          stream._enum_Sha = lastPrediction.upper !== undefined ? Math.floor(lastPrediction.upper) : 1;
         } else {
           stream.bufferLength = undefined;
         }

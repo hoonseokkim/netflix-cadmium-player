@@ -33,7 +33,6 @@ import { assert } from './Module_45146';               // h - assertion utility
 import * as CapabilityTypes from './Module_56800';     // k - video/audio capability detector type enums
 import * as TimedTextProfiles from './Module_75568';   // l - timed text profile constants (gs.UDa, gs.xX)
 import * as ObjectUtils from './Module_3887';          // m - forEachProperty, parseInteger, assignProperties
-// import './Module_87386';                            // side-effect only import
 import * as JsonUtils from './Module_22365';           // n - cla() JSON helper, forEach
 import * as TypeChecks from './Module_32687';          // q - type checking (isString, isObject, isArray, isNumber, isDefined, etc.)
 import * as SeekConstants from './Module_93294';       // r - pKa (small seek delta constant)
@@ -240,7 +239,7 @@ export function initializeConfig(configOverrides, initialParams) {
     try {
       value = validator ? validator(value) : value;
     } catch (_err) {
-      value = undefined;
+
     }
 
     if (value !== undefined) {
@@ -374,7 +373,7 @@ export function initializeConfig(configOverrides, initialParams) {
         try {
           value = JSON.videoSampleEntry(JsonUtils.cla(value));
         } catch (_err) {
-          value = undefined;
+
         }
       }
     }

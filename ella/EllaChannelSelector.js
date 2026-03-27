@@ -6,10 +6,6 @@
  * the appropriate ELLA channel (bitrate tier + relay channel) accordingly.
  */
 
-// import { platform } from '../core/AsejsEngine.js';
-// import { MediaType } from '../streaming/AseTrack.js';
-// import { assert } from '../ads/AdPoliciesManager.js';
-
 /**
  * State machine phases for channel selection.
  * @enum {number}

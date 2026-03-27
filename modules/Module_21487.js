@@ -7,12 +7,6 @@
 // Webpack module 21487
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 t = (function() {
     function a() {
         this.Iza = this.Jza = this.uy = this.R6a = 0;
@@ -49,4 +43,4 @@ t = (function() {
     return a;
 }
 )();
-b["default"] = t;
+export default t;

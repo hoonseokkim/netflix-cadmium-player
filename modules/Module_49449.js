@@ -7,15 +7,11 @@
 // Webpack module 49449
 // Parameters: t (module), b (exports), a (require)
 
-
 var p, c, g, f, e, h;
 function d(k) {
     return f.lj.call(this, k, c.ea.i9a) || this;
 }
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.lCa = void 0;
+
 t = a(22970);
 p = a(22674);
 c = a(36129);
@@ -36,8 +32,8 @@ d.prototype.ef = function(k, l) {
     var m, n, q;
     m = this;
     n = this.dR(l);
-    !1;
-    !1;
+    false;
+    false;
     q = {
         url: l.href,
         name: g.oj.events,
@@ -76,10 +72,9 @@ d.prototype.dR = function(k) {
 }
 ;
 a = d;
-b.lCa = a;
-b.lCa = a = t.__decorate([(0,
+export const lCa = a;
+export const lCa = a = t.__decorate([(0,
 p.aa)(), t.__param(0, (0,
 p.v)(e.io))], a);
-
 
 // Detected exports: lCa

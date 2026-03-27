@@ -7,19 +7,11 @@
 // Webpack module 94451
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.U6a = void 0;
-b.U6a = function(a) {
+export function U6a(a) {
     return a.reduce(function(d, p) {
         return d + p;
     }, 0);
 }
 ;
-
 
 // Detected exports: U6a

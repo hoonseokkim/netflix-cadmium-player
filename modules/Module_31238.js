@@ -7,12 +7,8 @@
 // Webpack module 31238
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g;
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.IDa = void 0;
+
 t = a(22970);
 t.__importDefault(a(42979));
 a(70390);
@@ -42,7 +38,6 @@ a = (function() {
     return f;
 }
 )();
-b.IDa = a;
-
+export const IDa = a;
 
 // Detected exports: IDa

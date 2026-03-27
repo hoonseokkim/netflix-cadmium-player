@@ -7,15 +7,8 @@
 // Webpack module 16756
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-t = b.oja = {};
+t = oja = {};
 t[t.start = 0] = "start";
 t[t.end = 1] = "end";
-
 
 // Detected exports: oja

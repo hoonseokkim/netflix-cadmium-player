@@ -9,10 +9,6 @@
  * @module streaming/SegmentMapMatcher
  */
 
-// import { __read } from 'tslib';
-// import { assert } from '../modules/Module_52571';
-// import { getTrackIndex } from '../modules/Module_28871';
-
 export class SegmentMapMatcher {
   /**
    * Get the track index (J property) from a segment map.

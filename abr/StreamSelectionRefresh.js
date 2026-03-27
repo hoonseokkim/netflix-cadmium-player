@@ -162,8 +162,8 @@ export function refreshStreamSelection(context) {
 
     // Compute timing
     let downloadDuration;
-    if (playerState.internal_Gec) {
-      downloadDuration = platform.platform.now() - playerState.internal_Gec;
+    if (playerState._flag_Gec) {
+      downloadDuration = platform.platform.now() - playerState._flag_Gec;
     }
 
     augmentedEntries.push({

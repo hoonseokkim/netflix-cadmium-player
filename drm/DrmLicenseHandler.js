@@ -26,9 +26,6 @@
  * @module drm/DrmLicenseHandler
  */
 
-// import { EmeSessionFactory } from './EmeSessionFactory.js';
-// import { DrmState } from './DrmState.js';
-
 /**
  * Coordinates DRM license acquisition for a playback session.
  */

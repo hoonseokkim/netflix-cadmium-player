@@ -8,9 +8,6 @@
  * @module mp4/VideoSampleEntryParser
  */
 
-// import { __extends } from 'tslib';
-// import { BoxParser as BaseBoxParser, DEBUG as u } from '../modules/Module_72905';
-
 export default class VideoSampleEntryParser /* extends BaseBoxParser */ {
   /**
    * Parse a Visual Sample Entry box.

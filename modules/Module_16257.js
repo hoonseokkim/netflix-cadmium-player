@@ -7,11 +7,6 @@
 // Webpack module 16257
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Qib = "PboLicenseRequestTransformerSymbol";
-
+export const Qib = "PboLicenseRequestTransformerSymbol";
 
 // Detected exports: Qib

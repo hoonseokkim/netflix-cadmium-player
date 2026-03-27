@@ -7,16 +7,10 @@
 // Webpack module 3082
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.vdc = b.Vga = void 0;
+
 d = a(21875)["default"];
-b.Vga = {
+export const Vga = {
     first: function() {
         return a(58223)["default"];
     },
@@ -60,7 +54,6 @@ b.Vga = {
         return d;
     }
 };
-b.vdc = ["selectaudio", "selectaudioadaptive"];
-
+export const vdc = ["selectaudio", "selectaudioadaptive"];
 
 // Detected exports: vdc, Vga

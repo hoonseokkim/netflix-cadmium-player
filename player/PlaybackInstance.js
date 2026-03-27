@@ -12,7 +12,7 @@
  *   f  = 20318 - aseGlobals (global ASE state)
  *   e  = 66093 - batteryManager (BD - battery status API)
  *   h  = 11953 - mediaSourceWrapper (qHa - MediaSource element wrapper)
- *   k  = 73585 - subtitlePlayer (internal_Dmb - subtitle download/sync)
+ *   k  = 73585 - subtitlePlayer (_fn_Dmb - subtitle download/sync)
  *   l  = 24427 - throttleFactory (l1b - creates throttled updater)
  *   m  = 33096 - constants (WJa, eIa, DX, SUCCESS, lK noop)
  *   n  = 81734 - observable (currentBitrate - Observable value holder)
@@ -23,7 +23,7 @@
  *   w  = 13044 - playbackRegistry (playbackInstanceHolder, tq list, iJa/jJa hooks)
  *   x  = 59032 - bitrateSelector ($gb - per-viewable bitrate selector)
  *   y  = 62439 - viewableAdapter (ViewableAdapterClass)
- *   A  = 79014 - textRenderer (internal_Fmb - timed text renderer)
+ *   A  = 79014 - textRenderer (_fn_Fmb - timed text renderer)
  *   z  = 39480 - playbackInitBindings (l5b - additional init bindings)
  *   B  = 31276 - loggerFactory (fetchOperation, getCategoryLog)
  *   C  = 5021  - timeUtils (MILLISECONDS, ri, ellaSendRateMultiplier)
@@ -39,7 +39,7 @@
  *   O  = 52569 - domFactory (createElement)
  *   I  = 72639 - manifestFlavors (qq - flavor constants)
  *   N  = 85001 - playerEnums (pacingTargetBufferStrategy, setState, zh, PlayerEvents, streamState, rCa)
- *   Q  = 31149 - playerError (we - error class, internal_Nra)
+ *   Q  = 31149 - playerError (we - error class, _fn_Nra)
  *   S  = 78719 - exceptionHandler (L0b - unhandled exception catcher)
  *   T  = 35128 - trackConstants (fragmentValidator - NONE language sentinel)
  *   U  = 13494 - videoQuality (SD - getVideoQuality, lAc - getAVBufferStatus)
@@ -49,7 +49,7 @@
  *   ba = 91176 - manifestUtils (AbortController, isLive)
  *   aa = 73403 - trackManager (wJa - track selection manager)
  *   ca = 54973 - manifestTypeResolver (getLicenseType)
- *   ea = 99416 - subtitleConfig (internal_Emb - subtitle configuration)
+ *   ea = 99416 - subtitleConfig (_fn_Emb - subtitle configuration)
  */
 
 // ============================================================================
@@ -61,7 +61,7 @@ import playbackSetup from '../modules/Module_86258'; // g - j5b init bindings
 import aseGlobals from '../modules/Module_20318';    // f - global ASE state
 import batteryManager from '../modules/Module_66093'; // e - BD battery API
 import mediaSourceWrapper from '../modules/Module_11953'; // h - qHa MediaSource
-import subtitlePlayerModule from '../modules/Module_73585'; // k - internal_Dmb
+import subtitlePlayerModule from '../modules/Module_73585'; // k - _fn_Dmb
 import throttleFactory from '../modules/Module_24427'; // l - l1b throttle
 import constants from '../modules/Module_33096';      // m - WJa, eIa, DX, etc
 import Observable from '../modules/Module_81734';      // n - currentBitrate
@@ -72,7 +72,7 @@ import documentEvents from '../modules/Module_37509'; // v - writeBytes
 import playbackRegistry from '../modules/Module_13044'; // w - playbackInstanceHolder
 import bitrateSelector from '../modules/Module_59032'; // x - $gb
 import viewableAdapter from '../modules/Module_62439'; // y - ViewableAdapterClass
-import textRendererModule from '../modules/Module_79014'; // A - internal_Fmb
+import textRendererModule from '../modules/Module_79014'; // A - _fn_Fmb
 import playbackInitBindings from '../modules/Module_39480'; // z - l5b
 import loggerFactory from '../modules/Module_31276';   // B - fetchOperation
 import timeUtils from '../modules/Module_5021';        // C - MILLISECONDS
@@ -98,7 +98,7 @@ import MediaType from '../modules/Module_26388';       // da - MediaType
 import manifestUtils from '../modules/Module_91176';   // ba - AbortController, isLive
 import trackManager from '../modules/Module_73403';    // aa - wJa
 import manifestTypeResolver from '../modules/Module_54973'; // ca - getLicenseType
-import subtitleConfig from '../modules/Module_99416'; // ea - internal_Emb
+import subtitleConfig from '../modules/Module_99416'; // ea - _fn_Emb
 
 // ============================================================================
 // PlaybackState enum (from playerEnums.pacingTargetBufferStrategy)
@@ -201,7 +201,7 @@ class PlaybackInstance {
         function onInitialTargetBufferChange(event) {
             if (event.newValue && event.newValue.stream) {
                 self.targetBuffer.removeListener(onInitialTargetBufferChange);
-                self.internal_Lta = event.newValue.stream.bitrate;
+                self._fn_Lta = event.newValue.stream.bitrate;
             }
         }
 
@@ -406,7 +406,7 @@ class PlaybackInstance {
         this.muted = new Observable.currentBitrate(false);
 
         /** @type {Observable<number>} Volume level 0.0-1.0 */
-        this.volume = new Observable.currentBitrate(playerConfig.config.internal_Lnc / 100);
+        this.volume = new Observable.currentBitrate(playerConfig.config._cfg_Lnc / 100);
 
         /** @type {Observable<string>} Presenting state (WAITING, PLAYING, PAUSED) */
         this.presentingState = new Observable.currentBitrate(PresentingState.WAITING);
@@ -741,7 +741,7 @@ class PlaybackInstance {
 
                         var handleSkipError = function (error) {
                             self.log.error('streamingSession.skipped threw an exception', error);
-                            var wrappedError = playerError.we.internal_Nra(errorCodes.ea.ASE_SKIPPED_THREW, error);
+                            var wrappedError = playerError.we._fn_Nra(errorCodes.ea.ASE_SKIPPED_THREW, error);
                             self.fireErrorEvent(wrappedError.code, wrappedError);
                         };
 
@@ -784,7 +784,7 @@ class PlaybackInstance {
                         }
                     } catch (error) {
                         self.log.error('streamingSession.seekByContentPts threw an exception', error);
-                        var seekError = playerError.we.internal_Nra(errorCodes.ea.ASE_SEEK_THREW, error);
+                        var seekError = playerError.we._fn_Nra(errorCodes.ea.ASE_SEEK_THREW, error);
                         self.fireErrorEvent(seekError.code, seekError);
                     }
                 }
@@ -802,7 +802,7 @@ class PlaybackInstance {
             if (session && session.isDeviceMonitored) {
                 session.vPc();
             }
-            self.fireEvent(PlayerEvents.internal_Tfa);
+            self.fireEvent(PlayerEvents.ratechange);
         });
 
         // ---- Underflow (rebuffer) handler ----
@@ -815,7 +815,7 @@ class PlaybackInstance {
                     if (session) session.underflow(self.mediaSourceManager.RBb());
                 } catch (error) {
                     self.log.error('streamingSession.underflow threw an exception', error);
-                    var underflowError = playerError.we.internal_Nra(errorCodes.ea.ASE_UNDERFLOW_THREW, error);
+                    var underflowError = playerError.we._fn_Nra(errorCodes.ea.ASE_UNDERFLOW_THREW, error);
                     self.fireErrorEvent(underflowError.code, underflowError);
                 }
             }
@@ -870,12 +870,12 @@ class PlaybackInstance {
         this.currentViewableConfig.parsedManifest = value;
     }
 
-    get internal_Kra() {
-        return this.currentViewableConfig.sessionContext.internal_Kra;
+    get _fn_Kra() {
+        return this.currentViewableConfig.sessionContext._fn_Kra;
     }
 
-    get internal_Lra() {
-        return this.currentViewableConfig.sessionContext.internal_Lra;
+    get _fn_Lra() {
+        return this.currentViewableConfig.sessionContext._fn_Lra;
     }
 
     /** @returns {number} The viewable index */
@@ -932,12 +932,12 @@ class PlaybackInstance {
     }
 
     /** @returns {number} Initial stream bitrate */
-    get internal_Lta() {
-        return this.currentViewableConfig.internal_Lta;
+    get _fn_Lta() {
+        return this.currentViewableConfig._fn_Lta;
     }
 
-    set internal_Lta(value) {
-        this.currentViewableConfig.internal_Lta = value;
+    set _fn_Lta(value) {
+        this.currentViewableConfig._fn_Lta = value;
     }
 
     /** @returns {object} The manifest reference for the current viewable */
@@ -1151,8 +1151,8 @@ class PlaybackInstance {
     }
 
     /** @returns {boolean} Whether track hydration is in progress */
-    get internal_Aqa() {
-        return this.currentViewableConfig.internal_Aqa;
+    get _fn_Aqa() {
+        return this.currentViewableConfig._fn_Aqa;
     }
 
     /** @returns {object} The live controller for the current viewable */
@@ -1477,7 +1477,7 @@ class PlaybackInstance {
             this.recordPlayDelay('asl_not_started');
         }
 
-        this.asyncLoader.internal_Nda(function (result) {
+        this.asyncLoader._fn_Nda(function (result) {
             self.recordPlayDelay('asl_load_complete');
             if (result.success) {
                 self._onAsyncLoadComplete();
@@ -1708,7 +1708,7 @@ class PlaybackInstance {
     /**
      * Creates or retrieves a viewable segment for the given configuration.
      * @private
-     * @param {object} config - { J: movieId, currentViewableId, M: segmentId, sessionContext, ze, internal_Fdc }
+     * @param {object} config - { J: movieId, currentViewableId, M: segmentId, sessionContext, ze, _flag_Fdc }
      * @param {number} [transactionId] - Source transaction ID
      * @param {object} [timeReference] - Time reference for the viewable
      */
@@ -1755,7 +1755,7 @@ class PlaybackInstance {
 
             var auxManifestToken = auxiliaryOptions ? auxiliaryOptions.auxiliaryManifestToken : undefined;
 
-            var auxiliaryManifest = config.internal_Fdc;
+            var auxiliaryManifest = config._flag_Fdc;
             if (!auxiliaryManifest) {
                 var currentManifestRef = this.currentViewableConfig.manifestRef;
                 var auxManifests = currentManifestRef ? currentManifestRef.auxiliaryManifests : undefined;
@@ -2561,7 +2561,7 @@ class PlaybackInstance {
     getVideoQuality() {
         var adapter = this.ViewableAdapter;
         if (adapter && adapter.aaa) return adapter.aaa.call(adapter);
-        return this._computeVideoQuality().internal_Vzb;
+        return this._computeVideoQuality()._prop_Vzb;
     }
 
     /**
@@ -2849,7 +2849,7 @@ class PlaybackInstance {
         var isAuxiliary = !hasRefreshOptions && viewableSegment !== this.currentViewableConfig;
 
         var flavor;
-        if (playerConfig.config.internal_Hya.qcEnabled) {
+        if (playerConfig.config._flag_Hya.qcEnabled) {
             flavor = manifestFlavors.qq.z5b;
         } else if (isAuxiliary) {
             flavor = manifestFlavors.qq.PRE_FETCH;
@@ -2994,7 +2994,7 @@ class PlaybackInstance {
     hydrateTracksFromManifest(audioTrackId, textTrackId, videoTrackId) {
         const self = this;
         var viewableConfig = this.currentViewableConfig;
-        viewableConfig.internal_Aqa = true;
+        viewableConfig._fn_Aqa = true;
 
         return this._fetchManifest(viewableConfig, {
             bF: viewableConfig.playbackContextId,
@@ -3276,7 +3276,7 @@ class PlaybackInstance {
                     bestManifest &&
                     1800000 > bestManifest.manifestContent.expiration - self.playerCore.kJ.toUnit(timeUtils.MILLISECONDS)
                 ) {
-                    bestManifest = undefined;
+
                 }
 
                 // Apply main manifest for auxiliary viewables
@@ -3297,7 +3297,7 @@ class PlaybackInstance {
 
                     // Invalidate cached manifest if aux token doesn't match
                     if (auxToken && auxToken !== (bestManifest ? bestManifest.manifestContent.auxiliaryManifestToken : undefined)) {
-                        bestManifest = undefined;
+
                     }
                 }
 
@@ -3385,7 +3385,7 @@ class PlaybackInstance {
     _initializeStreaming() {
         const self = this;
 
-        asyncHelpers.__awaiter(this, void 0, void 0, function generator() {
+        asyncHelpers.__awaiter(this, undefined, undefined, function generator() {
             return (function (gen) {
                 if (self.state.value !== PlaybackState.LOADING) return;
 
@@ -3496,7 +3496,7 @@ class PlaybackInstance {
                     }
                 });
 
-                this.playbackContainer.addEventListener(playerEnums.rCa.internal_Jna, function () {
+                this.playbackContainer.addEventListener(playerEnums.rCa.adBreakComplete, function () {
                     if (!self.liveController.isLive) self.session.WDb();
                 });
             } catch (error) {
@@ -3523,8 +3523,8 @@ class PlaybackInstance {
             this.mediaTime.set(this.startPts);
 
             // Create subtitle player and text renderer
-            var subtitleConfigInstance = new subtitleConfig.internal_Emb(playerConfig.config);
-            this.subtitlePlayer = new subtitlePlayerModule.internal_Dmb(this, subtitleConfigInstance);
+            var subtitleConfigInstance = new subtitleConfig._fn_Emb(playerConfig.config);
+            this.subtitlePlayer = new subtitlePlayerModule._fn_Dmb(this, subtitleConfigInstance);
 
             var renderTimedText =
                 typeof this.sessionContext.renderTimedText === 'boolean'
@@ -3532,7 +3532,7 @@ class PlaybackInstance {
                     : playerConfig.config.renderTimedText;
 
             if (renderTimedText) {
-                this.textRenderer = new textRendererModule.internal_Fmb(this, subtitleConfigInstance);
+                this.textRenderer = new textRendererModule._fn_Fmb(this, subtitleConfigInstance);
             }
 
             // Start inactivity monitor
@@ -3571,7 +3571,7 @@ class PlaybackInstance {
     handleStreamRestart() {
         const self = this;
 
-        return asyncHelpers.__awaiter(this, void 0, void 0, function generator() {
+        return asyncHelpers.__awaiter(this, undefined, undefined, function generator() {
             return (function (gen) {
                 var session = self.streamingSession;
                 var lastPts = typeChecks.wc(session ? session.atb : undefined)
@@ -3583,7 +3583,7 @@ class PlaybackInstance {
                 var wasJumping = self.mediaSourceManager.jU;
                 var videoElement = self.mediaSourceElement.htmlVideoElement;
 
-                self.nextState.emit(PlayerEvents.internal_Aga);
+                self.nextState.emit(PlayerEvents.restarting);
 
                 // Re-create MediaSource and manager
                 self.mediaSourceElement = new mediaSourceWrapper.qHa(self);
@@ -3796,7 +3796,7 @@ class PlaybackInstance {
             delete viewable.hm;
         }
 
-        this.currentViewableConfig.internal_Ewa();
+        this.currentViewableConfig._fn_Ewa();
     }
 
     /**

@@ -90,8 +90,8 @@ class MediaCapabilityDetectorManager {
     }
 
     /** Get video DRM capabilities info. */
-    internal_Eha() {
-        return this._getVideoDetector().internal_Eha();
+    _fn_Eha() {
+        return this._getVideoDetector()._fn_Eha();
     }
 
     /** Get audio spatial capabilities. */
@@ -100,8 +100,8 @@ class MediaCapabilityDetectorManager {
     }
 
     /** Get audio DRM capabilities info. */
-    internal_Dha() {
-        return this._getAudioDetector().internal_Dha();
+    _fn_Dha() {
+        return this._getAudioDetector()._fn_Dha();
     }
 
     /** Get video codec profiles supported. */
@@ -110,8 +110,8 @@ class MediaCapabilityDetectorManager {
     }
 
     /** Get extended video DRM capabilities. */
-    internal_Fha() {
-        return this._getVideoDetector().internal_Fha();
+    _fn_Fha() {
+        return this._getVideoDetector()._fn_Fha();
     }
 
     /** Get HDR capability info. */

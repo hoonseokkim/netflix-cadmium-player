@@ -31,7 +31,6 @@ import MslIoException from '../error/MslIoException.js';            // Module 48
 import { MessageHeader } from '../msg/MessageHeader.js';            // Module 54449 - message header
 import { isMslException } from '../error/MslErrorUtil.js';          // Module 32260 - MSL error type check
 
-
 /**
  * Authenticate a key exchange response by iterating through available
  * key exchange schemes to find a matching authentication factory.
@@ -112,7 +111,6 @@ function authenticateKeyResponse(mslContext, messageHeader, keyExchangeSchemes, 
     });
 }
 
-
 /**
  * Annotate an MSL error with message header context fields for debugging.
  *
@@ -136,7 +134,6 @@ function annotateError(error, header, type = 'full') {
     error.setUserAuthData(header.userAuthData);
     error.setMessageId(header.messageId);
 }
-
 
 /**
  * MSL Message Input Stream.
@@ -1284,7 +1281,6 @@ class MessageInputStream extends BaseInputStream {
         }
     }
 }
-
 
 /**
  * Factory function to create a new MessageInputStream.

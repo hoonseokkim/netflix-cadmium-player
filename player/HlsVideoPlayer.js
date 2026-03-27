@@ -219,7 +219,7 @@ class HlsVideoPlayer {
       this._emitEvent(PlayerEvent.rIb);
       this._emitEvent(PlayerEvent.qIb);
       this._emitEvent(PlayerEvent.eventCallback);
-      this._emitEvent(PlayerEvent.internal_Doa);
+      this._emitEvent(PlayerEvent.audiotracklistchanged);
       this._emitEvent(PlayerEvent.gq);
       this._emitEvent(PlayerEvent.EC);
     });
@@ -287,7 +287,7 @@ class HlsVideoPlayer {
     });
 
     el.addEventListener('progress', () => {
-      this._emitEvent(PlayerEvent.internal_Toa);
+      this._emitEvent(PlayerEvent.bufferedtimechanged);
       this._updateLoadProgress();
     });
 
@@ -324,12 +324,12 @@ class HlsVideoPlayer {
     });
 
     this._hasEnded.addListener(() => {
-      this._emitEvent(PlayerEvent.internal_Syb);
+      this._emitEvent(PlayerEvent.endedchanged);
     });
 
     this._session.playbackRate.addListener((change) => {
       this._videoElement.playbackRate = change.newValue;
-      this._emitEvent(PlayerEvent.internal_Tfa);
+      this._emitEvent(PlayerEvent.ratechange);
     });
   }
 
@@ -998,7 +998,7 @@ class HlsVideoPlayer {
     if (this._isLoaded) return;
     this._isLoaded = true;
 
-    this._asyncLoader.internal_Nda((result) => {
+    this._asyncLoader._fn_Nda((result) => {
       if (!this._supportsHls()) {
         this._close(this._createError(ErrorCode.HLS_NOT_SUPPORTED));
         return;
@@ -1072,7 +1072,7 @@ class HlsVideoPlayer {
             this._log.RETRY('Playback is blocked by the browser settings', err);
             this._playbackBlocked = true;
             this._autoplayRequested = true;
-            this._emitOnce(PlayerEvent.internal_Ioa, {
+            this._emitOnce(PlayerEvent.autoplaywasblocked, {
               player: {
                 play: () => this.play(),
               },
@@ -1277,7 +1277,7 @@ class HlsVideoPlayer {
 
     if (this._isAudioTrack(track)) {
       exposed.isNative = track.isNative;
-      exposed.surroundFormatLabel = track.internal_Gha;
+      exposed.surroundFormatLabel = track.surroundFormatLabel;
     }
 
     if (this._isTextTrack(track)) {

@@ -7,11 +7,6 @@
 // Webpack module 67572
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.cib = "OneWayCounterFactorySymbol";
-
+export const cib = "OneWayCounterFactorySymbol";
 
 // Detected exports: cib

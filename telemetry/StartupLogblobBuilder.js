@@ -67,7 +67,7 @@ startupComponent.register(ComponentEvents.INIT_COMPONENT_LOGBLOBBATCHER, functio
         }
 
         // Collect per-module load metrics
-        const moduleLoadMetrics = moduleMetrics.internal_Bxc();
+        const moduleLoadMetrics = moduleMetrics._fn_Bxc();
         Object.entries(moduleLoadMetrics).forEach(function (entry) {
             const iterator = Fa(entry);
             const moduleName = iterator.next().value;
@@ -89,7 +89,7 @@ startupComponent.register(ComponentEvents.INIT_COMPONENT_LOGBLOBBATCHER, functio
     logBlobService = disposableList.key(LogBlobServiceSymbol);
     moduleMetrics = disposableList.key(ModuleMetricsSymbol);
 
-    startupComponent.internal_Nda(function () {
+    startupComponent._fn_Nda(function () {
         logBlobService.data();
         scheduleAsync(buildAndSendStartupLogblob);
     });

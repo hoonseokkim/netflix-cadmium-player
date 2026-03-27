@@ -13,8 +13,6 @@
  * @original Module_71915
  */
 
-// import { assert } from './Assert'; // Module 52571
-
 /**
  * Validates a play-prediction result object.
  *

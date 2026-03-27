@@ -22,15 +22,6 @@
  * @module drm/MediaKeySystemAccessServices
  */
 
-// import { DrmScheme } from './DrmScheme.js';                         // Module 53921
-// import { KeySystemHelper } from './KeySystemIds.js';                // Module 17612
-// import { DrmError } from '../core/DrmError.js';                     // Module 61731
-// import { ErrorCode, EventTypeEnum } from '../core/ErrorCodes.js';   // Module 36129
-// import { KeySystemAccessWrapper } from './KeySystemAccessWrapper.js'; // Module 52428
-// import { EmeConstants } from './EmeConstants.js';                    // Module 82100
-// import { CodecStrings } from '../media/CodecStrings.js';            // Module 73796
-// import { DrmInitDataPssh } from './DrmInitDataPssh.js';             // Module 84218
-
 /**
  * Manages discovery and caching of the browser's MediaKeySystemAccess.
  */

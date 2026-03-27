@@ -6,10 +6,6 @@
  * @original Module_36149
  */
 
-// import { ContainerModule } from 'inversify'; // Module 22674
-// import { PboServiceToken } from '...';       // Module 58872
-// import { PboServiceImpl } from '...';        // Module 52357
-
 /**
  * Container module binding the PBO service implementation.
  */

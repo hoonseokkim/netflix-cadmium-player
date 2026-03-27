@@ -7,14 +7,8 @@
 // Webpack module 60028
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.$fb = b.Z7 = void 0;
+
 d = a(22970);
 p = a(90745);
 c = a(91967);
@@ -22,7 +16,7 @@ c = a(91967);
     f[f.gbb = 1] = "Creation";
     f[f.gma = 2] = "StartPlayback";
 }
-)(g || (b.Z7 = g = {}));
+)(g || (g = {}));
 t = (function() {
     function f(e, h, k) {
         this.tc = e;
@@ -35,7 +29,7 @@ t = (function() {
         var h;
         h = {
             TU: e,
-            XPa: void 0
+            XPa: undefined
         };
         this.uF[e.FB] = h;
         e.F$ === g.gbb && this.T4a(h);
@@ -63,9 +57,9 @@ t = (function() {
     f.prototype.hMc = function(e) {
         var h;
         this.T7a(e.TU, {
-            kic: !0
+            kic: true
         });
-        null === (h = e.XPa) || void 0 === h ? void 0 : h.kd();
+        null === (h = e.XPa) || undefined === h ? undefined : h.kd();
     }
     ;
     f.prototype.T4a = function(e) {
@@ -74,10 +68,10 @@ t = (function() {
         l = e.TU;
         m = this.tc.Opa(function() {
             h.T7a(l, {
-                UFb: !0
+                UFb: true
             });
         }, l.GD, l.FB);
-        null === (k = e.XPa) || void 0 === k ? void 0 : k.La();
+        null === (k = e.XPa) || undefined === k ? undefined : k.La();
         e.XPa = m;
     }
     ;
@@ -97,7 +91,7 @@ t = (function() {
     f.prototype.B2c = function(e) {
         var h, k, l;
         h = this.uF.aseReport;
-        if (void 0 !== h) {
+        if (undefined !== h) {
             k = h.TU;
             l = k.GD.G;
             k.QSb(e);
@@ -108,7 +102,6 @@ t = (function() {
     return f;
 }
 )();
-b.$fb = t;
-
+export const $fb = t;
 
 // Detected exports: Z7

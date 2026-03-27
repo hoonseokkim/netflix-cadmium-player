@@ -7,11 +7,6 @@
 // Webpack module 15348
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.YIa = "PboPublisherSymbol";
-
+export const YIa = "PboPublisherSymbol";
 
 // Detected exports: YIa

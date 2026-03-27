@@ -7,13 +7,7 @@
 // Webpack module 18319
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 p = a(93334);
 t = (function(c) {
@@ -37,23 +31,23 @@ t = (function(c) {
         this.tNa(this.N.Hd()));
         k = this.startOffset + this.length - this.vpb;
         0 < k && this.xr(k, this.vpb);
-        if (null === f || void 0 === f ? 0 : f.yh) {
-            k = void 0;
+        if (null === f || undefined === f ? 0 : f.yh) {
+
             for (var l = this.parent; l; ) {
-                k = null === (h = null === (e = l.wn("tkhd")) || void 0 === e ? void 0 : e.Uc) || void 0 === h ? void 0 : h.trackId;
-                if (void 0 !== k)
+                k = null === (h = null === (e = l.wn("tkhd")) || undefined === e ? undefined : e.Uc) || undefined === h ? undefined : h.trackId;
+                if (undefined !== k)
                     break;
                 l = l.parent;
             }
             (0,
-            p.assert)(void 0 !== k, "trackId is undefined");
+            p.assert)(undefined !== k, "trackId is undefined");
             f.yh[k].ncd = {
                 qAa: this.qAa,
                 iOb: this.iOb,
                 p3: this.p3
             };
         }
-        return !0;
+        return true;
     }
     ;
     g.prototype.tNa = function(f) {
@@ -66,8 +60,8 @@ t = (function(c) {
     }
     ;
     g.Ae = "avcC";
-    g.Fd = !1;
+    g.Fd = false;
     return g;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

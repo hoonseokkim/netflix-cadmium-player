@@ -85,13 +85,13 @@ export function createDebouncedPredicate({
 
   function resetTimer() {
     timerTask?.destroy();
-    timerTask = undefined;
+
     fired = false;
   }
 
   function onTimerComplete() {
     fired = true;
-    timerTask = undefined;
+
   }
 
   return Object.assign(

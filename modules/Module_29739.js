@@ -7,20 +7,14 @@
 // Webpack module 29739
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.cKa = void 0;
+
 d = a(22970);
 t = (function() {
     function p(c) {
         this.um = c;
         this.ic = p.ic;
-        this.enabled = !0;
+        this.enabled = true;
         this.wQa = new Map();
     }
     p.prototype.qCc = function(c, g) {
@@ -59,7 +53,6 @@ t = (function() {
     return p;
 }
 )();
-b.cKa = t;
-
+export const cKa = t;
 
 // Detected exports: cKa

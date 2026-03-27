@@ -7,14 +7,8 @@
 // Webpack module 54477
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c, g;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.qFa = void 0;
+
 t = a(22970);
 d = a(66164);
 p = a(65161);
@@ -60,24 +54,24 @@ a = (function() {
     f.prototype.$ra = function(e, h) {
         var A;
         for (var k, l = h.da(this.hZc), m = [], n = e, q = h, r, u, v = 0, w = 0, x = (0,
-        g.Gn)(e.track), y = !0; n; ) {
+        g.Gn)(e.track), y = true; n; ) {
             A = n.aCb(l);
             if (!y && !n.Dk && !x)
                 break;
             0 < A.Ta.length && (q = A.Ta[0].Vb,
-            void 0 === r && (r = A.Ta[A.Ta.length - 1].Sb,
+            export const undefined = == r && (r = A.Ta[A.Ta.length - 1].Sb,
             u = A.Ixa >= A.Ta.length ? r : A.Ta[A.Ixa].Vb),
             m = A.Ta.concat(m),
             v += 0 < A.Zw ? A.Zw : 0,
             w += A.z3);
             n = this.navigator.parent(n);
-            y = !1;
+            y = false;
         }
         return {
             ru: d.platform.C0()[e.mediaType],
             Nb: Math.floor(q.G),
             Ld: h.G,
-            fl: Math.floor(null !== (k = null === r || void 0 === r ? void 0 : r.G) && void 0 !== k ? k : h.G),
+            fl: Math.floor(null !== (k = null === r || undefined === r ? undefined : r.G) && undefined !== k ? k : h.G),
             yl: Math.floor(u ? u.G : h.G),
             jq: m.reduce(function(z, B) {
                 return z + B.la;
@@ -104,12 +98,12 @@ a = (function() {
             buffer: n,
             Jqa: q,
             A_: m,
-            bn: null === r || void 0 === r ? void 0 : r.bn,
+            bn: null === r || undefined === r ? undefined : r.bn,
             mediaType: l.mediaType,
             Ld: h.G,
             I3a: 0
         };
-        this.e3c(h, void 0 !== l.bq.Ro.El);
+        this.e3c(h, undefined !== l.bq.Ro.El);
         return h;
     }
     ;
@@ -148,7 +142,6 @@ a = (function() {
     return f;
 }
 )();
-b.qFa = a;
-
+export const qFa = a;
 
 // Detected exports: qFa

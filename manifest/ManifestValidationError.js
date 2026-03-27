@@ -15,12 +15,7 @@ export default function ManifestValidationError(module, exports, require) {
     function ManifestValidationErrorClass(parsedManifest) {
         this.parsedManifest = parsedManifest;
         this.configFlag = JSON.stringify(this.collectErrors());
-    }
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.DrmMediaRequestFactoryImpl = void 0;
+    }exports.DrmMediaRequestFactoryImpl = undefined;
 
     /**
      * Checks the manifest for missing required fields and returns

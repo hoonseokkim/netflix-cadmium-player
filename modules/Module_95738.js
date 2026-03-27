@@ -7,11 +7,6 @@
 // Webpack module 95738
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Pib = "PboGenerateScreenshotsCommandSymbol";
-
+export const Pib = "PboGenerateScreenshotsCommandSymbol";
 
 // Detected exports: Pib

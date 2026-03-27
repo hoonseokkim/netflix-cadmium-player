@@ -13,11 +13,6 @@
  * @original Module_79459
  */
 
-// import { __extends } from 'tslib';                          // Module 22970
-// import { viewableId } from '../player/ViewableConstants';    // Module 79048
-// import { u as DEBUG } from '../utils/AseGlobals';            // Module 48170
-// import { buildFunction as BaseMediaRequest } from '../streaming/BaseMediaRequest'; // Module 50468
-
 /**
  * A padding media request that fills timeline gaps with pre-generated data.
  */

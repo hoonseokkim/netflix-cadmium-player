@@ -18,19 +18,6 @@
  * @module drm/EmeSession
  */
 
-// import { MILLISECONDS } from '../timing/TimeUnit';           // Module 5021
-// import { ErrorCode, EventTypeEnum } from '../core/ErrorCodes'; // Module 36129
-// import { trustedConfig } from '../drm/DrmConfig';             // Module 24735
-// import { DrmState } from '../drm/DrmState';                   // Module 28289
-// import { KeyStatus } from '../drm/KeyStatus';                 // Module 28048
-// import { LicenseUpdateType } from '../drm/LicenseUpdateType'; // Module 27995
-// import { DrmError } from '../drm/DrmError';                   // Module 61731
-// import { PromiseTimerSymbol } from '../utils/PromiseTimer';   // Module 59818
-// import { PlaybackError } from '../core/PlaybackError';        // Module 31149
-// import { ObservableValue } from '../utils/ObservableValue';   // Module 81734
-// import { Deferred } from '../utils/Deferred';                 // Module 94293
-// import { parseHexErrorCode } from '../utils/ErrorUtils';      // Module 82100
-
 /**
  * Enum representing the current license negotiation state.
  * @readonly
@@ -200,7 +187,7 @@ export class EmeSession {
 
         const challengeResult = {
           rL: messageData,
-          internal_Ltb: messageType,
+          _Ltb: messageType,
           type: this._challengeType,
         };
 
@@ -404,7 +391,7 @@ export class EmeSession {
     try {
       if (!mediaKeyProvider.oEb()) {
         const mediaKeys = await this._licenseManager.removeCallback(
-          this._config.internal_Erb,
+          this._config._cfg_Erb,
           this._emeSession.createMediaKeys(this._encryptionSession)
         );
 
@@ -559,7 +546,7 @@ export class EmeSession {
 
     try {
       await this._licenseManager.removeCallback(
-        this._config.internal_Drb,
+        this._config._cfg_Drb,
         this._emeSession.closing()
       );
       this._log.info('Closed the session');
@@ -634,7 +621,7 @@ export class EmeSession {
 
     this._licenseManager
       .removeCallback(
-        this._config.internal_Frb,
+        this._config._cfg_Frb,
         this._emeSession.generateRequest(this._messageParser.DVa(), initData, initDataType)
       )
       .then(() => {
@@ -690,7 +677,7 @@ export class EmeSession {
 
     this._licenseManager
       .removeCallback(
-        this._config.internal_Irb,
+        this._config._cfg_Irb,
         this._emeSession.update(licenseData, updateType, this._keyIds)
       )
       .then(() => {
@@ -721,7 +708,7 @@ export class EmeSession {
    */
   _setServerCertificate(mediaKeys) {
     return this._licenseManager.removeCallback(
-      this._config.internal_Hrb,
+      this._config._cfg_Hrb,
       this._emeSession.setServerCertificate(mediaKeys, this._messageParser.dsa())
     );
   }

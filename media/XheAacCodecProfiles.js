@@ -13,8 +13,6 @@
  * @module media/XheAacCodecProfiles
  */
 
-// import { X as baseProfiles } from '../modules/Module_70349';
-
 /**
  * xHE-AAC codec profile test configurations.
  *

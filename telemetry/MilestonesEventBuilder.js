@@ -11,16 +11,6 @@
  * @webpack 51149
  */
 
-// import { __decorate, __param } from 'tslib';                     // Module 22970
-// import { injectable, injectDecorator } from 'inversify';         // Module 22674
-// import { PlayDelayEvent } from '../events/PlayDelayEvent';       // Module 63156
-// import { PlayDelayStoreToken } from '../tokens';                 // Module 77134 (H7)
-// import { timestamp, MILLISECONDS } from '../time/timestamp';     // Module 5021
-// import { responseType, sta as MEDIA_REQUEST_EVENT } from '../media/MediaRequestEvents'; // Module 61726
-// import { enumConstants } from '../config/EnumConstants';          // Module 34231
-// import { MH as assertNever } from '../util/assertNever';         // Module 79542
-// import { LoggerToken } from '../logging/LoggerToken';            // Module 87386
-
 /**
  * Maps media types (video, audioBufferedSegments) to their corresponding
  * start/end PlayDelayEvent identifiers for segment-level tracking.
@@ -154,13 +144,13 @@ class MilestonesEventBuilder {
     const upperBoundTs = context.JTb === undefined ? null : context.JTb;
 
     // Gather stored segment-level events for the current transaction
-    const storedEvents = this.playDelayStore.internal_Dxc(sourceTransactionId);
+    const storedEvents = this.playDelayStore._fn_Dxc(sourceTransactionId);
 
     // Also gather events from prior streaming sessions
     const priorTransactionIds = context.streamingSession?.Qmc;
     if (priorTransactionIds) {
       priorTransactionIds.forEach((txnId) => {
-        storedEvents.push(...this.playDelayStore.internal_Cxc(txnId));
+        storedEvents.push(...this.playDelayStore._fn_Cxc(txnId));
       });
     }
 
@@ -188,7 +178,7 @@ class MilestonesEventBuilder {
 
     if ("pr_ats" in playDelayTimestamps) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Ila,
+        name: PlayDelayEvent.RequestPrefetchManifestStart,
         $n: toOffsetTimestamp(playDelayTimestamps.pr_ats),
         sourceTransactionId,
         correlationId: "request-pre-manifest",
@@ -197,7 +187,7 @@ class MilestonesEventBuilder {
 
     if ("ats" in playDelayTimestamps) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Gla,
+        name: PlayDelayEvent.RequestManifestStart,
         $n: toOffsetTimestamp(playDelayTimestamps.ats),
         sourceTransactionId,
         correlationId: "request-manifest",
@@ -206,7 +196,7 @@ class MilestonesEventBuilder {
 
     if ("pr_at" in playDelayTimestamps) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Hla,
+        name: PlayDelayEvent.RequestPrefetchManifestEnd,
         $n: toOffsetTimestamp(playDelayTimestamps.pr_at),
         sourceTransactionId,
         correlationId: "request-pre-manifest",
@@ -215,7 +205,7 @@ class MilestonesEventBuilder {
 
     if ("at" in playDelayTimestamps) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Fla,
+        name: PlayDelayEvent.RequestManifestEnd,
         $n: toOffsetTimestamp(playDelayTimestamps.at),
         sourceTransactionId,
         correlationId: "request-manifest",
@@ -228,7 +218,7 @@ class MilestonesEventBuilder {
 
     if (manifestSendKey) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Qka,
+        name: PlayDelayEvent.manifestFetchStart,
         $n: toOffsetTimestamp(playDelayTimestamps[manifestSendKey]),
         sourceTransactionId,
         correlationId: "manifest",
@@ -237,7 +227,7 @@ class MilestonesEventBuilder {
 
     if (manifestReceiveKey) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Pka,
+        name: PlayDelayEvent.manifestFetchEnd,
         $n: toOffsetTimestamp(playDelayTimestamps[manifestReceiveKey]),
         sourceTransactionId,
         correlationId: "manifest",
@@ -247,7 +237,7 @@ class MilestonesEventBuilder {
     // License request sent
     if ("lg" in playDelayTimestamps) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Ela,
+        name: PlayDelayEvent.RequestLicenseStart,
         $n: toOffsetTimestamp(playDelayTimestamps.lg),
         sourceTransactionId,
         correlationId: "request-license",
@@ -257,7 +247,7 @@ class MilestonesEventBuilder {
     // License response received (marks both end of license request and start of license apply)
     if ("lr" in playDelayTimestamps) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Dla,
+        name: PlayDelayEvent.RequestLicenseEnd,
         $n: toOffsetTimestamp(playDelayTimestamps.lr),
         sourceTransactionId,
         correlationId: "request-license",
@@ -279,7 +269,7 @@ class MilestonesEventBuilder {
         correlationId: "apply-license",
       });
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Nja,
+        name: PlayDelayEvent.drmEnd,
         $n: toOffsetTimestamp(playDelayTimestamps.ld),
         sourceTransactionId,
         correlationId: "drm",
@@ -319,7 +309,7 @@ class MilestonesEventBuilder {
     const drmStartKey = this._findFirstPresentKey(playDelayTimestamps, ["drm_start", "lg"]);
     if (drmStartKey) {
       rawMilestones.push({
-        name: PlayDelayEvent.internal_Oja,
+        name: PlayDelayEvent.drmStart,
         $n: toOffsetTimestamp(playDelayTimestamps[drmStartKey]),
         sourceTransactionId,
         correlationId: "drm",
@@ -367,7 +357,7 @@ class MilestonesEventBuilder {
 
     if (bufferingStartTs !== Infinity) {
       allEvents.push({
-        eventName: PlayDelayEvent.internal_Gja,
+        eventName: PlayDelayEvent.contentBufferingStart,
         eventId: "content-buffering",
         ts: bufferingStartTs,
         comp: "buffering",
@@ -378,7 +368,7 @@ class MilestonesEventBuilder {
 
     if (bufferingEndTs !== -Infinity) {
       allEvents.push({
-        eventName: PlayDelayEvent.internal_Fja,
+        eventName: PlayDelayEvent.contentBufferingEnd,
         eventId: "content-buffering",
         ts: bufferingEndTs,
         comp: "buffering",
@@ -505,25 +495,25 @@ class MilestonesEventBuilder {
   _getComponent(name) {
     switch (name) {
       // Manifest events
-      case PlayDelayEvent.internal_Ila:
-      case PlayDelayEvent.internal_Hla:
-      case PlayDelayEvent.internal_Gla:
-      case PlayDelayEvent.internal_Fla:
-      case PlayDelayEvent.internal_Qka:
-      case PlayDelayEvent.internal_Pka:
+      case PlayDelayEvent.RequestPrefetchManifestStart:
+      case PlayDelayEvent.RequestPrefetchManifestEnd:
+      case PlayDelayEvent.RequestManifestStart:
+      case PlayDelayEvent.RequestManifestEnd:
+      case PlayDelayEvent.manifestFetchStart:
+      case PlayDelayEvent.manifestFetchEnd:
         return "manifest";
 
       // License / DRM events
-      case PlayDelayEvent.internal_Ela:
-      case PlayDelayEvent.internal_Dla:
+      case PlayDelayEvent.RequestLicenseStart:
+      case PlayDelayEvent.RequestLicenseEnd:
       case PlayDelayEvent.kKa:
       case PlayDelayEvent.jKa:
       case PlayDelayEvent.lka:
       case PlayDelayEvent.kka:
       case PlayDelayEvent.dja:
       case PlayDelayEvent.cja:
-      case PlayDelayEvent.internal_Oja:
-      case PlayDelayEvent.internal_Nja:
+      case PlayDelayEvent.drmStart:
+      case PlayDelayEvent.drmEnd:
         return "license";
 
       // Buffering / content download events
@@ -535,8 +525,8 @@ class MilestonesEventBuilder {
       case PlayDelayEvent.GW:
       case PlayDelayEvent.bCa:
       case PlayDelayEvent.aCa:
-      case PlayDelayEvent.internal_Gja:
-      case PlayDelayEvent.internal_Fja:
+      case PlayDelayEvent.contentBufferingStart:
+      case PlayDelayEvent.contentBufferingEnd:
         return "buffering";
 
       // Playback lifecycle events
@@ -563,19 +553,19 @@ class MilestonesEventBuilder {
   _classifyCategory(name) {
     switch (name) {
       // AWS - manifest fetches
-      case PlayDelayEvent.internal_Ila:
-      case PlayDelayEvent.internal_Hla:
-      case PlayDelayEvent.internal_Gla:
-      case PlayDelayEvent.internal_Fla:
-      case PlayDelayEvent.internal_Qka:
-      case PlayDelayEvent.internal_Pka:
+      case PlayDelayEvent.RequestPrefetchManifestStart:
+      case PlayDelayEvent.RequestPrefetchManifestEnd:
+      case PlayDelayEvent.RequestManifestStart:
+      case PlayDelayEvent.RequestManifestEnd:
+      case PlayDelayEvent.manifestFetchStart:
+      case PlayDelayEvent.manifestFetchEnd:
         return "aws";
 
       // Mixed - license request/response (network + server processing)
-      case PlayDelayEvent.internal_Ela:
-      case PlayDelayEvent.internal_Dla:
-      case PlayDelayEvent.internal_Oja:
-      case PlayDelayEvent.internal_Nja:
+      case PlayDelayEvent.RequestLicenseStart:
+      case PlayDelayEvent.RequestLicenseEnd:
+      case PlayDelayEvent.drmStart:
+      case PlayDelayEvent.drmEnd:
         return "mixed";
 
       // Device - local processing (DRM, decoding, rendering)
@@ -600,8 +590,8 @@ class MilestonesEventBuilder {
       case PlayDelayEvent.BW:
       case PlayDelayEvent.HW:
       case PlayDelayEvent.GW:
-      case PlayDelayEvent.internal_Gja:
-      case PlayDelayEvent.internal_Fja:
+      case PlayDelayEvent.contentBufferingStart:
+      case PlayDelayEvent.contentBufferingEnd:
         return "cdn";
 
       default:
@@ -620,10 +610,10 @@ class MilestonesEventBuilder {
   _getStep(name) {
     switch (name) {
       // Start events
-      case PlayDelayEvent.internal_Ila:
+      case PlayDelayEvent.RequestPrefetchManifestStart:
       case PlayDelayEvent.nIa:
-      case PlayDelayEvent.internal_Gla:
-      case PlayDelayEvent.internal_Ela:
+      case PlayDelayEvent.RequestManifestStart:
+      case PlayDelayEvent.RequestLicenseStart:
       case PlayDelayEvent.bCa:
       case PlayDelayEvent.FW:
       case PlayDelayEvent.DW:
@@ -631,16 +621,16 @@ class MilestonesEventBuilder {
       case PlayDelayEvent.kKa:
       case PlayDelayEvent.lka:
       case PlayDelayEvent.dja:
-      case PlayDelayEvent.internal_Qka:
-      case PlayDelayEvent.internal_Oja:
-      case PlayDelayEvent.internal_Gja:
+      case PlayDelayEvent.manifestFetchStart:
+      case PlayDelayEvent.drmStart:
+      case PlayDelayEvent.contentBufferingStart:
         return "start";
 
       // End events
-      case PlayDelayEvent.internal_Hla:
+      case PlayDelayEvent.RequestPrefetchManifestEnd:
       case PlayDelayEvent.mIa:
-      case PlayDelayEvent.internal_Fla:
-      case PlayDelayEvent.internal_Dla:
+      case PlayDelayEvent.RequestManifestEnd:
+      case PlayDelayEvent.RequestLicenseEnd:
       case PlayDelayEvent.jKa:
       case PlayDelayEvent.kka:
       case PlayDelayEvent.cja:
@@ -648,9 +638,9 @@ class MilestonesEventBuilder {
       case PlayDelayEvent.EW:
       case PlayDelayEvent.BW:
       case PlayDelayEvent.GW:
-      case PlayDelayEvent.internal_Pka:
-      case PlayDelayEvent.internal_Nja:
-      case PlayDelayEvent.internal_Fja:
+      case PlayDelayEvent.manifestFetchEnd:
+      case PlayDelayEvent.drmEnd:
+      case PlayDelayEvent.contentBufferingEnd:
         return "end";
 
       // Discrete (one-shot) events

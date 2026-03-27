@@ -18,13 +18,6 @@
  * @extends FullBox (Module 72905)
  */
 
-// import { __extends } from 'tslib';                              // Module 22970
-// import { QHa as NETFLIX_FRAME_RATE_BOX_TYPE } from './BoxTypes'; // Module 75589
-// import { TimeUtil } from './TimeUtil';                           // Module 49420
-// import { default as AudioSampleEntry } from './AudioSampleEntry'; // Module 70428
-// import { debugEnabled as FullBox } from './FullBox';             // Module 72905
-// import { default as EncryptedVideoBox } from './EncryptedVideoBox'; // Module 41192
-
 /**
  * Parser for the Sample Description (stsd) box.
  *
@@ -109,7 +102,9 @@ export default class SampleDescriptionBox /* extends FullBox */ {
    */
   reparseChildBox(boxType) {
     if (this.childrenMap[boxType] !== undefined && this.childrenMap[boxType].length !== 0) {
-      // Seek to the (entryCount - 1)th entry at byte offset + 12
+      // Seek to the (entryCount - 1)
+
+th entry at byte offset + 12
       this.readFloat64.fo(this.entryCount - 1, this.byteOffset + 12);
       const child = this.childrenMap[boxType][0];
       this.parseBoxContent(child.byteLength, child.byteOffset);

@@ -7,13 +7,6 @@
 // Webpack module 56656
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.$Ca = void 0;
 t = (function() {
     function a() {
         this.children = new Map();
@@ -36,4 +29,4 @@ t = (function() {
     return a;
 }
 )();
-b.$Ca = t;
+export const $Ca = t;

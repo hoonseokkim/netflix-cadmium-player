@@ -7,14 +7,8 @@
 // Webpack module 16131
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.xfb = void 0;
+
 d = a(22970);
 t = a(66164);
 p = a(94646);
@@ -31,7 +25,6 @@ a = (function(g) {
     return f;
 }
 )(p.YW);
-b.xfb = a;
-
+export const xfb = a;
 
 // Detected exports: xfb

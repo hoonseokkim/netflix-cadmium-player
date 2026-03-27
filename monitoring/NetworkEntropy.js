@@ -19,13 +19,6 @@
  * @module NetworkEntropy
  */
 
-// import * as helpers   from '../ads/AdBreakMismatchLogger.js';
-// import { platform }   from '../core/AsejsEngine.js';
-// import { j6 as SlidingWindowBucket } from '../modules/Module_72697.js';
-// import { U6a as sumArray }            from '../modules/Module_94451.js';
-// import { writable }                   from '../modules/Module_51044.js';
-// import { u as TRACE_ENABLED }         from '../ads/AdPoliciesManager.js';
-
 const logger = new platform.Console('ASEJS_NETWORK_ENTROPY', 'media|asejs');
 
 /**

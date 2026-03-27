@@ -18,22 +18,6 @@
  */
 
 // Dependencies
-// import { __importDefault, __extends } from '../ads/AdBreakMismatchLogger.js';          // tslib helpers
-// import asyncComplete from '../msg/MessageCapabilities.js';                            // async completion helper
-// import interruptibleComplete from '../network/HttpOutputStream.js';                    // interruptible async complete
-// import MslInterruptedException from '../modules/Module_25978.js';                  // MSL interrupted exception
-// import MslException from './MslTokenStore_25137.js';                              // MSL base exception
-// import { IDa as DefaultMessageFactory } from '../modules/Module_31238.js';         // default message factory
-// import { ZJa as MasterTokenLock } from '../modules/Module_74015.js';               // master token lock/mutex
-// import { oM as createMessageId } from '../modules/Module_93652.js';                // message ID utilities
-// import MslInternalException from '../msg/MessageHeader.js';                     // MSL internal exception
-// import MslConstants from '../msg/MessageCapabilities.js';                             // MSL constants (ErrorType, etc.)
-// import { ghb as MessageContext } from '../modules/Module_41962.js';                // message context
-// import MslMessageException from './MessageInputStream.js';                      // MSL message exception
-// import MslErrorCode from '../msg/MessageCapabilities.js';                             // MSL error codes
-// import { S5 as RenewalLockQueue } from '../network/HttpOutputStream.js';               // renewal lock queue
-// import { xlb as Semaphore } from '../modules/Module_81214.js';                     // semaphore for concurrency
-// import { readBytes as isMslError } from './MslTokenStore_25137.js';              // MSL error type checker
 
 /**
  * Checks whether an error is an MslInterruptedException by walking the cause chain.
@@ -172,7 +156,7 @@ class MessageBuilderProxy {
      * @param {Object} callback - Async callbacks {result, timeout, error}
      */
     getUserAuthData(errorCode, isRenewable, isRequired, callback) {
-        this.wrappedProxy.internal_Vsa(errorCode, isRenewable, isRequired, callback);
+        this.wrappedProxy._fn_Vsa(errorCode, isRenewable, isRequired, callback);
     }
 
     /**
@@ -241,7 +225,7 @@ class QueuedMessageBuilderProxy extends MessageBuilderProxy {
                     callback.result(true);
                 } else {
                     const item = self.objectQueue[index];
-                    outputStream.fXc(item.internal_Cpa, timeout, {
+                    outputStream.fXc(item._enum_Cpa, timeout, {
                         result() {
                             outputStream.write(item.data, 0, item.data.length, timeout, {
                                 result() {
@@ -576,7 +560,7 @@ export class MslControllerCore {
                 const data = serviceToken.getData();
                 if (data && data.length === 0) {
                     // Empty data = deletion signal
-                    tokenStore.internal_Uya(
+                    tokenStore._fn_Uya(
                         serviceToken.name,
                         serviceToken.itemsListProcessor() ? masterToken : null,
                         serviceToken.hasStarted() ? userIdToken : null
@@ -588,7 +572,7 @@ export class MslControllerCore {
         }
 
         if (pendingAdditions.length > 0) {
-            tokenStore.internal_Sna(pendingAdditions);
+            tokenStore._fn_Sna(pendingAdditions);
         }
     }
 
@@ -711,7 +695,7 @@ export class MslControllerCore {
     /**
      * Handles MSL error responses with recovery strategies based on the error code:
      *   - zi/zg (entity reauth): Re-authenticate the entity without master token
-     *   - ud/internal_Wla (user reauth): Prompt for new user auth data
+     *   - ud/_Wla (user reauth): Prompt for new user auth data
      *   - $e (key exchange): Retry with new key request
      *   - o7 (expired key request data): Retry with fresh key request data
      *   - m6 (master token expired/revoked): Get new master token + key exchange
@@ -807,7 +791,7 @@ export class MslControllerCore {
 
                 // User re-authentication required
                 case MslConstants.ErrorType.ud:
-                case MslConstants.ErrorType.internal_Wla:
+                case MslConstants.ErrorType._Wla:
                     messageProxy.getUserAuthData(errorCode, false, true, {
                         result(success) {
                             interruptibleComplete(callback, function () {
@@ -1038,7 +1022,7 @@ export class MslControllerCore {
                                         result(outputStream) {
                                             interruptibleComplete(callback, function () {
                                                 task.e4(function () { outputStream.abort(); });
-                                                outputStream.internal_Yhc(writeTimeout);
+                                                outputStream._fn_Yhc(writeTimeout);
 
                                                 outputStream.isReady({
                                                     result(ready) {
@@ -1110,7 +1094,7 @@ export class MslControllerCore {
                 const keyRequestData = [];
 
                 if (messageBuilder.timeUntilExpiry()) {
-                    const remoteTime = mslContext.internal_Isa();
+                    const remoteTime = mslContext._fn_Isa();
 
                     if (!masterToken || masterToken.timeUntilExpiry(remoteTime) || messageProxy.isNonReplayable()) {
                         messageProxy.getKeyRequestData({
@@ -1123,7 +1107,7 @@ export class MslControllerCore {
                                         for (let i = 0; i < data.length; ++i) {
                                             const item = data[i];
                                             keyRequestData.push(item);
-                                            messageBuilder.internal_Eac(item);
+                                            messageBuilder._fn_Eac(item);
                                         }
                                     }
                                     buildAndSend(masterToken, userIdToken, needsHandshake, keyRequestData);
@@ -1299,7 +1283,7 @@ export class MslControllerCore {
 
             const cryptoContexts = messageProxy.getCryptoContexts();
             const filteredData = self._messageFilter
-                ? self._messageFilter.internal_Sfd(requestData)
+                ? self._messageFilter._fn_Sfd(requestData)
                 : requestData;
 
             self._messageFactory.zRa(mslContext, filteredData, keyRequestData, cryptoContexts, streamTimeout, {
@@ -1501,7 +1485,7 @@ export class MslControllerCore {
                 }
 
                 // Wait on the existing queue for the current renewal to complete
-                const waitTicket = existingQueue.internal_Afa(timeout, {
+                const waitTicket = existingQueue._fn_Afa(timeout, {
                     result(lockResult) {
                         interruptibleComplete(callback, function () {
                             if (lockResult === undefined) {
@@ -1560,7 +1544,7 @@ export class MslControllerCore {
                     throw new MslInterruptedException('acquireRenewalLock aborted.');
                 }
 
-                const remoteTime = mslContext.internal_Isa();
+                const remoteTime = mslContext._fn_Isa();
 
                 if (!masterToken ||
                     masterToken.timeUntilExpiry(remoteTime) ||
@@ -1603,7 +1587,7 @@ export class MslControllerCore {
                 }
 
                 messageBuilder.cSb(masterToken, userIdToken);
-                const remoteTime = mslContext.internal_Isa();
+                const remoteTime = mslContext._fn_Isa();
 
                 if (masterToken.matchExpiry(remoteTime)) {
                     // Master token expired - must renew
@@ -1628,7 +1612,7 @@ export class MslControllerCore {
             const masterToken = messageBuilder.oE();
             const userIdToken = messageBuilder.yy();
             const userId = messageProxy.getUserAuthDataId();
-            const remoteTime = mslContext.internal_Isa();
+            const remoteTime = mslContext._fn_Isa();
 
             // Determine if renewal is needed
             const needsRenewal =

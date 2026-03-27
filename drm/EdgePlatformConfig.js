@@ -133,7 +133,7 @@ function isPlayReadyDisabled(config) {
 export function getEdgeDeviceConfig(platformFlags) {
     const prefix = platformFlags.zE ? "NFCDIE-04-"
         : platformFlags.GYa ? "NFCDIE-LX-"
-        : platformFlags.internal_Tta ? "NFCDIE-AP-"
+        : platformFlags._Tta ? "NFCDIE-AP-"
         : platformFlags.bda ? "NFCDIE-AT-"
         : platformFlags.YS ? "NFCDIE-PH-"
         : "NFCDIE-03-";
@@ -164,8 +164,8 @@ export function getEdgeStreamingConfig(config) {
             ...bufferLevel.mDa, ...bufferLevel.nDa, ...bufferLevel.oDa,
         ]),
         supportedAudioProfiles: flattenAndMap([
-            ...bufferLevel.B5, ...bufferLevel.internal_Bja,
-            ...bufferLevel.internal_Aja, ...bufferLevel.internal_Cja,
+            ...bufferLevel.B5, ...bufferLevel._enum_Bja,
+            ...bufferLevel._enum_Aja, ...bufferLevel._enum_Cja,
         ]),
         yB: undefined,
         enableHDRPassthrough: false,

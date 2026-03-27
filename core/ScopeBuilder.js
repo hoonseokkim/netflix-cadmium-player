@@ -68,7 +68,7 @@ export class ScopeBuilder {
      * @returns {ScopeBinding} The created scope binding
      */
     DO(deferredFactory) {
-        this.scopeConfig.type = BindingType.internal_Ybb;
+        this.scopeConfig.type = BindingType.DynamicValue;
         this.scopeConfig.cache = null;
         this.scopeConfig.w_ = deferredFactory;
         this.scopeConfig.$q = null;

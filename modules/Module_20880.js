@@ -7,13 +7,6 @@
 // Webpack module 20880
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.Glb = void 0;
 t = (function() {
     function a(d) {
         this.sC = [];
@@ -24,8 +17,8 @@ t = (function() {
             get: function() {
                 return this.sC[0].O;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(a.prototype, {
@@ -33,20 +26,20 @@ t = (function() {
             get: function() {
                 return this.sC.length;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(a.prototype, {
         muc: {
             get: function() {
                 var d;
-                return null !== (d = this.t8b) && void 0 !== d ? d : this.t8b = this.sC.reduce(function(p, c) {
+                return null !== (d = this.t8b) && undefined !== d ? d : this.t8b = this.sC.reduce(function(p, c) {
                     return p + c.length;
                 }, 0);
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     a.prototype.y0 = function(d) {
@@ -76,7 +69,6 @@ t = (function() {
     return a;
 }
 )();
-b.Glb = t;
-
+export const Glb = t;
 
 // Detected exports: Glb

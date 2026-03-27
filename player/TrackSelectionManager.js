@@ -9,10 +9,6 @@
  * @original Module_73403
  */
 
-// import { MediaType } from './MediaType';
-// import { assert, assertFunction } from './Assert';
-// import { TrackType } from './TrackType';
-
 /**
  * Manages track selection for audio, video, and text tracks.
  * Maintains current selections and dispatches change notifications

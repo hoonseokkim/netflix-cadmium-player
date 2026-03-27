@@ -23,9 +23,9 @@ import { BG as KeyUsages } from '../crypto/KeyUsages.js';                // k - 
 import { f8 as MasterTokenCryptoContext } from '../msg/MessageHeader.js'; // l - MasterToken CryptoContext
 import { nj as MslObject } from '../modules/Module_9000.js';                // m - MSL object wrapper
 import { UX as MslStore } from '../modules/Module_25137.js';                // n - Base MslStore class
-import { internal_Bxa as parseMasterToken } from './KeyResponseData.js'; // q - MasterToken parser
+import { _Bxa as parseMasterToken } from './KeyResponseData.js'; // q - MasterToken parser
 import { d2a as parseUserIdToken } from '../msg/MessageHeader.js';        // r - UserIdToken parser
-import { internal_Exa as parseServiceToken } from '../msg/MessageHeader.js'; // u - ServiceToken parser
+import { _Exa as parseServiceToken } from '../msg/MessageHeader.js'; // u - ServiceToken parser
 import { $Ka as SymmetricCryptoContext } from '../modules/Module_72672.js';  // v - SymmetricCryptoContext
 import { yKa as SecretKey } from '../modules/Module_60426.js';              // w - SecretKey wrapper
 
@@ -156,7 +156,7 @@ class MslTokenStore extends MslStore {
      */
     addServiceTokens(serviceTokens) {
         const filtered = serviceTokens.filter((token) => !EXCLUDED_SERVICE_TOKENS[token.name]);
-        super.internal_Sna(filtered);
+        super._fn_Sna(filtered);
     }
 
     /**

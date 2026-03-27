@@ -7,13 +7,7 @@
 // Webpack module 89362
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -23,11 +17,11 @@ t = (function(p) {
     c.prototype.parse = function(g) {
         this.Xmc = this.N.gC();
         g && g.ce && (g.ce.HVc = this.Xmc);
-        return !0;
+        return true;
     }
     ;
     c.Ae = "frma";
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

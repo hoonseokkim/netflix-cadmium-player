@@ -10,13 +10,6 @@
  * @original Module_97154
  */
 
-// import { createElement, calculateAspectRatio, computeStyleString } from '../utils/DomUtils.js'; // webpack 52569
-// import { resolveOverlaps } from '../text/TextLayoutResolver.js'; // webpack 33579
-// import { renderTextBlock, getBlockStyle, renderWindowBackground, getBlockPosition } from '../text/TextBlockRenderer.js'; // webpack 15531
-// import { config as globalConfig } from '../core/Config.js'; // webpack 29204
-// import { document as doc } from '../core/Globals.js'; // webpack 22365
-// import { forEachProperty } from '../utils/ObjectUtils.js'; // webpack 3887
-
 /** @type {Object} CSS class attributes for text containers */
 const TEXT_CONTAINER_ATTRS = { "class": "player-timedtext-text-container" };
 

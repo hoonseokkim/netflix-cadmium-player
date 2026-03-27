@@ -66,7 +66,7 @@ class EditListBox extends BaseBox {
 
     // Store edit list in the codec config for this track
     if (context?.codecConfigs?.[trackId]) {
-      context.codecConfigs[trackId].internal_Jaa = this.editListEntries;
+      context.codecConfigs[trackId]._prop_Jaa = this.editListEntries;
     }
 
     return true;

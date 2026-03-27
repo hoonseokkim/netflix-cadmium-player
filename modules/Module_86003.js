@@ -6,10 +6,3 @@
 
 // Webpack module 86003
 // Parameters: t (module), b (exports), N/A (require)
-
-
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});

@@ -8,9 +8,6 @@
  * @original Module_89752
  */
 
-// import { default as MaxCounter } from '../utils/MaxCounter.js'; // webpack 51411
-// import { default as CancelGuard } from '../utils/CancelGuard.js'; // webpack 79804
-
 /**
  * Finds the next active wait handler in the circular queue
  * @param {WaitableQueue} queue - The queue instance

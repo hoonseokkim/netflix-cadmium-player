@@ -10,24 +10,6 @@
  * @original Module_74418
  */
 
-// import { EventEmitter } from './EventEmitter';
-// import { objectValues } from './ObjectUtils';
-// import { Observable, ObservableBool } from './Observable';
-// import { TimeUtil } from './TimeUtil';
-// import { platform } from './PlatformGlobals';
-// import { IS_DEBUG } from './DebugFlags';
-// import { AseBufferBranch } from './AseBufferBranch';
-// import { AsyncIterator } from './AsyncIterator';
-// import { JustInTimeThrottler } from './JustInTimeThrottler';
-// import { BatchRequestThrottler } from './BatchRequestThrottler';
-// import { AppendPacer } from './AppendPacer';
-// import { LiveRequestMonitor } from './LiveRequestMonitor';
-// import { LiveRequestLogger } from './LiveRequestLogger';
-// import { assert } from './Assert';
-// import { mathTanh as createScopedLogger } from './LoggerUtils';
-// import { isBufferReset } from './BufferResetUtils';
-// import { AseStreamTracker } from './AseStreamTracker';
-
 /**
  * Manages the streaming buffer for a single media type, tracking received
  * requests, handling DRM events, and coordinating throttlers and pacers.

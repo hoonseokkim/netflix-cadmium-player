@@ -13,8 +13,6 @@
  * @module manifest/ManifestTransformer
  */
 
-// import { asMutable } from '../modules/Module_64274';
-
 export class ManifestTransformer {
   /**
    * @param {Object} cdnFilter          - Filters and reorders CDN endpoints.

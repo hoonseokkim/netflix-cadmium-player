@@ -32,16 +32,16 @@ import { TaskSchedulerAudit } from '../player/TaskSchedulerAudit.js'; // Module 
  * @param {Object} [options.retryTimeout] - Retry state for clock skew correction
  * @param {number} [options.priority=0] - Task priority
  * @param {boolean} [options.usePrioritySetTimeout=true] - Whether to use prioritySetTimeout
- * @param {boolean} [options.internal_Hsb=true] - Whether to apply backoff
+ * @param {boolean} [options._Hsb=true] - Whether to apply backoff
  * @returns {Object} Timer state object
  */
-function scheduleWakeup({ playerCore, EA: callback, RXb: targetTime, retryTimeout, priority = 0, usePrioritySetTimeout = true, internal_Hsb: applyBackoff = true }) {
+function scheduleWakeup({ playerCore, EA: callback, RXb: targetTime, retryTimeout, priority = 0, usePrioritySetTimeout = true, _Hsb: applyBackoff = true }) {
     assert(playerCore.zj, `Current time: ${platform.platform.now()} cr: ${playerCore.currentTime}`);
     assert(playerCore.currentTime.isFinite());
 
     let delay = targetTime.lowestWaterMarkLevelBufferRelaxed(playerCore.currentTime);
     if (applyBackoff) {
-        delay = applyExponentialBackoff(delay, retryTimeout?.internal_Owa ?? 0);
+        delay = applyExponentialBackoff(delay, retryTimeout?._cnt_Owa ?? 0);
     }
 
     const sleepTimeMs = Math.max(Math.ceil(delay.$B / playerCore.speed), 0);
@@ -49,7 +49,7 @@ function scheduleWakeup({ playerCore, EA: callback, RXb: targetTime, retryTimeou
     const timerState = retryTimeout || {
         id: undefined,
         oxb: sleepTimeMs,
-        internal_Owa: 0,
+        _cnt_Owa: 0,
         zNc: sleepTimeMs,
         usePrioritySetTimeout,
         epa: []
@@ -66,7 +66,7 @@ function scheduleWakeup({ playerCore, EA: callback, RXb: targetTime, retryTimeou
         if (remaining.timeComparison(TimeUtil.seekToSample)) {
             callback();
         } else {
-            timerState.internal_Owa++;
+            timerState._cnt_Owa++;
             scheduleWakeup({
                 Qa: playerCore,
                 EA: callback,
@@ -74,7 +74,7 @@ function scheduleWakeup({ playerCore, EA: callback, RXb: targetTime, retryTimeou
                 retryTimeout: timerState,
                 priority,
                 usePrioritySetTimeout,
-                internal_Hsb: applyBackoff
+                _Hsb: applyBackoff
             });
         }
     }, sleepTimeMs, priority);
@@ -164,7 +164,7 @@ export class RootTaskScheduler extends EventEmitter {
     };
 
     /** @type {WeakMap} Cache of scheduler instances per player core */
-    static internal_Dza = new WeakMap();
+    static _flag_Dza = new WeakMap();
 
     /**
      * @param {Object} playerCore - Player core with clock/speed
@@ -202,7 +202,7 @@ export class RootTaskScheduler extends EventEmitter {
                 cfa(shouldDestroy) {
                     if (shouldDestroy()) {
                         scheduler.destroy();
-                        RootTaskScheduler.internal_Dza.delete(playerCore);
+                        RootTaskScheduler._flag_Dza.delete(playerCore);
                     }
                 },
                 console: logger
@@ -211,12 +211,12 @@ export class RootTaskScheduler extends EventEmitter {
         }
 
         if (this.config.centralizeClockSchedulers) {
-            if (!this.internal_Dza.has(playerCore)) {
-                this.internal_Dza.set(playerCore, createInstance());
+            if (!this._flag_Dza.has(playerCore)) {
+                this._flag_Dza.set(playerCore, createInstance());
             }
         }
 
-        const entry = this.internal_Dza.key(playerCore) || createInstance();
+        const entry = this._flag_Dza.key(playerCore) || createInstance();
         return {
             tc: entry.forceEstRelativeLiveBookmark,
             decompressor: entry.BB.wA()
@@ -357,14 +357,14 @@ export class RootTaskScheduler extends EventEmitter {
                         type: ScheduleType.setTimeout,
                         twa: nextTime,
                         delay: this.playerCore.currentTime.lowestWaterMarkLevelBufferRelaxed(nextTime),
-                        kR: timerState.internal_Owa,
+                        kR: timerState._cnt_Owa,
                         epa: timerState.epa
                     });
                 },
                 RXb: nextTime,
                 priority: nextTask?.priorityConfig.forceEstRelativeLiveBookmark.priority ?? 0,
                 usePrioritySetTimeout: !!RootTaskScheduler.config.usePrioritySetTimeout,
-                internal_Hsb: !!RootTaskScheduler.config.backOffSetTimeout
+                _Hsb: !!RootTaskScheduler.config.backOffSetTimeout
             });
 
             this.schedulerConfig.set(nextTime, ScheduleType.setTimeout, timerState);
@@ -392,7 +392,7 @@ export class RootTaskScheduler extends EventEmitter {
         } finally {
             this.playerCore.validateManifest('stopStart', onClockChanged);
             this.isExecuting = false;
-            this.IQ?.internal_Arc(iterations);
+            this.IQ?._fn_Arc(iterations);
             this.cancelSchedule();
 
             const taskSummary = this.taskList.map((t) => ({
@@ -495,7 +495,7 @@ export class RootTaskScheduler extends EventEmitter {
             schedule: this.schedulerConfig.QV && {
                 sleepTime: this.schedulerConfig.QV.oxb,
                 originalSleepTime: this.schedulerConfig.QV.zNc,
-                clockSkewAdjustments: this.schedulerConfig.QV.internal_Owa
+                clockSkewAdjustments: this.schedulerConfig.QV._cnt_Owa
             },
             nextWakeup: this.schedulerConfig.twa.playbackSegment,
             timeScheduled: this.schedulerConfig.Jmc,

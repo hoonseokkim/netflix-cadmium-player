@@ -269,7 +269,7 @@ export class TtmlParser extends EventEmitter {
      * @param {string} [options.xml] - Pre-loaded TTML XML string
      * @param {Function} [options.request] - Function to fetch TTML data
      * @param {string} [options.url] - URL to fetch TTML from
-     * @param {number} [options.internal_Pfa=0] - Lookback window in ms
+     * @param {number} [options._prop_Pfa=0] - Lookback window in ms
      * @param {Object} [options.M6a] - Style transformation reference
      */
     constructor(options) {
@@ -316,7 +316,7 @@ export class TtmlParser extends EventEmitter {
         this._isParsing = false;
 
         /** @private @type {number} Lookback window in ms */
-        this._lookbackWindow = options.internal_Pfa || 0;
+        this._lookbackWindow = options._prop_Pfa || 0;
 
         /** @private @type {Object} Style transformation ref */
         this.style = options.M6a;
@@ -381,7 +381,7 @@ export class TtmlParser extends EventEmitter {
 
         this._logger.info('parsing the next 5 entries...');
 
-        const xmlSlice = this._index.internal_Yxc(fromPosition);
+        const xmlSlice = this._index._fn_Yxc(fromPosition);
         this._logger.debug(xmlSlice);
 
         const parser = SaxParser.createParser(true);
@@ -552,7 +552,7 @@ export class TtmlParser extends EventEmitter {
         );
 
         // Return null if before indexed content and nothing visible
-        if (timestamp < this._index.internal_Xzb() && visible.length === 0) {
+        if (timestamp < this._index._fn_Xzb() && visible.length === 0) {
             return null;
         }
 

@@ -8,13 +8,6 @@
  * @original Module_59405
  */
 
-// import { config } from '../core/PlayerConfig';
-// import { SUCCESS } from '../core/StatusCodes';
-// import { ea as Events } from '../core/ErrorCodes';
-// import { disposableList } from '../core/ServiceLocator';
-// import { $cb as ftlMonitorSymbol } from '../monitoring/FtlMonitor';
-// import { vk as componentManagerSymbol } from '../core/ComponentManager';
-
 /**
  * Initializes the FTL component.
  *

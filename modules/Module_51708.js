@@ -7,12 +7,8 @@
 // Webpack module 51708
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.Ueb = void 0;
+
 d = a(22970);
 t = a(44191);
 p = a(1084);
@@ -31,7 +27,7 @@ a = (function(g) {
     }
     ;
     f.prototype.Qxb = function(e, h, k) {
-        return d.__awaiter(this, void 0, void 0, function() {
+        return d.__awaiter(this, undefined, undefined, function() {
             var l, m, n, q;
             return d.__generator(this, function(r) {
                 switch (r.label) {
@@ -60,7 +56,7 @@ a = (function(g) {
     }
     ;
     f.prototype.Pxb = function(e, h, k, l) {
-        return d.__awaiter(this, void 0, void 0, function() {
+        return d.__awaiter(this, undefined, undefined, function() {
             var m;
             return d.__generator(this, function(n) {
                 switch (n.label) {
@@ -85,7 +81,6 @@ a = (function(g) {
     return f;
 }
 )(t.eGa);
-b.Ueb = a;
-
+export const Ueb = a;
 
 // Detected exports: Ueb

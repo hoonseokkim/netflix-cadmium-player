@@ -7,13 +7,7 @@
 // Webpack module 23471
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -22,12 +16,12 @@ t = (function(p) {
     d.__extends(c, p);
     c.prototype.parse = function(g) {
         p.prototype.parse.call(this, g);
-        return !0;
+        return true;
     }
     ;
     c.Ae = "evte";
-    c.Fd = !0;
+    c.Fd = true;
     return c;
 }
 )(a(99520).default);
-b["default"] = t;
+export default t;

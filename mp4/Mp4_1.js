@@ -8,10 +8,6 @@
  */
 
 // Dependencies
-// import { platform } from './Platform';                   // webpack 66164
-// import { Mp4BoxParser, readBoxType } from './Mp4BoxParser'; // webpack 91562
-// import { assert } from './TimeUtil';                      // webpack 91176
-// import { concatenateArrayBuffers } from './BufferUtils';   // webpack 69575
 
 /**
  * Checks whether every element in an array is an ArrayBuffer.

@@ -17,14 +17,6 @@
  */
 
 // ─── Dependencies ──────────────────────────────────────────
-// import { __decorate, __param } from 'tslib';
-// import { injectable, inject } from '../modules/Module_22674';
-// import { ClockToken } from '../modules/Module_81918';
-// import { PlayerError } from '../modules/Module_31149';
-// import { CommandCategory, EventTypeEnum } from '../modules/Module_36129';
-// import { PresentingState, BufferingState } from '../modules/Module_85001';
-// import { toMilliseconds, MILLISECONDS } from '../modules/Module_5021';
-// import { document as globalDocument } from '../modules/Module_22365';
 
 // ─── Diagnostic Reason Codes ───────────────────────────────
 
@@ -148,7 +140,7 @@ export class DecoderTimeoutDiagnostics {
           try {
             buffered = sourceBuffer.buffered();
           } catch (e) {
-            buffered = undefined;
+
           }
 
           if (buffered && buffered.length !== 0) {

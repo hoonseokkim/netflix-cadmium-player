@@ -557,7 +557,7 @@ class PboDispatcher {
         const params = context.url.searchParams;
 
         // Attempt number (1-based)
-        params.set(QueryParamKeys.internal_Gkb, (attemptIndex + 1).toString());
+        params.set(QueryParamKeys.X_Netflix_Request_Attempt, (attemptIndex + 1).toString());
 
         // Call mode: either as header or query param depending on config
         if (this.config.$Wb.includes(context.callMode)) {
@@ -567,7 +567,7 @@ class PboDispatcher {
         }
 
         // Request ID
-        params.set(QueryParamKeys.internal_Hkb, context.requestId);
+        params.set(QueryParamKeys.X_Netflix_Request_Id, context.requestId);
 
         // Session-bound request qualifier
         if (context.J) {
@@ -577,10 +577,10 @@ class PboDispatcher {
         // UI version and browser info
         const uiVersionInfo = this._parseUiVersion(this.config.uiVersion ?? '');
         if (uiVersionInfo.platformPrefix) {
-            params.set(QueryParamKeys.internal_Rab, uiVersionInfo.platformPrefix);
+            params.set(QueryParamKeys.x_netflix_clienttype, uiVersionInfo.platformPrefix);
 
             if (uiVersionInfo.uiVersion) {
-                params.set(QueryParamKeys.internal_Wmb, encodeURIComponent(uiVersionInfo.uiVersion));
+                params.set(QueryParamKeys.x_netflix_uiversion, encodeURIComponent(uiVersionInfo.uiVersion));
             }
 
             const browserInfo = this.platformInfo.browserInfo;
@@ -591,10 +591,10 @@ class PboDispatcher {
                 params.set(QueryParamKeys.mab, encodeURIComponent(browserInfo.version));
             }
             if (browserInfo?.os?.name) {
-                params.set(QueryParamKeys.internal_Whb, encodeURIComponent(browserInfo.os.name));
+                params.set(QueryParamKeys.x_netflix_osname, encodeURIComponent(browserInfo.os.name));
             }
             if (browserInfo?.os?.version) {
-                params.set(QueryParamKeys.internal_Xhb, encodeURIComponent(browserInfo.os.version));
+                params.set(QueryParamKeys.x_xetflix_osversion, encodeURIComponent(browserInfo.os.version));
             }
         }
     }

@@ -7,9 +7,6 @@
  * @module SideChannel
  */
 
-// import { platform } from './Module_66164';
-// import { CryptoEncoder, constrainValue } from './Module_69575';
-
 /**
  * Builds encrypted side-channel payloads for CDN download requests.
  * The side channel carries client-side telemetry to inform server-side

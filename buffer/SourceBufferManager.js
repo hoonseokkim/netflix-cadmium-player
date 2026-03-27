@@ -13,7 +13,7 @@ import { EventEmitter } from '../core/AsejsEngine.js';
 import {
     TimeUtil,
     AbortController,
-    internal_Vrb,
+    _fn_Vrb,
     xM as isAbortError,
     VC,
     t9a as AbortError,
@@ -23,7 +23,7 @@ import { globalExtension } from '../core/Asejs_2.js';
 import MediaTypeEnum from '../streaming/MediaFragment.js';
 import { MediaType } from '../core/AsejsEngine.js';
 import { assert } from '../ads/AdPoliciesManager.js';
-import { internal_Zgb as AppendProcessor } from '../../modules/Module_98321.js';
+import { _Zgb as AppendProcessor } from '../../modules/Module_98321.js';
 import { NC as AppendResult } from '../streaming/MediaFragmentRequest.js';
 import { s5 as createDelayedTask, ie as TimerUtil } from './BufferingStateTracker.js';
 import { MIb as buildAppendMetadata, concatenateArrayBuffers } from '../streaming/AseTrack.js';
@@ -186,14 +186,14 @@ export class SourceBufferManager extends EventEmitter {
     /**
      * Forces a header re-append on the next queue processing cycle.
      */
-    internal_Vtc() {
+    _fn_Vtc() {
         this._needsHeaderAppend = true;
     }
 
     /**
      * Signals that append can proceed even if frame processing was paused.
      */
-    internal_Faa() {
+    _fn_Faa() {
         this._forceAppendBypass = true;
         this._processAppendQueue();
     }
@@ -480,7 +480,7 @@ export class SourceBufferManager extends EventEmitter {
         }
 
         if (codecProfiles.length > 1) {
-            return internal_Vrb(codecProfiles, (profile) => profile.startPosition <= index) !==
+            return _fn_Vrb(codecProfiles, (profile) => profile.startPosition <= index) !==
                 this._currentHeader.fGb;
         }
 
@@ -577,7 +577,7 @@ export class SourceBufferManager extends EventEmitter {
      * @private
      */
     _appendFragment(request) {
-        let timestampOffset = request.internal_Eya || TimeUtil.seekToSample;
+        let timestampOffset = request._enum_Eya || TimeUtil.seekToSample;
         const stream = request.stream;
         const segment = request.currentSegment;
 
@@ -598,7 +598,7 @@ export class SourceBufferManager extends EventEmitter {
 
         // Compute optional start-time offset for the append
         const startTimeOffset = request.sv !== undefined
-            ? TimeUtil.fromMilliseconds(request.sv).item(request.internal_Eya)
+            ? TimeUtil.fromMilliseconds(request.sv).item(request._enum_Eya)
             : undefined;
 
         const nextRequestTimestamp = this._appendQueue[0]?.timestamp;
@@ -820,10 +820,10 @@ export class SourceBufferManager extends EventEmitter {
      * @private
      */
     _appendToSourceBuffer(data, metadata) {
-        if (this.config.enableAsyncAppend && typeof this.sourceBuffer.internal_Xbc === 'function') {
+        if (this.config.enableAsyncAppend && typeof this.sourceBuffer._fn_Xbc === 'function') {
             const signal = this.abortController?.signal;
             return new Promise((resolve, reject) => {
-                if (!this.sourceBuffer.internal_Xbc(data, metadata, (result) => {
+                if (!this.sourceBuffer._fn_Xbc(data, metadata, (result) => {
                     if (signal?.aborted) {
                         return reject(new AbortError());
                     }

@@ -8,10 +8,6 @@
  * @original Module_95591
  */
 
-// import { __spreadArray, __read } from 'tslib'; // webpack 22970
-// import { ArrayCopyUtils } from '../mp4/Mp4ParserExports.js'; // webpack 91562
-// import { assert } from '../assert/Assert.js'; // webpack 52571
-
 /**
  * Represents a parallel-array index of fragment durations and byte sizes
  * for a media track. Used by pipelines to look up fragment offsets and sizes.

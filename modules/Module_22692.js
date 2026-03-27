@@ -7,11 +7,6 @@
 // Webpack module 22692
 // Parameters: t (module), b (exports), N/A (require)
 
-
-Object.defineProperty(b, "__esModule", {
-    value: !0
-});
-b.xmb = "ThroughputTrackerConfigSymbol";
-
+export const xmb = "ThroughputTrackerConfigSymbol";
 
 // Detected exports: xmb

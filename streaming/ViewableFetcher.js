@@ -16,10 +16,6 @@
  * @original Module_26286
  */
 
-// import { __awaiter, __generator } from 'tslib';     // Module 22970
-// import { Deferred } from './Deferred';                // Module 91176
-// import { platform } from './Platform';                // Module 66164
-
 export class ViewableFetcher {
   /**
    * @param {Object} viewableId - Identifier for the content to fetch.

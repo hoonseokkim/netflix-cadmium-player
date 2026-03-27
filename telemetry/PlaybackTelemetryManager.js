@@ -10,10 +10,6 @@
  */
 
 // Dependencies
-// import { MILLISECONDS } from './modules/Module_5021';     // time unit
-// import { scheduleAsync } from './modules/Module_32219';   // async scheduler
-// import { cb as PlayerEventNames, setState as PresentingState, streamState as StreamStateEnum } from './modules/Module_85001';
-// import { MediaType } from './modules/Module_26388';
 
 /**
  * Coordinates telemetry collection during active playback.
@@ -75,7 +71,7 @@ export class PlaybackTelemetryManager {
       this.playerState.subscriberList.isStalled.removeListener(this.onStallChange);
       this.playerState.subscriberList.playbackRate.removeListener(this.logBlobManager.qha);
       this.playerState.removeEventListener(PlayerEventNames.closed, this.onClosed);
-      this.playerState.removeEventListener(PlayerEventNames.internal_Ioa, this.logBlobManager.logBlobEvent);
+      this.playerState.removeEventListener(PlayerEventNames.autoplaywasblocked, this.logBlobManager.logBlobEvent);
     };
 
     /** @private Wait for first PLAYING state then start telemetry. */
@@ -116,7 +112,7 @@ export class PlaybackTelemetryManager {
     /** @private Handle mute state changes. */
     this.onMuteChange = (change) => {
       if (this.isStarted) {
-        this.logBlobManager.internal_Lxa(!change.newValue);
+        this.logBlobManager._fn_Lxa(!change.newValue);
       }
     };
 
@@ -178,7 +174,7 @@ export class PlaybackTelemetryManager {
    */
   registerListeners() {
     this.playerState.addEventListener(PlayerEventNames.closed, this.onClosed);
-    this.playerState.addEventListener(PlayerEventNames.internal_Ioa, this.logBlobManager.logBlobEvent);
+    this.playerState.addEventListener(PlayerEventNames.autoplaywasblocked, this.logBlobManager.logBlobEvent);
     this.playerState.subscriberList.isSeeking.addListener(this.onSeekChange);
     this.playerState.subscriberList.tracks.addListener([MediaType.TEXT_MEDIA_TYPE], this.logBlobManager.gq);
     this.playerState.subscriberList.tracks.addListener([MediaType.V], this.onTrackChanged);

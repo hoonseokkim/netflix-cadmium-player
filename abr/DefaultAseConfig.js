@@ -544,7 +544,7 @@ export const defaultAseConfig = {
   },
 
   /** Internal flag for OC side channel */
-  internal_Yqa: false,
+  _Yqa: false,
 
   // ── Header Cache ──────────────────────────────────────────────────────────
 

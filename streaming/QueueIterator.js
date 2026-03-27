@@ -9,15 +9,6 @@
  * @original Module_89645
  */
 
-// import { __read, __extends } from 'tslib'; // webpack 22970
-// import { platform } from '../core/Platform.js'; // webpack 66164
-// import { EventEmitter } from '../events/EventEmitter.js'; // webpack 90745
-// import { AsyncIterator, map } from '../utils/AsyncIterator.js'; // webpack 29092
-// import { u as DEBUG_ENABLED } from '../core/Debug.js'; // webpack 48170
-// import { createChildLogger } from '../utils/Logger.js'; // webpack 69575
-// import { assert } from '../assert/Assert.js'; // webpack 52571
-// import { mixin } from '../utils/Mixin.js'; // webpack 85254
-
 /**
  * Unwraps a queue iterator result, calling the acknowledgment callback
  * @param {IteratorResult} result - The iterator result

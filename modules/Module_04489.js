@@ -7,16 +7,10 @@
 // Webpack module 4489
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.sBb = void 0;
+
 d = a(59839);
-b.sBb = function(p, c) {
+export function sBb(p, c) {
     return p.reduce(function(g, f) {
         var e;
         e = c(f);
@@ -27,6 +21,5 @@ b.sBb = function(p, c) {
     }, new d.Mjb());
 }
 ;
-
 
 // Detected exports: sBb

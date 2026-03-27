@@ -19,9 +19,6 @@
  * @original Module_75452
  */
 
-// import { X as parentProfileAttributes } from './Module_86252'; // parent profile set
-// import { X as secondaryAttributes } from './Module_27443';     // secondary attribute set
-
 /**
  * Dolby Digital Plus 5.1 HQ profile configuration array.
  *

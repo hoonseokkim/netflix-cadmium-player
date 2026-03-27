@@ -18,13 +18,6 @@
  * @module OcNetwork
  */
 
-// import * as helpers     from '../ads/AdBreakMismatchLogger.js';
-// import * as util        from '../abr/InitialStreamSelector.js';
-// import { platform }     from '../core/AsejsEngine.js';
-// import { MediaType }    from '../core/AsejsEngine.js';
-// import NodeType         from '../streaming/MediaFragment.js';
-// import { statusEnum }   from '../modules/Module_36670.js';
-
 const logger = new platform.Console('ASEJS_OC_NETWORK', 'media|asejs');
 
 /**

@@ -160,7 +160,7 @@ class PlaygraphMetricsReporter extends BaseAsePlayer {
                 config.pipelineHealthThresholdLowMs,
                 config.minimumPresentationDelayMs - 2500
             ),
-            internal_Omc: config.pipelineHealthThresholdCriticalMs,
+            _flag_Omc: config.pipelineHealthThresholdCriticalMs,
             /**
              * @returns {Object} The current playback set position
              */
@@ -640,7 +640,7 @@ class PlaygraphMetricsReporter extends BaseAsePlayer {
 
             if (this.manifestMetadata) {
                 let processorEvent =
-                    playgraph.eventProcessingPipeline.internal_Xyc(ManifestProcessorEvent);
+                    playgraph.eventProcessingPipeline._fn_Xyc(ManifestProcessorEvent);
                 if (!processorEvent) {
                     processorEvent = new ManifestProcessorEvent();
                     playgraph.getRemaining(processorEvent);
@@ -707,7 +707,7 @@ class PlaygraphMetricsReporter extends BaseAsePlayer {
             return false;
         }
 
-        const trackInfo = this.internal_Fba(position);
+        const trackInfo = this._fn_Fba(position);
         if (!trackInfo) {
             return false;
         }
@@ -777,7 +777,7 @@ class PlaygraphMetricsReporter extends BaseAsePlayer {
 
         this.currentPlaygraph?.onUnderflow(segmentPosition);
 
-        const trackInfo = this.internal_Fba(currentPos);
+        const trackInfo = this._fn_Fba(currentPos);
         trackInfo?.viewableSession?.setup();
 
         this.playgraph.onUnderflow(segmentPosition);
@@ -822,7 +822,7 @@ class PlaygraphMetricsReporter extends BaseAsePlayer {
                 state: 'PAUSED',
             });
         }
-        this.presentationDelayController.internal_Xza(false);
+        this.presentationDelayController._fn_Xza(false);
         this._recordSkipPosition(event);
     }
 
@@ -917,7 +917,7 @@ class PlaygraphMetricsReporter extends BaseAsePlayer {
         }
 
         this.presentationDelayController.$za(this.getPresentationDelay());
-        this.presentationDelayController.internal_Xza(true);
+        this.presentationDelayController._fn_Xza(true);
 
         if (laser.isEnabled) {
             laser.log({

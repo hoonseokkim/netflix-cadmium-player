@@ -7,13 +7,7 @@
 // Webpack module 96989
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
 d = a(22970);
 t = (function(p) {
     function c() {
@@ -22,9 +16,9 @@ t = (function(p) {
     d.__extends(c, p);
     c.prototype.parse = function(g) {
         var f, e, h, k, l, m, n;
-        l = null === (k = null === (h = null === (e = null === (f = this.parent) || void 0 === f ? void 0 : f.parent) || void 0 === e ? void 0 : e.wn("tkhd")) || void 0 === h ? void 0 : h.Uc) || void 0 === k ? void 0 : k.trackId;
+        l = null === (k = null === (h = null === (e = null === (f = this.parent) || undefined === f ? undefined : f.parent) || undefined === e ? undefined : e.wn("tkhd")) || undefined === h ? undefined : h.Uc) || undefined === k ? undefined : k.trackId;
         if ("undefined" === typeof l)
-            return !0;
+            return true;
         this.oi();
         f = this.N.dc();
         this.Jaa = [];
@@ -40,15 +34,15 @@ t = (function(p) {
                 Wid: n
             });
         }
-        if (null === g || void 0 === g || !g.yh || !g.yh[l])
-            return !0;
+        if (null === g || undefined === g || !g.yh || !g.yh[l])
+            return true;
         g.yh[l].Jaa = this.Jaa;
-        return !0;
+        return true;
     }
     ;
     c.Ae = "elst";
-    c.Fd = !1;
+    c.Fd = false;
     return c;
 }
 )(a(72905).Kf);
-b["default"] = t;
+export default t;

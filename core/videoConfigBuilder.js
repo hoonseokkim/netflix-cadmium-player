@@ -9,9 +9,6 @@
  */
 
 // Dependencies
-// import { __assign } from 'tslib';
-// import { assert } from './modules/TimeUtil';
-// import { pRa as cloneSegmentConfig } from './modules/SegmentUtils';
 
 /**
  * Remap the keys of an object using a rename map.

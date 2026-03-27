@@ -7,14 +7,8 @@
 // Webpack module 63172
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p, c;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.ejb = void 0;
+
 d = a(65161);
 p = a(95324);
 c = a(91967);
@@ -27,17 +21,17 @@ t = (function() {
             get: function() {
                 return "PipelineReporter";
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     Object.defineProperties(g.prototype, {
         enabled: {
             get: function() {
-                return !0;
+                return true;
             },
-            enumerable: !1,
-            configurable: !0
+            enumerable: false,
+            configurable: true
         }
     });
     g.prototype.Ph = function(f) {
@@ -59,12 +53,12 @@ t = (function() {
         var e, h, k, l, m;
         m = f.pe.Ta;
         m = {
-            actualStartPlayerTimestamp: null === (e = m.Vb) || void 0 === e ? void 0 : e.G,
+            actualStartPlayerTimestamp: null === (e = m.Vb) || undefined === e ? undefined : e.G,
             actualPartialPlayerTimestamp: m.jNb,
-            completePlayerTimestamp: null === (h = f.Hk) || void 0 === h ? void 0 : h.G,
+            completePlayerTimestamp: null === (h = f.Hk) || undefined === h ? undefined : h.G,
             segmentId: f.M,
-            contentStartMs: null === (k = f.qa) || void 0 === k ? void 0 : k.G,
-            contentEndMs: null === (l = f.wa) || void 0 === l ? void 0 : l.G,
+            contentStartMs: null === (k = f.qa) || undefined === k ? undefined : k.G,
+            contentEndMs: null === (l = f.wa) || undefined === l ? undefined : l.G,
             streamingPlayerMs: f.tJ.G,
             isStreamable: f.Ly(),
             isNormalized: f.ag(),
@@ -96,7 +90,6 @@ t = (function() {
     return g;
 }
 )();
-b.ejb = t;
-
+export const ejb = t;
 
 // Detected exports: ejb

@@ -26,7 +26,7 @@ import { ComponentRegistryToken } from '../core/ComponentTokens.js';
  * @param {Function} session.addEventListener - Register session event listeners
  * @param {Function} session.D4c - Prepare play data for sending
  * @param {Object} session.aseGcSettings - ASE garbage collection settings
- * @param {Function} session.internal_Ewa - Signal that data sending is complete
+ * @param {Function} session._fn_Ewa - Signal that data sending is complete
  * @returns {Object} Empty object (manager has no public API, works via side effects)
  */
 export function createPlayDataManager(session) {
@@ -100,8 +100,8 @@ export function createPlayDataManager(session) {
             ];
 
             Promise.all(sendTasks)
-                .then(() => session.internal_Ewa())
-                .catch(() => session.internal_Ewa());
+                .then(() => session._fn_Ewa())
+                .catch(() => session._fn_Ewa());
         }
     });
 

@@ -20,16 +20,6 @@
  */
 
 // --- external dependency stubs ---
-// import * as helpers       from '../ads/AdBreakMismatchLogger.js';
-// import { EventEmitter, ClockWatcher } from '../core/AsejsEngine.js';
-// import * as util          from '../abr/InitialStreamSelector.js';
-// import { platform }       from '../core/AsejsEngine.js';
-// import { Y7 as DebouncedAction } from '../core/AsejsEngine.js';
-// import NodeType           from '../streaming/MediaFragment.js';
-// import { mkb as ProbeManager }    from '../monitoring/ProbeManager.js';
-// import { YW as ErrorMap }          from '../monitoring/ErrorMap.js';
-// import { xfb as LiveErrorMap }     from '../modules/Module_16131.js';
-// import { errorNameMap }            from '../modules/Module_16131.js';
 
 const logger = new platform.Console('ASEJS_ERROR_DIRECTOR', 'asejs');
 const setImmediate = platform.setImmediate;

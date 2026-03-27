@@ -9,10 +9,6 @@
  */
 
 // Dependencies
-// import { platform } from './Platform';          // webpack 66164
-// import { debugEnabled } from './Debug';          // webpack 32910
-// import { assert } from './Assert';               // webpack 43529
-// import { PriorityQueue } from './PriorityQueue'; // webpack 50214
 
 /**
  * Comparator for the timer priority queue.

@@ -29,7 +29,7 @@ import MslEncoderException from '../error/MslEncoderException.js';       // Modu
 import MslCryptoException from '../error/MslCryptoException.js';         // Module 42458 (y)
 import HeaderConstants from '../msg/HeaderConstants.js';                  // Module 58511 (A)
 import { parseUserIdToken } from '../msg/UserIdTokenParser.js';          // Module 5248 (z) - z.hNb
-import { parseServiceToken } from '../msg/ServiceTokenParser.js';        // Module 61693 (B) - B.internal_Exa
+import { parseServiceToken } from '../msg/ServiceTokenParser.js';        // Module 61693 (B) - B._Exa
 // Module 58892 - side-effect import
 import { parseUserIdTokenFromData } from '../msg/UserIdTokenCreator.js'; // Module 85065 (C) - C.d2a
 import { parseKeyRequestData } from '../msg/KeyRequestDataParser.js';    // Module 59786 (D) - D.WMb
@@ -39,7 +39,6 @@ import { stringifyFn } from '../util/JsonUtil.js';                       // Modu
 import { parseMessageCapabilities } from '../msg/MessageCapabilities.js'; // Module 68480 (H) - H.ZMb
 import MslUserAuthException from '../error/MslUserAuthException.js';     // Module 88361 (J)
 import { isMslException, generateRandomMessageId } from '../error/MslErrorUtil.js'; // Module 32260 (M)
-
 
 // === Helper Functions ===
 
@@ -264,7 +263,6 @@ function reconstructKeyRequestData(mslContext, headerDataMo, callback) {
     });
 }
 
-
 // === Data Classes ===
 
 /**
@@ -349,7 +347,6 @@ class ParsedHeaderData {
         this.headerDataMo = headerDataMo;
     }
 }
-
 
 // === MessageHeader Class ===
 
@@ -630,12 +627,12 @@ class MessageHeader extends Header {
                                                 const headerMo = encoder.zf();
 
                                                 if (self.masterToken) {
-                                                    headerMo.put(HeaderConstants.internal_Yeb, self.masterToken);
+                                                    headerMo.put(HeaderConstants.mastertoken, self.masterToken);
                                                 } else {
                                                     headerMo.put(HeaderConstants.hGa, self.entityAuthData);
                                                 }
 
-                                                headerMo.put(HeaderConstants.internal_Xeb, ciphertext);
+                                                headerMo.put(HeaderConstants.headerdata, ciphertext);
                                                 headerMo.put(HeaderConstants.jGa, signature);
 
                                                 // Step 5: Encode the complete header
@@ -676,7 +673,6 @@ class MessageHeader extends Header {
         });
     }
 }
-
 
 // === Factory Functions ===
 
@@ -988,7 +984,6 @@ function parseMessageHeader(mslContext, encryptedHeaderData, signatureBytes, ent
         });
     });
 }
-
 
 // === Exports ===
 export {

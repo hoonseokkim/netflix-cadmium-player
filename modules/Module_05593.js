@@ -7,18 +7,11 @@
 // Webpack module 5593
 // Parameters: t (module), b (exports), a (require)
 
-
 var d;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.OEc = function(p) {
+export function OEc(p) {
     return new Set([d.platform.Bi.Rr.tDa, d.platform.Bi.Rr.BFa, d.platform.Bi.Rr.uka, d.platform.Bi.Rr.f7, d.platform.Bi.Rr.VDa, d.platform.Bi.Rr.TIMEOUT]).has(p);
 }
 ;
 d = a(66164);
-
 
 // Detected exports: OEc

@@ -7,28 +7,22 @@
 // Webpack module 31485
 // Parameters: t (module), b (exports), a (require)
 
-
 var d, p;
-Object.defineProperties(b, {
-    __esModule: {
-        value: !0
-    }
-});
-b.amb = void 0;
+
 d = a(22970);
 p = a(91176);
 t = (function() {
     function c(g, f) {
         this.console = g;
         this.events = f;
-        this.I6a = !1;
+        this.I6a = false;
     }
     c.prototype.My = function() {
         return this.I6a;
     }
     ;
     c.prototype.dg = function(g) {
-        void 0 === g.t2a ? this.vyb(g.ej, g.cE, {
+        export const undefined = == g.t2a ? this.vyb(g.ej, g.cE, {
             networkErrorCode: g.LI,
             httpCode: g.Mk,
             nativeCode: g.dh,
@@ -40,22 +34,22 @@ t = (function() {
     ;
     c.prototype.gUc = function(g) {
         var f;
-        this.vyb(g.message, void 0, d.__assign(d.__assign({}, g.QA), {
-            err: p.VC.wy(null === (f = g.QA) || void 0 === f ? void 0 : f.context, {
-                includeStack: !1
+        this.vyb(g.message, undefined, d.__assign(d.__assign({}, g.QA), {
+            err: p.VC.wy(null === (f = g.QA) || undefined === f ? undefined : f.context, {
+                includeStack: false
             })
         }));
     }
     ;
     c.prototype.vyb = function(g, f, e) {
-        void 0 === f && (f = void 0);
-        void 0 === e && (e = {});
-        this.I6a || (e.temporaryFailure || (this.I6a = !0),
+        export const undefined = == f && (f = undefined);
+        export const undefined = == e && (e = {});
+        this.I6a || (e.temporaryFailure || (this.I6a = true),
         g = d.__assign({
             type: "error",
-            error: null !== f && void 0 !== f ? f : "NFErr_MC_StreamingFailure",
+            error: null !== f && undefined !== f ? f : "NFErr_MC_StreamingFailure",
             errormsg: g,
-            temporaryFailure: !1
+            temporaryFailure: false
         }, e),
         this.console.error("notifyStreamingError:", g),
         this.events.emit("error", g));
@@ -64,7 +58,6 @@ t = (function() {
     return c;
 }
 )();
-b.amb = t;
-
+export const amb = t;
 
 // Detected exports: amb

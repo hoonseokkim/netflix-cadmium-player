@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push:*)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player -path *abr/*.js -o -path *ase/*.js)",
+      "Bash(grep:*)",
+      "Bash(ls -1 /Users/hoon/netflix-bts/netflix-cadium-player/drm/*.js)",
+      "Bash(ls:*)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player -maxdepth 1 -name *manifest* -o -name *playapi* -o -name *Manifest* -o -name *PlayApi* -o -name *.json)",
+      "Bash(python3:*)",
+      "Bash(cp /Users/hoon/netflix-bts/player/manifest /Users/hoon/netflix-bts/netflix-cadium-player/docs/bts-live-manifest.json)",
+      "Bash(cp /Users/hoon/netflix-bts/player/playapi /Users/hoon/netflix-bts/netflix-cadium-player/docs/bts-live-playapi.json)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(wc -l /Users/hoon/netflix-bts/netflix-cadium-player/*.js)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player -type f -name \"*.js\" ! -name \"cadmium-playercore-6.0055.939.911.js\" -exec wc -l {} +)",
+      "Bash(xxd)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player -name \"*.js\" -type f -exec grep -l \"config\\\\|Config\\\\|parameter\\\\|Parameter\" {})",
+      "Bash(/tmp/verification_report.txt:*)",
+      "Read(//tmp/**)",
+      "Bash(cp /Users/hoon/netflix-bts/init/s_init.cmfa* /Users/hoon/netflix-bts/netflix-cadium-player/docs/segments/s_init.cmfa)",
+      "Bash(cp /Users/hoon/netflix-bts/segments/s_10635.cmfa* /Users/hoon/netflix-bts/netflix-cadium-player/docs/segments/s_10635.cmfa)",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(git config:*)",
+      "Bash(find . -name symbols* -o -name Symbol*)",
+      "Bash(for id:*)",
+      "Bash(do echo:*)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player/modules/ -name \"Module_*.js\" -exec ls -lh {})",
+      "Bash(sort -k5 -h)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player -type f -name \"*.js\" -exec wc -l {} +)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player/modules/ -name \"Module_*.js\" -exec wc -l {})",
+      "Bash(grep -l \"Object.defineProperty\\(b\" /Users/hoon/netflix-bts/netflix-cadium-player/modules/*.js)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player/modules/ -name \"*.js\" -exec wc -l {} +)",
+      "Bash(find /Users/hoon/netflix-bts/netflix-cadium-player/modules/ -name *.js -exec grep -l \"switch\\\\|for \\(;.*!==\\\\|I8d\\\\|f1e\" {} +)"
+    ]
+  }
+}
