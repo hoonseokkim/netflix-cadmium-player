@@ -12,10 +12,10 @@
  * @original Module_53205
  */
 
-import { __decorate, __param } from '../modules/Module_22970.js'; // tslib decorators
-import { injectable, injectDecorator } from '../modules/Module_22674.js'; // DI framework
-import { seekToSample as ZERO_BYTES, fetchPayload as BYTES_UNIT } from '../modules/Module_72574.js'; // byte units
-import { seekToSample as ZERO_DURATION, MILLISECONDS } from '../modules/Module_5021.js'; // time units
+import { __decorate, __param } from '../ads/AdBreakMismatchLogger.js'; // tslib decorators
+import { injectable, injectDecorator } from '../ads/AdBreakMismatchLogger.js'; // DI framework
+import { seekToSample as ZERO_BYTES, fetchPayload as BYTES_UNIT } from '../ase/ThroughputSample.js'; // byte units
+import { seekToSample as ZERO_DURATION, MILLISECONDS } from '../drm/LicenseBroker.js'; // time units
 import { xmb as ThroughputConfigToken } from '../modules/Module_22692.js'; // DI token
 
 /**
@@ -140,7 +140,7 @@ class ThroughputEstimator {
   }
 }
 
-export { ThroughputEstimator as fLa };
+export { ThroughputEstimator };
 
 // Apply DI decorators
 const DecoratedThroughputEstimator = __decorate(

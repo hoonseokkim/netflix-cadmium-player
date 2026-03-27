@@ -24,4 +24,4 @@ export class StreamSelectionEntry {
 }
 
 // Legacy alias
-export { StreamSelectionEntry as i5b };
+export { StreamSelectionEntry };

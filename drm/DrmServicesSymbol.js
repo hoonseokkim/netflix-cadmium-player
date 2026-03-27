@@ -14,7 +14,7 @@ export default function DrmServicesSymbol(module, exports, require) {
     });
 
     /** Symbol identifier for the DRM services binding */
-    exports.internal_Rbb = "DrmServicesSymbol";
+    exports.DrmServicesSymbol = "DrmServicesSymbol";
 
     /** Symbol identifier for the DRM services provider binding */
     exports.aka = "DrmServicesProviderSymbol";

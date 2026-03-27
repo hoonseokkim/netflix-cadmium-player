@@ -71,7 +71,7 @@ class DrmLicenseRequestFactory {
     }
 }
 
-export { DrmLicenseRequestFactory as vEa };
+export { DrmLicenseRequestFactory };
 
 // IoC registration
 DrmLicenseRequestFactory = __decorate([

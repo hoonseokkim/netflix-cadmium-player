@@ -14,54 +14,54 @@ import { SourceBuffer } from '../modules/Module_90762.js';                  // g
 import {
     segmentDurationMs,
     lK as NOOP_RESOLVE,
-    internal_Rka as AUDIO_TYPE,
+    AUDIO_TYPE as AUDIO_TYPE,
     B7 as VIDEO_TYPE
-} from '../modules/Module_33096.js';                                        // f = a(33096)
-import { config } from '../modules/Module_29204.js';                        // e = a(29204)
-import { jl as EventEmitter } from '../modules/Module_94886.js';            // h = a(94886)
+} from '../config/PlayerConfiguration.js';                                        // f = a(33096)
+import { config } from '../drm/MicrosoftScreenSizeFilter.js';                        // e = a(29204)
+import { jl as EventEmitter } from '../text/SubtitleDownloader.js';            // h = a(94886)
 import {
     writeBytes as documentVisibility,
     stateChangeEvent as visibilityChangeEvent
 } from '../modules/Module_37509.js';                                        // k = a(37509)
-import { createElement, pic as matchesSourceBuffer } from '../modules/Module_52569.js'; // l = a(52569)
+import { createElement, pic as matchesSourceBuffer } from '../core/PlayerConfig.js'; // l = a(52569)
 import {
     fetchOperation as createDebugLogger,
     disposableList,
     extractFromMessage as toHexString
-} from '../modules/Module_31276.js';                                        // m = a(31276)
+} from '../drm/LicenseBroker.js';                                        // m = a(31276)
 import {
     ea as ErrorCodes,
     EventTypeEnum,
-    internal_Gcb as mapMediaErrorCode
-} from '../modules/Module_36129.js';                                        // n = a(36129)
-import { assert } from '../modules/Module_45146.js';                        // q = a(45146)
+    mapMediaErrorCode as mapMediaErrorCode
+} from '../drm/MediaKeySystemAccessServices.js';                                        // n = a(36129)
+import { assert } from '../config/PlayerConfiguration.js';                        // q = a(45146)
 import { zk as formatPts } from '../modules/Module_8825.js';                // r = a(8825)
 import { cib as cachedValueFactory } from '../modules/Module_67572.js';     // u = a(67572)
 import {
     assignProperties,
     initializeModel as serializeError,
     parseInteger
-} from '../modules/Module_3887.js';                                         // v = a(3887)
+} from '../utils/IpAddressUtils.js';                                         // v = a(3887)
 import { r_a as formatErrorPayload } from '../modules/Module_77705.js';     // w = a(77705)
 import {
     NP as NativeMediaSource,
     $i as documentRef,
     totalTime as toMediaTime,
     internal_Tka as absPts
-} from '../modules/Module_22365.js';                                        // x = a(22365)
-import { gd as isDefined, wc as isNumber } from '../modules/Module_32687.js'; // y = a(32687)
+} from '../utils/IpAddressUtils.js';                                        // x = a(22365)
+import { gd as isDefined, wc as isNumber } from '../utils/IpAddressUtils.js'; // y = a(32687)
 import { ofb as mediaElementBindingKey } from '../modules/Module_80012.js'; // A = a(80012)
-import { MediaSourceEvents } from '../modules/Module_16520.js';             // z = a(16520)
+import { MediaSourceEvents } from './MediaSourceEvents.js';             // z = a(16520)
 import {
     eQc as sanitizeDuration,
     ellaSendRateMultiplier as toMilliseconds
-} from '../modules/Module_5021.js';                                         // B = a(5021)
-import { PlayerEvents } from '../modules/Module_85001.js';                  // C = a(85001)
-import { zv as ReadyState } from '../modules/Module_63156.js';              // D = a(63156)
-import { iWa as extractSystemCode } from '../modules/Module_82100.js';      // E = a(82100)
-import { MediaType } from '../modules/Module_26388.js';                     // G = a(26388)
-import { valueList as schedulerKey } from '../modules/Module_53085.js';     // F = a(53085)
-import { currentBitrate as ObservableValue } from '../modules/Module_81734.js'; // H = a(81734)
+} from '../drm/LicenseBroker.js';                                         // B = a(5021)
+import { PlayerEvents } from '../drm/LicenseBroker.js';                  // C = a(85001)
+import { zv as ReadyState } from '../msl/MslComponentInitializer.js';              // D = a(63156)
+import { iWa as extractSystemCode } from '../drm/EmeConstants.js';      // E = a(82100)
+import { MediaType } from '../streaming/MediaRequestEventReporter.js';                     // G = a(26388)
+import { valueList as schedulerKey } from '../monitoring/MonitoringModule.js';     // F = a(53085)
+import { currentBitrate as ObservableValue } from '../drm/EmeSession.js'; // H = a(81734)
 
 // ─── Feature detection ───────────────────────────────────────────────────────
 

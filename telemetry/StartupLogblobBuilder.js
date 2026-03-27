@@ -14,7 +14,7 @@ import { getOdbMetrics } from '../core/AppInfoConfig';
 import { SUCCESS } from '../core/PlayerConstants';
 import { config } from '../config/PlayerConfiguration';
 import { playbackInstanceHolder } from '../core/PlaybackInstance';
-import { internal_Shc as getNavigationStartTime } from '../core/FtlComponentInit';
+import { getNavigationStartTime as getNavigationStartTime } from '../core/FtlComponentInit';
 import { ea as ComponentEvents } from '../core/ComponentHost';
 import { disposableList } from '../core/CompoundComponent';
 import { ZX as ModuleMetricsSymbol } from '../symbols/LogBatcherSymbols';

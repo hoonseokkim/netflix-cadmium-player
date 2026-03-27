@@ -11,7 +11,7 @@
  * @see Module_81375
  */
 
-import { internal_Wrb as isMatchingScope } from '../utils/ScopeUtils.js';  // Module 91176
+import { isMatchingScope as isMatchingScope } from '../utils/ScopeUtils.js';  // Module 91176
 import { ROOT } from '../core/RootConstants.js';                            // Module 19915
 
 /** @type {string} Special scope identifier for montage-related logging */

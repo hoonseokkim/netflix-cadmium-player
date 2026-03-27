@@ -14,12 +14,12 @@
  * @module StreamSelectionAlgorithm
  */
 
-import * as numberUtils from '../modules/Module_17267.js';  // number utilities (wc = isFiniteNumber)
-import { assert, hn as findIndex, cPa as findLast } from '../modules/Module_91176.js'; // assert & array helpers
-import { buildFunction } from '../modules/Module_50468.js'; // fragment index builder
-import { StreamSelectorClass } from '../modules/Module_13550.js'; // stream selector result
+import * as numberUtils from './InitialStreamSelector.js';  // number utilities (wc = isFiniteNumber)
+import { assert, hn as findIndex, cPa as findLast } from '../core/AsejsEngine.js'; // assert & array helpers
+import { buildFunction } from '../streaming/AseStream.js'; // fragment index builder
+import { StreamSelectorClass } from './StreamSelector.js'; // stream selector result
 import runBufferSimulation from '../modules/Module_62737.js'; // buffer simulation runner
-import { playerPhase } from '../modules/Module_65161.js'; // player state enum
+import { playerPhase } from '../core/AsejsEngine.js'; // player state enum
 import { internal_Glb as SegmentSizeAccumulator } from '../modules/Module_20880.js'; // segment size accumulator
 
 /**

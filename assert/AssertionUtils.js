@@ -8,8 +8,8 @@
  * @module Module_45146
  */
 
-// import { disposableList } from './modules/Module_31276.js'; // webpack module 31276 (service locator)
-// import { DebugSymbol } from './modules/Module_90597.js';    // webpack module 90597
+// import { disposableList } from '../drm/LicenseBroker.js'; // webpack module 31276 (service locator)
+// import { DebugSymbol } from '../ioc/ConfigurationStore.js';    // webpack module 90597
 
 let _assertService;
 
@@ -47,7 +47,7 @@ export function assertFalse() {
  * @param {string} [message] - Error message
  */
 export function assertDefined(value, message) {
-    return getAssertService().internal_Acc(value, message);
+    return getAssertService().assertDefined(value, message);
 }
 
 /**
@@ -56,7 +56,7 @@ export function assertDefined(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertNonNull(value, message) {
-    return getAssertService().internal_Bcc(value, message);
+    return getAssertService().assertNonNull(value, message);
 }
 
 /**
@@ -74,7 +74,7 @@ export function assertString(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertNonEmptyString(value, message) {
-    return getAssertService().internal_Hcc(value, message);
+    return getAssertService().assertNonEmptyString(value, message);
 }
 
 /**
@@ -83,7 +83,7 @@ export function assertNonEmptyString(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertOptionalString(value, message) {
-    return getAssertService().internal_Fcc(value, message);
+    return getAssertService().assertOptionalString(value, message);
 }
 
 /**
@@ -101,7 +101,7 @@ export function assertNumber(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertInteger(value, message) {
-    return getAssertService().internal_Dcc(value, message);
+    return getAssertService().assertInteger(value, message);
 }
 
 /**
@@ -110,7 +110,7 @@ export function assertInteger(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertIntegerInRange(value, message) {
-    return getAssertService().internal_Gcc(value, message);
+    return getAssertService().assertIntegerInRange(value, message);
 }
 
 /**
@@ -119,7 +119,7 @@ export function assertIntegerInRange(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertPositiveInteger(value, message) {
-    return getAssertService().internal_Ecc(value, message);
+    return getAssertService().assertPositiveInteger(value, message);
 }
 
 /**
@@ -137,7 +137,7 @@ export function assertBoolean(value, message) {
  * @param {string} [message] - Error message
  */
 export function assertFunction(value, message) {
-    return getAssertService().internal_Ccc(value, message);
+    return getAssertService().assertFunction(value, message);
 }
 
 /**

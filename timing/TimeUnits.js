@@ -8,7 +8,7 @@
  * @module TimeUnits
  */
 
-// import { TimeUnit as BaseTimeUnit, Duration } from './modules/Module_35201.js'; // webpack module 35201
+// import { TimeUnit as BaseTimeUnit, Duration } from '../core/DataSizeUnits.js'; // webpack module 35201
 
 /**
  * Extended TimeUnit for the player's time unit definitions.

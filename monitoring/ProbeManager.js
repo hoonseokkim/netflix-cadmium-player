@@ -19,8 +19,8 @@
  * @module ProbeManager
  */
 
-// import { platform }     from '../modules/Module_66164.js';
-// import { assert }       from '../modules/Module_52571.js';
+// import { platform }     from '../core/AsejsEngine.js';
+// import { assert }       from '../ads/AdPoliciesManager.js';
 // import { r$a as ProbeRequest } from '../modules/Module_72681.js';
 
 /**
@@ -537,4 +537,4 @@ class ProbeManager {
   }
 }
 
-export { ProbeManager as mkb, computeProbeRetryDelay as utb };
+export { ProbeManager, computeProbeRetryDelay };

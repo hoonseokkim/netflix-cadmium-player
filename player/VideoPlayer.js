@@ -514,7 +514,7 @@ var p, c, g, f, e, h, k, l;
     }
     ;
     d.prototype.mIb = function(m, n, q, r) {
-        if (!this.downloadReportInterval.internal_Arb(m))
+        if (!this.downloadReportInterval.isNonEmptyArray(m))
             throw Error("invalid url");
         this.tNb.push({
             url: m,
@@ -543,7 +543,7 @@ var p, c, g, f, e, h, k, l;
                 q = this.playerState.mediaSourceManager;
                 r = q ? q.vS() : null;
                 this.downloadReportInterval.mapTransform(r) && (m.totdfr = r);
-                r = q ? q.internal_Nba() : null;
+                r = q ? q.getCorruptedFrameCount() : null;
                 this.downloadReportInterval.mapTransform(r) && (m.totcfr = r);
                 u = q ? q.$wc() : null;
                 u && (m.rbfrs_decoder = u.dqa,
@@ -705,7 +705,7 @@ var p, c, g, f, e, h, k, l;
         this.playerState.addEventListener(c.PlayerEvents.iIb, function(n) {
             var q, r;
             if (m.livePlaybackManager().isLive && m.currentSegment.R === n.J) {
-                q = n.internal_Bfa;
+                q = n.jitteredStart;
                 if (void 0 !== q) {
                     r = "execute" === n.action ? "ending" : "prefetch";
                     m.timecodes = m.timecodes.filter(function(u) {

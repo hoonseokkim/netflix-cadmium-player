@@ -8,7 +8,7 @@
  * @module DerKeyUtils
  */
 
-import * as Base64Utils from '../modules/Module_44127.js'; // base64url encode/decode
+import * as Base64Utils from '../msg/MessageHeader.js'; // base64url encode/decode
 // Key format constants (previously imported from Module_11475):
 // { raw: "raw", jwk: "jwk", spki: "spki", pkcs8: "pkcs8" }
 // Inlined as string literals where used.

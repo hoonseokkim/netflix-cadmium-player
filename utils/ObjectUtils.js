@@ -7,9 +7,9 @@
  * @module Module_3887
  */
 
-// import { assert } from './modules/Module_45146.js';           // webpack module 45146
-// import { round, randomFloat } from './modules/Module_22365.js'; // webpack module 22365
-// import { isFunction, isDefined, isNumber } from './modules/Module_32687.js'; // webpack module 32687
+// import { assert } from '../config/PlayerConfiguration.js';           // webpack module 45146
+// import { round, randomFloat } from './IpAddressUtils.js'; // webpack module 22365
+// import { isFunction, isDefined, isNumber } from './IpAddressUtils.js'; // webpack module 32687
 
 /**
  * Invoke a named method on an object with optional fallback value.

@@ -11,7 +11,7 @@
 // Dependencies
 // import { JP as INJECT_TAG } from './modules/Module_37425';          // metadata key for inject
 // import { Metadata } from './modules/Module_67258';                  // metadata wrapper
-// import { HV as tagParameter, internal_Oha as tagProperty } from './modules/Module_28041';  // metadata appliers
+// import { HV as tagParameter, tagProperty as tagProperty } from './modules/Module_28041';  // metadata appliers
 
 /**
  * Creates a decorator that tags a constructor parameter or class property

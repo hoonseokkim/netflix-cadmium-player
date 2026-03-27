@@ -165,7 +165,7 @@ export class KeyMessageHandler {
     const error = new PlaybackError(
       ErrorCodes.PLAY_MSE_EVENT_KEYERROR,
       errorEvent instanceof promiseTimerSymbol ? EventTypeEnum.EME_TIMEOUT : EventTypeEnum.EME_MEDIA_KEYERR_BASE,
-      systemCode ? this._byteConverter.internal_Ora(systemCode, 4) : errorCode,
+      systemCode ? this._byteConverter.toByteArray(systemCode, 4) : errorCode,
       '',
       mediaError
     );

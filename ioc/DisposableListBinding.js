@@ -17,4 +17,4 @@ export const disposableListBinding = new ContainerModule(function (bind) {
     bind(DisposableListKey).to(DisposableListImpl).sa();
 });
 
-export { disposableListBinding as ksb };
+export { disposableListBinding };

@@ -30,11 +30,11 @@
 
 // Dependencies (webpack module references):
 // import { __values, __read, __spreadArray, __awaiter, __generator } from './Module_22970';  // tslib helpers
-// import { mathTanh, internal_Jka, jkb, lfb, pX, internal_Kcb, observableBool, np } from './Module_91176'; // utilities
+// import { mathTanh, internal_Jka, jkb, lfb, pX, ExpiryTracker, observableBool, np } from './Module_91176'; // utilities
 // import { platform } from './Module_66164';           // platform abstraction
 // import { EventEmitter } from './Module_90745';       // event emitter
 // import { mJa } from './Module_2300';                 // playback lease/cache stats
-// import { internal_Mbb } from './Module_84726';       // DormantManifestQueue
+// import { DormantQueue } from './Module_84726';       // DormantManifestQueue
 // import { wCb } from './Module_37349';                // computeManifestTtl
 // import { fHa } from './Module_52885';                // ManifestCacheItem
 
@@ -153,7 +153,7 @@ class ManifestCache {
             /**
              * @private @type {Object|undefined} Dormant manifest queue for prefetched items.
              */
-            this.eventQueue = new internal_Mbb(
+            this.eventQueue = new DormantQueue(
                 this.hashLookup,
                 options.config,
                 options.VTa,
@@ -222,7 +222,7 @@ class ManifestCache {
         /**
          * @private @type {Object} Tracks TTLs and auto-expires manifest items.
          */
-        this._expiryTracker = new internal_Kcb((item) => {
+        this._expiryTracker = new ExpiryTracker((item) => {
             // When an item's TTL expires, remove it from dormant and active caches
             if (this.eventQueue?.hasManifest(item.viewableId)) {
                 this.eventQueue?.item(item.viewableId);

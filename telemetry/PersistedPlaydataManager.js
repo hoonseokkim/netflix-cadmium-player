@@ -24,11 +24,11 @@
 // import { ea, EventTypeEnum } from '../core/ErrorCodeEnums';     // Module 36129
 // import { symbolMarker } from '../utils/TypeCheckers';           // Module 42207
 // import { we as CadmiumError } from '../core/CadmiumError';     // Module 31149
-// import { internal_Aeb as PersistableStore } from '../player/PersistableStore'; // Module 52657
+// import { PersistableStore as PersistableStore } from '../player/PersistableStore'; // Module 52657
 // import { PJ as StorageSymbol } from '../player/StorageSymbols'; // Module 17892
 // import { QC as DeviceConfigSymbol } from '../core/DeviceConfig';// Module 33554
 // import { qla as PlaydataCodec } from '../telemetry/PlaydataCodec'; // Module 23048
-// import { internal_Wib as ValidatorSymbol } from '../telemetry/ValidatorSymbol'; // Module 36258
+// import { ValidatorSymbol as ValidatorSymbol } from '../telemetry/ValidatorSymbol'; // Module 36258
 
 /**
  * Codec for individual playdata entries.

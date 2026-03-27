@@ -1,6 +1,6 @@
 /**
  * Netflix Cadmium Player - RequestPacer
- * Webpack Module 19089 (exported as `internal_Jkb`)
+ * Webpack Module 19089 (exported as `RequestPacer`)
  *
  * Paces and throttles outgoing media segment download requests to ensure
  * no more than `maxAllowedOutstandingRequests` are in-flight simultaneously.
@@ -312,5 +312,5 @@ export class RequestPacer {
 //   lz  -> 'removeRequest'             (df)
 //   aub -> 'checkRequestOpportunityRunner' (df)
 
-export { RequestPacer as internal_Jkb };
+export { RequestPacer as RequestPacer };
 export default RequestPacer;

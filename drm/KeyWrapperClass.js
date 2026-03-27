@@ -12,8 +12,8 @@
  * @module drm/KeyWrapperClass
  */
 
-import { AleScheme } from '../modules/Module_2802.js';
-import { sliceBuffer as SY } from '../modules/Module_1084.js';
+import { AleScheme } from './KeyProvisionValidator.js';
+import { sliceBuffer as SY } from '../utils/ArrayBufferSlice.js';
 import { AES_GCM_Cipher } from '../modules/Module_51708.js';
 import { AES_CBC_HS256_Cipher } from '../crypto/AES_CBC_HS256_Cipher.js';
 

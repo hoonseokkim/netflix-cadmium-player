@@ -161,7 +161,7 @@ class LowNetworkActivityManager {
     }
 }
 
-export { LowNetworkActivityManager as VGa };
+export { LowNetworkActivityManager };
 
 // IoC registration
 LowNetworkActivityManager = __decorate([

@@ -31,7 +31,7 @@ export default function BufferHealthMonitor(module, exports, require) {
             value: true
         }
     });
-    exports.internal_Xvb = exports.cjb = void 0;
+    exports.createPipelineHealthMonitor = exports.cjb = void 0;
 
     tslib = require(22970);
     TimeUtil = require(91176);
@@ -78,7 +78,7 @@ export default function BufferHealthMonitor(module, exports, require) {
      * @param {Object} config - Configuration with health check interval, thresholds, and stream access
      * @returns {Object} Monitor control object with start/stop/addListener/removeListener
      */
-    exports.internal_Xvb = function createBufferHealthMonitor(config) {
+    exports.createPipelineHealthMonitor = function createBufferHealthMonitor(config) {
         var eventEmitter, healthStates, timerHandle, isHealthDegraded;
 
         function checkHealth() {

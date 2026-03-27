@@ -10,9 +10,9 @@
  * @original Module_12394
  */
 
-import { __decorate, __param } from '../modules/Module_22970.js'; // tslib decorators
-import { injectable, injectDecorator } from '../modules/Module_22674.js'; // DI framework
-import { LoggerToken } from '../modules/Module_87386.js';
+import { __decorate, __param } from '../ads/AdBreakMismatchLogger.js'; // tslib decorators
+import { injectable, injectDecorator } from '../ads/AdBreakMismatchLogger.js'; // DI framework
+import { LoggerToken } from '../ads/AdVisibilityTracker.js';
 
 /**
  * Partitions CDN URLs across streams to maximize redundancy.
@@ -135,7 +135,7 @@ class CdnPartitioner {
   }
 }
 
-export { CdnPartitioner as BDa };
+export { CdnPartitioner };
 
 // Apply DI decorators
 const DecoratedCdnPartitioner = __decorate(

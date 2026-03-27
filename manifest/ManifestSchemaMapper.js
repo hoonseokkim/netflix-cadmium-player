@@ -617,7 +617,7 @@ class ManifestSchemaMapper {
     }
 }
 
-export { ManifestSchemaMapper as gHa };
+export { ManifestSchemaMapper };
 
 export const decoratedManifestSchemaMapper = __decorate([
     injectable(),

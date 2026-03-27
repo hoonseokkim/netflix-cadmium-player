@@ -13,7 +13,7 @@
  * @original Module_14128
  */
 
-import _curry2 from '../modules/Module_31187.js'; // Ramda _curry2
+import _curry2 from '../core/MapIndexed.js'; // Ramda _curry2
 import { data as xfInit, result as xfResult } from '../modules/Module_18610.js'; // transducer base methods
 
 /**

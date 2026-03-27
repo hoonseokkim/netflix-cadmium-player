@@ -192,7 +192,7 @@ export function registerMslComponent() {
                                             ? EventTypeEnum.MSL_ERROR_HEADER
                                             : EventTypeEnum.MSL_ERROR;
 
-                                reject(buildMslError(errorCode, mslContext.internal_Sba(error.error), error.error));
+                                reject(buildMslError(errorCode, mslContext.getErrorCode(error.error), error.error));
                             } else {
                                 log.error('Unknown MSL error', error);
                                 error.errorSubCode = error.errorSubCode;

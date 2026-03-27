@@ -17,13 +17,13 @@
  */
 
 // Dependencies
-// import { __extends, __assign } from './modules/Module_22970.js';
-// import { MediaType }           from './modules/Module_45247.js';
-// import { timeSlice, D2a }      from './modules/Module_65161.js';
+// import { __extends, __assign } from '../ads/AdBreakMismatchLogger.js';
+// import { MediaType }           from '../core/AseConfigConstants.js';
+// import { timeSlice, D2a }      from '../core/AsejsEngine.js';
 // import { pWa as createPredictor } from './modules/Module_14246.js';
 // import { jLa as SingleStreamListBuilder } from './modules/Module_44284.js';
-// import { assert }              from './modules/Module_52571.js';
-// import { isLiveStream }        from './modules/Module_8149.js';
+// import { assert }              from '../ads/AdPoliciesManager.js';
+// import { isLiveStream }        from '../network/AseMediaRequest.js';
 // import { BaseStreamSelector }  from './modules/Module_54477.js';
 
 /**

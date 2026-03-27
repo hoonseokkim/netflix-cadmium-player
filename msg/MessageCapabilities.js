@@ -17,7 +17,7 @@ import { fp as BaseSerializable } from '../msg/MessageBase.js';                /
 import { default as encodeAsync } from '../msl/AsyncEncoder.js';               // Module 42979
 import { default as ArrayUtils } from '../utils/ArrayCompare.js';              // Module 14945
 import { UJ as CompressionAlgorithms } from '../msl/CompressionAlgorithms.js'; // Module 51411
-import { internal_Xka as EncoderFormats } from '../msl/EncoderFormats.js';     // Module 65630
+import { EncoderFormats as EncoderFormats } from '../msl/EncoderFormats.js';     // Module 65630
 import { default as MslEncoderError } from '../msl/MslEncoderError.js';        // Module 6838
 import { default as MslMessageError } from '../msl/MslMessageError.js';        // Module 88257
 import { default as MslErrorCodes } from '../msl/MslErrorCodes.js';            // Module 36114

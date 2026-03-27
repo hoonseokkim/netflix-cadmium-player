@@ -14,9 +14,9 @@
  * @original Module_12501
  */
 
-import { la as parseDuration } from '../modules/Module_72574.js'; // duration parser
-import { ellaSendRateMultiplier as parseRate } from '../modules/Module_5021.js'; // rate parser
-import { componentCategory as ValidationError } from '../modules/Module_37187.js'; // validation error type
+import { la as parseDuration } from '../ase/ThroughputSample.js'; // duration parser
+import { ellaSendRateMultiplier as parseRate } from '../drm/LicenseBroker.js'; // rate parser
+import { componentCategory as ValidationError } from '../ioc/ConfigurationStore.js'; // validation error type
 
 // ─── Helper Functions ──────────────────────────────────────────────────────
 
@@ -163,7 +163,7 @@ export function arrayData(elementValidator, defaultValue) {
 export function parseBoolean(validator, key) {
   return validator.kPb(key);
 }
-export { parseBoolean as tM };
+export { parseBoolean };
 
 /**
  * Parse and validate a numeric config value.
@@ -174,7 +174,7 @@ export { parseBoolean as tM };
 export function parseNumber(validator, key) {
   return validator.D3a(key);
 }
-export { parseNumber as zd };
+export { parseNumber };
 
 /**
  * Parse and validate an enum string config value.
@@ -207,7 +207,7 @@ export { parseString as string };
 export function parseStringArray(validator, key) {
   return validator.rangeCallback(key, parseString);
 }
-export { parseStringArray as y4 };
+export { parseStringArray };
 
 /**
  * Parse an array of booleans.
@@ -218,7 +218,7 @@ export { parseStringArray as y4 };
 export function parseBooleanArray(validator, key) {
   return validator.rangeCallback(key, parseBoolean);
 }
-export { parseBooleanArray as dDc };
+export { parseBooleanArray };
 
 /**
  * Parse an array of enum strings.
@@ -229,7 +229,7 @@ export { parseBooleanArray as dDc };
 export function parseEnumStringArray(validator, key) {
   return validator.rangeCallback(key, parseEnumString);
 }
-export { parseEnumStringArray as Y7a };
+export { parseEnumStringArray };
 
 /**
  * Parse a duration config value (returns a Duration object).
@@ -241,7 +241,7 @@ export function parseDurationValue(validator, key) {
   const value = validator.ix(key);
   return value instanceof ValidationError ? value : parseDuration(value);
 }
-export { parseDurationValue as la };
+export { parseDurationValue };
 
 /**
  * Parse a rate/multiplier config value.
@@ -261,4 +261,4 @@ export { parseRateValue as joinOperation };
  */
 export const url = patternString(/^\S+$/);
 
-export { patternString as FPb };
+export { patternString };

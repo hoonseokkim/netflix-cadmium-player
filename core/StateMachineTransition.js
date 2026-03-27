@@ -65,4 +65,4 @@ function resolveTransition(stateDefinition, currentState, event) {
   };
 }
 
-export { resolveTransition as J1c };
+export { resolveTransition };

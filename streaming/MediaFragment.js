@@ -28,16 +28,16 @@
 // ---------------------------------------------------------------------------
 // Imports  (module IDs kept as comments for traceability)
 // ---------------------------------------------------------------------------
-import tslib from '../modules/Module_22970.js';                   // 22970 – tslib helpers
-import { TimeUtil } from '../modules/Module_91176.js';            // 91176 – TimeUtil
-import { assert } from '../modules/Module_52571.js';              // 52571 – assert
-import MediaTypeConstants from '../modules/Module_14282.js';      // 14282 – media-type constants
-import { FragmentStatistics } from '../modules/Module_95591.js';  // 95591 – FKa
-import { outputList } from '../modules/Module_85254.js';          // 85254 – outputList
-import { QueueIterator } from '../modules/Module_89645.js';       // 89645 – QueueIterator / RJ
-import { StreamRequest } from '../modules/Module_78015.js';       // 78015 – base class (xW)
-import { FragmentDataProxy } from '../modules/Module_5800.js';    // 5800  – WF
-import { processingContext } from '../modules/Module_71808.js';   // 71808 – processingContext
+import tslib from '../ads/AdBreakMismatchLogger.js';                   // 22970 – tslib helpers
+import { TimeUtil } from '../core/AsejsEngine.js';            // 91176 – TimeUtil
+import { assert } from '../ads/AdPoliciesManager.js';              // 52571 – assert
+import MediaTypeConstants from './MediaFragment.js';      // 14282 – media-type constants
+import { FragmentStatistics } from './MediaFragment.js';  // 95591 – FKa
+import { outputList } from '../network/AseMediaRequest.js';          // 85254 – outputList
+import { QueueIterator } from './MediaFragment.js';       // 89645 – QueueIterator / RJ
+import { StreamRequest } from '../network/AseMediaRequest.js';       // 78015 – base class (xW)
+import { FragmentDataProxy } from './MediaFragment.js';    // 5800  – WF
+import { processingContext } from './MediaFragment.js';   // 71808 – processingContext
 
 // ---------------------------------------------------------------------------
 // Constants

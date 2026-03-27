@@ -106,4 +106,4 @@ const DecoratedLogDisplayConfig = __decorate(
 );
 
 export { DecoratedLogDisplayConfig as LogDisplayConfig };
-export { DecoratedLogDisplayConfig as HGa };
+export { DecoratedLogDisplayConfig };

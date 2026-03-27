@@ -551,9 +551,9 @@ const features = {};
 features.maxColIndex = {
     type: "num",
     eventCounter: 0,
-    /** @param {{ internal_Kub: number }} event */
+    /** @param {{ colIndex: number }} event */
     update(event) {
-        this.eventCounter = Math.max(this.eventCounter, event.internal_Kub);
+        this.eventCounter = Math.max(this.eventCounter, event.colIndex);
     },
 };
 
@@ -562,11 +562,11 @@ features.avgColIndex = {
     type: "num",
     sampleCount: 0,
     eventCounter: 0,
-    /** @param {{ internal_Kub: number }} event */
+    /** @param {{ colIndex: number }} event */
     update(event) {
         this.sampleCount++;
         return (this.eventCounter =
-            (1 * (this.eventCounter + event.internal_Kub)) / this.sampleCount);
+            (1 * (this.eventCounter + event.colIndex)) / this.sampleCount);
     },
 };
 

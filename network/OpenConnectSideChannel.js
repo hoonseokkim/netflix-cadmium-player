@@ -16,7 +16,7 @@
 // import { ConfigToken } from '../core/ConfigToken.js'; // webpack 4203
 // import { document as doc } from '../core/Globals.js'; // webpack 22365
 // import { symbolMarker } from '../core/DownloadReportInterval.js'; // webpack 42207
-// import { eib, internal_Wgb } from '../streaming/TransportTokens.js'; // webpack 31034
+// import { eib, DownloaderToken } from '../streaming/TransportTokens.js'; // webpack 31034
 // import { EventEmitter } from '../events/EventEmitter.js'; // webpack 94886
 // import { enumNamespace as HttpConstants } from '../network/HttpConstants.js'; // webpack 48220
 // import { gG as UniqueIdGenerator } from '../utils/UniqueIdGenerator.js'; // webpack 62665

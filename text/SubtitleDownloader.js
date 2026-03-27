@@ -24,7 +24,7 @@ import {
     pacingTargetBufferStrategy as PlaybackState,
     PlayerEvents
 } from "./PlayerEnums";                                              // Module 85001
-import { internal_Bmb as SideloadedTextTrack } from "./SideloadedTextTrack"; // Module 35781
+import { SideloadedTextTrack as SideloadedTextTrack } from "./SideloadedTextTrack"; // Module 35781
 import { MediaType } from "./MediaTypes";                            // Module 26388
 
 // ─── Track loading state to caption status mapping ──────────────────────────────

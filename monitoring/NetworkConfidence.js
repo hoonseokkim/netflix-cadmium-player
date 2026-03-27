@@ -18,8 +18,8 @@
  * @module NetworkConfidence
  */
 
-// import { platform }   from '../modules/Module_66164.js';
-// import { OP as ConfidenceLevel } from '../modules/Module_65161.js';
+// import { platform }   from '../core/AsejsEngine.js';
+// import { OP as ConfidenceLevel } from '../core/AsejsEngine.js';
 
 /**
  * Monitors bytes and elapsed time to determine throughput-measurement

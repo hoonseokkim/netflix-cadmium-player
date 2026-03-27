@@ -32,7 +32,7 @@ import { m7 as SharedStreamSelector, l8 as PerTrackStreamSelector } from '../str
 import { WJ as TextQueueManager } from '../streaming/TextQueueManager.js';
 import { k8 as ParentStreamProxy } from '../streaming/ParentStreamProxy.js';
 import { o0 as trackableDecorator } from '../core/Trackable.js';
-import { internal_Afc as calculateLiveAdTiming } from '../live/LiveAdTiming.js';
+import { calculateLiveAdTiming as calculateLiveAdTiming } from '../live/LiveAdTiming.js';
 import { ncb as EllaAlgorithms } from '../ella/EllaAlgorithms.js';
 import { lW as mediaTypeSortOrder } from '../streaming/StreamSortUtils.js';
 import { ase_Lka as AdSegmentPipeline } from '../ads/AdSegmentPipeline.js';

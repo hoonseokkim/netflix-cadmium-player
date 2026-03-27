@@ -16,7 +16,7 @@ import { DX as DISPOSE_PRIORITY } from "../modules/Module_33096"; // disposePrio
 import { config } from "../modules/Module_29204"; // playerConfig
 import { ljb as TIMED_TEXT_REBUFFER, fJa as AV_REBUFFER, gJa as TEXT_REBUFFER } from "../modules/Module_13044"; // rebufferReasons
 import { writeBytes as eventBus, downloadNode as DOWNLOAD_EVENT, stateChangeEvent as VISIBILITY_CHANGE_EVENT } from "../modules/Module_37509"; // eventBus
-import { internal_Yac as addOneTimeEventListener } from "../modules/Module_52569"; // domUtils
+import { addOneTimeEventListener as addOneTimeEventListener } from "../modules/Module_52569"; // domUtils
 import { jy as performanceNow } from "../modules/Module_24066"; // performanceUtils
 import { fetchOperation as createLoggerFactory, disposableList } from "../modules/Module_31276"; // loggerFactory / disposables
 import "../modules/Module_24550"; // side-effect import
@@ -156,7 +156,7 @@ export class MediaPresenterASE {
      * Updates media time, processes pending seeks, determines presenting state.
      */
     this._renderTick = () => {
-      this.playerState.internal_Lha = performanceNow();
+      this.playerState.lastStreamStartTime = performanceNow();
 
       if (this.isDisposed() || !this._initialized) {
         return;
@@ -373,7 +373,7 @@ export class MediaPresenterASE {
    * @returns {*}
    */
   getBufferingInfo() {
-    return this.mediaSourceElement.internal_Nba();
+    return this.mediaSourceElement.getCorruptedFrameCount();
   }
 
   /**
@@ -1707,4 +1707,4 @@ export class MediaPresenterASE {
   }
 }
 
-export { MediaPresenterASE as wHa };
+export { MediaPresenterASE };

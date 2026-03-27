@@ -33,19 +33,19 @@ import { platform } from '../core/CadmiumPlatformFactory';
 import { MediaType } from '../media/MediaType';
 import { assert } from '../assert/Assert';
 import { nkb as CodecProfileSplicer } from '../streaming/StreamFilterChain';
-import { internal_Nhb as OverlapGuard } from '../streaming/StreamingErrorNotifier';
+import { OverlapGuard as OverlapGuard } from '../streaming/StreamingErrorNotifier';
 import { mlb as SeamlessAudioSplicer } from '../streaming/StreamingBarrelExports';
 import { yhb as NegativePtsGuard } from '../streaming/StreamingProfileTimestampOffset';
-import { internal_Umb as EndOfStreamAudioTruncator } from '../streaming/AseStreamingConfigDefaults';
-import { internal_Heb as SilentFrameInserter } from '../streaming/StreamSegmentInfo';
+import { EndOfStreamAudioTruncator as EndOfStreamAudioTruncator } from '../streaming/AseStreamingConfigDefaults';
+import { SilentFrameInserter as SilentFrameInserter } from '../streaming/StreamSegmentInfo';
 import { G$a as FrameCountStallGuard } from '../streaming/BranchCollectionManager';
 import { I$a as StallGuard } from '../streaming/BranchBase';
 import { H$a as VideoLocationHistoryHandler } from '../streaming/LocationHistory';
 import { snb as AudioLocationHistoryHandler } from '../streaming/LocationHistory_1';
 import { TCa as SeamlessVideoSplicer } from '../streaming/ViewableEntry';
 import { bmb as TimestampNormalizer } from '../streaming/WorkingSegment';
-import { internal_Ieb as AdBreakGapSplicer } from '../streaming/PlaygraphMetricsReporter';
-import { internal_Ifb as AdBreakSplicer } from '../streaming/PlaygraphSeekEventReplay';
+import { AdBreakGapSplicer as AdBreakGapSplicer } from '../streaming/PlaygraphMetricsReporter';
+import { AdBreakSplicer as AdBreakSplicer } from '../streaming/PlaygraphSeekEventReplay';
 
 class MediaSplicer {
     /**

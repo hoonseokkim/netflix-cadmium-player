@@ -171,7 +171,7 @@ export class AudioMediaFragmentEditor extends MediaFragmentEditor {
      * @param {Array} fragment.kv - Response data chunks
      * @param {Object} fragment.stream - Stream reference
      * @param {Object} [fragment.O2] - Optimized response descriptor
-     * @param {boolean} [fragment.internal_Mqa] - Whether responses are pre-processed
+     * @param {boolean} [fragment.isPreProcessed] - Whether responses are pre-processed
      * @param {boolean} [applyFadeOut=true] - Whether to apply fade-out processing
      * @returns {Object} Result with success flag, optional logDataArray and kv (edited chunks)
      */
@@ -203,7 +203,7 @@ export class AudioMediaFragmentEditor extends MediaFragmentEditor {
         }
 
         // Determine if we need to handle non-ArrayBuffer responses
-        const hasNonArrayBufferResponses = fragment.internal_Mqa === false &&
+        const hasNonArrayBufferResponses = fragment.isPreProcessed === false &&
             !responseChunks.every((chunk) => chunk instanceof ArrayBuffer);
 
         let editedChunks = [];

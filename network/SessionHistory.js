@@ -14,7 +14,7 @@
  * @module SessionHistory
  */
 
-// import { platform } from '../modules/Module_66164.js';
+// import { platform } from '../core/AsejsEngine.js';
 
 const logger = new platform.Console('ASEJS_SESSION_HISTORY', 'media|asejs');
 

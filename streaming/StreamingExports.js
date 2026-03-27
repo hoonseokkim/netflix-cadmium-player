@@ -40,5 +40,5 @@ export * from './StreamingTypes9.js';       // Module 62291
 import DefaultExport32201 from './Module_32201.js';
 import DefaultExport16514 from './Module_16514.js';
 
-export { DefaultExport32201 as X0b };
-export { DefaultExport16514 as f5b };
+export { DefaultExport32201 };
+export { DefaultExport16514 };

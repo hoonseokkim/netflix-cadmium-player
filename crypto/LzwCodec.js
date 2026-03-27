@@ -219,4 +219,4 @@ class LzwCodec {
     }
 }
 
-export { LzwCodec as dgb };
+export { LzwCodec };

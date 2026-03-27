@@ -18,15 +18,15 @@
  */
 
 // --- external dependency stubs ---
-// import * as helpers       from '../modules/Module_22970.js';
-// import * as util          from '../modules/Module_17267.js';
-// import { EventEmitter }   from '../modules/Module_90745.js';
-// import { platform }       from '../modules/Module_66164.js';
-// import { Deferred, qB }   from '../modules/Module_91176.js';
+// import * as helpers       from '../ads/AdBreakMismatchLogger.js';
+// import * as util          from '../abr/InitialStreamSelector.js';
+// import { EventEmitter }   from '../core/AsejsEngine.js';
+// import { platform }       from '../core/AsejsEngine.js';
+// import { Deferred, qB }   from '../core/AsejsEngine.js';
 // import { laser, mediaTypeToString } from '../classes/DISABLED.js';
-// import { dk as isTimedText }        from '../modules/Module_8149.js';
-// import NodeType           from '../modules/Module_14282.js';
-// import { assert }         from '../modules/Module_52571.js';
+// import { dk as isTimedText }        from './AseMediaRequest.js';
+// import NodeType           from '../streaming/MediaFragment.js';
+// import { assert }         from '../ads/AdPoliciesManager.js';
 // import { statusEnum, MJa as LocationState } from '../modules/Module_36670.js';
 // import { nK as OcNetwork } from './OcNetwork.js';
 
@@ -794,4 +794,4 @@ class LocationSelector extends EventEmitter {
   }
 }
 
-export { LocationSelector as v7 };
+export { LocationSelector };

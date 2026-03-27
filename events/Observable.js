@@ -8,8 +8,8 @@
  * @module Module_81734
  */
 
-// import { OBSERVABLE_PRIORITY_PREFIX } from './modules/Module_33096.js'; // webpack module 33096
-// import { assert, assertFunction } from './modules/Module_45146.js';     // webpack module 45146
+// import { OBSERVABLE_PRIORITY_PREFIX } from '../config/PlayerConfiguration.js'; // webpack module 33096
+// import { assert, assertFunction } from '../config/PlayerConfiguration.js';     // webpack module 45146
 
 let observableCounter = 0;
 

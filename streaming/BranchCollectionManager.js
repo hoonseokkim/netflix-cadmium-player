@@ -8,8 +8,8 @@
  * @original Module 74504 (export: F$a)
  */
 
-import { __awaiter, __generator, __spreadArray, __read } from '../modules/Module_22970.js'; // tslib helpers
-import { ClockWatcher } from '../modules/Module_90745.js'; // event subscription manager
+import { __awaiter, __generator, __spreadArray, __read } from '../ads/AdBreakMismatchLogger.js'; // tslib helpers
+import { ClockWatcher } from '../core/AsejsEngine.js'; // event subscription manager
 import {
     TimeUtil,
     observableBool,
@@ -19,19 +19,19 @@ import {
     np as arrayDifference,
     ePa as removeFromArray,
     gd as isNonNullish,
-} from '../modules/Module_91176.js'; // time utilities & array helpers
-import { platform } from '../modules/Module_66164.js'; // platform APIs
-import { ed as SegmentType } from '../modules/Module_79048.js'; // segment type enum
+} from '../core/AsejsEngine.js'; // time utilities & array helpers
+import { platform } from '../core/AsejsEngine.js'; // platform APIs
+import { ed as SegmentType } from '../ads/AdPoliciesManager.js'; // segment type enum
 import { p$a as MediaTypeBranch } from '../modules/Module_74418.js'; // per-media-type branch
-import { internal_Fxc as getManifestDuration } from '../modules/Module_62614.js'; // manifest helpers
-import { RJ as BranchQueue } from '../modules/Module_89645.js'; // branch queue
-import { MediaType } from '../modules/Module_65161.js'; // media type constants
-import { nab as SourceBufferManager } from '../modules/Module_78647.js'; // source buffer manager
-import { internal_Clb as TransitionEventEmitter } from '../modules/Module_69575.js'; // transition event emitter
-import { ie as SchedulerUtil, completionState } from '../modules/Module_40666.js'; // scheduler utilities
-import { assert } from '../modules/Module_52571.js'; // assertion helper
-import { internal_Jab as PlaygraphVisitor } from '../modules/Module_67181.js'; // playgraph visitor
-import { ase_Mka as LiveSegmentTracker } from '../modules/Module_95324.js'; // live segment tracker
+import { getManifestDuration as getManifestDuration } from '../modules/Module_62614.js'; // manifest helpers
+import { RJ as BranchQueue } from './MediaFragment.js'; // branch queue
+import { MediaType } from '../core/AsejsEngine.js'; // media type constants
+import { nab as SourceBufferManager } from '../buffer/SourceBufferManager.js'; // source buffer manager
+import { TransitionEventEmitter as TransitionEventEmitter } from './AseTrack.js'; // transition event emitter
+import { ie as SchedulerUtil, completionState } from '../buffer/BufferingStateTracker.js'; // scheduler utilities
+import { assert } from '../ads/AdPoliciesManager.js'; // assertion helper
+import { PlaygraphVisitor as PlaygraphVisitor } from '../modules/Module_67181.js'; // playgraph visitor
+import { ase_Mka as LiveSegmentTracker } from './MediaPipeline.js'; // live segment tracker
 import { lLa as LiveEdgeDetector } from '../modules/Module_16290.js'; // live edge detector
 import { OW as CdnListObserver } from '../modules/Module_89527.js'; // CDN list observer
 
@@ -776,7 +776,7 @@ export class BranchCollectionManager {
         branch.tracks.forEach((track) => {
             const existingBranch = this._findBranchByMediaType(track.mediaType);
             if (existingBranch !== undefined) {
-                this.transitionEventEmitter.once(track.internal_Cra, (event) => {
+                this.transitionEventEmitter.once(track.headerContainerRef, (event) => {
                     return existingBranch.internal_Ltc(event);
                 });
             }

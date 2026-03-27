@@ -6,8 +6,8 @@
  * handles HTTP/ELLA mixing proximity checks, and collects streaming telemetry.
  */
 
-// import { platform } from './modules/Module_66164.js';
-// import { findLast, assert } from './modules/Module_91176.js';
+// import { platform } from '../core/AsejsEngine.js';
+// import { findLast, assert } from '../core/AsejsEngine.js';
 // import { laser, mediaTypeToString } from './classes/DISABLED.js';
 // import { EllaAseClient } from './ella/EllaAseClient.js';
 // import { EllaSegmentSerializer } from './modules/Module_37468.js';

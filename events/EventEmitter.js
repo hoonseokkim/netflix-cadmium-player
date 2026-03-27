@@ -7,8 +7,8 @@
  * @module Module_94886
  */
 
-// import { scheduleAsync } from './modules/Module_32219.js'; // webpack module 32219
-// import { OrderedList } from './modules/Module_20483.js';   // webpack module 20483
+// import { scheduleAsync } from '../text/SubtitleDownloader.js'; // webpack module 32219
+// import { OrderedList } from './EventEmitter.js';   // webpack module 20483
 
 /**
  * Basic event emitter with named event channels.

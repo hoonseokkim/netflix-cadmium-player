@@ -103,7 +103,7 @@ class PlatformClock {
      * @param {number} monotonicTimestamp
      * @returns {number} Equivalent wall-clock time.
      */
-    internal_Mwa(monotonicTimestamp) {
+    getMonotonicTimestamp(monotonicTimestamp) {
         return monotonicTimestamp + getWallClockTime() - getMonotonicTime();
     }
 }

@@ -15,9 +15,9 @@
  * @module EndpointActivity
  */
 
-// import { platform }   from '../modules/Module_66164.js';
-// import { internal_Iab as BandwidthEstimator } from '../modules/Module_56089.js';
-// import { MediaType }  from '../modules/Module_65161.js';
+// import { platform }   from '../core/AsejsEngine.js';
+// import { BandwidthEstimator as BandwidthEstimator } from '../modules/Module_56089.js';
+// import { MediaType }  from '../core/AsejsEngine.js';
 
 /**
  * Per-endpoint bandwidth activity tracker used by {@link NetworkMonitor}.
@@ -184,4 +184,4 @@ class EndpointActivity {
   }
 }
 
-export { EndpointActivity as REa };
+export { EndpointActivity };

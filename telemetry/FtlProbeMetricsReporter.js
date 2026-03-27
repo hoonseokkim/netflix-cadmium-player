@@ -9,12 +9,12 @@
  * @original Module_76691
  */
 
-import { __decorate, __param } from '../modules/Module_22970.js'; // tslib decorators
-import { injectable, injectDecorator } from '../modules/Module_22674.js'; // DI framework
-import { unitConversion as BYTES } from '../modules/Module_72574.js'; // byte unit
-import { MILLISECONDS } from '../modules/Module_5021.js'; // millisecond unit
-import { oq as MediaFactoryToken } from '../modules/Module_45118.js'; // media factory DI token
-import { hG as EventLoggerToken } from '../modules/Module_31850.js'; // event logger DI token
+import { __decorate, __param } from '../ads/AdBreakMismatchLogger.js'; // tslib decorators
+import { injectable, injectDecorator } from '../ads/AdBreakMismatchLogger.js'; // DI framework
+import { unitConversion as BYTES } from '../ase/ThroughputSample.js'; // byte unit
+import { MILLISECONDS } from '../drm/LicenseBroker.js'; // millisecond unit
+import { oq as MediaFactoryToken } from '../monitoring/MonitoringModule.js'; // media factory DI token
+import { hG as EventLoggerToken } from '../monitoring/MonitoringModule.js'; // event logger DI token
 
 /**
  * Reports FTL probe error metrics with detailed network timing breakdown.
@@ -91,7 +91,7 @@ class FtlProbeMetricsReporter {
   }
 }
 
-export { FtlProbeMetricsReporter as aKa };
+export { FtlProbeMetricsReporter };
 
 // Apply DI decorators
 const DecoratedFtlProbeMetricsReporter = __decorate(

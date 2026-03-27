@@ -81,6 +81,6 @@ export {
   ZERO_BYTES,    // seekToSample
   createBitValue as bitBuffer,
   createByteValue as la,
-  createKilobyteValue as internal_Hhd,
+  createKilobyteValue as createKilobyteValue,
   createMegabyteValue as $id,
 };

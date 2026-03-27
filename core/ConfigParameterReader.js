@@ -56,7 +56,7 @@ export class ConfigParameterReader {
         return ConfigParameterReader.read(
             value,
             (v) => (v == "true" ? true : v == "false" ? false : undefined),
-            (v) => this.validator.internal_Fna(v)
+            (v) => this.validator.isRegExp(v)
         );
     }
 

@@ -32,7 +32,7 @@ export class MediaFragment extends BaseMediaRequest {
      */
     constructor(stream, segment, properties, timestampCallback) {
         super(stream, properties);
-        this.internal_Mqa = false;
+        this.isPreProcessed = false;
         MediaFragment.initializeData(this, stream, segment, properties, timestampCallback);
     }
 

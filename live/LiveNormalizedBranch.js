@@ -28,7 +28,7 @@
 // import { NormalizedBranch } from './NormalizedBranch';        // Module 33928
 // import { outputList } from './OutputList';                    // Module 85254
 // import { LiveTimestampNormalizer } from './LiveTimestampNormalizer'; // Module 98561
-// import { isLiveStream } from './LiveStreamChecks';            // Module 8149
+// import { isAdPlaygraph } from './LiveStreamChecks';            // Module 8149
 
 /**
  * Calculates the target presentation delay (latency from live edge) in milliseconds.

@@ -11,11 +11,11 @@ import { __decorate, __param } from '../core/tslib.js';
 import { injectable, inject as injectDecorator } from '../core/inversify.js';
 import { jja as EmeSessionToken } from '../drm/EmeSession.js';
 import { nativeProcessor as VersionToken } from '../core/VersionInfo.js';
-import { internal_Nib as KeySystemOpsToken } from '../drm/KeySystemOps.js';
+import { KeySystemOpsToken as KeySystemOpsToken } from '../drm/KeySystemOps.js';
 import { gG as LicenseBrokerToken } from '../drm/LicenseBroker.js';
 import { HttpToken } from '../network/HttpTransport.js';
 import { jnb as SecurityConfigToken } from '../drm/SecurityConfig.js';
-import { internal_Vja as DiagReporterToken } from '../drm/DiagReporter.js';
+import { DiagReporterToken as DiagReporterToken } from '../drm/DiagReporter.js';
 import { $ib as DrmPolicyToken } from '../drm/DrmPolicy.js';
 import { QC as DrmContextToken } from '../drm/DrmContext.js';
 

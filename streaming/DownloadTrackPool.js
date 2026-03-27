@@ -21,10 +21,10 @@
  */
 
 // Dependencies
-// import { __importDefault, __assign } from './modules/Module_22970.js';
-// import { platform } from './modules/Module_66164.js';
-// import DefaultTransport from './modules/Module_14282.js';
-// import { MediaType } from './modules/Module_65161.js';
+// import { __importDefault, __assign } from '../ads/AdBreakMismatchLogger.js';
+// import { platform } from '../core/AsejsEngine.js';
+// import DefaultTransport from './MediaFragment.js';
+// import { MediaType } from '../core/AsejsEngine.js';
 // import { DownloadTrackHandle } from './modules/Module_91772.js';
 
 /**

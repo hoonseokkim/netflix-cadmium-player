@@ -106,4 +106,4 @@ export class NetworkGlobals {
   }
 }
 
-export { NetworkGlobals as kP };
+export { NetworkGlobals };

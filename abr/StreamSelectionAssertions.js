@@ -52,4 +52,4 @@ function validateStreamSelectionInputs(context, streamList, priorSelection) {
   );
 }
 
-export { validateStreamSelectionInputs as acd };
+export { validateStreamSelectionInputs };

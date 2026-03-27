@@ -31,23 +31,23 @@
  */
 
 // -- Dependencies (resolved by the webpack bundler at runtime) --
-// import { __extends, __read, __spreadArray } from '../modules/Module_22970.js';  // tslib
-// import { assert }                           from '../modules/Module_52571.js';  // assertion
-// import { PartitionedCollection }            from '../modules/Module_99735.js';  // base class (internal_Uab)
-// import { outputList }                       from '../modules/Module_85254.js';  // mixin applicator
-// import { RequestList (mja) }                from '../modules/Module_71472.js';  // ordered request list
-// import { processingContext }                from '../modules/Module_71808.js';  // processing context mixin
-// import { bP as BranchCallbackHandler }      from '../modules/Module_81392.js';  // branch callback mixin
-// import { ContiguousRange (WF) }             from '../modules/Module_5800.js';   // contiguous range tracker
+// import { __extends, __read, __spreadArray } from '../ads/AdBreakMismatchLogger.js';  // tslib
+// import { assert }                           from '../ads/AdPoliciesManager.js';  // assertion
+// import { PartitionedCollection }            from './MediaRequestQueue.js';  // base class (PartitionedCollection)
+// import { outputList }                       from '../network/AseMediaRequest.js';  // mixin applicator
+// import { RequestList (mja) }                from './MediaRequestQueue.js';  // ordered request list
+// import { processingContext }                from './MediaFragment.js';  // processing context mixin
+// import { bP as BranchCallbackHandler }      from '../network/AseMediaRequest.js';  // branch callback mixin
+// import { ContiguousRange (WF) }             from './MediaFragment.js';   // contiguous range tracker
 
-import { __extends, __read, __spreadArray } from '../modules/Module_22970.js';
-import { assert } from '../modules/Module_52571.js';
-import { internal_Uab as PartitionedCollection } from '../modules/Module_99735.js';
-import { outputList } from '../modules/Module_85254.js';
-import { mja as RequestList } from '../modules/Module_71472.js';
-import { processingContext } from '../modules/Module_71808.js';
-import { bP as BranchCallbackHandler } from '../modules/Module_81392.js';
-import { WF as ContiguousRange } from '../modules/Module_5800.js';
+import { __extends, __read, __spreadArray } from '../ads/AdBreakMismatchLogger.js';
+import { assert } from '../ads/AdPoliciesManager.js';
+import { PartitionedCollection as PartitionedCollection } from './MediaRequestQueue.js';
+import { outputList } from '../network/AseMediaRequest.js';
+import { mja as RequestList } from './MediaRequestQueue.js';
+import { processingContext } from './MediaFragment.js';
+import { bP as BranchCallbackHandler } from '../network/AseMediaRequest.js';
+import { WF as ContiguousRange } from './MediaFragment.js';
 
 /**
  * Partition index constants for request states.

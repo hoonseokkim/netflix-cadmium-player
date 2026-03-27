@@ -41,4 +41,4 @@ const DecoratedStartEventImpl = tslib.__decorate(
   StartEventImpl
 );
 
-export { DecoratedStartEventImpl as RKa };
+export { DecoratedStartEventImpl };

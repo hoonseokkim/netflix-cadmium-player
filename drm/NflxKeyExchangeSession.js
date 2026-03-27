@@ -19,7 +19,7 @@
 import { __decorate, __param } from '../core/ReflectMetadataPolyfill';
 import { injectable, injectDecorator } from '../ioc/ComponentDependencyResolver';
 import { sourceBufferProcessor as BaseKeySession } from '../drm/EmeSessionAdapter';
-import { internal_Tcb as NflxKeyExchangeBuilder } from '../drm/KeyExchangeValidator';
+import { NflxKeyExchangeBuilder as NflxKeyExchangeBuilder } from '../drm/KeyExchangeValidator';
 import { M7 as DrmConfigSymbol } from '../symbols/DrmSessionDependencies';
 import { symbolMarker as TypeValidatorSymbol } from '../symbols/DrmSessionDependencies';
 import { keyMap as KeyEncoderSymbol } from '../symbols/DrmSessionDependencies';
@@ -151,7 +151,7 @@ class NflxKeyExchangeSession extends BaseKeySession {
     }
 }
 
-export { NflxKeyExchangeSession as gFa };
+export { NflxKeyExchangeSession };
 
 // IoC decorators
 NflxKeyExchangeSession = __decorate([

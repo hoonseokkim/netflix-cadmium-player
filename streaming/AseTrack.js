@@ -412,7 +412,7 @@ export class AseTrack {
    * The header container instance (internal access).
    * @returns {HeaderContainer}
    */
-  get internal_Cra() {
+  get headerContainerRef() {
     return this.headerContainer;
   }
 
@@ -618,8 +618,8 @@ export class AseTrack {
       this._setFrameDuration(sourceTrack.frameDuration);
       this._frameDurationInfo = sourceTrack.unknownDuration;
 
-      if (sourceTrack.internal_Cra.value) {
-        this.headerContainer.set(sourceTrack.internal_Cra.value);
+      if (sourceTrack.headerContainerRef.value) {
+        this.headerContainer.set(sourceTrack.headerContainerRef.value);
       } else {
         this.headerContainer.markPending();
       }
@@ -789,4 +789,4 @@ export class AseTrack {
   }
 }
 
-export { AseTrack as P5 };
+export { AseTrack };

@@ -11,21 +11,21 @@
  */
 
 // Module 22970 - tslib helpers (__assign, __generator, __decorate, __spreadArray)
-import { __assign, __generator, __decorate } from '../modules/Module_22970.js';
+import { __assign, __generator, __decorate } from '../ads/AdBreakMismatchLogger.js';
 // Module 91176 - Observable utilities and TimeUtil
-import { observableBool, TimeUtil } from '../modules/Module_91176.js';
+import { observableBool, TimeUtil } from '../core/AsejsEngine.js';
 // Module 66164 - Platform abstraction (platform.now(), etc.)
-import { platform } from '../modules/Module_66164.js';
+import { platform } from '../core/AsejsEngine.js';
 // Module 97685 - Laser logging / telemetry
-import { laser } from '../modules/Module_97685.js';
+import { laser } from '../core/AsejsEngine.js';
 // Module 65161 - PlaybackState enum, MediaType enum, timeSlice helper
-import { PlaybackState, MediaType, timeSlice } from '../modules/Module_65161.js';
+import { PlaybackState, MediaType, timeSlice } from '../core/AsejsEngine.js';
 // Module 52571 - Assertion utility
-import { assert } from '../modules/Module_52571.js';
+import { assert } from '../ads/AdPoliciesManager.js';
 // Module 61996 - Session metrics / diagnostics / consoleLogger decorator
-import { SessionMetricsClass, consoleLogger } from '../modules/Module_61996.js';
+import { SessionMetricsClass, consoleLogger } from './BufferingStateTracker.js';
 // Module 40666 - Scheduled-task helpers (ie.manifestUrlFetch, completionState)
-import { ie, completionState } from '../modules/Module_40666.js';
+import { ie, completionState } from './BufferingStateTracker.js';
 
 /**
  * Tracks the buffering state of the player, coordinating prebuffer progress
@@ -75,10 +75,10 @@ export class BufferingStateTracker {
         /** @private Network error stats */
         this._errorStats = { criticalErrorCount: 0 };
 
-        /** @type {import('../modules/Module_91176.js').observableBool} Observable playback state */
+        /** @type {import('../core/AsejsEngine.js').observableBool} Observable playback state */
         this.state = new observableBool(PlaybackState.STOPPED);
 
-        /** @type {import('../modules/Module_61996.js').SessionMetricsClass} Diagnostics tracer */
+        /** @type {import('./BufferingStateTracker.js').SessionMetricsClass} Diagnostics tracer */
         this.diagnosticsTracer = new SessionMetricsClass({
             Ig: 10,
             engineRef: this,
