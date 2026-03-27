@@ -10,7 +10,7 @@
 
 // Dependencies
 // import { platform } from './modules/Platform';
-// import { S9a as AsejsEngine } from './modules/AsejsEngine';
+// import { AsejsEngine as AsejsEngine } from './modules/AsejsEngine';
 
 /** @type {AsejsEngine|undefined} Cached singleton instance. */
 let asejsInstance;

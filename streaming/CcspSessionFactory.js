@@ -11,7 +11,7 @@
 
 // import { __spreadArray, __read } from 'tslib';
 // import { AFa as OutboundTransport } from '../streaming/OutboundTransport';
-// import { internal_Edb as InboundTransport } from '../streaming/InboundTransport';
+// import { InboundTransport as InboundTransport } from '../streaming/InboundTransport';
 // import { pP as Direction, DKa as CcspSession } from '../streaming/CcspSession';
 
 /** Fields sent from client to server in outbound messages */

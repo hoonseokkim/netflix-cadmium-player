@@ -12,7 +12,7 @@
  */
 
 import { n7 as BaseCipher } from '../modules/Module_88501.js';
-import { AleScheme } from '../modules/Module_2802.js';
+import { AleScheme } from '../drm/KeyProvisionValidator.js';
 
 export class AES_CBC_HS256_Cipher extends BaseCipher {
   /**

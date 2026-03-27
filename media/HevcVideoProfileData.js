@@ -67,5 +67,5 @@ export const hevcVideoProfileData = [
     1,
 ];
 
-export { hevcVideoProfileData as X };
+export { hevcVideoProfileData };
 export default hevcVideoProfileData;

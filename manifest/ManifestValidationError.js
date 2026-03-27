@@ -20,7 +20,7 @@ export default function ManifestValidationError(module, exports, require) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    exports.internal_Agb = void 0;
+    exports.DrmMediaRequestFactoryImpl = void 0;
 
     /**
      * Checks the manifest for missing required fields and returns
@@ -81,5 +81,5 @@ export default function ManifestValidationError(module, exports, require) {
         return "No tracks found.";
     };
 
-    exports.internal_Agb = ManifestValidationErrorClass;
+    exports.DrmMediaRequestFactoryImpl = ManifestValidationErrorClass;
 }

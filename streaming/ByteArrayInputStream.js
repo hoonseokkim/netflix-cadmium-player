@@ -12,7 +12,7 @@
  */
 
 import { __extends } from '../_tslib.js';
-import { internal_Cka as BaseInputStream } from '../msl/BaseInputStream.js';
+import { BaseInputStream as BaseInputStream } from '../msl/BaseInputStream.js';
 import interruptibleComplete from '../utils/InterruptibleComplete.js';
 import MslIoException from '../msl/MslIoException.js';
 

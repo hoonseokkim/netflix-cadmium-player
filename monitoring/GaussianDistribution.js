@@ -12,7 +12,7 @@
  * @original Module_32201
  */
 
-// import { internal_Vaa as erfc, cCc as erfcInverse } from './ErrorFunction'; // Module 68157
+// import { erfc as erfc, cCc as erfcInverse } from './ErrorFunction'; // Module 68157
 
 export default class GaussianDistribution {
     /**

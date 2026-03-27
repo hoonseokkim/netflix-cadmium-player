@@ -32,12 +32,12 @@
 // import { MediaType, F7 as ALL_MEDIA_TYPES } from './modules/MediaType';
 // import { assert as softAssert } from './modules/Assert';
 // import { isLiveStream } from './modules/StreamUtils';
-// import { internal_Ogb as MediaEventsStore } from './events/MediaEventsStore';
-// import { internal_Nla as EventProcessingPipeline } from './modules/EventProcessingPipeline';
+// import { MediaEventsStore as MediaEventsStore } from './events/MediaEventsStore';
+// import { EventProcessingPipeline as EventProcessingPipeline } from './modules/EventProcessingPipeline';
 // import { ServerClock, DeltaTracker } from './core/Asejs_4';
-// import { internal_Odb as HeaderManager } from './modules/HeaderManager';
-// import { internal_Hfb as NetworkStateManager } from './modules/NetworkStateManager';
-// import { internal_Cnb as PendingRequest } from './modules/PendingRequest';
+// import { HeaderManager as HeaderManager } from './modules/HeaderManager';
+// import { NetworkStateManager as NetworkStateManager } from './modules/NetworkStateManager';
+// import { PendingRequest as PendingRequest } from './modules/PendingRequest';
 // import { $ab as PaddingViewableEventProcessor } from './modules/PaddingViewableEventProcessor';
 // import { BaseViewable (bP) } from './modules/BaseViewable';
 
@@ -323,7 +323,7 @@ class AseViewable extends BaseViewable {
           });
 
           if (!this.isAdPlaygraph && this.chapters.length > 0) {
-            track.internal_Cra.once(() => {
+            track.headerContainerRef.once(() => {
               if (this.chaptersNormalized) return;
               this.chaptersNormalized = true;
               this.chapters = this.chapters.map((ch) => {
@@ -1696,7 +1696,7 @@ class AseViewable extends BaseViewable {
       });
       this.events.emit("livePostplayUpdated", {
         L: this,
-        internal_Bfa: jitteredStart,
+        jitteredStart: jitteredStart,
         action,
       });
     }

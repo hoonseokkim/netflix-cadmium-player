@@ -8,7 +8,7 @@
  * @original Module_2898
  */
 
-import { internal_Vka as registerDrmPlugin } from '../drm/DrmSessionManager'; // Module 59032
+import { registerDrmPlugin as registerDrmPlugin } from '../drm/DrmSessionManager'; // Module 59032
 import { config as drmConfig } from '../drm/DrmScheme'; // Module 29204
 import { disposableList, debugManager, playerCore } from '../core/MetadataReader'; // Module 31276
 import { gfb as KeyStatusFilter } from '../drm/KeyProvisionValidator'; // Module 25357

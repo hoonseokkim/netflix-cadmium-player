@@ -14,8 +14,8 @@
  * @original Module_50612
  */
 
-import { playerPhase } from '../modules/Module_65161.js'; // player phase enum
-import { zTa as interpolateCurve } from '../modules/Module_65167.js'; // curve interpolation
+import { playerPhase } from '../core/AsejsEngine.js'; // player phase enum
+import { zTa as interpolateCurve } from '../streaming/StreamingExports.js'; // curve interpolation
 import { calculateEffectiveBandwidth } from '../modules/Module_28847.js'; // bandwidth calculation
 
 /**
@@ -162,4 +162,4 @@ export class BandwidthAllocator {
   }
 }
 
-export { BandwidthAllocator as TJ };
+export { BandwidthAllocator };

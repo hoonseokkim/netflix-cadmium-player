@@ -134,6 +134,6 @@ export { filterAndBuildRanges, buildProfileBitrateRanges, partitionStreams };
 // Legacy obfuscated-name aliases
 export {
     filterAndBuildRanges as lAc,
-    buildProfileBitrateRanges as internal_Cdd,
+    buildProfileBitrateRanges as buildProfileBitrateRanges,
     partitionStreams as SD,
 };

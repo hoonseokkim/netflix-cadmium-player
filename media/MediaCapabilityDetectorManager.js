@@ -14,8 +14,8 @@
 import { __decorate, __param } from '../core/ReflectMetadataPolyfill';
 import { TW as ConfigReaderSymbol } from '../symbols/DrmSessionDependencies';
 import { injectable, injectDecorator } from '../ioc/ComponentDependencyResolver';
-import { internal_Mcb as CapabilityArraySymbol } from '../symbols/DrmSessionDependencies';
-import { internal_Hab as CapabilityDetectorFactorySymbol } from '../symbols/DrmSessionDependencies';
+import { CapabilityArraySymbol as CapabilityArraySymbol } from '../symbols/DrmSessionDependencies';
+import { CapabilityDetectorFactorySymbol as CapabilityDetectorFactorySymbol } from '../symbols/DrmSessionDependencies';
 
 class MediaCapabilityDetectorManager {
     /**
@@ -120,7 +120,7 @@ class MediaCapabilityDetectorManager {
     }
 }
 
-export { MediaCapabilityDetectorManager as mEa };
+export { MediaCapabilityDetectorManager };
 
 // IoC registration
 MediaCapabilityDetectorManager = __decorate([

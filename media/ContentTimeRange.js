@@ -95,4 +95,4 @@ export class ContentTimeRange {
 // Register with the processing context
 outputList(processingContext, ContentTimeRange);
 
-export { ContentTimeRange as WF };
+export { ContentTimeRange };

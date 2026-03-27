@@ -139,10 +139,10 @@ export class EmeSession {
     this._licenseState = LicenseState.UNKNOWN;
 
     /** @private @type {object} The underlying EME MediaKeySession wrapper */
-    this._emeSession = encryptionSession.internal_Hvb();
+    this._emeSession = encryptionSession.getMediaKeySession();
 
     /** @private @type {object} Parser for EME messages and errors */
-    this._messageParser = encryptionSession.internal_Fvb();
+    this._messageParser = encryptionSession.getMessageParser();
 
     /** @private @type {Array<{time: number, yea: number}>} DRM state transition timestamps */
     this._playDelayTimestamps = [];
@@ -411,7 +411,7 @@ export class EmeSession {
         this._log.pauseTrace('Created media keys');
 
         await this._setServerCertificate(mediaKeys)
-          .then(() => mediaKeyProvider.internal_Rqb(mediaKeys))
+          .then(() => mediaKeyProvider.setMediaKeys(mediaKeys))
           .catch((error) => {
             throw this._wrapDrmError(error, ErrorCode.EME_SET_SERVER_CERTIFICATE);
           });
@@ -421,8 +421,8 @@ export class EmeSession {
 
       try {
         this._emeSession.createSession(this._mediaKeys, this._onSessionClosed);
-        this._emeSession.internal_Sqb(this._onKeyMessage);
-        this._emeSession.internal_Nqb(this._onKeyStatusChange);
+        this._emeSession.onKeyMessage(this._onKeyMessage);
+        this._emeSession.onKeyStatusChange(this._onKeyStatusChange);
         this._updateSessionId(this._emeSession.getSessionId());
       } catch (error) {
         throw this._wrapDrmError(error, ErrorCode.EME_CREATE_SESSION_FAILED);
@@ -438,7 +438,7 @@ export class EmeSession {
    */
   setSessionInfo(sessionInfo) {
     this._sessionInfo = sessionInfo;
-    this._log.internal_Kqb('xid', sessionInfo.sourceTransactionId);
+    this._log.setLogProperty('xid', sessionInfo.sourceTransactionId);
   }
 
   /**
@@ -741,7 +741,7 @@ export class EmeSession {
       this._log.RETRY(`sessionId changed from ${this._sessionId} to ${newSessionId}`);
     }
     this._sessionId = newSessionId;
-    this._log.internal_Kqb('sessionId', newSessionId);
+    this._log.setLogProperty('sessionId', newSessionId);
   }
 
   /* ------------------------------------------------------------------

@@ -21,8 +21,8 @@
  */
 
 // Dependencies
-// import { platform }            from './modules/Module_66164.js';
-// import { MediaType, OP }       from './modules/Module_65161.js';
+// import { platform }            from '../core/AsejsEngine.js';
+// import { MediaType, OP }       from '../core/AsejsEngine.js';
 // import { GX as PacingResult }  from './modules/Module_29217.js';
 
 // ---------------------------------------------------------------------------
@@ -488,6 +488,6 @@ export class ResolutionSelector {
 // Exported helpers (used by other ABR modules)
 // ---------------------------------------------------------------------------
 
-export { filterPacingCoefficients as internal_Lfd };
+export { filterPacingCoefficients as filterPacingCoefficients };
 export { getObservedThroughput as $fd };
-export { computeTargetBufferLevel as internal_Rfd };
+export { computeTargetBufferLevel as computeTargetBufferLevel };

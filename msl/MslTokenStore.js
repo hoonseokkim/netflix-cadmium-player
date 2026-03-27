@@ -11,21 +11,21 @@
  */
 
 import { hh as MslCrypto } from '../modules/Module_50441.js';               // p - WebCrypto abstraction
-import { default as MslError } from '../modules/Module_1966.js';             // c - MslError constructor
-import { default as MslErrorCodes } from '../modules/Module_36114.js';       // g - Error code enum (.WC etc.)
+import { default as MslError } from './MslTokenStore_25137.js';             // c - MslError constructor
+import { default as MslErrorCodes } from '../msg/MessageCapabilities.js';       // g - Error code enum (.WC etc.)
 import {
     stringifyFn as encodeBase64,
     decodeBase64
-} from '../modules/Module_44127.js';                                         // f - Base64 encode/decode
-import { default as asyncExecutor } from '../modules/Module_42979.js';       // e - Async callback executor
+} from '../msg/MessageHeader.js';                                         // f - Base64 encode/decode
+import { default as asyncExecutor } from '../msg/MessageCapabilities.js';       // e - Async callback executor
 import { af as WebCryptoAlgorithms } from '../modules/Module_96837.js';      // h - Algorithm definitions (.XO = AES-CBC, .fX = HMAC)
-import { BG as KeyUsages } from '../modules/Module_10558.js';                // k - Key usage constants
-import { f8 as MasterTokenCryptoContext } from '../modules/Module_43088.js'; // l - MasterToken CryptoContext
+import { BG as KeyUsages } from '../crypto/KeyUsages.js';                // k - Key usage constants
+import { f8 as MasterTokenCryptoContext } from '../msg/MessageHeader.js'; // l - MasterToken CryptoContext
 import { nj as MslObject } from '../modules/Module_9000.js';                // m - MSL object wrapper
 import { UX as MslStore } from '../modules/Module_25137.js';                // n - Base MslStore class
-import { internal_Bxa as parseMasterToken } from '../modules/Module_58892.js'; // q - MasterToken parser
-import { d2a as parseUserIdToken } from '../modules/Module_85065.js';        // r - UserIdToken parser
-import { internal_Exa as parseServiceToken } from '../modules/Module_61693.js'; // u - ServiceToken parser
+import { internal_Bxa as parseMasterToken } from './KeyResponseData.js'; // q - MasterToken parser
+import { d2a as parseUserIdToken } from '../msg/MessageHeader.js';        // r - UserIdToken parser
+import { internal_Exa as parseServiceToken } from '../msg/MessageHeader.js'; // u - ServiceToken parser
 import { $Ka as SymmetricCryptoContext } from '../modules/Module_72672.js';  // v - SymmetricCryptoContext
 import { yKa as SecretKey } from '../modules/Module_60426.js';              // w - SecretKey wrapper
 

@@ -52,7 +52,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
         this.xm = requestManager;
         this.innerViewable = viewable;
         this.mediaType = mediaType;
-        this.internal_Csa = streamModeConfig;
+        this.streamModeConfig = streamModeConfig;
 
         /** @type {RequestQueue} Queue for managing request ordering */
         this.readInt32 = new RequestQueue(this.console);
@@ -226,7 +226,7 @@ class MediaRequestBranch extends BaseBranchPipeline {
         const request = RequestFactory.create(
             manifestData, this.config, streamInfo.track, requestInfo,
             this.completedRequests, this.isLive.currentSegment,
-            this.console, this.internal_Csa
+            this.console, this.streamModeConfig
         );
 
         // Adjust start time if there is a gap from the previous request

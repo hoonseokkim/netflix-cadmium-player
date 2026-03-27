@@ -8,7 +8,7 @@
  * @module LaserLogger
  */
 
-import { MediaType } from '../modules/Module_26388.js';
+import { MediaType } from '../streaming/MediaRequestEventReporter.js';
 
 /**
  * Connection state enum for the LASER logger.

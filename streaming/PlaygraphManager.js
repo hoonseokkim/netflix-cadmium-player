@@ -14,8 +14,8 @@
 
 // Dependencies
 // import { cb as PlayerEventNames, JX as PlaygraphEvents, setState as PresentingState, streamState as StreamState, PlayerEvents } from './modules/Module_85001';
-// import { internal_Tjb as PlaygraphIndex } from './modules/Module_98899';
-// import { internal_Ljb as PlaygraphNormalizer } from './modules/Module_15645';
+// import { PlaygraphIndex as PlaygraphIndex } from './modules/Module_98899';
+// import { PlaygraphNormalizer as PlaygraphNormalizer } from './modules/Module_15645';
 // import { ellaSendRateMultiplier as createThrottle } from './modules/Module_5021';
 // import { segmentDurationMs as SECONDS_PER_UNIT } from './modules/Module_33096';
 // import { disposableList } from './modules/Module_31276';

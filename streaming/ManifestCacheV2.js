@@ -10,12 +10,12 @@ import { __values, __read, __spreadArray, __awaiter, __generator } from '../core
 import { platform } from '../core/Platform.js';
 import {
     EventEmitter, internal_Jka as RefCounter, jkb as Throttler,
-    lfb as ExpiredMap, pX as BoundedCache, internal_Kcb as ExpiryTracker,
+    lfb as ExpiredMap, pX as BoundedCache, ExpiryTracker as ExpiryTracker,
     observableBool as ObservableBool, np as filterNewEntries, mathTanh as createLogger,
     c3a as manifestPriorityComparator
 } from '../utils/CollectionUtils.js';
 import { mJa as LeaseManager } from '../core/LeaseManager.js';
-import { internal_Mbb as DormantQueue } from '../streaming/DormantManifestQueue.js';
+import { DormantQueue as DormantQueue } from '../streaming/DormantManifestQueue.js';
 import { wCb as computeExpiry } from '../streaming/ManifestExpiry.js';
 import { fHa as ManifestItem } from '../streaming/ManifestItem.js';
 

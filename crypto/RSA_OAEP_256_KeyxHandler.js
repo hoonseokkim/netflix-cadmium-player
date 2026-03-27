@@ -13,7 +13,7 @@
  * @module crypto/RSA_OAEP_256_KeyxHandler
  */
 
-import { AleKeyxScheme } from '../modules/Module_2802.js';
+import { AleKeyxScheme } from '../drm/KeyProvisionValidator.js';
 import { KeyWrapperClass } from '../drm/KeyWrapperClass.js';
 
 export class RSA_OAEP_256_KeyxHandler extends KeyWrapperClass {

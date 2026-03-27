@@ -13,8 +13,8 @@
  */
 
 // Dependencies
-// import { platform }                     from './modules/Module_66164.js';
-// import { TJ as ThroughputPredictor }    from './modules/Module_50612.js';
+// import { platform }                     from '../core/AsejsEngine.js';
+// import { TJ as ThroughputPredictor }    from './StddevPredictor.js';
 // import { interpolateQualityMetric }     from './modules/Module_28847.js';
 
 /**

@@ -1,8 +1,10 @@
-# Netflix Cadmium Player (Deobfuscated)
+# Netflix Cadmium Player (Partially Deobfuscated)
 
-Fully deobfuscated source of Netflix's **Cadmium** streaming player (`cadmium-playercore v6.0055.939.911`), reverse-engineered by [Claude Opus 4.6](https://claude.ai).
+Partially deobfuscated source of Netflix's **Cadmium** streaming player (`cadmium-playercore v6.0055.939.911`), reverse-engineered by [Claude Opus 4.6](https://claude.ai).
 
-The original obfuscated webpack bundle has been transformed into **708 ES2025 files** across **33 domain directories**, with descriptive naming, proper class syntax, and JSDoc documentation throughout.
+The original obfuscated webpack bundle has been split into **706 ES2025 files** across **32 domain directories**, plus **187 extracted webpack module stubs** in `modules/`. Descriptive naming, proper class syntax, and JSDoc documentation have been applied where possible.
+
+**Deobfuscation status:** ~130 `internal_` identifiers have been resolved to meaningful names, but ~301 remain unresolved. 310 broken imports were fixed. 187 webpack modules were extracted from the bundle. This is a work in progress — significant portions of the codebase still contain opaque naming and unresolved references.
 
 ## Architecture
 
@@ -74,6 +76,7 @@ ASE Integration Layer  (streaming/)
 | `types/` | 3 | Media type enums (AUDIO/VIDEO/TIMED_TEXT/SUPPLEMENTARY) |
 | `config/` | 2 | Configuration |
 | `classes/` | 3 | Legacy classes |
+| `modules/` | 187 | Extracted webpack module stubs (partially resolved) |
 
 ## Key Components
 

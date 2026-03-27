@@ -37,25 +37,25 @@
  */
 
 // Dependencies (commented out — resolved by the module bundler)
-// import { playerPhase, getByteOffset, TimeUtil, p8, u8, platform, PlaybackState, bD } from './modules/Module_45247.js';
-// import { EventEmitter } from './modules/Module_90745.js';
-// import { scheduleAsync } from './modules/Module_32219.js';
-// import { ea as ErrorCategory, EventTypeEnum } from './modules/Module_36129.js';
+// import { playerPhase, getByteOffset, TimeUtil, p8, u8, platform, PlaybackState, bD } from '../core/AseConfigConstants.js';
+// import { EventEmitter } from '../core/AsejsEngine.js';
+// import { scheduleAsync } from '../text/SubtitleDownloader.js';
+// import { ea as ErrorCategory, EventTypeEnum } from '../drm/MediaKeySystemAccessServices.js';
 // import { kPa as processLogData } from './modules/Module_30326.js';
-// import { zh as BufferingState, PlayerEvents, streamState } from './modules/Module_85001.js';
-// import { createMediaRequestConfig, createFormatConfig } from './modules/Module_29204.js';
-// import { gd as isValidMediaType } from './modules/Module_32687.js';
-// import { ellaSendRateMultiplier, MILLISECONDS, seekToSample } from './modules/Module_5021.js';
+// import { zh as BufferingState, PlayerEvents, streamState } from '../drm/LicenseBroker.js';
+// import { createMediaRequestConfig, createFormatConfig } from '../drm/MicrosoftScreenSizeFilter.js';
+// import { gd as isValidMediaType } from '../utils/IpAddressUtils.js';
+// import { ellaSendRateMultiplier, MILLISECONDS, seekToSample } from '../drm/LicenseBroker.js';
 // import { vzc as computeStartPosition } from './modules/Module_64302.js';
 // import { zk as formatMediaTime } from './modules/Module_8825.js';
-// import { currentBitrate as ObservableValue } from './modules/Module_81734.js';
-// import { ManifestCacheClass } from './modules/Module_64213.js';
-// import { MediaType, DT as MediaTypeToString, supplementaryMediaType } from './modules/Module_26388.js';
+// import { currentBitrate as ObservableValue } from '../drm/EmeSession.js';
+// import { ManifestCacheClass } from './AsePrefetcherAdapter.js';
+// import { MediaType, DT as MediaTypeToString, supplementaryMediaType } from './MediaRequestEventReporter.js';
 // import { SegmentManager } from './modules/Module_45240.js';
 // import { y$a as AseUtilities } from './modules/Module_26668.js';
-// import { we as NfError } from './modules/Module_31149.js';
+// import { we as NfError } from '../drm/EmeSession.js';
 // import { EventEmitter as NodeEventEmitter } from './modules/Module_17187.js';
-// import { playgraphConfigBuilder } from './modules/Module_87141.js';
+// import { playgraphConfigBuilder } from '../core/PlayerConfig.js';
 
 /**
  * @typedef {object} AseGcSettings
@@ -760,7 +760,7 @@ class AseIntegrationImpl {
         playgraphEvents.addListener('livePostplayUpdated', (event) => {
             this.playerState.fireEvent(PlayerEvents.iIb, {
                 J: event.J,
-                internal_Bfa: event.internal_Bfa,
+                jitteredStart: event.jitteredStart,
                 action: event.action,
             });
         });

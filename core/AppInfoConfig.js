@@ -14,7 +14,7 @@ import { injectable, inject as injectDecorator, optional } from '../core/Inversi
 import { UC as Environment } from '../core/EnvironmentEnum';
 import { config as configDecorator, string as stringType } from '../core/ConfigDecorators';
 import { ConfigBase } from '../core/ConfigBase';
-import { gp as APP_CONFIG_KEY, internal_Kja as CONFIG_NAME_KEY } from '../core/ServiceKeys';
+import { gp as APP_CONFIG_KEY, CONFIG_NAME_KEY as CONFIG_NAME_KEY } from '../core/ServiceKeys';
 import { q8 as MSL_CONFIG_KEY } from '../msl/MslServiceKeys';
 
 /**

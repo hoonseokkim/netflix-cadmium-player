@@ -767,7 +767,7 @@ export const defaultAseConfig = {
   startMonitorOnLoadStart: false,
 
   /** Internal flag for media source processing */
-  internal_mediaSourceFlag: false,
+  mediaSourceFlag: false,
 
   /** Whether to append the first header only on download completion */
   appendFirstHeaderOnComplete: true,

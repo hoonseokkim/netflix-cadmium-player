@@ -29,26 +29,26 @@
  */
 
 // Dependencies (commented out — resolved by the module bundler)
-// import { __importDefault, __values, __read, __assign, __generator, __decorate, __param, __extends, __spreadArray } from './modules/Module_22970.js';
-// import { ClockWatcher, EventEmitter } from './modules/Module_90745.js';
-// import { PlaygraphFactory as WorkingPlaygraphFactory, SegmentType } from './modules/Module_79048.js';
-// import { TimeUtil, assert as filterAssert, DeferredLease, isDefined } from './modules/Module_91176.js';
-// import { platform } from './modules/Module_66164.js';
+// import { __importDefault, __values, __read, __assign, __generator, __decorate, __param, __extends, __spreadArray } from '../ads/AdBreakMismatchLogger.js';
+// import { ClockWatcher, EventEmitter } from '../core/AsejsEngine.js';
+// import { PlaygraphFactory as WorkingPlaygraphFactory, SegmentType } from '../ads/AdPoliciesManager.js';
+// import { TimeUtil, assert as filterAssert, DeferredLease, isDefined } from '../core/AsejsEngine.js';
+// import { platform } from '../core/AsejsEngine.js';
 // import { DISABLED, fVb as formatContentType, eka as ZERO_DURATION } from './classes/DISABLED.js';
-// import { CancelReason } from './modules/Module_16816.js';
-// import { EngineState } from './modules/Module_20271.js';
-// import { MediaType, PlaybackState, processPayload, qPb as getErrorScope } from './modules/Module_65161.js';
+// import { CancelReason } from '../media/MediaExportsIndex.js';
+// import { EngineState } from '../media/MediaExportsIndex.js';
+// import { MediaType, PlaybackState, processPayload, qPb as getErrorScope } from '../core/AsejsEngine.js';
 // import { ViewableFetcher } from './modules/Module_26286.js';
-// import { createBranch as ase_Pic } from './modules/Module_70842.js';
+// import { createBranch as ase_Pic } from './PaddingBranch.js';
 // import { SegmentValidator } from './modules/Module_31485.js';
-// import { assert } from './modules/Module_52571.js';
+// import { assert } from '../ads/AdPoliciesManager.js';
 // import { NullPlayer } from './modules/Module_61651.js';
-// import { Scheduler } from './modules/Module_40666.js';
+// import { Scheduler } from '../buffer/BufferingStateTracker.js';
 // import { createStreamFilters, createStreamFilterConfig } from './modules/Module_63576.js';
-// import { EventProcessingPipeline, LogEventType as getByteOffset } from './modules/Module_91967.js';
+// import { EventProcessingPipeline, LogEventType as getByteOffset } from './AseTrack.js';
 // import { TrackChangeHandler } from './modules/Module_5653.js';
-// import { WallClockSource } from './modules/Module_17122.js';
-// import { DiagnosticEventHandler, PositionTrackerDiagnostics } from './modules/Module_54366.js';
+// import { WallClockSource } from '../core/AsejsEngine.js';
+// import { DiagnosticEventHandler, PositionTrackerDiagnostics } from '../core/AsejsEngine.js';
 // import { TimedTextSegmentHandler } from './modules/Module_63172.js';
 // import { ViewableEventHandler } from './modules/Module_13580.js';
 // import { SessionMetricsClass, consoleLogger } from './modules/SessionMetricsClass.js';
@@ -56,10 +56,10 @@
 // import { FragmentHandler } from './modules/frag_Gjb.js';
 // import { ManifestFetchScheduler } from './modules/Module_60028.js';
 // import { BranchSchedulerHandler } from './modules/Module_73036.js';
-// import { findBranchesAtTimestamp } from './modules/Module_69575.js';
+// import { findBranchesAtTimestamp } from './AseTrack.js';
 // import { dataBucketSymbol } from './modules/Module_6783.js';
 // import { computeLiveStartTime, applyLiveNormalization as ase_Hga } from './modules/Module_99548.js';
-// import { isLiveStream } from './modules/Module_8149.js';
+// import { isLiveStream } from '../network/AseMediaRequest.js';
 // import { ViewableEventAggregator } from './modules/Module_29739.js';
 // import { mcc as freezeEventFields } from './modules/Module_66412.js';
 // import { validateSegmentPosition, constrainSegmentPosition, positionsEqual, seekSegmentPosition } from './modules/Module_94328.js';
@@ -68,7 +68,7 @@
 // import { evaluateBranches } from './modules/Module_25317.js';
 // import { validatePlaygraphUpdate } from './modules/Module_86451.js';
 // import { BranchCollection } from './modules/Module_88874.js';
-// import { PositionTracker } from './modules/Module_25510.js';
+// import { PositionTracker } from '../buffer/BufferingStateTracker.js';
 // import { buildBranchTracks } from './modules/Module_78538.js';
 // import { SegmentNormalizationInfo } from './modules/Module_36472.js';
 // import { BufferLevelMonitor } from './modules/Module_54775.js';

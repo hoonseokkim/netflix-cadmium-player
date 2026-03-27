@@ -871,8 +871,8 @@ function parseMessageHeader(mslContext, encryptedHeaderData, signatureBytes, ent
             let nonReplayableId, renewable, handshake, capabilities;
             try {
                 nonReplayableId = headerDataMo.has("nonreplayableid") ? headerDataMo.messageIdGetter("nonreplayableid") : null;
-                renewable = headerDataMo.internal_Eba("renewable");
-                handshake = headerDataMo.has("handshake") ? headerDataMo.internal_Eba("handshake") : false;
+                renewable = headerDataMo.getBoolean("renewable");
+                handshake = headerDataMo.has("handshake") ? headerDataMo.getBoolean("handshake") : false;
 
                 if (nonReplayableId < 0 || nonReplayableId > MslConstants.kf) {
                     throw new MslMessageException(MslError.thb, "headerdata " + headerDataMo.toString());
@@ -993,8 +993,8 @@ function parseMessageHeader(mslContext, encryptedHeaderData, signatureBytes, ent
 // === Exports ===
 export {
     MessageHeader,            // b.wX
-    HeaderData,               // b.internal_Mdb
-    HeaderPeerData,           // b.internal_Rdb
+    HeaderData,               // b.MessageHeader
+    HeaderPeerData,           // b.MessageCapabilities
     ParsedHeaderData,         // b.s_b
     createMessageHeader,      // b.SZ
     parseMessageHeader        // b.$Mb

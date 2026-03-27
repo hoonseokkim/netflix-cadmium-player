@@ -48,7 +48,7 @@
  *   da = 26388 - mediaTypes (MediaType - V=audio, U=video, TEXT_MEDIA_TYPE=text)
  *   ba = 91176 - manifestUtils (AbortController, isLive)
  *   aa = 73403 - trackManager (wJa - track selection manager)
- *   ca = 54973 - manifestTypeResolver (internal_Yba)
+ *   ca = 54973 - manifestTypeResolver (getLicenseType)
  *   ea = 99416 - subtitleConfig (internal_Emb - subtitle configuration)
  */
 
@@ -97,7 +97,7 @@ import viewableConstants from '../modules/Module_79048'; // Y - viewableId, yQa
 import MediaType from '../modules/Module_26388';       // da - MediaType
 import manifestUtils from '../modules/Module_91176';   // ba - AbortController, isLive
 import trackManager from '../modules/Module_73403';    // aa - wJa
-import manifestTypeResolver from '../modules/Module_54973'; // ca - internal_Yba
+import manifestTypeResolver from '../modules/Module_54973'; // ca - getLicenseType
 import subtitleConfig from '../modules/Module_99416'; // ea - internal_Emb
 
 // ============================================================================
@@ -959,12 +959,12 @@ class PlaybackInstance {
     }
 
     /** @returns {object} Internal LHA reference */
-    get internal_Lha() {
-        return this.currentViewableConfig.internal_Lha;
+    get lastStreamStartTime() {
+        return this.currentViewableConfig.lastStreamStartTime;
     }
 
-    set internal_Lha(value) {
-        this.currentViewableConfig.internal_Lha = value;
+    set lastStreamStartTime(value) {
+        this.currentViewableConfig.lastStreamStartTime = value;
     }
 
     /** @returns {object} The session context for the current viewable */
@@ -2862,7 +2862,7 @@ class PlaybackInstance {
         var manifestType =
             this.isSupplementalFormat() || hasRefreshOptions || isAuxiliary
                 ? undefined
-                : manifestTypeResolver.internal_Yba(playerConfig.config, isAuxiliary);
+                : manifestTypeResolver.getLicenseType(playerConfig.config, isAuxiliary);
 
         var auxOptions = viewableSegment.ze;
         var execPointer =

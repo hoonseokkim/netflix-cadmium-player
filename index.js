@@ -67,4 +67,4 @@ export * from './mp4/Mp4_2.js'; // Module 37268
 export * from './mp4/Fragments.js'; // Module 89613
 export * from './mp4/Fragments_1.js'; // Module 82149
 
-// Total: 1928 modules extracted from 1928 webpack modules
+// Total: 893 modules extracted from ~1991 webpack modules

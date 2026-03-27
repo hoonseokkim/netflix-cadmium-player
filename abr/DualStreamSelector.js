@@ -15,14 +15,14 @@
 
 // Dependencies
 // import { __extends, __assign, __spreadArray, __read }
-//   from './modules/Module_22970.js';
-// import { MediaType, TEXT_MEDIA_TYPE } from './modules/Module_45247.js';
-// import { assert }              from './modules/Module_52571.js';
-// import { timeSlice, D2a }      from './modules/Module_65161.js';
+//   from '../ads/AdBreakMismatchLogger.js';
+// import { MediaType, TEXT_MEDIA_TYPE } from '../core/AseConfigConstants.js';
+// import { assert }              from '../ads/AdPoliciesManager.js';
+// import { timeSlice, D2a }      from '../core/AsejsEngine.js';
 // import { dGa as StreamListBuilder } from './modules/Module_44284.js';
 // import { pWa as createPredictor }   from './modules/Module_14246.js';
 // import { l7 as JointStreamBuilder } from './modules/Module_56841.js';
-// import { dk as isLiveSegment, isLiveStream } from './modules/Module_8149.js';
+// import { dk as isLiveSegment, isLiveStream } from '../network/AseMediaRequest.js';
 // import { BaseStreamSelector }  from './modules/Module_54477.js';
 
 /**

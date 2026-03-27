@@ -58,4 +58,4 @@ export class SegmentTrackerSetup {
   }
 }
 
-export { SegmentTrackerSetup as x9a };
+export { SegmentTrackerSetup };

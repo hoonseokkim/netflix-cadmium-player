@@ -15,12 +15,12 @@
  */
 
 // Dependencies
-// import { platform }            from './modules/Module_66164.js';
-// import { playerPhase, MediaType } from './modules/Module_65161.js';
-// import { i0 as forEachStream, findLast } from './modules/Module_91176.js';
+// import { platform }            from '../core/AsejsEngine.js';
+// import { playerPhase, MediaType } from '../core/AsejsEngine.js';
+// import { i0 as forEachStream, findLast } from '../core/AsejsEngine.js';
 // import { selectorRegistry }    from './modules/Module_3082.js';
 // import { ResolutionSelector }  from './abr/PacerateSelector.js';
-// import { JointStream, F6a }   from './modules/Module_33923.js';
+// import { JointStream, F6a }   from '../streaming/JointStream.js';
 // import { wDb }                 from './modules/Module_44284.js';
 // import * as streamSelectorUtils from './abr/StreamSelector.js';
 // … remaining module imports …

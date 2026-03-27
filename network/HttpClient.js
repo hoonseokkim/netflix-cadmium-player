@@ -18,7 +18,7 @@
 // import { ea as ErrorCodes, EventTypeEnum, eG as formatError } from '../core/ErrorCodes';
 // import { getCategoryLog, fetchOperation } from '../core/ServiceLocator';
 // import { assert, jaa as assertUrl } from '../assert';
-// import { internal_Uka as random } from '../utils/random';
+// import { random as random } from '../utils/random';
 // import { scheduleAsync } from '../utils/scheduler';
 // import { arrayCheck as isString } from '../utils/typeCheck';
 // import { vkb as isOnline } from '../core/StatusCodes';

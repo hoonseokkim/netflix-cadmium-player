@@ -12,7 +12,7 @@
  * @module drm/ClearKeyxHandler
  */
 
-import { AleKeyxScheme } from '../modules/Module_2802.js';
+import { AleKeyxScheme } from './KeyProvisionValidator.js';
 import { KeyWrapperClass } from './KeyWrapperClass.js';
 
 export class ClearKeyxHandler extends KeyWrapperClass {

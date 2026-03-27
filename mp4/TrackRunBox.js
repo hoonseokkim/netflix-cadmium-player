@@ -18,7 +18,7 @@
  */
 
 import { assert } from '../assert/Assert.js';
-import { audioSampleRegistry, internal_Bsc as fadeFrame } from '../media/AudioSampleEditor.js';
+import { audioSampleRegistry, fadeFrame as fadeFrame } from '../media/AudioSampleEditor.js';
 
 /** @type {string} ISO BMFF box type identifier */
 const BOX_TYPE = 'trun';

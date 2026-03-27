@@ -15,7 +15,7 @@
  * @original Module_2710
  */
 
-import { dataQuery } from '../modules/Module_27851.js'; // component data accessor
+import { dataQuery } from '../ioc/ComponentDependencyResolver.js'; // component data accessor
 import { $Ca as BaseComponentAdapter } from '../modules/Module_56656.js'; // base class
 
 /**
@@ -137,4 +137,4 @@ export class ComponentHost extends BaseComponentAdapter {
   }
 }
 
-export { ComponentHost as internal_Leb };
+export { ComponentHost as ComponentHost };

@@ -18,22 +18,22 @@
  */
 
 // Dependencies
-// import { __importDefault, __extends } from '../modules/Module_22970.js';          // tslib helpers
-// import asyncComplete from '../modules/Module_42979.js';                            // async completion helper
-// import interruptibleComplete from '../modules/Module_79804.js';                    // interruptible async complete
+// import { __importDefault, __extends } from '../ads/AdBreakMismatchLogger.js';          // tslib helpers
+// import asyncComplete from '../msg/MessageCapabilities.js';                            // async completion helper
+// import interruptibleComplete from '../network/HttpOutputStream.js';                    // interruptible async complete
 // import MslInterruptedException from '../modules/Module_25978.js';                  // MSL interrupted exception
-// import MslException from '../modules/Module_1966.js';                              // MSL base exception
+// import MslException from './MslTokenStore_25137.js';                              // MSL base exception
 // import { IDa as DefaultMessageFactory } from '../modules/Module_31238.js';         // default message factory
 // import { ZJa as MasterTokenLock } from '../modules/Module_74015.js';               // master token lock/mutex
 // import { oM as createMessageId } from '../modules/Module_93652.js';                // message ID utilities
-// import MslInternalException from '../modules/Module_10690.js';                     // MSL internal exception
-// import MslConstants from '../modules/Module_51411.js';                             // MSL constants (ErrorType, etc.)
+// import MslInternalException from '../msg/MessageHeader.js';                     // MSL internal exception
+// import MslConstants from '../msg/MessageCapabilities.js';                             // MSL constants (ErrorType, etc.)
 // import { ghb as MessageContext } from '../modules/Module_41962.js';                // message context
-// import MslMessageException from '../modules/Module_20754.js';                      // MSL message exception
-// import MslErrorCode from '../modules/Module_36114.js';                             // MSL error codes
-// import { S5 as RenewalLockQueue } from '../modules/Module_89752.js';               // renewal lock queue
+// import MslMessageException from './MessageInputStream.js';                      // MSL message exception
+// import MslErrorCode from '../msg/MessageCapabilities.js';                             // MSL error codes
+// import { S5 as RenewalLockQueue } from '../network/HttpOutputStream.js';               // renewal lock queue
 // import { xlb as Semaphore } from '../modules/Module_81214.js';                     // semaphore for concurrency
-// import { readBytes as isMslError } from '../modules/Module_32260.js';              // MSL error type checker
+// import { readBytes as isMslError } from './MslTokenStore_25137.js';              // MSL error type checker
 
 /**
  * Checks whether an error is an MslInterruptedException by walking the cause chain.
@@ -2326,7 +2326,7 @@ export class MslControl {
 // Exports
 // ─────────────────────────────────────────────────────────────────────────────
 
-export { MslControlResult as j3b };
-export { MslControllerCore as m3b };
-export { MslControl as l3b };
+export { MslControlResult };
+export { MslControllerCore };
+export { MslControl };
 export default MslControl;

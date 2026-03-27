@@ -16,7 +16,7 @@ import { SessionToken } from '../streaming/SessionToken.js';
 import { HLa as SessionFactory } from '../streaming/SessionFactory.js';
 import { akb as SessionConfigToken } from '../streaming/SessionConfigTokens.js';
 import { KJa as SessionConfig } from '../streaming/SessionConfig.js';
-import { $jb as SessionUtilToken, internal_Zjb as SessionHelperToken } from '../streaming/SessionUtilTokens.js';
+import { $jb as SessionUtilToken, SessionHelperToken as SessionHelperToken } from '../streaming/SessionUtilTokens.js';
 import { nHa as SessionUtil } from '../streaming/SessionUtil.js';
 import { xGa as SessionHelper } from '../streaming/SessionHelper.js';
 import { q$a as ConfigProviderToken, QCa as ConfigResolverToken } from '../streaming/ConfigProviderTokens.js';

@@ -15,7 +15,7 @@
 // import asyncExecutor from './modules/Module_42979';         // async execution wrapper
 // import MslErrorCode from './modules/Module_36114';          // error code constants
 // import MslException from './modules/Module_20754';          // MSL exception class
-// import { internal_Mdb as MessageHeader, internal_Rdb as MessageCapabilities, SZ as sendMessage } from './modules/Module_54449';
+// import { MessageHeader as MessageHeader, MessageCapabilities as MessageCapabilities, SZ as sendMessage } from './modules/Module_54449';
 // import defaultMessageId from './modules/Module_32260';      // message ID utilities
 // import { readBytes as isMslError } from './modules/Module_32260';
 
@@ -62,7 +62,7 @@ export class MessageBuilder {
   constructor(decoderState, sendType, receiveType, messageId, callback) {
     asyncExecutor(callback, () => {
       if (messageId === undefined || messageId === null) {
-        messageId = defaultMessageId.internal_Nyc(decoderState);
+        messageId = defaultMessageId.decode(decoderState);
       } else if (messageId < 0 || messageId > MaxMessageId.kf) {
         throw new MslError(`Message ID ${messageId} is outside the valid range.`);
       }

@@ -34,4 +34,4 @@ export function isAdPlaygraphFromContext(context) {
   return context.viewableSession.isAdPlaygraph;
 }
 
-export { isLive as dk, isAdPlaygraph as isLiveStream, isAdPlaygraphFromContext as khd };
+export { isLive, isAdPlaygraph, isAdPlaygraphFromContext };

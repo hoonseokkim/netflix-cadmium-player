@@ -33,7 +33,7 @@ class OpenConnectSideChannelManager {
      * @param {*}      _unused    - (unused parameter)
      * @param {*}      requestData - Additional request data / payload.
      */
-    internal_Pra(request, _unused, requestData) {
+    processRequest(request, _unused, requestData) {
         const options = {
             url: request.url,
             dWc: requestData

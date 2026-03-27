@@ -10,12 +10,12 @@
  * @original Module_15153
  */
 
-import { __decorate, __param } from '../modules/Module_22970.js'; // tslib decorators
-import { injectable, injectDecorator } from '../modules/Module_22674.js'; // DI framework
-import { ea as ErrorCodes } from '../modules/Module_36129.js'; // error code enums
+import { __decorate, __param } from '../ads/AdBreakMismatchLogger.js'; // tslib decorators
+import { injectable, injectDecorator } from '../ads/AdBreakMismatchLogger.js'; // DI framework
+import { ea as ErrorCodes } from '../drm/MediaKeySystemAccessServices.js'; // error code enums
 import { oj as PboEndpoints } from '../modules/Module_19114.js'; // PBO endpoint names
 import { lj as BasePboCommand } from '../modules/Module_51658.js'; // base PBO command class
-import { io as PboServiceToken } from '../modules/Module_83998.js'; // DI token
+import { io as PboServiceToken } from '../events/StartEventImpl.js'; // DI token
 
 /**
  * PBO Bind Command.
@@ -56,7 +56,7 @@ class PboBindCommand extends BasePboCommand {
   }
 }
 
-export { PboBindCommand as zIa };
+export { PboBindCommand };
 
 // Apply DI decorators
 const DecoratedPboBindCommand = __decorate(

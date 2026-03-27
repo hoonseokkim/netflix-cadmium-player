@@ -18,11 +18,11 @@
  * @module OcNetwork
  */
 
-// import * as helpers     from '../modules/Module_22970.js';
-// import * as util        from '../modules/Module_17267.js';
-// import { platform }     from '../modules/Module_66164.js';
-// import { MediaType }    from '../modules/Module_65161.js';
-// import NodeType         from '../modules/Module_14282.js';
+// import * as helpers     from '../ads/AdBreakMismatchLogger.js';
+// import * as util        from '../abr/InitialStreamSelector.js';
+// import { platform }     from '../core/AsejsEngine.js';
+// import { MediaType }    from '../core/AsejsEngine.js';
+// import NodeType         from '../streaming/MediaFragment.js';
 // import { statusEnum }   from '../modules/Module_36670.js';
 
 const logger = new platform.Console('ASEJS_OC_NETWORK', 'media|asejs');
@@ -528,7 +528,7 @@ class OcNetwork {
     this._attachUrls(stream, streamData.urls);
 
     // Sort URLs within each location by server rank
-    util.internal_Iaa(stream.locationUrlMap, (urlList) => {
+    util.forEachEntry(stream.locationUrlMap, (urlList) => {
       urlList.sort((a, b) => a.server.rank - b.server.rank);
     });
 
@@ -597,4 +597,4 @@ class OcNetwork {
   onStreamsUpdated() {}
 }
 
-export { OcNetwork as nK };
+export { OcNetwork };

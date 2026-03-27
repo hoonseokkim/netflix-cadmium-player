@@ -300,4 +300,4 @@ class BranchCollection {
     }
 }
 
-export { BranchCollection as internal_Hjb };
+export { BranchCollection as BranchCollection };

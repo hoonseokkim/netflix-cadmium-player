@@ -15,4 +15,4 @@
  */
 export const PboManifestTransformerSymbol = 'PboManifestRequestTransformerSymbol';
 
-export { PboManifestTransformerSymbol as internal_Uib };
+export { PboManifestTransformerSymbol as PboManifestTransformerSymbol };

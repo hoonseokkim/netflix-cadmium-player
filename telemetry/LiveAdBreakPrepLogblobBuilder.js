@@ -18,10 +18,10 @@
  * @original Module_10940
  */
 
-import { __assign } from '../modules/Module_22970.js';      // tslib helpers
+import { __assign } from '../ads/AdBreakMismatchLogger.js';      // tslib helpers
 import { EventEmitter } from '../events/EventEmitter.js';    // Module 90745
 import { TimeUtil } from '../timing/TimeUtil.js';             // Module 91176
-import * as ErrorUtil from '../modules/Module_95407.js';      // bD.internal_Sba error code extraction
+import * as ErrorUtil from '../modules/Module_95407.js';      // bD.getErrorCode error code extraction
 import { LogblobPhase } from '../modules/Module_60028.js';    // Z7 enum (StartPlayback, Creation, etc.)
 
 /**
@@ -192,7 +192,7 @@ export class LiveAdBreakPrepLogblobBuilder {
       const timeRandomizationWasCalculated = scheduling.timeRandomizationWasCalculated;
 
       // Extract error code, falling back to "failed"
-      const errorCode = ErrorUtil.bD.internal_Sba(error) ?? 'failed';
+      const errorCode = ErrorUtil.bD.getErrorCode(error) ?? 'failed';
 
       this.adImpressionData = {
         ...{

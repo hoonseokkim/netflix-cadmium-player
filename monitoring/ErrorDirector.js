@@ -20,12 +20,12 @@
  */
 
 // --- external dependency stubs ---
-// import * as helpers       from '../modules/Module_22970.js';
-// import { EventEmitter, ClockWatcher } from '../modules/Module_90745.js';
-// import * as util          from '../modules/Module_17267.js';
-// import { platform }       from '../modules/Module_66164.js';
-// import { Y7 as DebouncedAction } from '../modules/Module_91176.js';
-// import NodeType           from '../modules/Module_14282.js';
+// import * as helpers       from '../ads/AdBreakMismatchLogger.js';
+// import { EventEmitter, ClockWatcher } from '../core/AsejsEngine.js';
+// import * as util          from '../abr/InitialStreamSelector.js';
+// import { platform }       from '../core/AsejsEngine.js';
+// import { Y7 as DebouncedAction } from '../core/AsejsEngine.js';
+// import NodeType           from '../streaming/MediaFragment.js';
 // import { mkb as ProbeManager }    from '../monitoring/ProbeManager.js';
 // import { YW as ErrorMap }          from '../monitoring/ErrorMap.js';
 // import { xfb as LiveErrorMap }     from '../modules/Module_16131.js';

@@ -30,7 +30,7 @@ import { xKa as ManifestProcessorEvent } from '../manifest/ManifestProcessorEven
 import { o0 as injectable } from '../di/injectable';
 import NetworkStatsProvider from '../network/NetworkStatsProvider';
 import { dkb as PresentationDelayController } from '../streaming/PresentationDelayController';
-import { internal_Xvb as createPipelineHealthMonitor, cjb as HealthLevel } from '../health/PipelineHealthMonitor';
+import { createPipelineHealthMonitor as createPipelineHealthMonitor, cjb as HealthLevel } from '../health/PipelineHealthMonitor';
 import { F$a as PlaygraphController } from '../streaming/PlaygraphController';
 import { uJa as BaseAsePlayer } from '../player/BaseAsePlayer';
 import { zjb as PlayerClock } from '../clock/PlayerClock';

@@ -16,7 +16,7 @@
 // import MslEncoderException from '../msl/MslEncoderException';
 // import { fp as MslToken } from '../msl/MslToken';
 // import MslInternalException from '../msl/MslInternalException';
-// import { internal_Bgb as MasterToken } from '../msl/MasterToken';
+// import { MasterToken as MasterToken } from '../msl/MasterToken';
 // import { nnb as UserIdToken } from '../msl/UserIdToken';
 // import AsyncExecutor from '../msl/AsyncExecutor';
 // import MslException from '../msl/MslException';
@@ -366,7 +366,7 @@ export function parseServiceToken(mslContext, mslObject, masterToken, userIdToke
                 uitSerial = tokenData.messageIdGetter("uitserialnumber");
             }
 
-            const isEncrypted = tokenData.internal_Eba("encrypted");
+            const isEncrypted = tokenData.getBoolean("encrypted");
 
             let compressionAlgo = null;
             if (tokenData.has("compressionalgo")) {

@@ -102,7 +102,7 @@ class FtlProbeParameterParser {
     }
 }
 
-export { FtlProbeParameterParser as kFa };
+export { FtlProbeParameterParser };
 
 // IoC registration
 FtlProbeParameterParser = __decorate([

@@ -38,4 +38,4 @@ export function logStreamCandidates(console, streamList, selectedStream) {
     });
 }
 
-export { logStreamCandidates as cid };
+export { logStreamCandidates };

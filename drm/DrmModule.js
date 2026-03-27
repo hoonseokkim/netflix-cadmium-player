@@ -9,10 +9,10 @@
 import { ContainerModule } from '../core/inversify.js';
 import { mHa as DrmKeySystemServiceId, lHa as DrmKeySystemServiceImpl } from '../drm/DrmKeySystemService.js';
 import { wgb as DrmSessionManagerId, kHa as DrmSessionManagerImpl } from '../drm/DrmSessionManager.js';
-import { internal_Fjb as DrmProviderFactoryId } from '../drm/DrmProviderFactory.js';
+import { DrmProviderFactoryId as DrmProviderFactoryId } from '../drm/DrmProviderFactory.js';
 import { WP as DrmProviderImpl } from '../drm/DrmProvider.js';
 import { zgb as MediaRequestFactoryId } from '../drm/DrmMediaRequestFactory.js';
-import { internal_Agb as DrmMediaRequestFactoryImpl } from '../drm/DrmMediaRequestFactoryImpl.js';
+import { DrmMediaRequestFactoryImpl as DrmMediaRequestFactoryImpl } from '../drm/DrmMediaRequestFactoryImpl.js';
 import { sX as DrmConfigId, hHa as DrmConfigImpl } from '../drm/DrmConfig.js';
 import { ugb as DrmCryptoId, gHa as DrmCryptoImpl } from '../drm/DrmCrypto.js';
 

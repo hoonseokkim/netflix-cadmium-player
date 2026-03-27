@@ -120,12 +120,12 @@ export function isDecodedValue(value) {
 }
 
 /**
- * Checks if value passes the internal_Arb predicate.
+ * Checks if value passes the isNonEmptyArray predicate.
  * @param {*} value
  * @returns {boolean}
  */
 export function isInternalType(value) {
-  return typeChecker.internal_Arb(value);
+  return typeChecker.isNonEmptyArray(value);
 }
 
 /**
@@ -147,12 +147,12 @@ export function isValidInterval(value) {
 }
 
 /**
- * Checks the internal_Fna predicate.
+ * Checks the isRegExp predicate.
  * @param {*} value
  * @returns {boolean}
  */
 export function isRegisteredType(value) {
-  return typeChecker.internal_Fna(value);
+  return typeChecker.isRegExp(value);
 }
 
 /**
@@ -161,5 +161,5 @@ export function isRegisteredType(value) {
  * @returns {boolean}
  */
 export function typeofChecker(value) {
-  return typeChecker.internal_Hna(value);
+  return typeChecker.isFunction(value);
 }

@@ -9,26 +9,26 @@
  * @original Module 71976
  */
 
-import { __decorate, __param } from '../../modules/Module_22970.js'; // tslib decorators
-import { injectable, injectDecorator } from '../../modules/Module_22674.js'; // DI framework
-import { ellaSendRateMultiplier, ri, seekToSample, MILLISECONDS } from '../../modules/Module_5021.js'; // time/rate utilities
-import { internal_Pmb } from '../../modules/Module_14543.js'; // transport factory token
-import { LoggerToken } from '../../modules/Module_87386.js';
+import { __decorate, __param } from '../ads/AdBreakMismatchLogger.js'; // tslib decorators
+import { injectable, injectDecorator } from '../ads/AdBreakMismatchLogger.js'; // DI framework
+import { ellaSendRateMultiplier, ri, seekToSample, MILLISECONDS } from '../drm/LicenseBroker.js'; // time/rate utilities
+import { TransportSelectorToken } from '../../modules/Module_14543.js'; // transport factory token
+import { LoggerToken } from '../ads/AdVisibilityTracker.js';
 import { jX as DataToken } from '../../modules/Module_63368.js';
-import { ClockToken } from '../../modules/Module_81918.js';
-import { enumConstants } from '../../modules/Module_34231.js';
-import { internal_Lla as RandomGeneratorToken } from '../../modules/Module_10306.js';
-import { valueList as SchedulerToken } from '../../modules/Module_53085.js';
-import { kua as isPboError } from '../../modules/Module_71977.js';
-import { nativeProcessor as ConfigToken } from '../../modules/Module_7605.js';
+import { ClockToken } from '../drm/EmeSessionFactory.js';
+import { enumConstants } from '../core/AppStorageManager.js';
+import { RandomGeneratorToken as RandomGeneratorToken } from '../../modules/Module_10306.js';
+import { valueList as SchedulerToken } from '../monitoring/MonitoringModule.js';
+import { kua as isPboError } from './ApiRequestSender.js';
+import { nativeProcessor as ConfigToken } from '../drm/KeyMessageHandler.js';
 import { pFa as EventBusToken } from '../../modules/Module_15160.js';
-import { ZFa } from '../../modules/Module_85001.js';
+import { ZFa } from '../drm/LicenseBroker.js';
 import { cD as QueryParamKeys, M5b as HeaderKeys } from '../../modules/Module_19114.js';
 import { ola as PboResponseParser } from '../../modules/Module_45385.js';
 import { YIa as ReceiverToken } from '../../modules/Module_15348.js';
-import { dPb as raceWithTimeout } from '../../modules/Module_91176.js';
-import { internal_Snb as BackpressureToken } from '../../modules/Module_82229.js';
-import { internal_Jib as BackoffToken } from '../../modules/Module_17391.js';
+import { dPb as raceWithTimeout } from '../core/AsejsEngine.js';
+import { BackpressureToken as BackpressureToken } from '../../modules/Module_82229.js';
+import { BackoffToken as BackoffToken } from '../../modules/Module_17391.js';
 
 /**
  * Known UI version prefixes and their corresponding platform names.
@@ -165,7 +165,7 @@ class PboCommandRecord {
                     ? this.elapsedTime.toUnit(MILLISECONDS)
                     : 'in progress',
             },
-            this.transport.internal_Gpa(),
+            this.transport.getTransport(),
         );
 
         if (this.success) {
@@ -175,7 +175,7 @@ class PboCommandRecord {
         return Object.assign(
             {},
             base,
-            this.transport.internal_Gpa(),
+            this.transport.getTransport(),
             {
                 subcode: this.subcode,
                 extcode: this.extcode,
@@ -472,7 +472,7 @@ class PboDispatcher {
                 // HTTP failure: determine retry eligibility
                 responseHeaders = responseHeaders ?? error.headers;
                 const backpressureInfo = self.backpressure.dzc(responseHeaders);
-                let maxRetries = PboResponseParser.internal_Gxc(error, backpressureInfo);
+                let maxRetries = PboResponseParser.getMaxRetries(error, backpressureInfo);
                 maxRetries = maxRetries !== undefined
                     ? Math.min(maxRetries, context.callModeFlag)
                     : context.callModeFlag;
@@ -808,13 +808,13 @@ class PboDispatcher {
 
 let PboDispatcherInjectable = PboDispatcher;
 
-export { PboDispatcherInjectable as EIa };
+export { PboDispatcherInjectable };
 
 PboDispatcherInjectable = __decorate(
     [
         injectable(),
         __param(0, injectDecorator(LoggerToken)),
-        __param(1, injectDecorator(internal_Pmb)),
+        __param(1, injectDecorator(TransportSelectorToken)),
         __param(2, injectDecorator(DataToken)),
         __param(3, injectDecorator(ClockToken)),
         __param(4, injectDecorator(enumConstants)),

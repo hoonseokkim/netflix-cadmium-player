@@ -28,9 +28,9 @@ export const PboCommands = Object.freeze({
  * @enum {string}
  */
 export const PboRequestHeaders = Object.freeze({
-  REQUEST_ID: 'X-Netflix.Request.internal_Id',
+  REQUEST_ID: 'X-Netflix.Request.id',
   REQUEST_ATTEMPT: 'X-Netflix.Request.Attempt',
-  CLIENT_REQUEST_NAME: 'X-Netflix.Client.Request.internal_Name',
+  CLIENT_REQUEST_NAME: 'X-Netflix.Client.Request.name',
   BROWSER_NAME: 'x-netflix.browsername',
   BROWSER_VERSION: 'x-netflix.browserversion',
   OS_NAME: 'x-netflix.osname',

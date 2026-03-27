@@ -188,12 +188,12 @@ export class PlayPredictionModel {
         const playEventInfo = findPlayEvent(contexts);
 
         if (this.telemetry?.reportPlayFocusEvent) {
-            eventData.internal_Red = getNow();
+            eventData.timestamp = getNow();
             eventData.direction = DirectionTypes.name[direction];
 
             if (rowInfo) {
                 eventData.rowIndex = rowInfo.rowIndex;
-                eventData.internal_Kub = rowInfo.lic;
+                eventData.colIndex = rowInfo.lic;
             }
 
             if (playEventInfo.timeNode !== undefined) {

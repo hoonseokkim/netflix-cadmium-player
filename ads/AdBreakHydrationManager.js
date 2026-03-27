@@ -418,8 +418,8 @@ class AdBreakHydrationManager {
       previousType = this.hydrationEvents.get(key)?.type;
     }
 
-    if (adBreak.currentIndexValue() || adBreak.internal_Ura()) {
-      const triggerId = adBreak.internal_Ura();
+    if (adBreak.currentIndexValue() || adBreak.getTriggerId()) {
+      const triggerId = adBreak.getTriggerId();
       const indexValue = adBreak.currentIndexValue();
 
       this.hydrationEvents.set(key, {
@@ -430,7 +430,7 @@ class AdBreakHydrationManager {
         isSkippableAd: forceSkip ? false : adBreak.isSkippableAd,
         IO: {
           Ub: adBreak.timedTextDownloadRetryCountBeforeCdnSwitch,
-          internal_Ura: () => triggerId,
+          getTriggerId: () => triggerId,
           currentIndexValue: () => indexValue,
           isSkippableAd: adBreak.isSkippableAd,
           isMissing: adBreak.isMissing,
@@ -749,7 +749,7 @@ class AdBreakHydrationManager {
 
     this.sessionMetrics.emitDiagnosticEvent({ id: itemId, reason });
 
-    const adBreakToken = adBreak.internal_Ura();
+    const adBreakToken = adBreak.getTriggerId();
     const hb = adBreak.currentIndexValue();
     const resolvedToken = hb ?? adBreakToken;
     assert(resolvedToken, "adBreakToken or adBreakTriggerId must exist if adBreak hydration was queued");
@@ -817,8 +817,8 @@ class AdBreakHydrationManager {
       hydrationCompleted = true;
     } catch (error) {
       if (!signal.aborted) {
-        const errorCategory = ErrorParser.internal_Yzc(error);
-        const errorCode = ErrorParser.internal_Sba(error);
+        const errorCategory = ErrorParser.getErrorCategory(error);
+        const errorCode = ErrorParser.getErrorCode(error);
         const parentViewable = await viewable.mq;
         assert(parentViewable, "parentAseViewable must exist");
 

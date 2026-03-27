@@ -53,4 +53,4 @@ export class ExplicitVideoStreamFilter {
   }
 }
 
-export { ExplicitVideoStreamFilter as internal_Lcb };
+export { ExplicitVideoStreamFilter as ExplicitVideoStreamFilter };

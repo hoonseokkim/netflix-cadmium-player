@@ -8,7 +8,7 @@
  * @module TextProcessingContext
  */
 
-import { TimeUtil } from '../modules/Module_91176.js';
+import { TimeUtil } from '../core/AsejsEngine.js';
 
 /**
  * Creates a TimeUtil from ticks and timescale, returning undefined

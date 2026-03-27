@@ -1297,4 +1297,4 @@ export class AsejsEngine {
   }
 }
 
-export { AsejsEngine as S9a };
+export { AsejsEngine };

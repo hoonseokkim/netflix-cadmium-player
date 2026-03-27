@@ -89,4 +89,4 @@ class RequestTask extends AsyncRequest {
 }
 
 export { RequestTask };
-export { RequestTask as h8 };
+export { RequestTask };

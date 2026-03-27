@@ -241,7 +241,7 @@ export class PlayerInfoOverlay {
                 'Current Dropped Frames': isNumber(this.currentDroppedFrames) ? this.currentDroppedFrames : '',
                 'Total Frames': msm.YA(),
                 'Total Dropped Frames': msm.vS(),
-                'Total Corrupted Frames': msm.internal_Nba()
+                'Total Corrupted Frames': msm.getCorruptedFrameCount()
             });
         } catch (e) { /* swallow */ }
 

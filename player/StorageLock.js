@@ -10,7 +10,7 @@
 import { SUCCESS, lK as noop, DX as disposePhase, segmentDurationMs } from '../core/constants.js';
 import { config } from '../core/PlayerConfig.js';
 import { writeBytes } from '../events/EventBus.js';
-import { internal_Cub as getEpochTime } from '../timing/Clock.js';
+import { getEpochTime as getEpochTime } from '../timing/Clock.js';
 import { ea as EventTypes } from '../core/EventTypes.js';
 import { assert } from '../assert/Assert.js';
 import { disposableList } from '../core/DisposableList.js';
@@ -49,7 +49,7 @@ disposableList.key(componentKey).register(EventTypes.INIT_COMPONENT_STORAGELOCK,
                 logger.pauseTrace('popstate event, Lock timers can stay');
             } else {
                 forEachProperty(activeLocks, (key, lock) => {
-                    localStorage.removeItem(lock.internal_Name);
+                    localStorage.removeItem(lock.name);
                 });
                 clearInterval(intervalId);
             }
@@ -62,7 +62,7 @@ disposableList.key(componentKey).register(EventTypes.INIT_COMPONENT_STORAGELOCK,
     function refreshAllLocks() {
         const now = getEpochTime();
         forEachProperty(activeLocks, (key, lock) => {
-            let lockData = localStorage.getItem(lock.internal_Name);
+            let lockData = localStorage.getItem(lock.name);
             lockData = JSON.parse(lockData);
             if (lockData) {
                 lockData.updated = now;
@@ -73,7 +73,7 @@ disposableList.key(componentKey).register(EventTypes.INIT_COMPONENT_STORAGELOCK,
                     length: 1
                 };
             }
-            localStorage.setItem(lock.internal_Name, JSON.stringify(lockData));
+            localStorage.setItem(lock.name, JSON.stringify(lockData));
         });
     }
 
@@ -171,7 +171,7 @@ disposableList.key(componentKey).register(EventTypes.INIT_COMPONENT_STORAGELOCK,
                 localStorage.setItem(lockKey, JSON.stringify(lockData));
                 const handle = { Qy: lockKey };
                 activeLocks[lockKey] = handle;
-                logger.pauseTrace('Lock acquired', { Name: handle.internal_Name });
+                logger.pauseTrace('Lock acquired', { Name: handle.name });
                 startRefreshInterval();
                 callback({ success: true, gva: handle });
             }
@@ -183,29 +183,29 @@ disposableList.key(componentKey).register(EventTypes.INIT_COMPONENT_STORAGELOCK,
          * @param {Function} [callback] - Optional callback invoked with SUCCESS.
          */
         release(lockHandle, callback) {
-            assert(activeLocks[lockHandle.internal_Name] === lockHandle);
+            assert(activeLocks[lockHandle.name] === lockHandle);
 
             if (localStorage) {
                 try {
-                    const rawData = localStorage.getItem(lockHandle.internal_Name);
+                    const rawData = localStorage.getItem(lockHandle.name);
                     const lockData = JSON.parse(rawData);
                     if (lockData && lockData.length > 1) {
                         lockData.length--;
-                        localStorage.setItem(lockHandle.internal_Name, JSON.stringify(lockData));
+                        localStorage.setItem(lockHandle.name, JSON.stringify(lockData));
                         logger.pauseTrace('Lock count decremented', {
-                            Name: lockHandle.internal_Name,
+                            Name: lockHandle.name,
                             length: lockData.length
                         });
                     } else {
-                        localStorage.removeItem(lockHandle.internal_Name);
-                        delete activeLocks[lockHandle.internal_Name];
+                        localStorage.removeItem(lockHandle.name);
+                        delete activeLocks[lockHandle.name];
                         logger.pauseTrace('Lock released', {
-                            Name: lockHandle.internal_Name
+                            Name: lockHandle.name
                         });
                     }
                 } catch (err) {
                     logger.error('Unable to release Lock', {
-                        Name: lockHandle.internal_Name
+                        Name: lockHandle.name
                     }, err);
                 }
                 if (callback) callback(SUCCESS);

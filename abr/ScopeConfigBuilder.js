@@ -47,4 +47,4 @@ export class ScopeConfigBuilder {
   }
 }
 
-export { ScopeConfigBuilder as bDa };
+export { ScopeConfigBuilder };

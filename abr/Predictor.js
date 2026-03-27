@@ -17,11 +17,11 @@
  */
 
 // Dependencies
-// import { platform }           from './modules/Module_66164.js';
-// import { constrainValue, internal_Ahc as parseCurve, zTa as evaluateCurve,
+// import { platform }           from '../core/AsejsEngine.js';
+// import { constrainValue, parseCurve as parseCurve, zTa as evaluateCurve,
 //          $rc as evaluateNiqrFactor, RVc as blendCurves }
-//   from './modules/Module_65167.js';
-// import { TJ as ThroughputPredictor } from './modules/Module_50612.js';
+//   from '../streaming/StreamingExports.js';
+// import { TJ as ThroughputPredictor } from './StddevPredictor.js';
 
 /**
  * Manifold-based bandwidth predictor.

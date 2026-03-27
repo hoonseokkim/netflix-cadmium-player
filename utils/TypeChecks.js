@@ -8,7 +8,7 @@
  * @module Module_32687
  */
 
-// import { typeChecker } from './modules/Module_76564.js'; // webpack module 76564
+// import { typeChecker } from './TypeChecks.js'; // webpack module 76564
 
 import { typeChecker } from './Module_76564.js';
 
@@ -49,7 +49,7 @@ export function isTrue(value) { return is.Q$b(value); }
 export function isFalse(value) { return is.R$b(value); }
 
 /** Check if value is a non-empty array */
-export function isNonEmptyArray(value) { return is.internal_Arb(value); }
+export function isNonEmptyArray(value) { return is.isNonEmptyArray(value); }
 
 /** Check if value is a string */
 export function isString(value) { return is.filterPredicate(value); }
@@ -58,7 +58,7 @@ export function isString(value) { return is.filterPredicate(value); }
 export function isValidInterval(value) { return is.isValidInterval(value); }
 
 /** Check if value is a RegExp */
-export function isRegExp(value) { return is.internal_Fna(value); }
+export function isRegExp(value) { return is.isRegExp(value); }
 
 /** Check if value is a function */
-export function isFunction(value) { return is.internal_Hna(value); }
+export function isFunction(value) { return is.isFunction(value); }

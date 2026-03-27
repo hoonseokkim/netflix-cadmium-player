@@ -20,7 +20,7 @@ import { sja as BaseBroker } from '../drm/DrmSessionManager'; // Module 20124
 import { PlayerEvents } from '../player/PlayerEvents'; // Module 85001
 import { XFb as getCodecProfile } from '../media/HevcProfileConfig'; // Module 82100
 import { JVa as getStreamSecurityLevel } from '../drm/DrmScheme'; // Module 56039
-import { internal_Yba as getLicenseType } from '../drm/EmeSession'; // Module 54973
+import { getLicenseType as getLicenseType } from '../drm/EmeSession'; // Module 54973
 
 /**
  * Manages the DRM license lifecycle for encrypted content playback.
@@ -92,7 +92,7 @@ export class LicenseBroker extends BaseBroker {
    */
   _tryUseCachedLicense(viewable) {
     return Promise.all([
-      this.session.internal_Avc(viewable.R),
+      this.session.getKeyStatus(viewable.R),
       this._licenseProviderFactory(),
     ]).then(([cachedResult, licenseProvider]) => {
       return cachedResult.internal_Tza.then((mediaKeysResult) => {
@@ -128,7 +128,7 @@ export class LicenseBroker extends BaseBroker {
   _applyCachedLicense(mediaKeysResult, viewable, licenseSource) {
     this._bindErrorHandler(mediaKeysResult, viewable);
     viewable.qZ = licenseSource;
-    this._mediaKeysManager.internal_Rqb(mediaKeysResult.mediaKeys);
+    this._mediaKeysManager.setMediaKeys(mediaKeysResult.mediaKeys);
     return mediaKeysResult.$Oa();
   }
 

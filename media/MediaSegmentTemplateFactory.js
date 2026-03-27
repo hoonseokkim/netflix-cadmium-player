@@ -44,7 +44,7 @@ export default function MediaSegmentTemplateFactory(module, exports, require) {
             value: true
         }
     });
-    exports.internal_Tlb = void 0;
+    exports.MediaSegmentTemplateFactoryClass = void 0;
 
     tslib = require(22970);
     TimeUtil = require(91176);
@@ -255,5 +255,5 @@ export default function MediaSegmentTemplateFactory(module, exports, require) {
         return MediaSegmentTemplateFactoryClass;
     })();
 
-    exports.internal_Tlb = MediaSegmentTemplateFactoryClass;
+    exports.MediaSegmentTemplateFactoryClass = MediaSegmentTemplateFactoryClass;
 }

@@ -16,14 +16,14 @@
  */
 
 // --- external dependency stubs (webpack imports) ---
-// import * as helpers            from '../modules/Module_22970.js';  // tslib helpers
-// import { ClockWatcher }        from '../modules/Module_90745.js';  // EventEmitter + ClockWatcher
-// import { platform }            from '../modules/Module_66164.js';  // platform abstraction
-// import { laser, mediaTypeToString } from '../modules/Module_97685.js'; // logging / telemetry
-// import { assert }              from '../modules/Module_52571.js';  // assertion util
+// import * as helpers            from '../ads/AdBreakMismatchLogger.js';  // tslib helpers
+// import { ClockWatcher }        from '../core/AsejsEngine.js';  // EventEmitter + ClockWatcher
+// import { platform }            from '../core/AsejsEngine.js';  // platform abstraction
+// import { laser, mediaTypeToString } from '../core/AsejsEngine.js'; // logging / telemetry
+// import { assert }              from '../ads/AdPoliciesManager.js';  // assertion util
 // import { timestampBuffer }     from '../modules/Module_45550.js';  // latency sample ring buffer
-// import { MediaType }           from '../modules/Module_65161.js';  // media type enum
-// import NetworkMonitor          from '../modules/Module_40497.js';  // network perf monitor
+// import { MediaType }           from '../core/AsejsEngine.js';  // media type enum
+// import NetworkMonitor          from './NetworkMonitor.js';  // network perf monitor
 
 /* ------------------------------------------------------------------ */
 /*  Request State Enum                                                */

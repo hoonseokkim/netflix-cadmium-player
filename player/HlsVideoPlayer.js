@@ -18,23 +18,23 @@
 import {
   setState as PlaybackState,
   cb as PlayerEvent
-} from '../modules/Module_85001.js';                       // p = a(85001)
-import { createElement } from '../modules/Module_52569.js'; // c = a(52569)
-import { playbackInstanceHolder } from '../modules/Module_13044.js'; // g = a(13044)
-import { qq as ManifestFlavor } from '../modules/Module_72639.js';   // f = a(72639)
-import { trustedConfig as TrustedConfig } from '../modules/Module_24735.js'; // e = a(24735)
+} from '../drm/LicenseBroker.js';                       // p = a(85001)
+import { createElement } from '../core/PlayerConfig.js'; // c = a(52569)
+import { playbackInstanceHolder } from './PlaybackRegistry.js'; // g = a(13044)
+import { qq as ManifestFlavor } from '../streaming/AsePrefetcherAdapter.js';   // f = a(72639)
+import { trustedConfig as TrustedConfig } from '../drm/EmeSession.js'; // e = a(24735)
 import {
   ea as ErrorCode,
   EventTypeEnum
-} from '../modules/Module_36129.js';                       // h = a(36129)
-import { zv as ReadyStateMap } from '../modules/Module_63156.js'; // k = a(63156)
-import { currentBitrate as Observable } from '../modules/Module_81734.js'; // l = a(81734)
-import { MILLISECONDS } from '../modules/Module_5021.js';  // m = a(5021)
-import { wc as isValidNumber } from '../modules/Module_32687.js'; // n = a(32687)
-import { mergeSessionData } from '../modules/Module_45266.js';   // q = a(45266)
-import { initializeModel as serializeError } from '../modules/Module_3887.js'; // r = a(3887)
-import { MediaType } from '../modules/Module_26388.js';    // u = a(26388)
-import { AbortController } from '../modules/Module_91176.js'; // v = a(91176)
+} from '../drm/MediaKeySystemAccessServices.js';                       // h = a(36129)
+import { zv as ReadyStateMap } from '../msl/MslComponentInitializer.js'; // k = a(63156)
+import { currentBitrate as Observable } from '../drm/EmeSession.js'; // l = a(81734)
+import { MILLISECONDS } from '../drm/LicenseBroker.js';  // m = a(5021)
+import { wc as isValidNumber } from '../utils/IpAddressUtils.js'; // n = a(32687)
+import { mergeSessionData } from '../drm/DefaultDrmProvider.js';   // q = a(45266)
+import { initializeModel as serializeError } from '../utils/IpAddressUtils.js'; // r = a(3887)
+import { MediaType } from '../streaming/MediaRequestEventReporter.js';    // u = a(26388)
+import { AbortController } from '../core/AsejsEngine.js'; // v = a(91176)
 
 /**
  * HLS-based video player that uses native browser HLS support.
@@ -1523,5 +1523,5 @@ class HlsVideoPlayer {
   clearSourceBuffer() {}
 }
 
-export { HlsVideoPlayer as unb };
+export { HlsVideoPlayer };
 export default HlsVideoPlayer;

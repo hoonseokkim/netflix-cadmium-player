@@ -10,8 +10,8 @@
  */
 
 // Dependencies
-// import { platform } from './modules/Module_66164.js';
-// import { playerPhase } from './modules/Module_65161.js';
+// import { platform } from '../core/AsejsEngine.js';
+// import { playerPhase } from '../core/AsejsEngine.js';
 
 /** @type {boolean} Whether verbose logging is enabled */
 let verboseLogging = false;

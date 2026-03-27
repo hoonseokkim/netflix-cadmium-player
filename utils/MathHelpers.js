@@ -46,4 +46,4 @@ export function formatMillisecondsAsSeconds(ms) {
   }
 }
 
-export { clamp as oG, lerp as a$c, formatMillisecondsAsSeconds as zk };
+export { clamp, lerp, formatMillisecondsAsSeconds };

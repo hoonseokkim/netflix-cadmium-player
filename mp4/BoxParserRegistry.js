@@ -14,15 +14,15 @@
  * @module BoxParserRegistry
  */
 
-import { assert } from '../modules/Module_93334.js';
-import * as BoxTypeConstants from '../modules/Module_75589.js';
-import { TimeUtil } from '../modules/Module_49420.js';
+import { assert } from './BoxTypeUtils.js';
+import * as BoxTypeConstants from './SampleDescriptionBox.js';
+import { TimeUtil } from './SampleDescriptionBox.js';
 import ArrayFrom from '../modules/Module_24500.js';
 // Side-effect imports for box type registrations
 import '../modules/Module_2050.js';
 import '../modules/Module_32296.js';
 
-import { debugEnabled as BaseBoxParser } from '../modules/Module_72905.js';
+import { debugEnabled as BaseBoxParser } from './EditListBox.js';
 
 // Individual box parser imports (pre-registered box types from other modules)
 import BoxH from '../modules/Module_71368.js';
@@ -39,12 +39,12 @@ import BoxQ from '../modules/Module_84379.js';
 import '../modules/Module_71724.js';
 import '../modules/Module_70428.js';
 
-import { h9a as BoxS, internal_Zbb as BoxT } from '../modules/Module_40755.js';
+import { h9a as BoxS, BoxT as BoxT } from '../modules/Module_40755.js';
 import BoxU from '../modules/Module_26856.js';
 import BoxX from '../modules/Module_29043.js';
-import DefaultEncvBox from '../modules/Module_41192.js';
-import { p9a as BoxDa, q9a as BoxBa, r9a as BoxAa, s9a as BoxCa } from '../modules/Module_41192.js';
-import { workin_Kdb as BoxZ, ydb as BoxFa, sbb as BoxLa, o9a as BoxKa } from '../modules/Module_41192.js';
+import DefaultEncvBox from './SampleDescriptionBox.js';
+import { p9a as BoxDa, q9a as BoxBa, r9a as BoxAa, s9a as BoxCa } from './SampleDescriptionBox.js';
+import { workin_Kdb as BoxZ, ydb as BoxFa, sbb as BoxLa, o9a as BoxKa } from './SampleDescriptionBox.js';
 import SchmBox from '../modules/Module_41116.js';
 import BoxR from '../modules/Module_18319.js';
 import BoxP from '../modules/Module_56226.js';
@@ -415,11 +415,11 @@ TencBox.prototype.videoSampleEntry = function (ma) {
         this.bitReader.offset += 1; // reserved
     } else {
         const patternByte = this.bitReader.readUint32();
-        this.internal_Onc = patternByte >> 4;    // crypt_byte_block
-        this.internal_Snc = patternByte & 15;    // skip_byte_block
+        this.cryptByteBlock = patternByte >> 4;    // crypt_byte_block
+        this.skipByteBlock = patternByte & 15;    // skip_byte_block
         if (ma && ma.ce) {
-            ma.ce.internal_Vdd = this.internal_Onc;
-            ma.ce.internal_Ydd = this.internal_Snc;
+            ma.ce.cryptByteBlock = this.cryptByteBlock;
+            ma.ce.skipByteBlock = this.skipByteBlock;
         }
     }
 
@@ -437,10 +437,10 @@ TencBox.prototype.videoSampleEntry = function (ma) {
 
     // If isProtected=1 and per_sample_IV_size=0, read constant IV
     if (1 == this.ixb && 0 == this.gxb) {
-        this.internal_Nnc = this.bitReader.readUint32();          // constant_IV_size
-        this.internal_Mnc = this.bitReader.s3(this.internal_Nnc); // constant_IV
+        this.constantIVSize = this.bitReader.readUint32();          // constant_IV_size
+        this.constantIV = this.bitReader.s3(this.constantIVSize); // constant_IV
         if (ma && ma.ce) {
-            ma.ce.internal_Pnc = this.internal_Mnc;
+            ma.ce.constantIV = this.constantIV;
         }
     }
 
@@ -986,7 +986,7 @@ SaioBox.prototype.videoSampleEntry = function (ma) {
         const ivSize = ma.ce.hxb;
         const sampleCount = ma.data.GVc;
 
-        assert(0 < ivSize || void 0 !== ma.ce.internal_Pnc, 'Expected per sample or constant IV');
+        assert(0 < ivSize || void 0 !== ma.ce.constantIV, 'Expected per sample or constant IV');
         assert(0 < sampleCount, 'Expected saix box parsing to find sample count');
 
         ma.data.eV = [];
@@ -1281,13 +1281,13 @@ SbgpBox.prototype.videoSampleEntry = function () {
     }
 
     this.length = this.bitReader.dc(); // entry_count
-    this.internal_Gga = []; // expanded per-sample group assignments
+    this.sampleGroupAssignments = []; // expanded per-sample group assignments
 
     for (let i = 0; i < this.length; ++i) {
         const sampleCount = this.bitReader.dc();
         const groupDescriptionIndex = this.bitReader.dc();
         for (let j = 0; j < sampleCount; ++j) {
-            this.internal_Gga.push(groupDescriptionIndex);
+            this.sampleGroupAssignments.push(groupDescriptionIndex);
         }
     }
 
@@ -1303,12 +1303,12 @@ SbgpBox.prototype.videoSampleEntry = function () {
  */
 SbgpBox.prototype.ase_location_history = function (ma, ra) {
     // Slice the per-sample group array
-    this.internal_Gga = ra
-        ? this.internal_Gga.slice(0, ma)
-        : this.internal_Gga.slice(ma);
+    this.sampleGroupAssignments = ra
+        ? this.sampleGroupAssignments.slice(0, ma)
+        : this.sampleGroupAssignments.slice(ma);
 
     // Re-encode as run-length groups
-    const groups = this.internal_Gga.reduce(function (acc, group) {
+    const groups = this.sampleGroupAssignments.reduce(function (acc, group) {
         if (0 !== acc.length && acc[acc.length - 1].group === group) {
             // Extend current run
         } else {
