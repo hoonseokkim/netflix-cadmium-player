@@ -2,7 +2,7 @@
 
 Deobfuscated source of Netflix's **Cadmium** streaming player (`cadmium-playercore v6.0055.939.911`), reverse-engineered by [Claude Opus 4.6](https://claude.ai).
 
-The original obfuscated webpack bundle has been split into **871 JS files** — **684 ES2025 modules** across **32 domain directories**, plus **187 extracted webpack module stubs** in `modules/`. Descriptive naming, proper class syntax, and JSDoc documentation have been applied throughout.
+The original obfuscated webpack bundle has been split into **2,140 JS files** — **684 deobfuscated domain files** across **32 domain directories**, plus **1,456 extracted webpack modules** in `modules/`. Descriptive naming, proper class syntax, and JSDoc documentation have been applied throughout.
 
 **Deobfuscation status: Complete.**
 - All `internal_` identifiers resolved to meaningful names (0 remaining)
@@ -12,7 +12,8 @@ The original obfuscated webpack bundle has been split into **871 JS files** — 
 - All hex/unicode encoded strings decoded to readable form (0 remaining)
 - Control flow deflattening applied to state machine modules
 - 24 dead empty/marker files removed
-- 187 webpack module stubs extracted and deobfuscated
+- 1,456 webpack module files extracted and deobfuscated
+- Total webpack modules: 1,935 — all covered (100%)
 
 ## Architecture
 
@@ -84,7 +85,7 @@ ASE Integration Layer  (streaming/)
 | `types/` | 2 | Media type enums (AUDIO/VIDEO/TIMED_TEXT/SUPPLEMENTARY) |
 | `config/` | 2 | Configuration |
 | `classes/` | 3 | Legacy classes |
-| `modules/` | 187 | Extracted webpack module stubs (fully deobfuscated) |
+| `modules/` | 1,456 | Extracted webpack modules (fully deobfuscated); Module_12457.js contains 325 sub-modules (Netflix Cadmium Player Core webpack chunk) |
 
 ## Key Components
 

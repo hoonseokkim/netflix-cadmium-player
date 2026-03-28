@@ -67,4 +67,4 @@ export * from './mp4/Mp4_2.js'; // Module 37268
 export * from './mp4/Fragments.js'; // Module 89613
 export * from './mp4/Fragments_1.js'; // Module 82149
 
-// Total: 871 modules extracted from ~1991 webpack modules
+// Total: 2,140 files covering all 1,935 webpack modules from cadmium-playercore-6.0055.939.911.js
